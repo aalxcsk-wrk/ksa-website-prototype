@@ -22,7 +22,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { font-family:'Open Sans', sans-serif; color:var(--text); background:var(--white); }
+  body { font-family:'Open Sans', sans-serif; color:var(--text); background:var(--white); padding-top:73px; }
 
   /* PROTOTYPE BANNER */
   .proto-top {
@@ -220,7 +220,7 @@
   .cta-strip p { color:rgba(255,255,255,0.7); font-size:16px; margin-bottom:34px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.7; }
 
   /* PAGE BANNER */
-  .page-banner { background:linear-gradient(130deg, var(--dark-navy) 0%, var(--kblue) 100%); padding:56px 56px 48px; }
+  .page-banner { background:linear-gradient(130deg, var(--dark-navy) 0%, var(--kblue) 100%); padding:64px 56px 48px; }
   .breadcrumb { font-size:13px; color:rgba(255,255,255,0.45); margin-bottom:12px; cursor:pointer; font-weight:600; }
   .breadcrumb:hover { color:rgba(255,255,255,0.75); }
   .page-banner h1 { font-family:'Montserrat',sans-serif; font-size:38px; font-weight:800; color:var(--white); letter-spacing:-0.02em; }
@@ -547,6 +547,8 @@
   }
 
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 
@@ -1408,8 +1410,6 @@
     <div style="max-width:1100px;margin:0 auto">
       <h3 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:var(--dark-navy);margin-bottom:24px;text-align:center">Our Regional Offices</h3>
       <div id="ksa-map" style="width:100%;height:420px;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.08)"></div>
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
       <script>
         (function() {
           function initMap() {
