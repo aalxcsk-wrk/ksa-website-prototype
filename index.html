@@ -896,6 +896,7 @@
     </div>
   </div></section>
   <div class="cta-strip"><h2>Let's Work Together</h2><p>Whether you're looking for a solution or a strategic partner, we'd like to hear from you.</p><button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button></div>
+  </div>
   <footer>
     <div class="footer-grid">
       <div>
@@ -1379,10 +1380,11 @@
         <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:18px"><span style="font-size:20px;margin-top:2px">📧</span><div><strong style="display:block;font-size:13.5px;font-weight:700;color:var(--dark-navy)">Email</strong><span style="font-size:13.5px;color:var(--gray)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9d0d7dfd6f9d2cbd6d4d8c1cad897dad6d4">[email&#160;protected]</a></span></div></div>
         <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px"><span style="font-size:20px;margin-top:2px">🔗</span><div><strong style="display:block;font-size:13.5px;font-weight:700;color:var(--dark-navy)">LinkedIn</strong><span style="font-size:13.5px;color:var(--gray)">linkedin.com/company/kromax-south-asia</span></div></div>
         <h4 style="font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--dark-navy);margin-bottom:14px">Our Offices</h4>
-        <div class="office-block"><strong>🇸🇬 Singapore (HQ)</strong><span>Main operations &amp; business development</span></div>
-        <div class="office-block"><strong>🇲🇾 Malaysia</strong><span>Sales &amp; technical support</span></div>
-        <div class="office-block"><strong>🇮🇩 Indonesia</strong><span>Regional partnerships</span></div>
-        <div class="office-block"><strong>🇹🇼 Taiwan</strong><span>Semiconductor &amp; industrial division</span></div>
+        <div class="office-block"><strong>🇸🇬 Singapore (HQ)</strong><span>Main Operations, Sales &amp; Services</span></div>
+        <div class="office-block"><strong>🇲🇾 Malaysia — Kulim, Kedah</strong><span>Sales &amp; Services</span></div>
+        <div class="office-block"><strong>🇲🇾 Malaysia — Bandar Sunway, Selangor</strong><span>Sales &amp; Services</span></div>
+        <div class="office-block"><strong>🇮🇩 Indonesia</strong><span>Sales Team</span></div>
+        <div class="office-block"><strong>🇹🇼 Taiwan</strong><span>Sales &amp; Service</span></div>
       </div>
       <div class="cf">
         <div class="form-title">Request a Consultation</div>
@@ -1403,6 +1405,54 @@
       </div>
     </div>
   </div></section>
+  <div style="background:#f8f9fb;padding:48px 40px 56px">
+    <div style="max-width:1100px;margin:0 auto">
+      <h3 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:var(--dark-navy);margin-bottom:24px;text-align:center">Our Regional Offices</h3>
+      <div id="ksa-map" style="width:100%;height:420px;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.08)"></div>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+      <script>
+        (function() {
+          function initMap() {
+            var el = document.getElementById('ksa-map');
+            if (!el || el._leaflet_id) return;
+            var map = L.map('ksa-map', { scrollWheelZoom: false }).setView([5.5, 108], 4);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+              maxZoom: 18
+            }).addTo(map);
+            var icon = L.divIcon({
+              className: '',
+              html: '<div style="background:#1a4b9c;width:14px;height:14px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.35)"></div>',
+              iconSize: [14,14], iconAnchor: [7,7], popupAnchor: [0,-8]
+            });
+            var offices = [
+              [1.3521, 103.8198, '&#127480;&#127468; Singapore (HQ)', 'Main Operations, Sales & Services'],
+              [5.3763, 100.5609, '&#127474;&#127486; Malaysia — Kulim, Kedah', 'Sales & Services'],
+              [3.0680, 101.6035, '&#127474;&#127486; Malaysia — Bandar Sunway, Selangor', 'Sales & Services'],
+              [-6.2088, 106.8456, '&#127470;&#127465; Indonesia', 'Sales Team'],
+              [25.0330, 121.5654, '&#127481;&#127484; Taiwan', 'Sales & Service']
+            ];
+            offices.forEach(function(o) {
+              L.marker([o[0],o[1]],{icon:icon}).addTo(map)
+               .bindPopup('<strong style="font-family:Montserrat,sans-serif;font-size:13px">'+o[2]+'</strong><br><span style="font-size:12px;color:#6b7280">'+o[3]+'</span>');
+            });
+          }
+          var _origShow = window.showPage;
+          document.addEventListener('DOMContentLoaded', function() {
+            var orig = window.showPage;
+            window.showPage = function(id) {
+              orig(id);
+              if (id === 'contact') setTimeout(initMap, 200);
+            };
+            if (document.getElementById('page-contact') && document.getElementById('page-contact').classList.contains('active')) {
+              setTimeout(initMap, 200);
+            }
+          });
+        })();
+      </script>
+    </div>
+  </div>
   <footer>
     <div class="footer-grid">
       <div>
