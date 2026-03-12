@@ -639,6 +639,58 @@
     [style*="grid-template-columns:2fr 1fr 1fr 1fr"] { grid-template-columns:repeat(2,1fr) !important; }
   }
 
+  /* ── MEGA MENU ── */
+  .mega-panel {
+    display:none; position:absolute; top:100%; left:0;
+    padding-top:8px; z-index:200;
+  }
+  .nav-dropdown-wrapper:hover .mega-panel { display:block; }
+  .mega-inner {
+    background:var(--white); border-radius:16px;
+    box-shadow:var(--shadow-dropdown); min-width:500px;
+    border:1px solid rgba(221,226,238,0.6);
+    display:grid; grid-template-columns:1fr 1fr;
+    overflow:hidden;
+  }
+  .mega-left { padding:10px; border-right:1px solid var(--border); }
+  .mega-right { padding:14px 16px; min-height:200px; }
+  .mega-group {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:11px 14px; border-radius:9px; cursor:pointer;
+    transition:all 0.15s; margin-bottom:2px;
+  }
+  .mega-group:hover, .mega-group.mg-active { background:var(--kblue-50); }
+  .mega-group-name {
+    font-size:13px; font-weight:600; font-family:'DM Sans',sans-serif;
+    color:var(--text); transition:color 0.15s;
+  }
+  .mega-group:hover .mega-group-name,
+  .mega-group.mg-active .mega-group-name { color:var(--kblue); }
+  .mega-group-arrow { font-size:14px; color:var(--gray); transition:all 0.15s; line-height:1; }
+  .mega-group.mg-active .mega-group-arrow { color:var(--kblue); transform:translateX(2px); }
+  .mega-sub { display:none; }
+  .mega-sub.ms-active { display:block; }
+  .mega-sub-label {
+    font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+    letter-spacing:0.14em; text-transform:uppercase; color:var(--kblue);
+    margin-bottom:12px; padding:0 4px; opacity:0.7;
+  }
+  .mega-sub-item {
+    display:block; padding:9px 12px; font-size:13px; color:var(--text);
+    border-radius:8px; cursor:pointer; transition:all 0.15s;
+    font-family:'DM Sans',sans-serif; font-weight:500; margin-bottom:1px;
+  }
+  .mega-sub-item:hover { background:var(--kblue-50); color:var(--kblue); padding-left:17px; }
+  /* Mobile: stack mega-menu */
+  @media (max-width:600px) {
+    .mega-panel { position:static; padding-top:0; }
+    .mega-inner { display:block; box-shadow:none; border:none; background:var(--kblue-light); border-radius:8px; margin:4px 0 8px; min-width:0; }
+    .mega-left { border-right:none; padding:4px; }
+    .mega-right { display:none; }
+    .mega-group { padding:10px 14px; }
+    .mega-group-arrow { display:none; }
+  }
+
   /* ── INTELLIGENT SOLAR PAGE ── */
   .solar-hero { position:relative; height:500px; overflow:hidden; display:flex; align-items:flex-end; }
   .solar-hero-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80') center/cover no-repeat; }
@@ -746,12 +798,45 @@
   <div class="nav-links" id="navLinks">
     <div class="nav-dropdown-wrapper">
       <div class="nav-link has-dd">Our Solutions</div>
-      <div class="dropdown-panel">
-        <div class="dropdown-panel-inner">
-          <div class="dd-item" onclick="showPage('semi')"><strong>Semiconductor &amp; Industrial</strong><span>Energy, Manufacturing, Fab Solutions</span></div>
-          <div class="dd-item" onclick="showPage('solar')" style="padding-left:28px;border-left:3px solid var(--kblue-light)"><strong style="font-size:12.5px">↳ Intelligent Solar &amp; Sustainability</strong><span>Solar Energy, ESG &amp; Net-Zero Solutions</span></div>
-          <div class="dd-item" onclick="showPage('medical')"><strong>Healthcare &amp; Medical</strong><span>Interventional, Surgical, Neuromodulation</span></div>
-          <div class="dd-item" onclick="showPage('personalhealth')"><strong>Personal Health</strong><span>Quantum Wellness Technology</span></div>
+      <div class="mega-panel">
+        <div class="mega-inner">
+          <div class="mega-left">
+            <div class="mega-group mg-active" onmouseenter="megaHover('semi',this)" onclick="showPage('semi')">
+              <span class="mega-group-name">Semiconductor &amp; Industrial</span>
+              <span class="mega-group-arrow">›</span>
+            </div>
+            <div class="mega-group" onmouseenter="megaHover('medical',this)" onclick="showPage('medical')">
+              <span class="mega-group-name">Healthcare &amp; Medical</span>
+              <span class="mega-group-arrow">›</span>
+            </div>
+            <div class="mega-group" onmouseenter="megaHover('health',this)" onclick="showPage('personalhealth')">
+              <span class="mega-group-name">Personal Health</span>
+              <span class="mega-group-arrow">›</span>
+            </div>
+          </div>
+          <div class="mega-right">
+            <div class="mega-sub ms-active" id="mega-semi">
+              <div class="mega-sub-label">Semiconductor &amp; Industrial</div>
+              <div class="mega-sub-item" onclick="showPage('solar')">Intelligent Solar &amp; Sustainability</div>
+              <div class="mega-sub-item" onclick="showPage('semi')">AI Chiller Energy Optimisation</div>
+              <div class="mega-sub-item" onclick="showPage('semi')">Smart Factory Monitoring</div>
+              <div class="mega-sub-item" onclick="showPage('semi')">Predictive Equipment Health</div>
+              <div class="mega-sub-item" onclick="showPage('semi')">Gas Safety &amp; Scrubber Systems</div>
+            </div>
+            <div class="mega-sub" id="mega-medical">
+              <div class="mega-sub-label">Healthcare &amp; Medical</div>
+              <div class="mega-sub-item" onclick="showPage('medical')">Interventional Cardiology</div>
+              <div class="mega-sub-item" onclick="showPage('medical')">Surgical Navigation Systems</div>
+              <div class="mega-sub-item" onclick="showPage('medical')">Neuromodulation Therapy</div>
+              <div class="mega-sub-item" onclick="showPage('medical')">Patient Monitoring &amp; Diagnostics</div>
+            </div>
+            <div class="mega-sub" id="mega-health">
+              <div class="mega-sub-label">Personal Health</div>
+              <div class="mega-sub-item" onclick="showPage('personalhealth')">Quantum Wellness Devices</div>
+              <div class="mega-sub-item" onclick="showPage('personalhealth')">Recovery &amp; Rehabilitation</div>
+              <div class="mega-sub-item" onclick="showPage('personalhealth')">Health Supplements</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2659,6 +2744,15 @@ function submitOrder(btn) {
     document.getElementById('cartTotal').textContent = '0.00';
     setTimeout(function() { closeCheckout(); btn.textContent = 'Place Order →'; btn.style.background = ''; btn.disabled = false; }, 2500);
   }, 1500);
+}
+
+// ── MEGA MENU HOVER ──
+function megaHover(group, el) {
+  document.querySelectorAll('.mega-group').forEach(function(g) { g.classList.remove('mg-active'); });
+  document.querySelectorAll('.mega-sub').forEach(function(s) { s.classList.remove('ms-active'); });
+  el.classList.add('mg-active');
+  var sub = document.getElementById('mega-' + group);
+  if (sub) sub.classList.add('ms-active');
 }
 
 // ── SOLAR STATS COUNTER ──
