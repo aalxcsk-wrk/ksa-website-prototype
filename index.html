@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kromax South Asia — Website Prototype v9</title>
+<title>Kromax South Asia — Website Prototype v10</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -546,6 +546,56 @@
     [style*="grid-template-columns:2fr 1fr 1fr 1fr"] { grid-template-columns:repeat(2,1fr) !important; }
   }
 
+  /* ── INTELLIGENT SOLAR PAGE ── */
+  .solar-hero { position:relative; height:500px; overflow:hidden; display:flex; align-items:flex-end; }
+  .solar-hero-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80') center/cover no-repeat; }
+  .solar-hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(11,26,62,0.25) 0%, rgba(11,26,62,0.7) 55%, rgba(11,26,62,0.93) 100%); }
+  .solar-hero-content { position:relative; z-index:2; padding:0 56px 56px; max-width:1180px; width:100%; }
+  .solar-intro-grid { display:grid; grid-template-columns:1.6fr 1fr; gap:52px; max-width:1180px; margin:0 auto; padding:70px 56px; align-items:start; }
+  .solar-quick-links { background:var(--offwhite); border:1.5px solid var(--border); border-radius:14px; padding:28px; position:sticky; top:120px; }
+  .solar-quick-links h4 { font-family:'Montserrat',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--kblue); margin-bottom:16px; }
+  .solar-link-item { display:flex; align-items:center; gap:13px; padding:11px 14px; border-radius:9px; cursor:pointer; border:1.5px solid var(--border); background:var(--white); margin-bottom:9px; transition:all 0.18s; }
+  .solar-link-item:last-child { margin-bottom:0; }
+  .solar-link-item:hover { border-color:var(--kblue); background:var(--kblue-light); }
+  .solar-link-icon { width:36px; height:36px; background:var(--kblue); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+  .solar-link-text strong { display:block; font-size:13px; font-weight:700; color:var(--text); font-family:'Montserrat',sans-serif; }
+  .solar-link-text span { font-size:11px; color:var(--gray); }
+  .solar-video-section { background:var(--dark-navy); padding:76px 56px; text-align:center; }
+  .solar-video-wrap { position:relative; max-width:820px; margin:0 auto; border-radius:14px; overflow:hidden; box-shadow:0 24px 64px rgba(0,0,0,0.5); aspect-ratio:16/9; }
+  .solar-video-wrap iframe { width:100%; height:100%; border:none; display:block; }
+  .solar-stats-section { padding:80px 56px; background:var(--white); }
+  .solar-stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; max-width:1100px; margin:44px auto 0; }
+  .solar-stat-card { background:linear-gradient(135deg,var(--kblue-light) 0%,#d6e5f8 100%); border-radius:16px; padding:36px 20px 28px; text-align:center; border:1.5px solid var(--border); }
+  .solar-stat-icon { font-size:30px; margin-bottom:14px; }
+  .solar-stat-number { font-family:'Montserrat',sans-serif; font-size:46px; font-weight:800; color:var(--kblue); line-height:1; letter-spacing:-0.02em; }
+  .solar-stat-suffix { font-family:'Montserrat',sans-serif; font-size:30px; font-weight:800; color:var(--kblue); }
+  .solar-stat-label { font-size:13px; font-weight:700; color:var(--text); margin-top:12px; font-family:'Montserrat',sans-serif; line-height:1.3; }
+  .solar-stat-desc { font-size:11.5px; color:var(--gray); margin-top:7px; line-height:1.55; }
+  .solar-presence-section { background:var(--offwhite); padding:80px 56px; }
+  .solar-presence-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:18px; max-width:1100px; margin:44px auto 0; }
+  .solar-country-card { background:var(--white); border:1.5px solid var(--border); border-radius:14px; padding:30px 14px 22px; text-align:center; transition:all 0.2s; }
+  .solar-country-card:hover { border-color:var(--kblue); transform:translateY(-4px); box-shadow:0 10px 28px rgba(26,75,156,0.12); }
+  .solar-country-flag { font-size:38px; margin-bottom:12px; }
+  .solar-country-name { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--text); margin-bottom:4px; }
+  .solar-country-count { font-size:11px; color:var(--kblue); font-weight:600; }
+  .solar-logos-section { background:var(--white); padding:72px 56px; }
+  .solar-logos-grid { display:flex; gap:18px; justify-content:center; flex-wrap:wrap; max-width:1100px; margin:44px auto 0; }
+  .solar-logo-card { width:160px; height:80px; border:1.5px solid var(--border); border-radius:10px; display:flex; align-items:center; justify-content:center; background:var(--offwhite); color:var(--gray); font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; transition:all 0.18s; }
+  .solar-logo-card:hover { border-color:var(--kblue); background:var(--kblue-light); color:var(--kblue); }
+  @media (max-width:900px) {
+    .solar-hero { height:380px; }
+    .solar-hero-content { padding:0 24px 32px; }
+    .solar-intro-grid { grid-template-columns:1fr; padding:44px 24px; gap:28px; }
+    .solar-quick-links { position:static; }
+    .solar-stats-grid { grid-template-columns:repeat(2,1fr); }
+    .solar-presence-grid { grid-template-columns:repeat(3,1fr); }
+    .solar-video-section,.solar-logos-section,.solar-presence-section,.solar-stats-section { padding:52px 24px; }
+  }
+  @media (max-width:600px) {
+    .solar-presence-grid { grid-template-columns:repeat(2,1fr); }
+    .solar-logo-card { width:130px; height:65px; font-size:11px; }
+  }
+
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -606,6 +656,7 @@
       <div class="dropdown-panel">
         <div class="dropdown-panel-inner">
           <div class="dd-item" onclick="showPage('semi')"><strong>Semiconductor &amp; Industrial</strong><span>Energy, Manufacturing, Fab Solutions</span></div>
+          <div class="dd-item" onclick="showPage('solar')" style="padding-left:28px;border-left:3px solid var(--kblue-light)"><strong style="font-size:12.5px">↳ Intelligent Solar &amp; Sustainability</strong><span>Solar Energy, ESG &amp; Net-Zero Solutions</span></div>
           <div class="dd-item" onclick="showPage('medical')"><strong>Healthcare &amp; Medical</strong><span>Interventional, Surgical, Neuromodulation</span></div>
           <div class="dd-item" onclick="showPage('personalhealth')"><strong>Personal Health</strong><span>Quantum Wellness Technology</span></div>
         </div>
@@ -1095,7 +1146,7 @@
         <div class="sidebar-item"><div class="dot"></div><span>Smart Factory Energy Monitoring</span></div>
         <div class="sidebar-item"><div class="dot"></div><span>Predictive Equipment Health</span></div>
         <div class="sidebar-item"><div class="dot"></div><span>Process Chemical Analysis</span></div>
-        <div class="sidebar-item"><div class="dot"></div><span>Intelligent Solar &amp; Sustainability</span></div>
+        <div class="sidebar-item" onclick="showPage('solar')" style="cursor:pointer"><div class="dot"></div><span>Intelligent Solar &amp; Sustainability ↗</span></div>
         <div class="sidebar-item"><div class="dot"></div><span>Gas Safety &amp; Scrubber Systems</span></div>
         <div class="sidebar-item"><div class="dot"></div><span>Industrial Heating Solutions</span></div>
       </div>
@@ -1124,7 +1175,7 @@
       </div>
       <div class="sol-card">
         <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="sol-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=400&q=80" alt="Solar" loading="lazy"></div>
-        <div class="sol-body"><div class="sol-num">05 · SUSTAINABILITY</div><h3>Intelligent Solar &amp; Sustainability Systems</h3><p>Award-winning intelligent solar installations for commercial and industrial facilities with ESG reporting requirements.</p><div class="sol-link" onclick="showPage('contact')">Request details →</div></div>
+        <div class="sol-body"><div class="sol-num">05 · SUSTAINABILITY</div><h3>Intelligent Solar &amp; Sustainability Systems</h3><p>Award-winning intelligent solar installations for commercial and industrial facilities with ESG reporting requirements.</p><div class="sol-link" onclick="showPage('solar')">Learn more →</div></div>
       </div>
       <div class="sol-card">
         <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="sol-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Gas Safety" loading="lazy"></div>
@@ -1133,6 +1184,194 @@
     </div>
   </div></section>
   <div class="cta-strip"><h2>Ready to Optimise Your Operations?</h2><p>Tell us your challenge — our engineers will identify the right solution for your facility.</p><button class="btn-primary" onclick="showPage('contact')">Talk to an Engineer →</button></div>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p>
+      </div>
+      <div class="footer-col"><h4>Solutions</h4>
+        <span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span>
+        <span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span>
+        <span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span>
+        <span class="footer-link" onclick="showPage('shop')">E-Shop</span>
+      </div>
+      <div class="footer-col"><h4>Company</h4>
+        <span class="footer-link" onclick="showPage('about')">About Us</span>
+        <span class="footer-link" onclick="showPage('news')">News &amp; Events</span>
+        <span class="footer-link" onclick="showPage('careers')">Careers</span>
+        <span class="footer-link" onclick="showPage('partnerships')">Partner With Us</span>
+      </div>
+      <div class="footer-col"><h4>Connect</h4>
+        <span class="footer-link" onclick="showPage('contact')">Get in Touch</span>
+        <span class="footer-link" onclick="showPage('resources')">Resources</span>
+        <span class="footer-link" onclick="showPage('contact')">Singapore Office</span>
+        <span class="footer-link" onclick="showPage('contact')">Malaysia Office</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <span class="footer-link" style="margin:0">Privacy Policy</span>
+        <span class="footer-link" style="margin:0">Cookie Policy</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════ INTELLIGENT SOLAR & SUSTAINABILITY -->
+<div id="page-solar" class="page">
+
+  <!-- Hero: image + fade overlay + title -->
+  <div class="solar-hero">
+    <div class="solar-hero-bg"></div>
+    <div class="solar-hero-overlay"></div>
+    <div class="solar-hero-content">
+      <div class="breadcrumb" onclick="showPage('semi')">← Semiconductor &amp; Industrial Solutions</div>
+      <h1 style="font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.6vw,52px);font-weight:800;color:var(--white);line-height:1.12;letter-spacing:-0.02em;margin-bottom:14px;max-width:680px">Intelligent Solar &amp;<br>Sustainability Systems</h1>
+      <p style="color:rgba(255,255,255,0.75);font-size:16px;max-width:540px;line-height:1.75">Award-winning solar solutions for commercial and industrial facilities — delivering measurable energy savings, ESG compliance and long-term ROI across Southeast Asia.</p>
+    </div>
+  </div>
+
+  <!-- Intro + Quick Links (2-column) -->
+  <div class="solar-intro-grid">
+    <div>
+      <div class="sec-label">Solution Overview</div>
+      <h2 class="sec-title">Smarter Solar, Built for Industry</h2>
+      <p style="font-size:15.5px;line-height:1.85;color:var(--gray);margin-bottom:20px">Our Intelligent Solar &amp; Sustainability platform combines high-efficiency photovoltaic systems with AI-driven energy management software — giving industrial and commercial operators full visibility and control over their renewable energy assets.</p>
+      <p style="font-size:15.5px;line-height:1.85;color:var(--gray);margin-bottom:20px">Backed by Singapore's EDB Energy Efficiency Fund programme and deployed across five countries in Southeast Asia, our installations are engineered for maximum output, minimal downtime, and seamless integration with existing building management systems.</p>
+      <p style="font-size:15.5px;line-height:1.85;color:var(--gray)">Whether you are meeting corporate net-zero targets, reducing operational energy costs, or preparing for mandatory ESG reporting, our end-to-end solar solution is designed to deliver results from day one.</p>
+    </div>
+    <div>
+      <div class="solar-quick-links">
+        <h4>Resources &amp; Downloads</h4>
+        <div class="solar-link-item" onclick="showGatedForm('Intelligent Solar — Product Brochure')">
+          <div class="solar-link-icon">📄</div>
+          <div class="solar-link-text"><strong>Product Brochure</strong><span>PDF · 4.2 MB</span></div>
+        </div>
+        <div class="solar-link-item" onclick="showGatedForm('Intelligent Solar — Technical Specifications')">
+          <div class="solar-link-icon">⚙️</div>
+          <div class="solar-link-text"><strong>Technical Specifications</strong><span>PDF · 2.1 MB</span></div>
+        </div>
+        <div class="solar-link-item" onclick="showGatedForm('Intelligent Solar — ROI &amp; Payback Calculator')">
+          <div class="solar-link-icon">📊</div>
+          <div class="solar-link-text"><strong>ROI &amp; Payback Calculator</strong><span>Excel · Interactive</span></div>
+        </div>
+        <div class="solar-link-item" onclick="document.getElementById('solar-video').scrollIntoView({behavior:'smooth'})">
+          <div class="solar-link-icon">▶️</div>
+          <div class="solar-link-text"><strong>Watch Product Video</strong><span>2 min overview</span></div>
+        </div>
+        <div class="solar-link-item" onclick="showPage('contact')">
+          <div class="solar-link-icon" style="background:var(--kyellow)">💬</div>
+          <div class="solar-link-text"><strong>Talk to a Solar Engineer</strong><span>Get a free site assessment</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video section -->
+  <div class="solar-video-section" id="solar-video">
+    <div class="sec-label" style="color:rgba(255,255,255,0.5)">See It In Action</div>
+    <h2 class="sec-title" style="color:var(--white);margin-bottom:8px">Intelligent Solar in the Field</h2>
+    <p style="color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:38px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.75">Watch how our system monitors, optimises and reports solar energy generation in real time.</p>
+    <div class="solar-video-wrap">
+      <iframe src="https://www.youtube.com/embed/yUI1BL4c7zE" title="Intelligent Solar — Product Overview" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <!-- Stats / Animated numbers -->
+  <div class="solar-stats-section">
+    <div style="max-width:1100px;margin:0 auto;text-align:center">
+      <div class="sec-label">By the Numbers</div>
+      <h2 class="sec-title" style="margin-bottom:6px">Proven Performance, Measurable Impact</h2>
+      <p class="sec-sub" style="margin:0 auto">Real figures from deployed installations across Southeast Asia.</p>
+    </div>
+    <div class="solar-stats-grid" id="solarStatsGrid">
+      <div class="solar-stat-card">
+        <div class="solar-stat-icon">⚡</div>
+        <div><span class="solar-stat-number" data-solar-target="40">0</span><span class="solar-stat-suffix">%</span></div>
+        <div class="solar-stat-label">Energy Cost Savings</div>
+        <div class="solar-stat-desc">Average reduction in grid electricity bills across all installations</div>
+      </div>
+      <div class="solar-stat-card">
+        <div class="solar-stat-icon">☀️</div>
+        <div><span class="solar-stat-number" data-solar-target="25">0</span><span class="solar-stat-suffix">%</span></div>
+        <div class="solar-stat-label">Power Self-Generated</div>
+        <div class="solar-stat-desc">Average share of facility energy met by on-site solar production</div>
+      </div>
+      <div class="solar-stat-card">
+        <div class="solar-stat-icon">🌿</div>
+        <div><span class="solar-stat-number" data-solar-target="30">0</span><span class="solar-stat-suffix">%</span></div>
+        <div class="solar-stat-label">Carbon Footprint Reduced</div>
+        <div class="solar-stat-desc">Scope 2 emissions cut, supporting net-zero and ESG reporting goals</div>
+      </div>
+      <div class="solar-stat-card">
+        <div class="solar-stat-icon">💰</div>
+        <div><span class="solar-stat-number" data-solar-target="8">0</span><span class="solar-stat-suffix">yr</span></div>
+        <div class="solar-stat-label">Average Payback Period</div>
+        <div class="solar-stat-desc">With government grants and incentives, payback achievable in as few as 5 years</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Presence / Geography -->
+  <div class="solar-presence-section">
+    <div style="max-width:1100px;margin:0 auto;text-align:center">
+      <div class="sec-label">Our Footprint</div>
+      <h2 class="sec-title" style="margin-bottom:6px">Installed Across Southeast Asia</h2>
+      <p class="sec-sub" style="margin:0 auto">Active solar deployments powering commercial and industrial facilities across the region.</p>
+    </div>
+    <div class="solar-presence-grid">
+      <div class="solar-country-card">
+        <div class="solar-country-flag">🇸🇬</div>
+        <div class="solar-country-name">Singapore</div>
+        <div class="solar-country-count">Regional HQ · Active</div>
+      </div>
+      <div class="solar-country-card">
+        <div class="solar-country-flag">🇲🇾</div>
+        <div class="solar-country-name">Malaysia</div>
+        <div class="solar-country-count">Industrial &amp; Commercial</div>
+      </div>
+      <div class="solar-country-card">
+        <div class="solar-country-flag">🇹🇭</div>
+        <div class="solar-country-name">Thailand</div>
+        <div class="solar-country-count">Manufacturing Zones</div>
+      </div>
+      <div class="solar-country-card">
+        <div class="solar-country-flag">🇮🇩</div>
+        <div class="solar-country-name">Indonesia</div>
+        <div class="solar-country-count">Industrial Estates</div>
+      </div>
+      <div class="solar-country-card">
+        <div class="solar-country-flag">🇻🇳</div>
+        <div class="solar-country-name">Vietnam</div>
+        <div class="solar-country-count">Expanding · 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Logos -->
+  <div class="solar-logos-section">
+    <div style="max-width:1100px;margin:0 auto;text-align:center">
+      <div class="sec-label">Trusted By</div>
+      <h2 class="sec-title" style="margin-bottom:6px">Our Customers</h2>
+      <p class="sec-sub" style="margin:0 auto">Leading commercial and industrial organisations powering sustainability with us.</p>
+    </div>
+    <div class="solar-logos-grid">
+      <div class="solar-logo-card">Adidas</div>
+      <div class="solar-logo-card">Client B</div>
+      <div class="solar-logo-card">Client C</div>
+      <div class="solar-logo-card">Client D</div>
+      <div class="solar-logo-card">Client E</div>
+      <div class="solar-logo-card">Client F</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Ready to Go Solar?</h2>
+    <p>Get a free site assessment and ROI projection from our solar engineering team.</p>
+    <button class="btn-primary" onclick="showPage('contact')">Request a Free Site Assessment →</button>
+  </div>
   <footer>
     <div class="footer-grid">
       <div>
@@ -2328,6 +2567,45 @@ function submitOrder(btn) {
     setTimeout(function() { closeCheckout(); btn.textContent = 'Place Order →'; btn.style.background = ''; btn.disabled = false; }, 2500);
   }, 1500);
 }
+
+// ── SOLAR STATS COUNTER ──
+var _solarDone = false;
+function _runSolarCounters() {
+  if (_solarDone) return;
+  _solarDone = true;
+  document.querySelectorAll('[data-solar-target]').forEach(function(el) {
+    var target = parseInt(el.dataset.solarTarget, 10);
+    var duration = 1600;
+    var steps = 60;
+    var step = 0;
+    var timer = setInterval(function() {
+      step++;
+      var val = Math.round(target * (step / steps));
+      el.textContent = val;
+      if (step >= steps) { el.textContent = target; clearInterval(timer); }
+    }, duration / steps);
+  });
+}
+var _solarIO = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting) _runSolarCounters();
+}, { threshold: 0.2 });
+function _initSolarCounters() {
+  var grid = document.getElementById('solarStatsGrid');
+  if (grid) _solarIO.observe(grid);
+}
+document.addEventListener('DOMContentLoaded', _initSolarCounters);
+// Reset when navigating away and back to solar page
+var _origShowPageSolar = showPage;
+showPage = function(id) {
+  _origShowPageSolar(id);
+  if (id === 'solar') {
+    _solarDone = false;
+    setTimeout(function() {
+      var grid = document.getElementById('solarStatsGrid');
+      if (grid) { _solarIO.disconnect(); _solarIO.observe(grid); }
+    }, 250);
+  }
+};
 
 // ── MOBILE NAV ──
 function toggleMobileNav() {
