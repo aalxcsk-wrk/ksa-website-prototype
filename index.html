@@ -751,8 +751,9 @@
     background:linear-gradient(160deg,rgba(4,27,74,0.88) 0%,rgba(4,27,74,0.65) 50%,rgba(4,27,74,0.78) 100%);
   }
   .med-hero-content {
-    position:relative; z-index:2; max-width:720px;
-    padding:80px 60px 72px; width:100%;
+    position:relative; z-index:2; width:100%;
+    max-width:1180px; margin:0 auto;
+    padding:80px 56px 72px;
   }
   .med-hero-content .breadcrumb { margin-bottom:22px; }
   .med-hero-h1 {
@@ -775,8 +776,7 @@
   }
 
   /* Medical Solutions Grid — S3 */
-  .med-grid-section { background:var(--white); padding:72px 60px; }
-  .med-grid-section .section-inner { max-width:1200px; margin:0 auto; }
+  .med-grid-section { background:var(--white); }
   .med-card-grid {
     display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
     margin-top:36px;
@@ -809,8 +809,8 @@
   .med-card:hover .med-card-cta::after { transform:translateX(4px); }
 
   /* Clinical Specialties — S4 */
-  .med-specialty-section { background:#f4f7fb; padding:72px 60px; }
-  .med-specialty-section .section-inner { max-width:1100px; margin:0 auto; text-align:center; }
+  .med-specialty-section { background:#f4f7fb; }
+  .med-specialty-section .section-inner { text-align:center; }
   .med-specialty-sub {
     font-size:14px; font-weight:600; color:var(--kblue); text-transform:uppercase;
     letter-spacing:0.08em; margin-bottom:14px; font-family:'Montserrat',sans-serif;
@@ -838,8 +838,7 @@
   }
 
   /* Beyond the Device — S5 */
-  .med-beyond-section { background:var(--dark-navy); padding:80px 60px; }
-  .med-beyond-section .section-inner { max-width:1200px; margin:0 auto; }
+  .med-beyond-section { background:var(--dark-navy); }
   .med-beyond-header { text-align:center; margin-bottom:52px; }
   .med-beyond-header h2 {
     font-family:'Montserrat',sans-serif; font-size:clamp(28px,3vw,44px);
@@ -881,9 +880,9 @@
   /* Our Commitment to Quality — S6 */
   .med-quality-section {
     background:linear-gradient(135deg,#eef2f8 0%,#f8f9fb 100%);
-    padding:80px 60px; border-top:1px solid var(--border);
+    border-top:1px solid var(--border);
   }
-  .med-quality-section .section-inner { max-width:800px; margin:0 auto; text-align:center; }
+  .med-quality-section .section-inner { text-align:center; }
   .med-quality-section h2 {
     font-family:'Montserrat',sans-serif; font-size:clamp(26px,2.8vw,38px);
     font-weight:800; color:var(--dark-navy); letter-spacing:-0.03em; margin-bottom:22px;
@@ -893,8 +892,7 @@
   }
 
   /* Clinical Resources — S7 */
-  .med-resources-section { background:var(--white); padding:72px 60px; }
-  .med-resources-section .section-inner { max-width:1100px; margin:0 auto; }
+  .med-resources-section { background:var(--white); }
   .med-resources-intro {
     font-size:15.5px; color:var(--gray); line-height:1.85; max-width:680px; margin-bottom:36px;
   }
@@ -1028,8 +1026,7 @@
     .med-features-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width:700px) {
-    .med-hero-content, .med-grid-section, .med-specialty-section,
-    .med-beyond-section, .med-quality-section, .med-resources-section,
+    .med-hero-content { padding-left:24px; padding-right:24px; }
     .med-sub-intro-grid, .med-features-section { padding-left:24px; padding-right:24px; }
     .med-card-grid { grid-template-columns:1fr; }
     .med-specialty-grid { grid-template-columns:repeat(2,1fr); }
@@ -1905,7 +1902,7 @@
   </div>
 
   <!-- S3 — MEDICAL SOLUTIONS GRID -->
-  <div class="med-grid-section" id="med-solutions">
+  <div class="med-grid-section section" id="med-solutions">
     <div class="section-inner">
       <div class="sec-label">Medical Solutions</div>
       <h2 class="sec-title">Our Medical Solutions</h2>
@@ -1972,7 +1969,7 @@
   </div>
 
   <!-- S4 — CLINICAL SPECIALTIES WE SERVE -->
-  <div class="med-specialty-section">
+  <div class="med-specialty-section section">
     <div class="section-inner">
       <h2 class="sec-title" style="text-align:center">Clinical Specialties We Serve</h2>
       <p class="med-specialty-sub">Conditions &amp; Specialties We Support</p>
@@ -2019,7 +2016,7 @@
   </div>
 
   <!-- S5 — BEYOND THE DEVICE -->
-  <div class="med-beyond-section">
+  <div class="med-beyond-section section">
     <div class="section-inner">
       <div class="med-beyond-header">
         <div class="med-beyond-sub">Clinical Support &amp; Partnership</div>
@@ -2057,7 +2054,7 @@
   </div>
 
   <!-- S6 — OUR COMMITMENT TO QUALITY -->
-  <div class="med-quality-section">
+  <div class="med-quality-section section">
     <div class="section-inner">
       <h2>Our Commitment to Quality</h2>
       <p class="med-quality-body">Every solution we carry is selected through a rigorous process — evaluating clinical evidence, regulatory approvals, R&amp;D backing and real-world performance. We don't represent brands because they're well known. We represent them because we've verified they work.</p>
@@ -2065,7 +2062,7 @@
   </div>
 
   <!-- S7 — CLINICAL RESOURCES & DOWNLOADS -->
-  <div class="med-resources-section">
+  <div class="med-resources-section section">
     <div class="section-inner">
       <div class="sec-label">Clinical Resources &amp; Downloads</div>
       <h2 class="sec-title">Resources for Your Team</h2>
