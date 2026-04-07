@@ -941,6 +941,106 @@
     color:var(--kblue); font-weight:700; cursor:pointer; text-decoration:underline;
   }
 
+  /* Pill strip — S3 */
+  .med-pill-strip { background:#f4f7fb; padding:20px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .med-pill-strip-inner { max-width:1180px; margin:0 auto; padding:0 56px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .med-pill-label { font-size:12px; font-weight:700; color:var(--gray); text-transform:uppercase; letter-spacing:0.08em; font-family:'Montserrat',sans-serif; white-space:nowrap; margin-right:4px; }
+  .med-pill { display:inline-flex; align-items:center; padding:6px 14px; border-radius:100px; background:var(--white); border:1.5px solid var(--border); font-size:12.5px; font-weight:600; color:var(--dark-navy); font-family:'Montserrat',sans-serif; }
+  .med-pill.vet { background:#fff8e1; border-color:#f5c518; color:#7a5a00; }
+
+  /* Key Advantages — S4 */
+  .med-adv-section { background:var(--white); }
+  .med-adv-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:32px; }
+  .med-adv-card { background:#f4f7fb; border:1.5px solid var(--border); border-radius:14px; padding:28px 22px; }
+  .med-adv-icon { font-size:26px; margin-bottom:14px; }
+  .med-adv-card h3 { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; color:var(--dark-navy); margin-bottom:8px; letter-spacing:-0.01em; line-height:1.3; }
+  .med-adv-card p { font-size:13px; color:var(--gray); line-height:1.72; }
+
+  /* Solutions Range — S5 */
+  .med-range-section { background:#f4f7fb; }
+  .med-principal-block { background:var(--white); border:1.5px solid var(--border); border-radius:16px; padding:32px; margin-top:28px; }
+  .med-principal-head { display:flex; align-items:center; gap:12px; margin-bottom:10px; flex-wrap:wrap; }
+  .med-principal-head h3 { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:800; color:var(--dark-navy); }
+  .med-principal-badge { font-size:10.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--kblue); font-family:'Montserrat',sans-serif; background:var(--kblue-light); padding:4px 10px; border-radius:100px; }
+  .med-principal-intro { font-size:14px; color:var(--gray); line-height:1.78; margin-bottom:22px; padding-bottom:20px; border-bottom:1px solid var(--border); }
+  .med-prod-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .med-prod-grid.two-col { grid-template-columns:repeat(2,1fr); }
+  .med-prod-card { border:1.5px solid var(--border); border-radius:12px; padding:20px; background:#f8f9fb; }
+  .med-prod-card.featured { background:var(--white); border-color:var(--kblue); }
+  .med-prod-name { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--dark-navy); margin-bottom:6px; line-height:1.35; }
+  .med-prod-desc { font-size:12px; color:var(--gray); line-height:1.65; }
+  .med-prod-badge { display:inline-block; font-size:10px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; border-radius:100px; padding:3px 9px; margin-bottom:8px; }
+  .med-prod-badge.classic { background:#e3f0fa; color:#0a5a8a; }
+  .med-prod-badge.extended { background:#e8f5e9; color:#1a7a3a; }
+  .med-prod-badge.optional { background:#fff3e0; color:#b84c00; }
+  .med-prod-badge.eligible { background:#ede7f6; color:#512da8; }
+  .med-prod-enquire { margin-top:12px; background:var(--kblue); color:var(--white); border:none; padding:8px 16px; border-radius:7px; font-size:12px; font-weight:700; cursor:pointer; font-family:'Montserrat',sans-serif; width:100%; }
+  .med-working-bar { margin-top:24px; padding-top:20px; border-top:1px solid var(--border); }
+  .med-working-bar h4 { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--dark-navy); margin-bottom:14px; }
+  .med-bar-row { margin-bottom:10px; }
+  .med-bar-label { font-size:12px; font-weight:700; color:var(--dark-navy); font-family:'Montserrat',sans-serif; margin-bottom:5px; }
+  .med-bar-track { height:10px; background:#e8edf5; border-radius:100px; overflow:hidden; display:flex; }
+  .med-bar-seg { height:100%; font-size:0; }
+  .med-bar-seg.mix { background:#1a4bbc; }
+  .med-bar-seg.wait { background:#6b9ce8; }
+  .med-bar-seg.apply { background:#f5c842; }
+  .med-bar-seg.set { background:#e0e6ef; }
+  .med-bar-legend { display:flex; gap:14px; margin-top:8px; flex-wrap:wrap; }
+  .med-bar-leg-item { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--gray); }
+  .med-bar-leg-dot { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
+  .med-accordion-wrap { margin-top:20px; border-top:1px solid var(--border); padding-top:16px; }
+  .med-acc-item { border:1.5px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:8px; }
+  .med-acc-trigger { width:100%; background:var(--white); border:none; padding:13px 18px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--dark-navy); text-align:left; }
+  .med-acc-trigger:hover { background:#f4f7fb; }
+  .med-acc-arrow { transition:transform .2s; }
+  .med-acc-item.open .med-acc-arrow { transform:rotate(180deg); }
+  .med-acc-body { display:none; padding:4px 18px 14px; background:var(--white); }
+  .med-acc-item.open .med-acc-body { display:block; }
+  .med-acc-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--border); }
+  .med-acc-row:last-child { border-bottom:none; }
+  .med-acc-row-name { font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--dark-navy); margin-bottom:3px; }
+  .med-acc-row-desc { font-size:12px; color:var(--gray); line-height:1.6; }
+  .med-acc-enquire { flex-shrink:0; background:var(--kblue); color:var(--white); border:none; padding:7px 13px; border-radius:7px; font-size:11.5px; font-weight:700; cursor:pointer; font-family:'Montserrat',sans-serif; white-space:nowrap; }
+
+  /* Also Relevant To — S6 */
+  .med-also-section { background:linear-gradient(135deg,#041b4a 0%,#0a3580 100%); }
+  .med-also-intro { font-size:15.5px; color:rgba(255,255,255,0.68); line-height:1.82; max-width:680px; margin-bottom:32px; }
+  .med-also-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  .med-also-grid.three { grid-template-columns:repeat(3,1fr); }
+  .med-also-card { background:rgba(255,255,255,0.07); border:1.5px solid rgba(255,255,255,0.12); border-radius:14px; padding:22px; cursor:pointer; transition:background .2s,border-color .2s; display:flex; justify-content:space-between; align-items:center; }
+  .med-also-card:hover { background:rgba(255,255,255,0.13); border-color:rgba(255,255,255,0.3); }
+  .med-also-title { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; color:var(--white); margin-bottom:5px; }
+  .med-also-desc { font-size:12.5px; color:rgba(255,255,255,0.55); line-height:1.55; }
+  .med-also-arrow { color:var(--kyellow); font-size:20px; flex-shrink:0; margin-left:12px; }
+  .med-also-all-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+
+  /* Sub-page dual CTA strip */
+  .med-cta-strip { text-align:center; padding:72px 56px; background:var(--dark-navy); position:relative; overflow:hidden; }
+  .med-cta-strip::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 60% 40%,rgba(245,200,0,0.07) 0%,transparent 65%); pointer-events:none; }
+  .med-cta-strip h2 { font-family:'Montserrat',sans-serif; font-size:clamp(22px,2.8vw,36px); font-weight:800; color:var(--white); letter-spacing:-0.025em; margin-bottom:14px; position:relative; }
+  .med-cta-strip p { font-size:16px; color:rgba(255,255,255,0.68); line-height:1.8; max-width:540px; margin:0 auto 32px; position:relative; }
+  .med-cta-buttons { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; }
+  .btn-outline-white { padding:13px 28px; border-radius:100px; border:2px solid rgba(255,255,255,0.35); background:transparent; color:var(--white); font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; cursor:pointer; transition:border-color .2s,background .2s; }
+  .btn-outline-white:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+
+  /* Responsive — new sub-page components */
+  @media(max-width:1100px) {
+    .med-adv-grid { grid-template-columns:repeat(2,1fr); }
+    .med-prod-grid { grid-template-columns:repeat(2,1fr); }
+    .med-also-grid.three { grid-template-columns:repeat(2,1fr); }
+    .med-also-all-grid { grid-template-columns:repeat(2,1fr); }
+  }
+  @media(max-width:700px) {
+    .med-pill-strip-inner { padding:0 24px; }
+    .med-adv-grid { grid-template-columns:1fr; }
+    .med-prod-grid { grid-template-columns:1fr; }
+    .med-prod-grid.two-col { grid-template-columns:1fr; }
+    .med-also-grid, .med-also-grid.three { grid-template-columns:1fr; }
+    .med-also-all-grid { grid-template-columns:repeat(2,1fr); }
+    .med-cta-strip { padding:52px 24px; }
+    .med-sub-intro-grid { padding:40px 24px; gap:24px; }
+  }
+
   /* Medical sub-page hero */
   .med-sub-hero {
     position:relative; min-height:400px; display:flex; align-items:flex-end;
@@ -2187,49 +2287,149 @@
   <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Interventional Oncology · Thyroid · Women's Health</div>
-      <h1>Thermal Ablation</h1>
-      <p>Minimally invasive RF and microwave ablation for tumour, thyroid and fibroid procedures — delivering precise, image-guided energy delivery with proven clinical outcomes.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Thermal Ablation</div>
+      <h1>A Smarter Path to Minimally Invasive Treatment.</h1>
+      <p>Thermal ablation uses precisely controlled radiofrequency or microwave energy to treat targeted tissue — without open surgery, without general anaesthesia, and with recovery times measured in hours, not weeks. KSA brings you a comprehensive range of RF and microwave ablation systems, supported by our clinical specialists every step of the way.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Precision Thermal Energy, Clinically Proven</h2>
-      <p>Thermal ablation uses targeted heat energy — delivered via radiofrequency (RF) or microwave — to destroy abnormal tissue while preserving surrounding healthy structures. KSA distributes a curated portfolio of thermal ablation systems purpose-built for interventional oncology, thyroid nodule ablation, and uterine fibroid management.</p>
-      <p>Our systems are supported by robust clinical evidence, strong regulatory clearances across Singapore, Malaysia and Indonesia, and hands-on case support from KSA's trained product specialists — present in the room when you need us.</p>
-      <p>Whether you're building a new ablation programme or expanding an existing one, our team will help you assess the right platform, configure your setup, and support your learning curve from the first case.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Clinical Applications</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Hepatocellular carcinoma (HCC)</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Thyroid nodule ablation (RFA/MWA)</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Uterine fibroid ablation</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Lung &amp; renal tumours</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Breast lesions</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('Thermal Ablation — Product Brochure')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Brochure →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Tumour Ablation</span><span class="med-pill">Thyroid Care</span><span class="med-pill">Women's Health</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">Why Thermal Ablation</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">🎯</div><h3>Minimally Invasive</h3><p>Performed percutaneously under image guidance — minimal scarring, reduced recovery time and lower complication rates vs open surgery.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⚡</div><h3>Fast Procedure Times</h3><p>Most ablation procedures completed in under 30 minutes, with patients returning to normal activity within days.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📡</div><h3>Image-Guided Precision</h3><p>Real-time ultrasound or CT guidance enables accurate needle placement and real-time monitoring of the ablation zone.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔬</div><h3>Strong Clinical Evidence</h3><p>Supported by peer-reviewed data across multiple indication areas — RFA for thyroid nodules now a guideline-endorsed approach in Asia.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🤝</div><h3>Case Support Included</h3><p>KSA product specialists attend procedures during your onboarding phase — trained, credentialled and ready to support your team.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🌏</div><h3>Regulatory-Cleared Across SEA</h3><p>Systems distributed by KSA hold relevant clearances for use in Singapore, Malaysia and Indonesia — we'll confirm specifics for your market.</p></div>
+      <h2 class="sec-title">Why Thermal Ablation?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>Minimally Invasive</h3>
+          <p>No open surgery, no general anaesthesia. Procedures are performed through a thin needle under image guidance — reducing risk and patient discomfort significantly.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Organ-Sparing Precision</h3>
+          <p>Radiofrequency and microwave energy targets only the affected tissue, preserving healthy surrounding structures and eliminating the need for hormone replacement in most thyroid cases.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Faster Patient Recovery</h3>
+          <p>Most patients return to normal activities within 24–48 hours. Compared to conventional surgery, hospitalisation time is dramatically reduced.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Repeatable When Needed</h3>
+          <p>Unlike surgery, thermal ablation can be performed again to treat additional or recurrent lesions — without the cumulative risks associated with multiple operations.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Interested in thermal ablation for your facility?</h2><p>Our specialists will assess your clinical setup and recommend the right platform.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our Thermal Ablation Solutions</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply a complete range of RF and microwave ablation systems — from generators to procedure-specific electrodes and consumables — fully supported by our clinical team.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>Radiofrequency Ablation Systems</h3>
+          <span class="med-principal-badge">Cambridge Interventional</span>
+        </div>
+        <p class="med-principal-intro">The Cambridge Interventional CRF System delivers large, spherical, reproducible ablation zones rapidly and consistently — optimised for thyroid nodules, uterine fibroids, and soft tissue tumours.</p>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">CRF RF Generator</div>
+            <div class="med-prod-desc">Touchscreen interface, real-time audiovisual feedback, automated pump synchronisation and electronic records. Treats up to 4 sites simultaneously.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Peristaltic Pump</div>
+            <div class="med-prod-desc">Automatic cooling synchronisation with CRF generator.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Footswitch</div>
+            <div class="med-prod-desc">Hands-free generator operation during procedure.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div class="med-accordion-wrap">
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Cooled Electrodes &amp; Consumables <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Cooled Electrodes — Thyroid (CRF-UxxxxS/L)</div><div class="med-acc-row-desc">18G. Tip sizes 5–20mm. Shaft lengths 7cm &amp; 12cm. Optimised for thyroid nodule moving-shot technique.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Cooled Electrodes — Myoma (CRF-UxxxxS/L)</div><div class="med-acc-row-desc">17G. Tip sizes 1–3cm. 27cm shaft. For uterine fibroid transvaginal ablation.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Cooled Electrodes — General (CRF-UxxxxS/L)</div><div class="med-acc-row-desc">20–15G. Tip sizes 0.5–5cm. Shaft lengths 10–25cm. For liver, lung, kidney, bone applications.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Two-Piece Cannula (CRF-Cxxxx)</div><div class="med-acc-row-desc">15G introducer with removable stylet. Allows biopsy before ablation and sequential ablation via multiple introducers.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Two-Piece Electrodes (CRF-Ex)</div><div class="med-acc-row-desc">Flexible electrode for use with two-piece cannula system.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Tubing (CRF-TUBE)</div><div class="med-acc-row-desc">Cooling circuit tubing for generator-pump circuit.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Ground Pad (CRF-GP)</div><div class="med-acc-row-desc">Disposable patient ground pad.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>Microwave Ablation Systems</h3>
+          <span class="med-principal-badge">Hygea</span>
+        </div>
+        <p class="med-principal-intro">The Hygea EXCEED system combines smart safety features, predictive ablation zone visualisation and stable energy delivery — engineered for diverse clinical applications including liver, lung, kidney, thyroid and uterine fibroids.</p>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">EXCEED S10E Microwave Ablation Device</div>
+            <div class="med-prod-desc">Single-channel, 0–120W output. Chaotic-Modulation technology for stable uniform thermal effects. One-button startup, automated self-diagnostic, guided interface.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div class="med-accordion-wrap">
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">EXACT Probe Series <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HS Series</div><div class="med-acc-row-desc">Spherical ablation design. Delivers predictable, precise ablation zones. 14G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HC Series</div><div class="med-acc-row-desc">Ceramic insulation sleeve. Superior flexural strength and durability. 14G–18G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HP Series</div><div class="med-acc-row-desc">PTFE insulation. Rapid heating, earlier ultrasound visualisation of ablation zone. 14G–18G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HT Series</div><div class="med-acc-row-desc">Integrated temperature sensors for precise ablation control and safety. 14G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Available Probe Sizes</div><div class="med-acc-row-desc">15 models total. Needle lengths 80–250mm across all series. 14G–18G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Thermal ablation technology extends beyond oncology. If you're exploring minimally invasive options for spinal or bone conditions, you may also find these solutions relevant.</p>
+      <div class="med-also-grid">
+      <div class="med-also-card" onclick="showPage('med-spinal')">
+        <div>
+          <div class="med-also-title">Spinal Pain Interventions</div>
+          <div class="med-also-desc">Hygea EXCEED covers bone tumour ablation — overlaps with spinal applications.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-bone')">
+        <div>
+          <div class="med-also-title">Bone &amp; Spinal Augmentation</div>
+          <div class="med-also-desc">Both address spinal/vertebral conditions through minimally invasive approaches.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Ready to Explore Thermal Ablation for Your Practice?</h2>
+    <p>Our clinical specialists are here to help you evaluate whether thermal ablation is the right fit for your department — with no obligation and no sales pressure. Just an honest conversation.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Thermal Ablation — Product Brochure')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
@@ -2238,350 +2438,947 @@
   <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Pain Management · Interventional Pain</div>
-      <h1>RF Pain Management</h1>
-      <p>Precision radiofrequency solutions for nerve and joint pain — from facet to sacroiliac. Long-lasting relief through targeted denervation with minimal systemic effects.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">RF Pain Management</div>
+      <h1>Lasting Relief. Without the Operating Table.</h1>
+      <p>Chronic joint and nerve pain affects millions — and for many patients, surgery carries risks that outweigh the benefits. Radiofrequency ablation offers clinicians a precise, minimally invasive alternative for managing pain at the source, with lasting results and faster return to daily life. KSA provides a complete RF pain management system, from generator to consumables, backed by hands-on clinical support.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Targeted Radiofrequency for Lasting Pain Relief</h2>
-      <p>Radiofrequency (RF) ablation for pain management delivers controlled thermal energy to specific nerves responsible for transmitting pain signals — interrupting the pain pathway without the side effects of long-term pharmacological management.</p>
-      <p>KSA's RF pain management portfolio covers conventional RF, pulsed RF, and cooled RF modalities, providing interventional pain specialists with flexible options across the full spectrum of joint and spine pain indications. Our team provides comprehensive product training, clinical education and on-site procedure support.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Clinical Applications</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Facet joint denervation</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Sacroiliac joint pain</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Knee osteoarthritis</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Shoulder &amp; hip pain</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Trigeminal neuralgia</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('RF Pain Management — Product Brochure')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Brochure →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Pain Management</span><span class="med-pill">Orthopaedics &amp; Spine</span><span class="med-pill">Neurology</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">Why RF Pain Management</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">🎯</div><h3>Highly Targeted</h3><p>Selective nerve ablation targets only the pain-transmitting fibres — preserving motor function and surrounding tissue integrity.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⏱️</div><h3>Long-Lasting Relief</h3><p>RF denervation provides relief lasting 6–24 months in most patients — significantly reducing the need for repeat pharmacological intervention.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🏥</div><h3>Day Surgery Compatible</h3><p>Most procedures performed as day surgery under local anaesthesia — improving patient throughput and reducing inpatient bed utilisation.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📡</div><h3>Multiple RF Modalities</h3><p>Conventional, pulsed and cooled RF options allow clinicians to optimise technique based on anatomy, indication and patient profile.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🤝</div><h3>Training &amp; Proctoring</h3><p>KSA organises cadaveric workshops and proctored live cases to support your team's proficiency development from day one.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📋</div><h3>Evidence-Based</h3><p>Our portfolio is backed by published clinical evidence and international pain society guidelines across multiple joint and spinal indications.</p></div>
+      <h2 class="sec-title">Why RF Pain Management?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>Targeted at the Source</h3>
+          <p>Radiofrequency energy precisely targets the nerve or joint causing pain — disrupting the pain signal at its origin rather than masking symptoms with medication.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Minimally Invasive</h3>
+          <p>Performed under local anaesthesia with image guidance. No open surgery, no general anaesthesia, minimal downtime for your patients.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Long-Lasting Results</h3>
+          <p>RF ablation provides sustained pain relief — often lasting 6 to 12 months or longer — giving patients a meaningful window of improved quality of life.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Versatile Applications</h3>
+          <p>From facet joint and sacroiliac pain to trigeminal neuralgia, knee and hip pain — one system covers a broad range of chronic pain indications.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Expand your pain intervention capabilities.</h2><p>Talk to our clinical team about introducing RF pain management to your practice.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our RF Pain Management Solutions</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply the complete Boston Scientific RF pain management system — generator, electrodes, cannulae and all necessary accessories — with full clinical support from our product specialists.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>RF Pain Management System</h3>
+          <span class="med-principal-badge">Boston Scientific</span>
+        </div>
+        <p class="med-principal-intro">The Boston Scientific G4 RF Generator is a versatile, intuitive system designed for consistent, reliable results across a wide range of pain management procedures. With the ability to treat up to four sites simultaneously and a comprehensive range of electrodes and cannulae, it adapts to your procedural needs.</p>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">G4 RF Generator (RFG-4-240V)</div>
+            <div class="med-prod-desc">Intuitive 12" touchscreen. Colour-coded status display. Monopolar/bipolar/pulsed RF modes. Treats up to 4 sites simultaneously. Exportable data.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Reusable Electrode (CSK-TC-3M)</div>
+            <div class="med-prod-desc">Autoclavable stainless steel reusable electrode. 3-metre cable. Available 5–20cm lengths.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Disposable Electrode (TCD-x-3M-P)</div>
+            <div class="med-prod-desc">Sterile-packed single-use electrode. Eliminates sterilisation planning.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div class="med-accordion-wrap">
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Cannulae &amp; Accessories <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Unified Disposable Electrode/Cannula (CU-xxxxx-P)</div><div class="med-acc-row-desc">All-in-one design combining electrode, cannula, temperature sensor and injection tube.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">RCE Pulsed RF Electrode (RCE-Exxxxxx-P)</div><div class="med-acc-row-desc">For pulsed RF procedures.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Straight Sharp Cannula (CCxxxxx-P)</div><div class="med-acc-row-desc">Multiple gauges 22–18G. Shaft lengths 5–20cm. Tip sizes 2–15mm. Echogenic.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Curved Sharp Cannula (RFK-CxxxxS-P)</div><div class="med-acc-row-desc">Steerable curved cannula. Echogenic for enhanced procedural versatility.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">SideKick 2 Cannula (RFK-CxxxxxxS-ZK2-P)</div><div class="med-acc-row-desc">Creates more than double the lesion size vs standard cannula — same procedure time.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Ground Pad (DGP-PM2-xx)</div><div class="med-acc-row-desc">Single-use patient ground pad with cord.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Palisade Guideblock (PG-xxxx-P)</div><div class="med-acc-row-desc">For bipolar SI joint procedures — parallel 10mm electrode spacing.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Flextrode Introducer Kit (FLEX-K151320-5P)</div><div class="med-acc-row-desc">Multi-introducer kit for complex procedures.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Connection Cable (CB114-TC)</div><div class="med-acc-row-desc">For disposable electrode connection.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Storage &amp; Carrying Case (SC-2)</div><div class="med-acc-row-desc">For G4 generator transport and storage.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Sterilising Case (CSK-CASE)</div><div class="med-acc-row-desc">For CSK reusable electrode sterilisation.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Managing pain often requires more than one approach. If you're exploring comprehensive pain solutions for your department, these related solutions may also be relevant.</p>
+      <div class="med-also-grid">
+      <div class="med-also-card" onclick="showPage('med-spinal')">
+        <div>
+          <div class="med-also-title">Spinal Pain Interventions</div>
+          <div class="med-also-desc">Seawon catheters complement RF for epidural access in the same pain clinic setting.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-neuro')">
+        <div>
+          <div class="med-also-title">Neuromodulation</div>
+          <div class="med-also-desc">GammaCore offers a non-invasive complement for headache and neurological pain conditions.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Ready to Bring Precision Pain Management to Your Practice?</h2>
+    <p>Our clinical specialists can walk you through the full Boston Scientific RF system — procedure by procedure. Get in touch for a no-obligation consultation or product demonstration.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('RF Pain Management — Product Brochure')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
-<!-- ════════════════ MED SUB: SPINAL PAIN INTERVENTIONS -->
+<!-- ════════════════ MED SUB: SPINAL PAIN -->
 <div id="page-med-spinal" class="page">
   <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Orthopaedics &amp; Spine · Pain Management</div>
-      <h1>Spinal Pain Interventions</h1>
-      <p>Targeted epidural and neurolysis systems for chronic back pain and spinal conditions — precision tools for interventional pain specialists and spine surgeons.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Spinal Pain Interventions</div>
+      <h1>Minimally Invasive Solutions for Complex Spinal Conditions.</h1>
+      <p>Chronic back pain, spinal stenosis and post-surgical pain syndromes are among the most debilitating conditions in modern medicine — and surgery isn't always the answer. KSA provides a comprehensive range of steerable epidural catheters, neurolysis systems and regenerative tools that give clinicians precise, minimally invasive access to the spinal canal, with faster patient recovery and repeatable treatment options.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Advanced Systems for Spinal Pain Relief</h2>
-      <p>Chronic spinal pain affects a significant proportion of patients seen in pain clinics and orthopaedic departments across Southeast Asia. KSA's spinal pain intervention portfolio provides the tools interventionalists need to deliver targeted epidural steroid injections, selective nerve root blocks, and chemical neurolysis procedures with confidence.</p>
-      <p>Our product range is carefully curated to address the full continuum of spinal pain — from acute disc-related radiculopathy to complex chronic conditions — with systems designed for fluoroscopy and CT-guided use. Full training and case support are standard with every product we distribute.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Clinical Applications</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Epidural steroid injections</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Selective nerve root blocks</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Caudal epidural procedures</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Chemical neurolysis</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Lumbar &amp; cervical pain</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('Spinal Pain Interventions — Product Brochure')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Brochure →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Pain Management</span><span class="med-pill">Orthopaedics &amp; Spine</span><span class="med-pill">Rehabilitation</span><span class="med-pill">Regenerative Medicine</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">Comprehensive Spinal Pain Coverage</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">🎯</div><h3>Targeted Drug Delivery</h3><p>Epidural and nerve root access systems designed for precise, controlled delivery of therapeutic agents to the target anatomical site.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🦴</div><h3>Full Spinal Range</h3><p>Products covering cervical, thoracic, lumbar and caudal approaches — serving the complete spine from a single, trusted distributor.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📡</div><h3>Fluoroscopy &amp; CT Compatible</h3><p>Radiopaque needle systems designed for optimal visualisation under fluoroscopic and CT guidance for accurate placement confirmation.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⚙️</div><h3>Consistent Quality</h3><p>All products in our spinal range are sourced from manufacturers with ISO 13485 certification and relevant CE or FDA clearances.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🎓</div><h3>Cadaveric Training</h3><p>KSA organises regular cadaveric lab sessions for interventional pain fellows and consultants — building procedural confidence in a controlled environment.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔄</div><h3>Reliable Supply Chain</h3><p>Consistent inventory management across Singapore, Malaysia and Indonesia — minimising procedure cancellations due to consumable stockouts.</p></div>
+      <h2 class="sec-title">Why Spinal Pain Interventions?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>No Open Surgery Required</h3>
+          <p>Steerable catheter systems navigate the spinal canal with precision through minimally invasive access — no incision, no general anaesthesia, no long hospitalisation.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Targets the Exact Pain Source</h3>
+          <p>Steerable and inflatable epidural systems allow clinicians to reach and treat the specific pathology with targeted medication delivery.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Repeatable and Low Risk</h3>
+          <p>Unlike surgical intervention, these procedures can be repeated when needed without cumulative risk — suitable for long-term chronic pain management strategies.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Broad Indication Coverage</h3>
+          <p>From chronic back pain and spinal stenosis to herniated nucleus pulposus and post-laminectomy syndrome — one product family covers a wide range of spinal conditions.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Build a stronger spinal intervention service.</h2><p>Our team will help you select the right systems for your clinical environment.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our Spinal Pain Intervention Solutions</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply a complete range of Seawon Meditech spinal intervention systems — steerable neurolysis catheters, epidural balloon systems and platelet-rich plasma kits — all supported by our clinical team.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>Spinal Intervention Systems</h3>
+          <span class="med-principal-badge">Seawon Meditech</span>
+        </div>
+        <p class="med-principal-intro">Seawon Meditech's range of steerable epidural and neurolysis systems are designed for precision access through the spinal canal — minimally invasive, easy to handle, and repeatable when clinically needed.</p>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">St. Reed Plus — Steerable Neurolysis Catheter</div>
+            <div class="med-prod-desc">Steerable aromatic distal tip. Bidirectional control handle. Radiopaque shaft. For percutaneous epidural neuroplasty. Indicated for chronic back pain, spinal stenosis, post-laminectomy syndrome and herniated nucleus pulposus.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">Fora-B — Steerable Epidural Balloon Catheter</div>
+            <div class="med-prod-desc">Steerable and inflatable epidural catheter for immediate and long-term relief of lumbar spine chronic pain. Silicone and urethane balloon options available.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div class="med-accordion-wrap">
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Additional Systems &amp; Accessories <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">St. Reed Plus — Introducer/Needle/Stylet (SWVP-33R)</div><div class="med-acc-row-desc">Companion introducer system for St. Reed Plus catheter.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B — Accessory Set</div><div class="med-acc-row-desc">Needle/stylet + guide wire + port + syringe. Complete accessory set for Fora-B procedure.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B Plus (SWCB42)</div><div class="med-acc-row-desc">Extended length variant. 540mm length, 2.3mm OD.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B TF — Transforaminal Epidural Balloon Catheter</div><div class="med-acc-row-desc">Transforaminal approach for precise epidural access. Exact targeting through spinal canal for medication delivery to epidural space.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B TF — Accessory Set</div><div class="med-acc-row-desc">Needle + port + syringe. Complete accessory set for Fora-B TF procedure.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Dotomy (SW-TW-02)</div><div class="med-acc-row-desc">Spinal needle device. 320mm length, 2mm OD. Half covered and fully covered variants available.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">SW-PRP — Autologous Platelet Rich Plasma Kit</div><div class="med-acc-row-desc">Closed-system PRP preparation from 20ml blood sample. One-step process. Yields 5.5× baseline platelet concentration. Used with standard centrifuge.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Comprehensive spinal pain management often involves more than one approach. These related solutions are frequently used alongside spinal intervention systems in clinical practice.</p>
+      <div class="med-also-grid">
+      <div class="med-also-card" onclick="showPage('med-rfpain')">
+        <div>
+          <div class="med-also-title">RF Pain Management</div>
+          <div class="med-also-desc">Boston Scientific G4 complements spinal interventions for nerve and joint RF ablation in the same pain clinic setting.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-bone')">
+        <div>
+          <div class="med-also-title">Bone &amp; Spinal Augmentation</div>
+          <div class="med-also-desc">Heraeus bone cement addresses vertebral fracture stabilisation — often relevant in the same patient population.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Bringing Minimally Invasive Spinal Solutions to Your Practice?</h2>
+    <p>Our product specialists have hands-on experience supporting spinal intervention procedures across the region. Get in touch to discuss which system best fits your clinical setting — no obligation, just expertise.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Spinal Pain Interventions — Product Brochure')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
-<!-- ════════════════ MED SUB: RADIATION PROTECTION -->
+<!-- ════════════════ MED SUB: RADIATION SAFETY -->
 <div id="page-med-radiation" class="page">
   <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Radiation Safety · Interventional Radiology · Cath Lab</div>
-      <h1>Radiation Protection</h1>
-      <p>Comprehensive radiation protection apparel and accessories for interventional and radiology teams — keeping clinical staff safe in every procedure room.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Radiation Safety &amp; Protection</div>
+      <h1>Radiation Safety That Meets the Demands of Modern Interventional Practice.</h1>
+      <p>Interventional procedures, fluoroscopy, cardiac catheterisation and radiology expose clinical teams to radiation daily. Proper protection isn't optional — it's a clinical and regulatory imperative. KSA supplies a comprehensive range of lead-free radiation protection apparel, accessories and imaging solutions from Kiran, one of the world's leading radiation protection specialists, trusted by medical institutions across 160 countries.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Full-Spectrum Radiation Shielding for Clinical Teams</h2>
-      <p>Interventional radiologists, cardiologists and their teams are among the most radiation-exposed healthcare professionals in any hospital. KSA distributes a comprehensive range of radiation protection solutions — from lead aprons and thyroid collars to ceiling-mounted shields and procedural accessories — for every interventional environment.</p>
-      <p>Our radiation protection portfolio is selected on quality, ergonomics and regulatory compliance. Lightweight composite materials reduce staff fatigue during long procedures, while certified attenuation values ensure regulatory compliance across Singapore, Malaysia and Indonesia. We also provide fitting consultations and custom sizing for team orders.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Product Categories</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Lead &amp; lead-free aprons</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Thyroid collars &amp; shields</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Radiation protection eyewear</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Ceiling-mounted &amp; mobile shields</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Dosimetry accessories</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('Radiation Protection Solutions Catalogue')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Catalogue →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Radiation Safety</span><span class="med-pill">Interventional Radiology</span><span class="med-pill">Cardiology</span><span class="med-pill">Orthopaedics &amp; Spine</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">Protection That Fits Your Team</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">🛡️</div><h3>Certified Attenuation</h3><p>All products carry tested and certified lead-equivalence values — meeting IEC 61331 and local regulatory requirements across the region.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⚖️</div><h3>Lightweight Composites</h3><p>Advanced composite materials deliver equivalent protection at significantly lower weight — reducing musculoskeletal strain for staff in long fluoroscopic procedures.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📐</div><h3>Custom Sizing Available</h3><p>KSA works with procurement teams to coordinate fitting sessions and custom-order garments for large clinical teams — one order, one contact.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🏥</div><h3>Full Room Coverage</h3><p>From personal protective equipment to ceiling-suspended and mobile barrier shields — full procedural room shielding from one trusted source.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔍</div><h3>Annual Inspection Support</h3><p>KSA provides guidance and documentation support for the annual inspection and recertification of radiation protection garments.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🌏</div><h3>Regional Regulatory Compliance</h3><p>Products verified for use in Singapore, Malaysia and Indonesia — KSA will confirm applicable country clearances for your procurement team.</p></div>
+      <h2 class="sec-title">Why Radiation Protection Matters?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>Lead-Free &amp; Eco-Friendly</h3>
+          <p>Kiran's proprietary lead-free materials provide equivalent protection to traditional lead aprons — without the environmental disposal concerns or the weight burden on clinical staff.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Comprehensive Coverage</h3>
+          <p>From head to toe — aprons, thyroid collars, gloves, eyewear and shields. Every part of the body exposed during interventional procedures is covered by a purpose-designed solution.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Sterile &amp; Disposable Options</h3>
+          <p>Kiran's disposable radiation protection gloves are gamma-sterilised, single-use and ready for the most demanding sterile field requirements — ideal for cath lab and EP lab procedures.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Globally Proven</h3>
+          <p>Kiran products are trusted by medical institutions across 160 countries, manufactured to international quality standards with rigorous contamination control and regulatory compliance.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Protect every member of your clinical team.</h2><p>Get in touch to discuss your radiation protection requirements — from single items to full team outfitting.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our Radiation Protection Solutions</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply Kiran's full radiation protection portfolio — from personal protective apparel to imaging accessories and storage systems — for interventional, radiology and surgical teams across Singapore, Malaysia and Indonesia.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>Radiation Protection Portfolio</h3>
+          <span class="med-principal-badge">Kiran</span>
+        </div>
+        <p class="med-principal-intro">Kiran is a global leader in radiation protection and imaging accessories, manufacturing to international quality standards and exporting to over 160 countries. Their lead-free, ergonomically designed range protects clinical teams without compromising comfort or mobility during long procedures.</p>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">Radiation Protection Aprons</div>
+            <div class="med-prod-desc">Full range of lead-free aprons. Standard and custom sizes. Lightweight flexible material for extended procedure comfort.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">Skirt &amp; Vest Sets</div>
+            <div class="med-prod-desc">Two-piece apron system distributing weight across hips and shoulders — reduces back strain during long cases.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Thyroid Collar</div>
+            <div class="med-prod-desc">Lead-free thyroid protection. Worn with apron for comprehensive coverage.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div class="med-accordion-wrap">
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Shields, Eyewear &amp; Accessories <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Radiation Protection Shields &amp; Drapes</div><div class="med-acc-row-desc">Sterile and non-sterile barrier shields. Table-mounted and patient-mounted options. Blocks scattered radiation in diagnostic and interventional procedures.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Gloves — HiGrip</div><div class="med-acc-row-desc">Sterile, single-use, gamma-sterilised. Flexible textured material for grip and tactile sensitivity. For hands in active X-ray beam field.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Gloves — Max</div><div class="med-acc-row-desc">Maximum protection variant. Same sterile disposable format. For high-scatter environments.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Radiation Protection Eyewear</div><div class="med-acc-row-desc">Lead-equivalent lenses protecting against scattered radiation exposure during fluoroscopic procedures.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">RadShield Storage System</div><div class="med-acc-row-desc">Purpose-designed storage for radiation protection apparel. Maintains shape, extends garment life.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Imaging Accessories <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">X-Ray Cassettes &amp; Screens</div><div class="med-acc-row-desc">Image enhancement accessories for conventional X-ray workflows.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Digital Plates</div><div class="med-acc-row-desc">For CR/DR imaging workflows.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Scatter Grids</div><div class="med-acc-row-desc">Reduces scatter radiation in X-ray imaging for improved image quality.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Ultrasound Gel</div><div class="med-acc-row-desc">Medical-grade ultrasound coupling gel for diagnostic and interventional imaging.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Surgical C-Arm Accessories</div><div class="med-acc-row-desc">Sterile drapes and accessories for C-arm use in surgical and interventional settings.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Radiation protection is relevant wherever image-guided procedures take place. If your team performs interventional procedures, these related solutions are frequently used alongside radiation protection equipment.</p>
+      <div class="med-also-grid three">
+      <div class="med-also-card" onclick="showPage('med-thermal')">
+        <div>
+          <div class="med-also-title">Thermal Ablation</div>
+          <div class="med-also-desc">Ablation procedures performed under image guidance — radiation protection relevant to the same interventional team.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-rfpain')">
+        <div>
+          <div class="med-also-title">RF Pain Management</div>
+          <div class="med-also-desc">Fluoroscopy-guided RF procedures expose pain clinic teams to scattered radiation daily.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-spinal')">
+        <div>
+          <div class="med-also-title">Spinal Pain Interventions</div>
+          <div class="med-also-desc">C-arm guided spinal procedures require full team radiation protection.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Protecting Your Team Starts With the Right Equipment.</h2>
+    <p>Our team can help you assess your department's radiation protection requirements and recommend the right Kiran solution for your clinical setting. Get in touch for a consultation or product demonstration.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Radiation Protection Solutions Catalogue')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
 <!-- ════════════════ MED SUB: NEUROMODULATION -->
 <div id="page-med-neuro" class="page">
-  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1400&q=85') center/cover no-repeat; background-position:center top">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay" style="background:linear-gradient(155deg,rgba(20,10,60,0.92) 0%,rgba(20,10,60,0.60) 100%)"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Neurology · Headache Medicine</div>
-      <h1>Neuromodulation</h1>
-      <p>Non-invasive vagus nerve stimulation for cluster headache and migraine management — a drug-free, patient-held device with strong clinical evidence.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Neuromodulation Therapy</div>
+      <h1>Relief From Cluster Headaches. No Surgery. No Drugs.</h1>
+      <p>Cluster headaches and migraines are among the most debilitating neurological conditions your patients face — and pharmaceutical options don't work for everyone. GammaCore Sapphire offers clinicians a clinically validated, non-invasive vagus nerve stimulation device that patients can self-administer, providing both preventive and acute treatment without surgery, implants or systemic side effects. KSA brings GammaCore to medical institutions and neurology practitioners across Singapore, Malaysia and Indonesia.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Non-Pharmacological Headache Relief Through Vagus Nerve Stimulation</h2>
-      <p>KSA distributes GammaCore — the world's only non-invasive vagus nerve stimulator (nVNS) cleared for the acute and preventive treatment of cluster headache and migraine. Handheld, drug-free and patient-operated, GammaCore offers neurologists a new treatment dimension for patients who cannot tolerate or have failed conventional pharmacotherapy.</p>
-      <p>GammaCore has been studied in multiple randomised controlled trials, holds clearances in both the US (FDA) and Europe (CE), and has been adopted by leading headache centres in the Asia-Pacific region. KSA provides clinical education, patient onboarding support and physician training across Singapore, Malaysia and Indonesia.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Clinical Indications</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Episodic cluster headache (acute)</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Chronic cluster headache (preventive)</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Migraine — acute treatment</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Migraine — preventive therapy</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('Non-Invasive VNS for Headache — Whitepaper')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Clinical Whitepaper →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Neurology &amp; Headache</span><span class="med-pill">Pain Management</span><span class="med-pill">Rehabilitation</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">A New Dimension in Headache Treatment</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">💊</div><h3>Drug-Free Option</h3><p>GammaCore offers an effective treatment pathway for patients who prefer non-pharmacological management or are drug-intolerant.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🤲</div><h3>Patient-Held &amp; Simple</h3><p>Designed for patient self-administration — compact, rechargeable, and easy to use at the onset of a headache attack, wherever the patient is.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔬</div><h3>RCT-Backed Evidence</h3><p>Clinical efficacy demonstrated in the ACT1, ACT2, PREVA and PREMIUM randomised controlled trials — robust evidence for neurologist confidence.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">✅</div><h3>FDA &amp; CE Cleared</h3><p>Holds US FDA clearance and CE marking across multiple headache indications — strong regulatory standing for regional adoption.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🎓</div><h3>Physician Training</h3><p>KSA provides structured training for prescribing neurologists and clinical educators on patient selection, device initiation and follow-up protocols.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🏥</div><h3>Hospital &amp; Clinic Ready</h3><p>Suitable for both headache clinic and acute neurology settings — flexible procurement for outpatient trial programmes and ongoing patient prescriptions.</p></div>
+      <h2 class="sec-title">Why GammaCore Neuromodulation?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>No Surgery. No Implant.</h3>
+          <p>GammaCore Sapphire is fully non-invasive — applied externally to the neck for 2 minutes per stimulation. No surgical procedure, no implanted hardware, no anaesthesia required.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Patient Self-Administered</h3>
+          <p>Designed for patients to use independently at home or on the go — giving them control over their treatment at the moment they need it most, without waiting for a clinical appointment.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Dual Action — Prevention &amp; Acute Relief</h3>
+          <p>GammaCore is indicated for both the preventive treatment of cluster headaches and the acute treatment of migraines — one device addressing two of the most common debilitating headache conditions.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Clinically Validated</h3>
+          <p>Backed by published clinical evidence and regulatory clearance, GammaCore Sapphire is a proven neuromodulation therapy with a growing body of real-world data supporting its use in headache management.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Offer your headache patients a new option.</h2><p>Talk to our neurology team about introducing GammaCore to your practice.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our Neuromodulation Solution</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply the GammaCore Sapphire non-invasive vagus nerve stimulation system — the only device of its kind cleared for both cluster headache prevention and migraine acute treatment — fully supported by our clinical team.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>GammaCore Sapphire — Non-Invasive Vagus Nerve Stimulation</h3>
+          <span class="med-principal-badge">electroCore / GammaCore</span>
+        </div>
+        <p class="med-principal-intro">GammaCore Sapphire is a handheld, rechargeable non-invasive vagus nerve stimulation device. Patients apply the device to the side of the neck and self-administer a 2-minute stimulation — at home, at work, or wherever symptoms occur. Simple, discreet and clinically validated.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+          <span style="background:#e8edf5;border:1.5px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12.5px;font-weight:700;color:var(--dark-navy);font-family:'Montserrat',sans-serif">✓ Preventive treatment of cluster headaches</span>
+          <span style="background:#e8edf5;border:1.5px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12.5px;font-weight:700;color:var(--dark-navy);font-family:'Montserrat',sans-serif">✓ Acute treatment of migraines</span>
+        </div>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-badge eligible">HSA/FSA Eligible</div>
+            <div class="med-prod-name">GammaCore Sapphire Device</div>
+            <div class="med-prod-desc">Handheld rechargeable nVNS device. Applied externally to the neck. 2-minute stimulation protocol. Patient self-administered.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Conductive Gel</div>
+            <div class="med-prod-desc">Highly conductive multi-purpose electrolyte gel. Required for each stimulation session to ensure optimal skin contact and energy delivery.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">Charging Unit</div>
+            <div class="med-prod-desc">Proprietary charging unit for GammaCore Sapphire device.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Neuromodulation is one piece of a broader pain and neurology management toolkit. If your department manages chronic pain or neurological conditions, these related solutions may also be relevant.</p>
+      <div class="med-also-grid">
+      <div class="med-also-card" onclick="showPage('med-rfpain')">
+        <div>
+          <div class="med-also-title">RF Pain Management</div>
+          <div class="med-also-desc">Both address chronic pain conditions — RF pain management complements neuromodulation for broader pain clinic offerings.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-spinal')">
+        <div>
+          <div class="med-also-title">Spinal Pain Interventions</div>
+          <div class="med-also-desc">Neurological and spinal pain conditions frequently overlap in the same patient population.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Bringing GammaCore to Your Neurology or Pain Practice?</h2>
+    <p>Our team can support you with product demonstrations, clinical evidence and patient education materials. Get in touch to find out how GammaCore Sapphire fits into your headache management pathway.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Non-Invasive VNS for Headache — Whitepaper')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
-<!-- ════════════════ MED SUB: NEAR-INFRARED PHOTOTHERAPY -->
+<!-- ════════════════ MED SUB: NIR PHOTOTHERAPY -->
 <div id="page-med-photo" class="page">
   <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay" style="background:linear-gradient(155deg,rgba(4,40,60,0.90) 0%,rgba(4,40,60,0.60) 100%)"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Rehabilitation · Dermatology · Pain Management</div>
-      <h1>Near-Infrared Phototherapy</h1>
-      <p>High-power near-infrared therapy for pain, rehabilitation and dermatological conditions — non-invasive, evidence-based light energy delivered with precision.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Near-Infrared Phototherapy</div>
+      <h1>Deep Tissue Therapy. Without Drugs. Without Downtime.</h1>
+      <p>Near-infrared phototherapy delivers high-power light energy deep into tissue — stimulating circulation, reducing inflammation and accelerating recovery across a broad range of clinical conditions. The Tokyo Iken Superlizer Mini PRO is a compact, lightweight infrared therapy device trusted by pain clinics, rehabilitation centres, orthopaedic departments, dermatology practices and veterinary clinics across the region. KSA brings this proven Japanese technology to medical institutions and practitioners across Singapore, Malaysia and Indonesia.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Light-Based Therapy with Clinical Depth</h2>
-      <p>Near-infrared (NIR) phototherapy delivers therapeutic wavelengths of light deep into biological tissue — stimulating cellular energy production, reducing inflammation, and accelerating tissue repair. Unlike low-level laser therapy (LLLT), the high-power NIR systems distributed by KSA deliver significantly greater photon energy to target tissue, enabling faster treatment times and deeper penetration.</p>
-      <p>Applicable across pain management, musculoskeletal rehabilitation and dermatological conditions, KSA's NIR phototherapy systems are used in physiotherapy clinics, pain centres, sports medicine facilities and dermatology practices across the region. Our clinical team provides full training, protocol development and ongoing support.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Clinical Applications</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Musculoskeletal pain &amp; injury</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Post-surgical rehabilitation</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Wound healing &amp; tissue repair</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Dermatological conditions</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Sports medicine &amp; recovery</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('Near-Infrared Phototherapy — Product Brochure')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Brochure →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Rehabilitation</span>
+      <span class="med-pill">Pain Management</span>
+      <span class="med-pill">Orthopaedics &amp; Spine</span>
+      <span class="med-pill">Dermatology</span>
+      <span class="med-pill vet">🐾 Veterinary</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">High-Power NIR for Faster, Deeper Results</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">💡</div><h3>Deep Tissue Penetration</h3><p>High-power NIR wavelengths penetrate significantly deeper than conventional low-level laser — reaching target tissue in joint, muscle and spinal structures.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⚡</div><h3>Faster Treatment Times</h3><p>Higher irradiance delivers the therapeutic dose faster — typical treatment sessions of 3–10 minutes vs 20–40 minutes for conventional LLLT.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🌿</div><h3>Non-Invasive &amp; Drug-Free</h3><p>A non-pharmacological option for patients managing chronic pain or post-surgical recovery — no needles, no downtime, no systemic side effects.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔬</div><h3>Cellular Biostimulation</h3><p>NIR photons stimulate mitochondrial ATP production and nitric oxide release — supporting cellular repair, inflammation reduction and tissue regeneration.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🏋️</div><h3>Broad Clinical Versatility</h3><p>Single device addressing pain, rehabilitation and dermatology — enabling multi-department deployment and maximising capital utilisation.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🎓</div><h3>Protocol Support</h3><p>KSA provides evidence-based treatment protocol guides and training for all clinical disciplines — ensuring safe, effective and consistent delivery.</p></div>
+      <h2 class="sec-title">Why Near-Infrared Phototherapy?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>Deep Tissue Penetration</h3>
+          <p>The Superlizer Mini PRO emits high-power near-infrared light at 0.6–1.6μm wavelength — a range proven to penetrate deeply into human tissue, delivering therapeutic energy where surface treatments cannot reach.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Broad Clinical Applications</h3>
+          <p>From arthritis and tendonitis to facial paralysis, pressure ulcers and autonomic nerve conditions — near-infrared phototherapy addresses a wide spectrum of conditions across multiple clinical departments.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Drug-Free &amp; Non-Invasive</h3>
+          <p>No needles, no medication, no recovery time. Patients receive therapy in minutes and return to normal activity immediately — making it ideal for outpatient and rehabilitation settings.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Compact &amp; Easy to Use</h3>
+          <p>The Superlizer Mini PRO is lightweight, handheld and simple to operate — with two selectable irradiation modes and three interchangeable probe units for targeted or wide-area treatment.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Bring high-power phototherapy to your clinic.</h2><p>Our team will assess your use case and recommend the right system configuration.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our Near-Infrared Phototherapy Solution</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply the complete Tokyo Iken Superlizer Mini PRO system — device and all probe attachments — backed by our clinical team for training, setup and ongoing support.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>Superlizer Mini PRO — Infrared Therapy System</h3>
+          <span class="med-principal-badge">Tokyo Iken</span>
+        </div>
+        <p class="med-principal-intro">The Superlizer Mini PRO is a compact, handheld near-infrared therapy device developed by Tokyo Iken, Japan. It delivers 2,500mW maximum output power through a specialised optical filter — providing deep, comfortable therapeutic warmth. Simple two-dial operation, two irradiation modes, and three interchangeable probe units make it versatile across departments and veterinary settings.</p>
+        <div class="med-prod-grid">
+          <div class="med-prod-card featured">
+            <div class="med-prod-name">Superlizer Mini PRO Device</div>
+            <div class="med-prod-desc">Compact handheld infrared therapy unit. Output: 2.5W. Wavelength: 0.6–1.6μm. Two modes: continuous and cycle. Weight: 1.8kg. AC adaptor included. For human and animal use.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">B Probe Unit</div>
+            <div class="med-prod-desc">Deep point irradiation. Output: 1.9W. Focus area: 10mm. For targeted deep tissue therapy.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card">
+            <div class="med-prod-name">C Probe Unit</div>
+            <div class="med-prod-desc">Wide area irradiation. Output: 2.5W. Focus area: 80mm. For broad surface treatment.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div style="margin-top:16px">
+          <div class="med-prod-card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+            <div>
+              <div class="med-prod-badge optional">Optional Add-On</div>
+              <div class="med-prod-name">SG Probe Unit</div>
+              <div class="med-prod-desc">Narrow area irradiation. Output: 1.3W. Focus area: 7mm. For confined areas such as the neck region.</div>
+            </div>
+            <button class="med-prod-enquire" onclick="showPage('contact')" style="width:auto;white-space:nowrap">Enquire →</button>
+          </div>
+        </div>
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border)">
+          <div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px">Clinical Indications</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Pain &amp; Inflammation</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Arthritis &amp; Rheumatism</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Skin Conditions</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Oral Surgery</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Sports Medicine</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Rehabilitation</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Neurology</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Orthopaedic Surgery</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Dermatology</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Gynaecology</span><span style="background:#f0f4fa;border:1px solid var(--border);border-radius:100px;padding:5px 12px;font-size:12px;color:var(--dark-navy);font-family:Montserrat,sans-serif;font-weight:600">Veterinary Applications</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Near-infrared phototherapy is frequently used alongside interventional procedures as part of a broader pain management and rehabilitation programme. These related solutions are often relevant to the same clinical team.</p>
+      <div class="med-also-grid three">
+      <div class="med-also-card" onclick="showPage('med-rfpain')">
+        <div>
+          <div class="med-also-title">RF Pain Management</div>
+          <div class="med-also-desc">Phototherapy frequently used alongside RF in pain clinic settings as a complementary modality.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-spinal')">
+        <div>
+          <div class="med-also-title">Spinal Pain Interventions</div>
+          <div class="med-also-desc">Rehabilitation following spinal procedures frequently incorporates phototherapy for recovery support.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-bone')">
+        <div>
+          <div class="med-also-title">Bone &amp; Spinal Augmentation</div>
+          <div class="med-also-desc">Post-augmentation rehabilitation may incorporate near-infrared therapy for tissue recovery.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Bringing Near-Infrared Therapy to Your Department?</h2>
+    <p>Our team can arrange a product demonstration of the Superlizer Mini PRO for your clinic or department. Get in touch to find out how near-infrared phototherapy fits into your rehabilitation or pain management programme.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Near-Infrared Phototherapy — Product Brochure')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
 <!-- ════════════════ MED SUB: BONE & SPINAL AUGMENTATION -->
 <div id="page-med-bone" class="page">
-  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1400&q=85') center/cover no-repeat">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1516841273335-e39b37888115?w=1400&q=85') center/cover no-repeat">
     <div class="med-sub-hero-overlay"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Orthopaedics &amp; Spine · Spine Surgery</div>
-      <h1>Bone &amp; Spinal Augmentation</h1>
-      <p>Radiopaque bone cement systems for vertebral body augmentation and spinal surgery — trusted materials for vertebroplasty, kyphoplasty and spinal stabilisation procedures.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Bone &amp; Spinal Augmentation</div>
+      <h1>Vertebral Augmentation Solutions for Spinal Fracture and Osteoporotic Conditions.</h1>
+      <p>Vertebral compression fractures — particularly in osteoporotic patients — require fast, reliable stabilisation to restore function and relieve pain. Heraeus OSTEOPAL bone cement systems have been trusted in spinal surgery for over 15 years, offering clinicians a proven, radiopaque cement with outstanding viscosity control and imaging visibility. KSA brings Heraeus spinal augmentation solutions to orthopaedic and spinal surgery teams across Singapore, Malaysia and Indonesia.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Solution Overview</div>
-      <h2>Bone Cement Systems for Spinal Stabilisation</h2>
-      <p>Vertebral compression fractures — primarily caused by osteoporosis — are a growing clinical challenge across the ageing populations of Singapore, Malaysia and Indonesia. KSA distributes radiopaque polymethylmethacrylate (PMMA) bone cement systems purpose-engineered for vertebroplasty and balloon kyphoplasty procedures, offering spine surgeons and interventional radiologists the consistency and reliability needed in the operating room.</p>
-      <p>Our bone cement products are selected for their predictable viscosity profiles, controlled working time, and strong radiopacity for real-time fluoroscopic monitoring. Technical support and procedure training are provided by KSA's experienced clinical team.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Request a Consultation →</button>
-    </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Procedure Applications</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Vertebroplasty</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Balloon kyphoplasty</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Vertebral body augmentation</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Pathological fracture stabilisation</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Pedicle screw augmentation</div>
-        <div class="med-sub-sidebar-item" onclick="showGatedForm('Bone & Spinal Augmentation — Product Brochure')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">📄 Download Brochure →</div>
-      </div>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">Orthopaedics &amp; Spine</span><span class="med-pill">Pain Management</span><span class="med-pill">Rehabilitation</span>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
+  <div class="med-adv-section section">
+    <div class="section-inner">
       <div class="sec-label">Key Advantages</div>
-      <h2 class="sec-title">Reliable Materials for Demanding Procedures</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">📡</div><h3>High Radiopacity</h3><p>Excellent fluoroscopic visibility enables precise real-time monitoring of cement flow and distribution during augmentation procedures.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⏱️</div><h3>Controlled Working Time</h3><p>Predictable viscosity profiles and extended working windows give surgeons full control throughout the injection phase — reducing cement extravasation risk.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">💪</div><h3>Strong Mechanical Properties</h3><p>Compressive strength and elastic modulus matched to vertebral bone biomechanics — supporting stable, long-term augmentation outcomes.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🌡️</div><h3>Low Exotherm</h3><p>Optimised formulations minimise heat generation during polymerisation — reducing thermal injury risk to adjacent neural structures.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🩻</div><h3>Vertebroplasty &amp; Kyphoplasty Ready</h3><p>Systems configured and validated for use in both vertebroplasty and balloon kyphoplasty procedures — one product family, full procedural coverage.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔄</div><h3>Consistent Supply</h3><p>Reliable inventory management with regional stocking across Southeast Asia — ensuring materials availability when your procedure schedule demands it.</p></div>
+      <h2 class="sec-title">Why Heraeus Bone Cement?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>Proven Over Decades</h3>
+          <p>OSTEOPAL bone cement is built on the same raw material foundation as PALACOS — one of the most clinically studied bone cements in the world, with a track record spanning over 60 years of orthopaedic and spinal surgery.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Outstanding X-Ray Visibility</h3>
+          <p>Zirconium dioxide is incorporated as a radiopaque contrast agent — giving surgeons precise real-time visualisation of cement placement and distribution under fluoroscopy, reducing the risk of extravasation.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Optimised Viscosity Control</h3>
+          <p>OSTEOPAL V offers a well-characterised low viscosity for easy application, while OSTEOPAL Plus extends the working time — giving surgeons flexibility to augment multiple vertebral levels in a single session.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>High Fatigue Strength</h3>
+          <p>Engineered to withstand the dynamic loading demands of the spine — OSTEOPAL cement maintains structural integrity under repeated mechanical stress, supporting long-term vertebral stability.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Reliable cement systems for every spinal augmentation.</h2><p>Talk to our team about product evaluation, clinical support and supply arrangements.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Specialist →</button></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Our Bone &amp; Spinal Augmentation Solutions</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply the Heraeus OSTEOPAL bone cement range — both standard and extended working time formulations — for vertebroplasty and kyphoplasty procedures, fully supported by our clinical team.</p>
+      <div class="med-principal-block">
+        <div class="med-principal-head">
+          <h3>OSTEOPAL Bone Cement — Spinal Augmentation System</h3>
+          <span class="med-principal-badge">Heraeus</span>
+        </div>
+        <p class="med-principal-intro">Heraeus Medical is a global leader in bone cement technology with over 60 years of experience. The OSTEOPAL range brings that heritage to vertebral body augmentation — offering two formulations that address the full range of spinal augmentation needs, from single-level procedures to complex multi-level cases.</p>
+        <div class="med-prod-grid two-col">
+          <div class="med-prod-card featured">
+            <div class="med-prod-badge classic">Classic</div>
+            <div class="med-prod-name">OSTEOPAL V <span style="font-weight:400;font-size:11px;color:var(--gray)">REF: 66017789</span></div>
+            <div class="med-prod-desc">Classic radiopaque bone cement for vertebral body filling and stabilisation. Low viscosity for easy application. Zirconium dioxide for X-ray visibility. High fatigue strength against dynamic loading. Pack: 1×20.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+          <div class="med-prod-card featured">
+            <div class="med-prod-badge extended">Extended Working Time</div>
+            <div class="med-prod-name">OSTEOPAL Plus <span style="font-weight:400;font-size:11px;color:var(--gray)">REF: 66045747</span></div>
+            <div class="med-prod-desc">Extended working time variant of OSTEOPAL V. Same outstanding radiopacity and viscosity — with a prolonged application phase allowing a single mixture across multiple vertebral bodies. Pack: 1×20.</div>
+            <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+          </div>
+        </div>
+        <div class="med-working-bar">
+          <h4>Working Time Comparison — OSTEOPAL V vs OSTEOPAL Plus</h4>
+          <div class="med-bar-row">
+            <div class="med-bar-label">OSTEOPAL V (Classic)</div>
+            <div class="med-bar-track">
+              <div class="med-bar-seg mix" style="width:18%"></div>
+              <div class="med-bar-seg wait" style="width:12%"></div>
+              <div class="med-bar-seg apply" style="width:35%"></div>
+              <div class="med-bar-seg set" style="width:35%"></div>
+            </div>
+          </div>
+          <div class="med-bar-row">
+            <div class="med-bar-label">OSTEOPAL Plus (Extended)</div>
+            <div class="med-bar-track">
+              <div class="med-bar-seg mix" style="width:18%"></div>
+              <div class="med-bar-seg wait" style="width:10%"></div>
+              <div class="med-bar-seg apply" style="width:50%"></div>
+              <div class="med-bar-seg set" style="width:22%"></div>
+            </div>
+          </div>
+          <div class="med-bar-legend">
+            <div class="med-bar-leg-item"><div class="med-bar-leg-dot" style="background:#1a4bbc"></div>Mixing</div>
+            <div class="med-bar-leg-item"><div class="med-bar-leg-dot" style="background:#6b9ce8"></div>Waiting</div>
+            <div class="med-bar-leg-item"><div class="med-bar-leg-dot" style="background:#f5c842"></div>Application</div>
+            <div class="med-bar-leg-item"><div class="med-bar-leg-dot" style="background:#e0e6ef"></div>Setting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Also Relevant To</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Related Solutions</h2>
+      <p class="med-also-intro">Vertebral augmentation is often one part of a broader spinal care pathway. These related solutions are frequently relevant to the same orthopaedic and spinal surgery teams.</p>
+      <div class="med-also-grid three">
+      <div class="med-also-card" onclick="showPage('med-spinal')">
+        <div>
+          <div class="med-also-title">Spinal Pain Interventions</div>
+          <div class="med-also-desc">Epidural and neurolysis systems frequently used in the same patient population — pre or post vertebral augmentation.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-rfpain')">
+        <div>
+          <div class="med-also-title">RF Pain Management</div>
+          <div class="med-also-desc">Chronic spinal pain management often accompanies vertebral augmentation in osteoporotic patients.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      <div class="med-also-card" onclick="showPage('med-photo')">
+        <div>
+          <div class="med-also-title">Near-Infrared Phototherapy</div>
+          <div class="med-also-desc">Post-surgical rehabilitation — phototherapy frequently used in recovery following spinal augmentation.</div>
+        </div>
+        <span class="med-also-arrow">›</span>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Bringing Heraeus Bone Cement to Your Spinal Surgery Programme?</h2>
+    <p>Our team can support you with clinical evidence, product samples and procedure guidance for OSTEOPAL vertebral augmentation. Get in touch to discuss which formulation best fits your surgical needs.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Bone &amp; Spinal Augmentation — Product Brochure')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
 
-<!-- ════════════════ MED SUB: PARTS, CONSUMABLES & SUPPORT -->
+<!-- ════════════════ MED SUB: PARTS & SUPPORT -->
 <div id="page-med-parts" class="page">
-  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1516841273335-e39b37888115?w=1400&q=85') center/cover no-repeat">
-    <div class="med-sub-hero-overlay" style="background:linear-gradient(155deg,rgba(4,27,74,0.92) 0%,rgba(4,27,74,0.65) 100%)"></div>
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=85') center/cover no-repeat">
+    <div class="med-sub-hero-overlay"></div>
     <div class="med-sub-hero-content">
-      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical</div>
-      <div class="med-sub-category">Service &amp; Support · All Product Lines</div>
-      <h1>Parts, Consumables &amp; Support</h1>
-      <p>Genuine replacement parts, procedure consumables and reorder support across all product lines — keeping your equipment performing and your procedures uninterrupted.</p>
+      <div class="breadcrumb" onclick="showPage('medical')">← Healthcare &amp; Medical Solutions</div>
+      <div class="med-sub-category">Parts, Consumables &amp; Support</div>
+      <h1>Genuine Parts. Reliable Supply. Ongoing Support.</h1>
+      <p>Uninterrupted clinical workflow depends on more than great equipment — it depends on reliable access to genuine parts, procedure consumables and responsive support when something goes wrong. KSA maintains stock of consumables and replacement parts across all the product lines we carry, so your team is never left waiting. From electrodes and probes to catheters and bone cement — we keep your procedures running.</p>
       <p class="med-sub-disclaimer">Product availability is subject to local regulatory requirements. Contact us to confirm availability in your region.</p>
     </div>
   </div>
-  <div class="med-sub-intro-grid">
-    <div>
-      <div class="sec-label">Service Overview</div>
-      <h2>Everything You Need, After the First Purchase</h2>
-      <p>The relationship with KSA doesn't end at the point of sale. We maintain comprehensive inventory of genuine replacement parts and procedure consumables for every product line we distribute — managed across our Singapore, Malaysia and Indonesia operations to ensure consistent availability wherever you practice.</p>
-      <p>Our parts and consumables team works closely with your procurement and biomedical engineering departments to set up reorder schedules, manage stock levels and ensure that the right consumable is available when your procedure schedule demands it. We also coordinate planned maintenance, emergency service calls and calibration for distributed equipment through our certified engineering team.</p>
-      <button class="btn-primary" onclick="showPage('contact')" style="margin-top:8px">Contact Our Support Team →</button>
+  <div class="med-pill-strip">
+    <div class="med-pill-strip-inner">
+      <span class="med-pill-label">This solution supports:</span>
+      <span class="med-pill">All Specialties</span><span class="med-pill">Interventional</span><span class="med-pill">Surgical</span><span class="med-pill">Rehabilitation</span>
     </div>
-    <div>
-      <div class="med-sub-sidebar">
-        <h4>Support Services</h4>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Genuine OEM spare parts</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Procedure consumables (all lines)</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Planned preventive maintenance</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Emergency breakdown response</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Equipment calibration</div>
-        <div class="med-sub-sidebar-item"><span class="med-sub-sidebar-dot"></span>Reorder management programmes</div>
-        <div class="med-sub-sidebar-item" onclick="showPage('contact')" style="color:var(--kblue);font-weight:700;border-top:1.5px solid var(--border);margin-top:8px;padding-top:14px">💬 Contact Support Team →</div>
+  </div>
+  <div class="med-adv-section section">
+    <div class="section-inner">
+      <div class="sec-label">Key Advantages</div>
+      <h2 class="sec-title">Why Source Consumables Through KSA?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🎯</div>
+          <h3>Genuine Parts Guaranteed</h3>
+          <p>Every consumable and replacement part we supply is sourced directly from our principals — ensuring full compatibility, clinical safety and warranty compliance with your existing equipment.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">⚡</div>
+          <h3>Regional Stock Availability</h3>
+          <p>We maintain local inventory across Singapore, Malaysia and Indonesia — so when you need an urgent reorder, you're not waiting on international shipping timelines.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🏃</div>
+          <h3>Single Point of Contact</h3>
+          <p>One relationship, multiple product lines. Whether you need CRF electrodes, Seawon catheters, Kiran gloves or Heraeus bone cement — your KSA account manager handles it all.</p>
+        </div>
+        <div class="med-adv-card">
+          <div class="med-adv-icon">🔄</div>
+          <h3>Urgent Parts Support</h3>
+          <p>Clinical emergencies don't follow office hours. Our team provides responsive on-call support for urgent parts requests — keeping your procedures and your patients on schedule.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="med-features-section">
-    <div class="med-features-inner">
-      <div class="sec-label">What We Cover</div>
-      <h2 class="sec-title">Comprehensive After-Sales Support</h2>
-      <div class="med-features-grid">
-        <div class="med-feature-card"><div class="med-feature-icon">🔧</div><h3>Genuine Parts Only</h3><p>All replacement parts sourced directly from our principals — ensuring compatibility, performance and warranty compliance across every product we distribute.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📦</div><h3>Regional Inventory</h3><p>Stocked warehouses in Singapore, Malaysia and Indonesia enable fast local fulfilment — minimising lead times for procedure-critical consumables.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">⚙️</div><h3>Certified Engineering Team</h3><p>Factory-trained field service engineers handling installation, commissioning, calibration and repair for all distributed medical equipment.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">🔔</div><h3>On-Call Emergency Response</h3><p>Priority support for urgent breakdowns — because when your equipment is down, procedures stop. We respond fast.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📋</div><h3>Reorder Programmes</h3><p>Scheduled consumable reorder programmes tailored to your procedure volume — eliminating last-minute orders and supply gaps.</p></div>
-        <div class="med-feature-card"><div class="med-feature-icon">📑</div><h3>Service Documentation</h3><p>Full service records, calibration certificates and maintenance logs provided — supporting your biomedical engineering team and regulatory compliance requirements.</p></div>
+  <div class="med-range-section section">
+    <div class="section-inner">
+      <div class="sec-label">Solutions Range</div>
+      <h2 class="sec-title">Consumables &amp; Parts Across All Product Lines</h2>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:700px">We supply genuine procedure consumables, replacement parts and accessories across every product line we carry — all available through your KSA account manager.</p>
+      <div class="med-principal-block">
+        <div class="med-accordion-wrap" style="margin-top:0;border-top:none;padding-top:0">
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Boston Scientific — RF Pain Management Consumables <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Electrodes (TCD-x-3M-P)</div><div class="med-acc-row-desc">Single-use sterile electrodes for G4 RF Generator.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Unified Disposable Electrode/Cannula (CU-xxxxx-P)</div><div class="med-acc-row-desc">All-in-one disposable for pain procedures.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Straight Sharp Cannulae (CCxxxxx-P)</div><div class="med-acc-row-desc">Multiple gauges and lengths.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Curved Sharp Cannulae (RFK-CxxxxS-P)</div><div class="med-acc-row-desc">Steerable curved cannulae.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">SideKick 2 Cannula (RFK-CxxxxxxS-ZK2-P)</div><div class="med-acc-row-desc">Extended lesion cannula.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Ground Pad (DGP-PM2-xx)</div><div class="med-acc-row-desc">Single-use patient ground pad with cord.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Palisade Guideblock (PG-xxxx-P)</div><div class="med-acc-row-desc">For SI joint bipolar procedures.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Flextrode Introducer Kit (FLEX-K151320-5P)</div><div class="med-acc-row-desc">Multi-introducer kit.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Connection Cable (CB114-TC)</div><div class="med-acc-row-desc">For disposable electrode connection.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Cambridge Interventional — RFA Consumables <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Cooled Electrodes — Thyroid (CRF-UxxxxS/L)</div><div class="med-acc-row-desc">18G thyroid-specific cooled electrodes. Multiple tip sizes 5–20mm.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Cooled Electrodes — Myoma (CRF-UxxxxS/L)</div><div class="med-acc-row-desc">17G uterine fibroid electrodes. 1–3cm tips, 27cm shaft.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Cooled Electrodes — General (CRF-UxxxxS/L)</div><div class="med-acc-row-desc">20–15G general ablation electrodes. 0.5–5cm tips, 10–25cm shafts.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Two-Piece Cannula (CRF-Cxxxx)</div><div class="med-acc-row-desc">15G introducer with removable stylet.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Two-Piece Electrodes (CRF-Ex)</div><div class="med-acc-row-desc">For use with two-piece cannula system.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Tubing (CRF-TUBE)</div><div class="med-acc-row-desc">Cooling circuit tubing.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Ground Pad (CRF-GP)</div><div class="med-acc-row-desc">Disposable patient ground pad.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Hygea — Microwave Ablation Consumables <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HS Series</div><div class="med-acc-row-desc">Spherical ablation probes. 14G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HC Series</div><div class="med-acc-row-desc">Ceramic insulation probes. 14G–18G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HP Series</div><div class="med-acc-row-desc">PTFE insulation probes. 14G–18G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">EXACT Probe — HT Series</div><div class="med-acc-row-desc">Temperature sensor probes. 14G.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">15 probe models total</div><div class="med-acc-row-desc">Needle lengths 80–250mm across all series. Contact us for full size selection.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Seawon Meditech — Spinal Intervention Consumables <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">St. Reed Plus Catheter Set</div><div class="med-acc-row-desc">Steerable neurolysis catheter + introducer/needle/stylet.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B Catheter Set</div><div class="med-acc-row-desc">Epidural balloon catheter + accessories.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B Plus (SWCB42)</div><div class="med-acc-row-desc">Extended length epidural balloon catheter. 540mm, 2.3mm OD.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Fora-B TF Catheter Set</div><div class="med-acc-row-desc">Transforaminal epidural balloon catheter + accessories.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Dotomy (SW-TW-02)</div><div class="med-acc-row-desc">Spinal needle device. Half covered and full covered variants.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">SW-PRP Kit</div><div class="med-acc-row-desc">Autologous platelet rich plasma preparation kit.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Kiran — Radiation Protection Consumables <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Gloves — HiGrip</div><div class="med-acc-row-desc">Sterile, single-use, gamma sterilised radiation protection gloves.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Disposable Gloves — Max</div><div class="med-acc-row-desc">Maximum protection variant.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Ultrasound Gel</div><div class="med-acc-row-desc">Medical-grade coupling gel.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Heraeus — Bone Cement <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">OSTEOPAL V (REF: 66017789)</div><div class="med-acc-row-desc">Standard working time vertebral cement. Pack 1×20.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">OSTEOPAL Plus (REF: 66045747)</div><div class="med-acc-row-desc">Extended working time vertebral cement. Pack 1×20.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">GammaCore — Device Accessories <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Conductive Gel</div><div class="med-acc-row-desc">Electrolyte gel for GammaCore Sapphire stimulation sessions.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">Charging Unit</div><div class="med-acc-row-desc">Proprietary device charger.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+          <div class="med-acc-item">
+            <button class="med-acc-trigger" onclick="toggleMedAcc(this)">Tokyo Iken — Probe Accessories <span class="med-acc-arrow">▾</span></button>
+            <div class="med-acc-body">
+              <div class="med-acc-row"><div><div class="med-acc-row-name">B Probe Unit</div><div class="med-acc-row-desc">Deep point irradiation probe for Superlizer Mini PRO.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">C Probe Unit</div><div class="med-acc-row-desc">Wide area irradiation probe for Superlizer Mini PRO.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+              <div class="med-acc-row"><div><div class="med-acc-row-name">SG Probe Unit</div><div class="med-acc-row-desc">Narrow area irradiation probe. Optional add-on.</div></div><button class="med-acc-enquire" onclick="showPage('contact')">Enquire</button></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Never let a parts or service issue interrupt patient care.</h2><p>Talk to our after-sales team to set up your support and reorder programme today.</p><button class="btn-primary" onclick="showPage('contact')">Contact Support →</button></div>
+  <div class="med-also-section section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.5)">Browse All Solutions</div>
+      <h2 class="sec-title" style="color:var(--white);margin-bottom:16px">Looking for a Specific Solution?</h2>
+      <p class="med-also-intro">Each of our solution categories has its own dedicated page with full product detail, clinical context and support information.</p>
+      <div class="med-also-all-grid">
+        <div class="med-also-card" onclick="showPage('med-thermal')"><div><div class="med-also-title">Thermal Ablation</div><div class="med-also-desc">Cambridge Interventional &amp; Hygea systems</div></div><span class="med-also-arrow">›</span></div>
+        <div class="med-also-card" onclick="showPage('med-rfpain')"><div><div class="med-also-title">RF Pain Management</div><div class="med-also-desc">Boston Scientific G4 system</div></div><span class="med-also-arrow">›</span></div>
+        <div class="med-also-card" onclick="showPage('med-spinal')"><div><div class="med-also-title">Spinal Pain Interventions</div><div class="med-also-desc">Seawon Meditech catheters &amp; PRP</div></div><span class="med-also-arrow">›</span></div>
+        <div class="med-also-card" onclick="showPage('med-radiation')"><div><div class="med-also-title">Radiation Safety &amp; Protection</div><div class="med-also-desc">Kiran full PPE portfolio</div></div><span class="med-also-arrow">›</span></div>
+        <div class="med-also-card" onclick="showPage('med-neuro')"><div><div class="med-also-title">Neuromodulation</div><div class="med-also-desc">GammaCore Sapphire nVNS</div></div><span class="med-also-arrow">›</span></div>
+        <div class="med-also-card" onclick="showPage('med-photo')"><div><div class="med-also-title">Near-Infrared Phototherapy</div><div class="med-also-desc">Tokyo Iken Superlizer Mini PRO</div></div><span class="med-also-arrow">›</span></div>
+        <div class="med-also-card" onclick="showPage('med-bone')"><div><div class="med-also-title">Bone &amp; Spinal Augmentation</div><div class="med-also-desc">Heraeus OSTEOPAL bone cement</div></div><span class="med-also-arrow">›</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="med-cta-strip">
+    <h2>Need to Reorder? We've Got You Covered.</h2>
+    <p>Contact your KSA account manager for consumable reorders, urgent parts requests or to check regional stock availability. We're here to keep your procedures running without interruption.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showGatedForm('Healthcare &amp; Medical Portfolio Overview')">Download Product Brochures</button>
+    </div>
+  </div>
   <footer><div class="footer-grid"><div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p></div><div class="footer-col"><h4>Solutions</h4><span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span><span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('news')">News &amp; Events</span><span class="footer-link" onclick="showPage('careers')">Careers</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
 </div>
+
 
 <!-- ════════════════ PERSONAL HEALTH SOLUTIONS -->
 <div id="page-personalhealth" class="page">
@@ -3569,6 +4366,11 @@ function filterRes(type, btn) {
 }
 
 // ── GATED DOWNLOAD ──
+function toggleMedAcc(el) {
+  var item = el.closest('.med-acc-item');
+  item.classList.toggle('open');
+}
+
 function filterMedResources(cat, btn) {
   document.querySelectorAll('#medFilterTabs .med-filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
