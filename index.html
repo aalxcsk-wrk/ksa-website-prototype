@@ -952,6 +952,10 @@
 
   /* Key Advantages — S4 */
   .med-adv-section { background:var(--white); }
+  .med-adv-section.section { padding-left:0; padding-right:0; }
+  .med-adv-section .section-inner { padding:0 56px; }
+  .med-also-section.section { padding-left:0; padding-right:0; }
+  .med-also-section .section-inner { padding:0 56px; }
   .med-adv-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:32px; }
   .med-adv-card { background:#f4f7fb; border:1.5px solid var(--border); border-radius:14px; padding:28px 22px; }
   .med-adv-icon { font-size:26px; margin-bottom:14px; }
@@ -1011,16 +1015,17 @@
   .med-products-nav-inner { max-width:1180px; margin:0 auto; padding:48px 56px 24px; }
   .med-products-nav-inner .sec-label { margin-bottom:8px; }
   .med-products-nav-inner .sec-title { margin-bottom:0; }
-  .med-cat-tab-bar { display:flex; gap:0; overflow-x:auto; background:var(--white); border-bottom:2px solid var(--border); position:sticky; top:72px; z-index:50; scrollbar-width:none; padding:0 56px; }
+  .med-cat-tab-bar { display:flex; gap:0; overflow-x:auto; background:var(--white); border-bottom:2px solid var(--border); position:sticky; top:72px; z-index:50; scrollbar-width:none; padding:0; }
   .med-cat-tab-bar::-webkit-scrollbar { display:none; }
+  .med-tab-inner { max-width:1180px; margin:0 auto; padding:0 56px; display:flex; gap:0; }
   .med-cat-tab { padding:14px 22px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--gray); cursor:pointer; white-space:nowrap; border-bottom:3px solid transparent; margin-bottom:-2px; transition:color .2s,border-color .2s; }
   .med-cat-tab:hover { color:var(--kblue); }
   .med-cat-tab.act { color:var(--kblue); border-bottom-color:var(--kblue); }
 
   /* Product section — each principal block */
-  .med-product-section { padding:60px 56px; border-bottom:1px solid var(--border); }
+  .med-product-section { padding:60px 0; border-bottom:1px solid var(--border); }
   .med-product-section:last-child { border-bottom:none; }
-  .med-product-section .section-inner { max-width:1100px; margin:0 auto; padding:0; }
+  .med-product-section .section-inner { max-width:1180px; margin:0 auto; padding:0 56px; }
   .med-sec-hd { display:flex; align-items:center; gap:16px; margin-bottom:16px; }
   .med-sec-logo { height:32px; max-width:130px; object-fit:contain; }
   .med-sec-hd h2 { font-family:'Montserrat',sans-serif; font-size:clamp(18px,2vw,26px); font-weight:800; color:var(--dark-navy); letter-spacing:-0.02em; margin:0; }
@@ -1032,7 +1037,15 @@
   .med-app-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
   .med-app-pill { display:inline-flex; align-items:center; padding:5px 13px; border-radius:100px; background:var(--kblue-light,#e8eef8); border:1.5px solid #c5d3ed; font-size:12px; font-weight:600; color:var(--kblue); font-family:'Montserrat',sans-serif; }
   .med-app-pill.vet { background:#fff8e1; border-color:#f5c518; color:#7a5a00; }
-  @media(max-width:900px) { .med-highlight-grid { grid-template-columns:1fr; } .med-product-section { padding:48px 24px; } .med-products-nav-inner { padding:36px 24px 18px; } .med-cat-tab-bar { padding:0 24px; } }
+  @media(max-width:900px) {
+    .med-highlight-grid { grid-template-columns:1fr; }
+    .med-product-section { padding:40px 0; }
+    .med-product-section .section-inner { padding:0 24px; }
+    .med-adv-section .section-inner { padding:0 24px; }
+    .med-also-section .section-inner { padding:0 24px; }
+    .med-products-nav-inner { padding:36px 24px 18px; }
+    .med-tab-inner { padding:0 24px; }
+  }
 
   /* Also Relevant To — S6 */
   .med-also-section { background:linear-gradient(135deg,#041b4a 0%,#0a3580 100%); }
@@ -2349,7 +2362,7 @@ function medTabClick(el, anchorId) {
       <div class="sec-label">Product Lines</div>
       <h2 class="sec-title">Pain Management Solutions</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-pain-management')">RF Pain Management</div><div class="med-cat-tab" onclick="medTabClick(this,'spinal-pain-interventions')">Spinal Pain Interventions</div><div class="med-cat-tab" onclick="medTabClick(this,'neuromodulation')">Neuromodulation</div><div class="med-cat-tab" onclick="medTabClick(this,'nir-phototherapy')">Near-Infrared Phototherapy</div></div>
+    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-pain-management')">RF Pain Management</div><div class="med-cat-tab" onclick="medTabClick(this,'spinal-pain-interventions')">Spinal Pain Interventions</div><div class="med-cat-tab" onclick="medTabClick(this,'neuromodulation')">Neuromodulation</div><div class="med-cat-tab" onclick="medTabClick(this,'nir-phototherapy')">Near-Infrared Phototherapy</div></div></div>
   </div>
   <div class="med-product-section" id="rf-pain-management">
     <div class="section-inner">
@@ -2628,7 +2641,7 @@ function medTabClick(el, anchorId) {
       <div class="sec-label">Product Lines</div>
       <h2 class="sec-title">Ablation Systems</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-ablation-cambridge')">RF Ablation &#8212; Cambridge Interventional</div><div class="med-cat-tab" onclick="medTabClick(this,'microwave-ablation-hygea')">Microwave Ablation &#8212; Hygea</div></div>
+    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-ablation-cambridge')">RF Ablation &#8212; Cambridge Interventional</div><div class="med-cat-tab" onclick="medTabClick(this,'microwave-ablation-hygea')">Microwave Ablation &#8212; Hygea</div></div></div>
   </div>
   <div class="med-product-section" id="rf-ablation-cambridge">
     <div class="section-inner">
@@ -2823,7 +2836,7 @@ function medTabClick(el, anchorId) {
       <div class="sec-label">Product Portfolio</div>
       <h2 class="sec-title">Radiation Protection Range</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-cat-tab act" onclick="medTabClick(this,'radiation-protection-kiran')">Radiation Protection Portfolio</div></div>
+    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'radiation-protection-kiran')">Radiation Protection Portfolio</div></div></div>
   </div>
   <div class="med-product-section" id="radiation-protection-kiran">
     <div class="section-inner">
@@ -2967,7 +2980,7 @@ function medTabClick(el, anchorId) {
       <div class="sec-label">Product Portfolio</div>
       <h2 class="sec-title">Bone Cement Solutions</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-cat-tab act" onclick="medTabClick(this,'osteopal-bone-cement')">OSTEOPAL Bone Cement</div></div>
+    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'osteopal-bone-cement')">OSTEOPAL Bone Cement</div></div></div>
   </div>
   <div class="med-product-section" id="osteopal-bone-cement">
     <div class="section-inner">
