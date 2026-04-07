@@ -259,6 +259,7 @@
     background:linear-gradient(130deg, var(--dark-navy) 0%, var(--kblue) 100%);
     padding:72px 56px 52px; position:relative; overflow:hidden;
   }
+  .page-banner-inner { max-width:1180px; margin:0 auto; }
   .page-banner::before {
     content:''; position:absolute; inset:0;
     background:radial-gradient(ellipse at 90% 20%, rgba(245,208,0,0.07) 0%, transparent 55%);
@@ -1023,7 +1024,7 @@
   .med-cat-tab.act { color:var(--kblue); border-bottom-color:var(--kblue); }
 
   /* Product section — each principal block */
-  .med-product-section { padding:60px 0; border-bottom:1px solid var(--border); }
+  .med-product-section { padding:60px 0; border-bottom:1px solid var(--border); scroll-margin-top:140px; }
   .med-product-section:last-child { border-bottom:none; }
   .med-product-section .section-inner { max-width:1180px; margin:0 auto; padding:0 56px; }
   .med-sec-hd { display:flex; align-items:center; gap:16px; margin-bottom:16px; }
@@ -1194,7 +1195,28 @@ function medTabClick(el, anchorId) {
   bar.querySelectorAll('.med-cat-tab').forEach(function(t){ t.classList.remove('act'); });
   el.classList.add('act');
   var target = document.getElementById(anchorId);
-  if(target){ var y = target.getBoundingClientRect().top + window.scrollY - 140; window.scrollTo({top:y,behavior:'smooth'}); }
+  if(target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+var _medSpyObserver = null;
+function initMedScrollSpy() {
+  if(_medSpyObserver){ _medSpyObserver.disconnect(); _medSpyObserver = null; }
+  var activePage = document.querySelector('.page.active');
+  if(!activePage) return;
+  var sections = activePage.querySelectorAll('.med-product-section[id]');
+  if(!sections.length) return;
+  _medSpyObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var id = entry.target.id;
+      var bar = activePage.querySelector('.med-cat-tab-bar');
+      if(!bar) return;
+      bar.querySelectorAll('.med-cat-tab').forEach(function(t){ t.classList.remove('act'); });
+      var match = bar.querySelector('.med-cat-tab[onclick*="' + id + '"]');
+      if(match) match.classList.add('act');
+    });
+  }, { rootMargin:'-140px 0px -55% 0px', threshold:0 });
+  sections.forEach(function(s){ _medSpyObserver.observe(s); });
 }
 
 </script>
@@ -2195,81 +2217,30 @@ function medTabClick(el, anchorId) {
   </div>
 
   <!-- S7 — CLINICAL RESOURCES & DOWNLOADS -->
-  <div class="med-resources-section section">
+  <div class="section" style="background:#f4f7fb">
     <div class="section-inner">
-      <div class="sec-label">Clinical Resources &amp; Downloads</div>
-      <h2 class="sec-title">Resources for Your Team</h2>
-      <p class="med-resources-intro">Access our latest product brochures, clinical whitepapers and case studies — or get in touch to request materials specific to your area of practice.</p>
-
-      <div class="med-filter-tabs" id="medFilterTabs">
-        <button class="med-filter-btn active" onclick="filterMedResources('all',this)">All</button>
-        <button class="med-filter-btn" onclick="filterMedResources('brochure',this)">Brochures</button>
-        <button class="med-filter-btn" onclick="filterMedResources('whitepaper',this)">Whitepapers</button>
-        <button class="med-filter-btn" onclick="filterMedResources('casestudy',this)">Case Studies</button>
-      </div>
-
-      <div class="med-resource-grid" id="medResourceGrid">
-
-        <div class="med-resource-card" data-cat="brochure">
-          <div class="med-resource-thumb">📄</div>
-          <div class="med-resource-body">
-            <div class="med-resource-tag">Brochure</div>
-            <div class="med-resource-title">Healthcare &amp; Medical Portfolio Overview</div>
-            <button class="med-resource-dl" onclick="showGatedForm('Healthcare &amp; Medical Portfolio Overview')">Download PDF →</button>
-          </div>
+      <div class="sec-label">Downloads</div>
+      <h2 class="sec-title">Product Brochures</h2>
+      <p style="font-size:15.5px;color:var(--gray);max-width:560px;line-height:1.78;margin-bottom:36px">Download our latest product brochures for full specifications, clinical evidence and ordering information. Fill in a quick form and we'll send them straight to you.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:44px;height:44px;background:var(--kblue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px">📋</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:14px;font-weight:800;color:var(--dark-navy);line-height:1.35">Healthcare &amp; Medical Portfolio Overview</div>
+          <p style="font-size:13px;color:var(--gray);line-height:1.65;margin:0;flex:1">Full portfolio across Pain Management, Tumour Ablation, Radiation Safety and Surgical Support.</p>
+          <button class="med-resource-dl" onclick="showGatedForm('Healthcare &amp; Medical Portfolio Overview')">Download PDF →</button>
         </div>
-
-        <div class="med-resource-card" data-cat="brochure">
-          <div class="med-resource-thumb">📋</div>
-          <div class="med-resource-body">
-            <div class="med-resource-tag">Brochure</div>
-            <div class="med-resource-title">Thermal Ablation — Product Brochure</div>
-            <button class="med-resource-dl" onclick="showGatedForm('Thermal Ablation — Product Brochure')">Download PDF →</button>
-          </div>
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:44px;height:44px;background:var(--kblue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px">🎯</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:14px;font-weight:800;color:var(--dark-navy);line-height:1.35">Thermal Ablation Product Brochure</div>
+          <p style="font-size:13px;color:var(--gray);line-height:1.65;margin:0;flex:1">RF and microwave ablation systems from Cambridge Interventional and Hygea.</p>
+          <button class="med-resource-dl" onclick="showGatedForm('Thermal Ablation — Product Brochure')">Download PDF →</button>
         </div>
-
-        <div class="med-resource-card" data-cat="brochure">
-          <div class="med-resource-thumb">🛡️</div>
-          <div class="med-resource-body">
-            <div class="med-resource-tag">Brochure</div>
-            <div class="med-resource-title">Radiation Protection Solutions Catalogue</div>
-            <button class="med-resource-dl" onclick="showGatedForm('Radiation Protection Solutions Catalogue')">Download PDF →</button>
-          </div>
+        <div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:44px;height:44px;background:var(--kblue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px">🛡️</div>
+          <div style="font-family:Montserrat,sans-serif;font-size:14px;font-weight:800;color:var(--dark-navy);line-height:1.35">Radiation Protection Solutions Catalogue</div>
+          <p style="font-size:13px;color:var(--gray);line-height:1.65;margin:0;flex:1">Full Kiran range — aprons, shields, eyewear, gloves and imaging accessories.</p>
+          <button class="med-resource-dl" onclick="showGatedForm('Radiation Protection Solutions Catalogue')">Download PDF →</button>
         </div>
-
-        <div class="med-resource-card" data-cat="whitepaper">
-          <div class="med-resource-thumb">📰</div>
-          <div class="med-resource-body">
-            <div class="med-resource-tag">Whitepaper</div>
-            <div class="med-resource-title">RF Ablation in Interventional Oncology: Clinical Evidence Review</div>
-            <button class="med-resource-dl" onclick="showGatedForm('RF Ablation Clinical Evidence Review')">Download PDF →</button>
-          </div>
-        </div>
-
-        <div class="med-resource-card" data-cat="whitepaper">
-          <div class="med-resource-thumb">🧠</div>
-          <div class="med-resource-body">
-            <div class="med-resource-tag">Whitepaper</div>
-            <div class="med-resource-title">Non-Invasive Vagus Nerve Stimulation for Headache Management</div>
-            <button class="med-resource-dl" onclick="showGatedForm('Non-Invasive VNS for Headache — Whitepaper')">Download PDF →</button>
-          </div>
-        </div>
-
-        <div class="med-resource-card" data-cat="casestudy">
-          <div class="med-resource-thumb">📊</div>
-          <div class="med-resource-body">
-            <div class="med-resource-tag">Case Study</div>
-            <div class="med-resource-title">Spinal Pain Clinic, Singapore — Vertebroplasty Outcomes 2024</div>
-            <button class="med-resource-dl" onclick="showGatedForm('Spinal Pain Clinic Singapore — Case Study')">Download PDF →</button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="med-gap-cta">
-        Can't find what you're looking for?&nbsp;
-        <span onclick="showPage('contact')">Contact our team directly.</span>
-        &nbsp;<button class="btn-primary" onclick="showPage('contact')" style="margin-left:12px;padding:11px 24px;font-size:13px">Get in Touch →</button>
       </div>
     </div>
   </div>
@@ -4078,6 +4049,7 @@ function showPage(id) {
   var pill = document.getElementById('pill-' + id);
   if (pill) pill.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(initMedScrollSpy, 100);
 }
 
 // ── HERO SLIDESHOW ──
