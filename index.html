@@ -1190,14 +1190,13 @@
 
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
 function medTabClick(el, sectionId) {
   var bar = el.closest('.med-cat-tab-bar');
   var page = bar.closest('.page');
-  // update tab active state
   bar.querySelectorAll('.med-cat-tab').forEach(function(t){ t.classList.remove('act'); });
   el.classList.add('act');
-  // show only the targeted section
   page.querySelectorAll('.med-product-section').forEach(function(s){ s.classList.remove('act'); });
   var target = document.getElementById(sectionId);
   if(target) target.classList.add('act');
@@ -1205,19 +1204,16 @@ function medTabClick(el, sectionId) {
 
 function resetMedPage(page) {
   if(!page) return;
-  // activate first tab
   var bar = page.querySelector('.med-cat-tab-bar');
   if(bar) {
     bar.querySelectorAll('.med-cat-tab').forEach(function(t){ t.classList.remove('act'); });
     var first = bar.querySelector('.med-cat-tab');
     if(first) first.classList.add('act');
   }
-  // show only first product section
   var sections = page.querySelectorAll('.med-product-section');
   sections.forEach(function(s){ s.classList.remove('act'); });
   if(sections.length) sections[0].classList.add('act');
 }
-
 </script>
 </head>
 <body>
