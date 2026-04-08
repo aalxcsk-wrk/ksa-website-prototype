@@ -518,11 +518,8 @@
      RESPONSIVE — TABLET  (≤ 900px)
   ═══════════════════════════════════════════ */
   @media (max-width: 900px) {
-    /* Nav */
+    /* Nav — reduce padding only; hamburger takes over at 768px */
     nav { padding:0 24px; }
-    .nav-links { gap:0; }
-    .nav-link { font-size:12.5px; padding:8px 10px; }
-    .nav-cta { padding:9px 16px; font-size:12.5px; margin-left:10px; }
 
     /* Util bar */
     .util-bar { padding:0 24px; }
@@ -569,6 +566,40 @@
   }
 
   /* ═══════════════════════════════════════════
+     RESPONSIVE — NAV HAMBURGER  (≤ 768px)
+  ═══════════════════════════════════════════ */
+  @media (max-width: 768px) {
+    .nav-links {
+      display:none; flex-direction:column; position:fixed;
+      top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.98);
+      z-index:9000; padding:100px 28px 40px; gap:4px; overflow-y:auto;
+    }
+    .nav-links.mob-open { display:flex; }
+    .nav-dropdown-wrapper { width:100%; }
+    .nav-link, .nav-dropdown-wrapper .nav-link {
+      font-size:16px; padding:14px 10px;
+      border-bottom:1px solid var(--border); width:100%; border-radius:0;
+    }
+    .dropdown-panel { position:static; padding-top:0; }
+    .dropdown-panel-inner {
+      box-shadow:none; border:none; background:var(--kblue-light);
+      border-radius:8px; margin:4px 0 8px;
+    }
+    .nav-cta { display:none; }
+    .nav-hamburger {
+      display:flex; flex-direction:column; gap:5px;
+      cursor:pointer; padding:10px; margin-left:auto;
+    }
+    .nav-hamburger span {
+      display:block; width:22px; height:2px;
+      background:var(--text); border-radius:2px; transition:all 0.2s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity:0; }
+    .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  }
+
+  /* ═══════════════════════════════════════════
      RESPONSIVE — MOBILE  (≤ 600px)
   ═══════════════════════════════════════════ */
   @media (max-width: 600px) {
@@ -581,26 +612,8 @@
     .util-item { padding:4px 8px; font-size:11px; }
     .util-item span { display:none; }
 
-    /* Nav — hide links, show hamburger */
+    /* Nav — adjust top/height for smaller mobile header stack */
     nav { top:65px !important; padding:0 16px; height:50px; }
-    .nav-links { display:none; flex-direction:column; position:fixed;
-      top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.98);
-      z-index:9000; padding:80px 28px 40px; gap:4px; overflow-y:auto; }
-    .nav-links.mob-open { display:flex; }
-    .nav-dropdown-wrapper { width:100%; }
-    .nav-link, .nav-dropdown-wrapper .nav-link { font-size:16px; padding:14px 10px;
-      border-bottom:1px solid var(--border); width:100%; }
-    .dropdown-panel { position:static; padding-top:0; }
-    .dropdown-panel-inner { box-shadow:none; border:none; background:var(--kblue-light);
-      border-radius:8px; margin:4px 0 8px; }
-    .nav-cta { display:none; }
-    .nav-hamburger { display:flex; flex-direction:column; gap:5px;
-      cursor:pointer; padding:8px; margin-left:auto; }
-    .nav-hamburger span { display:block; width:22px; height:2px;
-      background:var(--text); border-radius:2px; transition:all 0.2s; }
-    .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity:0; }
-    .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
 
     /* Hero */
     .hero { min-height:70vh; }
@@ -658,12 +671,14 @@
     .footer-bottom-links { justify-content:center; }
 
     /* Floating proto nav — horizontal scroll */
-    .proto-nav { left:12px; right:12px; transform:none;
+    .proto-nav {
+      left:10px; right:10px; transform:none; bottom:14px;
       overflow-x:auto; -webkit-overflow-scrolling:touch;
-      scrollbar-width:none; padding:6px; gap:2px;
-      justify-content:flex-start; }
+      scrollbar-width:none; padding:5px; gap:2px;
+      justify-content:flex-start; border-radius:14px;
+    }
     .proto-nav::-webkit-scrollbar { display:none; }
-    .proto-pill { font-size:11.5px; padding:7px 12px; white-space:nowrap; }
+    .proto-pill { font-size:12px; padding:11px 14px; white-space:nowrap; min-height:44px; display:flex; align-items:center; }
 
     /* Inline-style grids (News, Resources, Shop, etc.) */
     /* These use inline style="display:grid;grid-template-columns:..." so we
