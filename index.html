@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kromax South Asia — Website Prototype v15</title>
+<title>Kromax South Asia — Website Prototype v16</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -470,18 +470,19 @@
   }
 
   /* BU SOLUTION CARDS — "WHAT WE DO" section */
-  .bu-sol-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .bu-sol-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:40px; }
   .bu-sol-card {
-    background:var(--white); border:1.5px solid var(--border);
+    background:linear-gradient(135deg, var(--kblue-50) 0%, #e4ecf8 100%);
+    border:1.5px solid var(--border);
     border-radius:20px; padding:36px 32px; cursor:pointer;
     transition:all 0.3s var(--ease-spring); box-shadow:var(--shadow-card);
     border-top:3px solid transparent; display:flex; flex-direction:column;
   }
-  .bu-sol-card:hover { border-top-color:var(--kyellow); box-shadow:var(--shadow-card-hover); transform:translateY(-6px); }
+  .bu-sol-card:hover { background:linear-gradient(135deg, var(--kblue-light) 0%, #d4e0f5 100%); border-top-color:var(--kyellow); box-shadow:var(--shadow-card-hover); transform:translateY(-6px); }
   .bu-sol-card h3 { font-family:'Montserrat',sans-serif; font-size:16.5px; font-weight:800; color:var(--dark-navy); margin-bottom:14px; letter-spacing:-0.02em; }
   .bu-sol-card p { font-size:14px; color:var(--gray); line-height:1.78; flex:1; margin-bottom:28px; }
-  .bu-sol-link { color:#b8940a; font-size:13.5px; font-weight:700; font-family:'DM Sans',sans-serif; letter-spacing:0.01em; }
-  .bu-sol-card:hover .bu-sol-link { color:var(--kblue); }
+  .bu-sol-link { color:var(--kblue); font-size:13.5px; font-weight:700; font-family:'DM Sans',sans-serif; letter-spacing:0.01em; }
+  .bu-sol-card:hover .bu-sol-link { color:var(--kblue-dark); }
 
   /* SQUARE INDUSTRY GRID — "WHO WE SERVE" section */
   .ind-sq-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:40px; }
@@ -1466,13 +1467,8 @@ function resetMedPage(page) {
   <section class="section" style="background:var(--offwhite)">
     <div class="section-inner">
       <div class="sec-label">WHO WE SERVE</div>
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:8px">
-        <div>
-          <h2 class="sec-title" style="margin-bottom:12px">Industries We Serve</h2>
-          <p class="sec-sub" style="margin-bottom:0">From semiconductor fabs to operating theatres — our solutions span eight critical sectors.</p>
-        </div>
-        <button onclick="showPage('industries')" style="background:var(--white);color:var(--kblue);border:1.5px solid var(--border);padding:10px 20px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:'Montserrat',sans-serif;white-space:nowrap">View All Industries →</button>
-      </div>
+      <h2 class="sec-title" style="margin-bottom:12px">Industries We Serve</h2>
+      <p class="sec-sub" style="margin-bottom:0">From semiconductor fabs to operating theatres — our solutions span eight critical sectors.</p>
       <div class="ind-sq-grid">
         <div class="ind-sq-card" onclick="showPage('industries')">
           <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Semiconductor Fabrication" loading="lazy">
@@ -1483,7 +1479,7 @@ function resetMedPage(page) {
           </div>
         </div>
         <div class="ind-sq-card" onclick="showPage('industries')">
-          <img src="https://images.unsplash.com/photo-1611143669-75d7bb972ef7?w=600&q=80" alt="F&B & Palm Oil Processing" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="F&B & Palm Oil Processing" loading="lazy">
           <div class="ind-sq-overlay"></div>
           <div class="ind-sq-body">
             <h3>F&amp;B &amp; Palm Oil Processing</h3>
@@ -1499,7 +1495,7 @@ function resetMedPage(page) {
           </div>
         </div>
         <div class="ind-sq-card" onclick="showPage('industries')">
-          <img src="https://images.unsplash.com/photo-1518736346175-3d713e937f96?w=600&q=80" alt="Oil, Gas & Energy" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="Oil, Gas & Energy" loading="lazy">
           <div class="ind-sq-overlay"></div>
           <div class="ind-sq-body">
             <h3>Oil, Gas &amp; Energy</h3>
@@ -1507,7 +1503,7 @@ function resetMedPage(page) {
           </div>
         </div>
         <div class="ind-sq-card" onclick="showPage('industries')">
-          <img src="https://images.unsplash.com/photo-1509391366636-0e3ff394b034?w=600&q=80" alt="Solar & Renewable Energy" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="Solar & Renewable Energy" loading="lazy">
           <div class="ind-sq-overlay"></div>
           <div class="ind-sq-body">
             <h3>Solar &amp; Renewable Energy</h3>
@@ -1538,6 +1534,9 @@ function resetMedPage(page) {
             <div class="ind-sq-arrow">→</div>
           </div>
         </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <button onclick="showPage('industries')" style="background:var(--white);color:var(--kblue);border:1.5px solid var(--border);padding:12px 28px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:'Montserrat',sans-serif">View All Industries →</button>
       </div>
     </div>
   </section>
