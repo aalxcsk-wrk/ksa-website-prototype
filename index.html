@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kromax South Asia — Website Prototype v10</title>
+<title>Kromax South Asia — Website Prototype v15</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -149,6 +149,8 @@
     font-size:17px; color:rgba(255,255,255,0.7);
     line-height:1.75; max-width:540px; margin-bottom:44px;
   }
+  #heroText { transition:opacity 0.3s ease; }
+  #heroText.fading { opacity:0; }
   .hero-btns { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:64px; }
   .btn-primary {
     background:var(--kyellow); color:var(--dark-navy);
@@ -467,6 +469,50 @@
     border:1px solid rgba(221,226,238,0.6);
   }
 
+  /* BU SOLUTION CARDS — "WHAT WE DO" section */
+  .bu-sol-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .bu-sol-card {
+    background:var(--white); border:1.5px solid var(--border);
+    border-radius:20px; padding:36px 32px; cursor:pointer;
+    transition:all 0.3s var(--ease-spring); box-shadow:var(--shadow-card);
+    border-top:3px solid transparent; display:flex; flex-direction:column;
+  }
+  .bu-sol-card:hover { border-top-color:var(--kyellow); box-shadow:var(--shadow-card-hover); transform:translateY(-6px); }
+  .bu-sol-card h3 { font-family:'Montserrat',sans-serif; font-size:16.5px; font-weight:800; color:var(--dark-navy); margin-bottom:14px; letter-spacing:-0.02em; }
+  .bu-sol-card p { font-size:14px; color:var(--gray); line-height:1.78; flex:1; margin-bottom:28px; }
+  .bu-sol-link { color:#b8940a; font-size:13.5px; font-weight:700; font-family:'DM Sans',sans-serif; letter-spacing:0.01em; }
+  .bu-sol-card:hover .bu-sol-link { color:var(--kblue); }
+
+  /* SQUARE INDUSTRY GRID — "WHO WE SERVE" section */
+  .ind-sq-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:40px; }
+  .ind-sq-card {
+    position:relative; aspect-ratio:1/1; border-radius:16px;
+    overflow:hidden; cursor:pointer;
+  }
+  .ind-sq-card img {
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; transition:transform 0.5s ease;
+  }
+  .ind-sq-card:hover img { transform:scale(1.08); }
+  .ind-sq-card::before {
+    content:''; position:absolute; inset:0; z-index:1;
+    background:linear-gradient(0deg, rgba(8,18,48,0.78) 0%, rgba(8,18,48,0.32) 55%, transparent 100%);
+  }
+  .ind-sq-overlay {
+    position:absolute; inset:0; z-index:1;
+    background:rgba(11,26,62,0.84);
+    opacity:0; transition:opacity 0.3s ease;
+  }
+  .ind-sq-card:hover .ind-sq-overlay { opacity:1; }
+  .ind-sq-body {
+    position:absolute; inset:0; z-index:2;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:20px; text-align:center;
+  }
+  .ind-sq-body h3 { font-family:'Montserrat',sans-serif; font-size:13.5px; font-weight:700; color:var(--white); letter-spacing:-0.01em; line-height:1.35; }
+  .ind-sq-arrow { font-size:18px; color:var(--white); margin-top:10px; opacity:0; transform:translateY(8px); transition:all 0.3s ease; }
+  .ind-sq-card:hover .ind-sq-arrow { opacity:1; transform:translateY(0); }
+
   /* ═══════════════════════════════════════════
      RESPONSIVE — TABLET  (≤ 900px)
   ═══════════════════════════════════════════ */
@@ -503,6 +549,8 @@
     .pillars  { grid-template-columns:repeat(2,1fr); }
     .sol-grid { grid-template-columns:repeat(2,1fr); }
     .ind-grid-2 { grid-template-columns:1fr; }
+    .bu-sol-grid { grid-template-columns:repeat(3,1fr); }
+    .ind-sq-grid { grid-template-columns:repeat(2,1fr); }
 
     /* About */
     .about-grid { grid-template-columns:1fr; gap:32px; }
@@ -584,6 +632,8 @@
     .ind-grid-2 { grid-template-columns:1fr; }
     .stat-grid { grid-template-columns:1fr; }
     .frow      { grid-template-columns:1fr; }
+    .bu-sol-grid { grid-template-columns:1fr; }
+    .ind-sq-grid { grid-template-columns:repeat(2,1fr); }
 
     /* About */
     .about-grid { grid-template-columns:1fr; gap:24px; }
@@ -1337,48 +1387,29 @@ function resetMedPage(page) {
   <!-- HERO WITH SLIDING BANNER -->
   <section class="hero">
     <div class="hero-slides" id="heroSlides">
-      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80')"></div>
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"></div>
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80')"></div>
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600&q=80')"></div>
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80')"></div>
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&q=80')"></div>
     </div>
 
     <div class="slide-dots" id="slideDots">
       <div class="slide-dot active" onclick="goSlide(0)"></div>
-      <div class="slide-dot" onclick="goSlide(1)"></div>
       <div class="slide-dot" onclick="goSlide(2)"></div>
-      <div class="slide-dot" onclick="goSlide(3)"></div>
       <div class="slide-dot" onclick="goSlide(4)"></div>
     </div>
 
     <div class="hero-content">
       <div class="hero-eyebrow">🌏 Singapore · Malaysia · Indonesia · Taiwan</div>
-      <h1>Engineering Solutions<br>From <em>Fab Floor</em><br>to Final Outcome.</h1>
-      <p class="hero-sub">Kromax South Asia delivers precision-engineered solutions and clinical technologies across South and Southeast Asia — from semiconductor fabrication to frontline healthcare.</p>
+      <div id="heroText">
+        <h1>Engineering Solutions From <em>Fab Floor</em> to Final Outcome.</h1>
+        <p class="hero-sub">Kromax South Asia delivers precision-engineered solutions and clinical technologies across South and Southeast Asia — from semiconductor fabrication to frontline healthcare.</p>
+      </div>
       <div class="hero-btns">
         <button class="btn-primary" onclick="showPage('contact')">Request a Consultation →</button>
         <button class="btn-outline" onclick="showPage('industries')">Explore Our Solutions</button>
-      </div>
-      <div class="bu-row">
-        <div class="bu-card" onclick="showPage('semi')">
-          <div class="bu-icon"></div>
-          <h3>Semiconductor &amp; Industrial</h3>
-          <p>Energy optimisation, predictive maintenance, smart monitoring &amp; gas safety for manufacturing facilities.</p>
-          <div class="bu-link">Explore solutions →</div>
-        </div>
-        <div class="bu-card" onclick="showPage('medical')">
-          <div class="bu-icon"></div>
-          <h3>Healthcare &amp; Medical</h3>
-          <p>Interventional, ablation, neuromodulation and precision surgical solutions for specialist teams.</p>
-          <div class="bu-link">Explore solutions →</div>
-        </div>
-        <div class="bu-card" onclick="showPage('personalhealth')">
-          <div class="bu-icon"></div>
-          <h3>Personal Health</h3>
-          <p>Quantum information-field technology bridging Eastern philosophy and Western clinical science.</p>
-          <div class="bu-link">Explore solutions →</div>
-        </div>
       </div>
     </div>
   </section>
@@ -1406,41 +1437,106 @@ function resetMedPage(page) {
     </div>
   </div>
 
-  <!-- INDUSTRIES with images -->
+  <!-- WHAT WE DO — 3 BU Cards -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="sec-label">WHAT WE DO</div>
+      <h2 class="sec-title">Three Specialised Business Units. One Trusted Partner.</h2>
+      <div class="bu-sol-grid">
+        <div class="bu-sol-card" onclick="showPage('semi')">
+          <h3>Semiconductor &amp; Industrial</h3>
+          <p>Energy optimisation, process monitoring, chemical analysis, heating solutions and sustainability systems for manufacturing and industrial facilities.</p>
+          <div class="bu-sol-link">Explore Solutions →</div>
+        </div>
+        <div class="bu-sol-card" onclick="showPage('medical')">
+          <h3>Healthcare &amp; Medical</h3>
+          <p>Interventional, ablation, neuromodulation and precision surgical solutions for hospitals, specialists and clinical teams across the region.</p>
+          <div class="bu-sol-link">Explore Solutions →</div>
+        </div>
+        <div class="bu-sol-card" onclick="showPage('personalhealth')">
+          <h3>Personal Health &amp; Wellness</h3>
+          <p>TimeWaver frequency technology for integrative wellness practitioners, corporate wellness programmes and individuals seeking a better quality of life.</p>
+          <div class="bu-sol-link">Explore Solutions →</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE — 8-card square grid -->
   <section class="section" style="background:var(--offwhite)">
     <div class="section-inner">
-      <div class="sec-label">What We Serve</div>
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+      <div class="sec-label">WHO WE SERVE</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:8px">
         <div>
-          <h2 class="sec-title">Solutions Across Every Industry</h2>
-          <p style="font-size:16px;color:var(--gray);line-height:1.75;max-width:500px">From semiconductor fab to frontline healthcare — curated engineering expertise wherever precision matters.</p>
+          <h2 class="sec-title" style="margin-bottom:12px">Industries We Serve</h2>
+          <p class="sec-sub" style="margin-bottom:0">From semiconductor fabs to operating theatres — our solutions span eight critical sectors.</p>
         </div>
-        <button onclick="showPage('industries')" style="background:var(--white);color:var(--kblue);border:1.5px solid var(--border);padding:10px 20px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:'Montserrat',sans-serif">View All Industries</button>
+        <button onclick="showPage('industries')" style="background:var(--white);color:var(--kblue);border:1.5px solid var(--border);padding:10px 20px;border-radius:8px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:'Montserrat',sans-serif;white-space:nowrap">View All Industries →</button>
       </div>
-      <div class="ind-grid">
-        <div class="ind-card" onclick="showPage('semi')">
-          <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="ind-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Semiconductor" loading="lazy"></div>
-          <div class="ind-body"><h3>Semiconductor Fabrication</h3><p>Energy optimisation, chemical monitoring, predictive equipment health and gas safety for semiconductor fabs.</p><div class="ind-link">Explore →</div></div>
+      <div class="ind-sq-grid">
+        <div class="ind-sq-card" onclick="showPage('industries')">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Semiconductor Fabrication" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Semiconductor Fabrication</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
         </div>
-        <div class="ind-card">
-          <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="ind-img" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600&q=80" alt="Manufacturing" loading="lazy"></div>
-          <div class="ind-body"><h3>Industrial Manufacturing</h3><p>Smart energy monitoring, industrial heating, sustainability systems and operational efficiency platforms.</p><div class="ind-link">Explore →</div></div>
+        <div class="ind-sq-card" onclick="showPage('industries')">
+          <img src="https://images.unsplash.com/photo-1611143669-75d7bb972ef7?w=600&q=80" alt="F&B & Palm Oil Processing" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>F&amp;B &amp; Palm Oil Processing</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
         </div>
-        <div class="ind-card">
-          <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="ind-img" src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80" alt="Hospital" loading="lazy"></div>
-          <div class="ind-body"><h3>Hospital &amp; Healthcare</h3><p>Interventional procedures, minimally invasive surgery, radiation protection and specialist instruments.</p><div class="ind-link">Explore →</div></div>
+        <div class="ind-sq-card" onclick="showPage('industries')">
+          <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=600&q=80" alt="Pharmaceutical & Cleanroom" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Pharmaceutical &amp; Cleanroom</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
         </div>
-        <div class="ind-card">
-          <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="ind-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Wellness" loading="lazy"></div>
-          <div class="ind-body"><h3>Wellness &amp; Integrative Health</h3><p>Professional clinical systems, corporate wellness and personal health devices.</p><div class="ind-link">Explore →</div></div>
+        <div class="ind-sq-card" onclick="showPage('industries')">
+          <img src="https://images.unsplash.com/photo-1518736346175-3d713e937f96?w=600&q=80" alt="Oil, Gas & Energy" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Oil, Gas &amp; Energy</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
         </div>
-        <div class="ind-card">
-          <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="ind-img" src="https://images.unsplash.com/photo-1532094349884-543559c64b5e?w=600&q=80" alt="Research" loading="lazy"></div>
-          <div class="ind-body"><h3>Research &amp; Life Sciences</h3><p>Precision analytical instruments, laboratory monitoring and safety solutions.</p><div class="ind-link">Explore →</div></div>
+        <div class="ind-sq-card" onclick="showPage('industries')">
+          <img src="https://images.unsplash.com/photo-1509391366636-0e3ff394b034?w=600&q=80" alt="Solar & Renewable Energy" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Solar &amp; Renewable Energy</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
         </div>
-        <div class="ind-card">
-          <div style="overflow:hidden"><img onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" class="ind-img" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80" alt="Energy" loading="lazy"></div>
-          <div class="ind-body"><h3>Oil, Gas &amp; Energy</h3><p>Process safety, industrial monitoring and energy optimisation for heavy energy sector operations.</p><div class="ind-link">Explore →</div></div>
+        <div class="ind-sq-card" onclick="showPage('industries')">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80" alt="Research & Life Sciences" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Research &amp; Life Sciences</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
+        </div>
+        <div class="ind-sq-card" onclick="showPage('medical')">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="Hospital & Healthcare" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Hospital &amp; Healthcare</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
+        </div>
+        <div class="ind-sq-card" onclick="showPage('personalhealth')">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Wellness & Integrative Health" loading="lazy">
+          <div class="ind-sq-overlay"></div>
+          <div class="ind-sq-body">
+            <h3>Wellness &amp; Integrative Health</h3>
+            <div class="ind-sq-arrow">→</div>
+          </div>
         </div>
       </div>
     </div>
@@ -4052,16 +4148,42 @@ function showPage(id) {
 
 // ── HERO SLIDESHOW ──
 var currentSlide = 0;
-var totalSlides = 5;
+var totalSlides = 6;
+
+var slideContent = [
+  {
+    h1: 'Engineering Solutions From <em>Fab Floor</em> to Final Outcome.',
+    sub: 'Kromax South Asia delivers precision-engineered solutions and clinical technologies across South and Southeast Asia — from semiconductor fabrication to frontline healthcare.'
+  },
+  {
+    h1: 'Clinical Solutions From the <em>Procedure Room</em> to Patient Recovery.',
+    sub: 'Kromax South Asia partners with hospitals, specialists, and procurement teams across Singapore, Malaysia and Indonesia — bringing verified medical devices, hands-on clinical support, and the expertise to match.'
+  },
+  {
+    h1: 'Elevating Life With <em>Frequency.</em> For Practitioners, Corporates and Individuals.',
+    sub: 'Kromax South Asia brings TimeWaver frequency technology to integrative wellness practitioners, corporate wellness programmes, and individuals seeking a better quality of life — across Singapore, Malaysia and Indonesia.'
+  }
+];
 
 function goSlide(n) {
   var slides = document.querySelectorAll('.hero-slide');
   var dots = document.querySelectorAll('.slide-dot');
+  var heroText = document.getElementById('heroText');
+  var prevTheme = Math.floor(currentSlide / 2);
+  var newTheme = Math.floor(n / 2);
   slides[currentSlide].classList.remove('active');
-  dots[currentSlide].classList.remove('active');
+  dots[prevTheme].classList.remove('active');
   currentSlide = n;
   slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
+  dots[newTheme].classList.add('active');
+  if (newTheme !== prevTheme) {
+    heroText.classList.add('fading');
+    setTimeout(function() {
+      heroText.querySelector('h1').innerHTML = slideContent[newTheme].h1;
+      heroText.querySelector('.hero-sub').textContent = slideContent[newTheme].sub;
+      heroText.classList.remove('fading');
+    }, 300);
+  }
 }
 
 function nextSlide() {
