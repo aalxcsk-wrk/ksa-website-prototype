@@ -88,6 +88,7 @@
   .hero {
     position:relative; min-height:90vh;
     display:flex; align-items:center; overflow:hidden;
+    padding:0 56px;
   }
 
   /* Slideshow background */
@@ -127,7 +128,7 @@
   /* Hero content */
   .hero-content {
     position:relative; z-index:5;
-    padding:88px 56px 100px;
+    padding:88px 0 100px;
     width:100%; max-width:1180px; margin:0 auto;
   }
   .hero-eyebrow {
@@ -481,7 +482,8 @@
     .util-item span { display:none; }
 
     /* Hero */
-    .hero-content { padding:72px 24px 80px; }
+    .hero { padding:0 24px; }
+    .hero-content { padding:72px 0 80px; }
     .bu-row { grid-template-columns:1fr 1fr; gap:14px; }
 
     /* Trust bar */
@@ -693,11 +695,12 @@
   }
 
   /* ── INTELLIGENT SOLAR PAGE ── */
-  .solar-hero { position:relative; height:500px; overflow:hidden; display:flex; align-items:flex-end; }
+  .solar-hero { position:relative; height:500px; overflow:hidden; display:flex; align-items:flex-end; padding:0 56px; }
   .solar-hero-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80') center/cover no-repeat; }
   .solar-hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(11,26,62,0.25) 0%, rgba(11,26,62,0.7) 55%, rgba(11,26,62,0.93) 100%); }
-  .solar-hero-content { position:relative; z-index:2; padding:0 56px 56px; max-width:1180px; width:100%; }
-  .solar-intro-grid { display:grid; grid-template-columns:1.6fr 1fr; gap:52px; max-width:1180px; margin:0 auto; padding:70px 56px; align-items:start; }
+  .solar-hero-content { position:relative; z-index:2; padding:0 0 56px; max-width:1180px; width:100%; margin:0 auto; }
+  .solar-intro-section { padding:0 56px; }
+  .solar-intro-grid { display:grid; grid-template-columns:1.6fr 1fr; gap:52px; max-width:1180px; margin:0 auto; padding:70px 0; align-items:start; }
   .solar-quick-links { background:var(--offwhite); border:1.5px solid var(--border); border-radius:14px; padding:28px; position:sticky; top:120px; }
   .solar-quick-links h4 { font-family:'Montserrat',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--kblue); margin-bottom:16px; }
   .solar-link-item { display:flex; align-items:center; gap:13px; padding:11px 14px; border-radius:9px; cursor:pointer; border:1.5px solid var(--border); background:var(--white); margin-bottom:9px; transition:all 0.18s; }
@@ -729,9 +732,10 @@
   .solar-logo-card { width:160px; height:80px; border:1.5px solid var(--border); border-radius:10px; display:flex; align-items:center; justify-content:center; background:var(--offwhite); color:var(--gray); font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; transition:all 0.18s; }
   .solar-logo-card:hover { border-color:var(--kblue); background:var(--kblue-light); color:var(--kblue); }
   @media (max-width:900px) {
-    .solar-hero { height:380px; }
-    .solar-hero-content { padding:0 24px 32px; }
-    .solar-intro-grid { grid-template-columns:1fr; padding:44px 24px; gap:28px; }
+    .solar-hero { height:380px; padding:0 24px; }
+    .solar-hero-content { padding:0 0 32px; }
+    .solar-intro-section { padding:0 24px; }
+    .solar-intro-grid { grid-template-columns:1fr; padding:44px 0; gap:28px; }
     .solar-quick-links { position:static; }
     .solar-stats-grid { grid-template-columns:repeat(2,1fr); }
     .solar-presence-grid { grid-template-columns:repeat(3,1fr); }
@@ -746,6 +750,7 @@
   .med-hero {
     position:relative; min-height:580px; display:flex; align-items:flex-end;
     background:url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=1600&q=85') center/cover no-repeat;
+    padding:0 56px;
   }
   .med-hero-overlay {
     position:absolute; inset:0;
@@ -754,7 +759,7 @@
   .med-hero-content {
     position:relative; z-index:2; width:100%;
     max-width:1180px; margin:0 auto;
-    padding:80px 56px 72px;
+    padding:80px 0 72px;
   }
   .med-hero-content .breadcrumb { margin-bottom:22px; }
   .med-hero-h1 {
@@ -938,8 +943,8 @@
   }
 
   /* Partner logo strip — subpages */
-  .med-partner-strip { background:var(--white); padding:22px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
-  .med-partner-strip-inner { max-width:1180px; margin:0 auto; padding:0 56px; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+  .med-partner-strip { background:var(--white); padding:22px 56px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .med-partner-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
   .med-partner-label { font-size:11px; font-weight:700; color:var(--gray); text-transform:uppercase; letter-spacing:0.1em; font-family:'Montserrat',sans-serif; white-space:nowrap; margin-right:8px; flex-shrink:0; }
   .med-partner-logo { height:36px; max-width:120px; object-fit:contain; filter:grayscale(1) opacity(0.55); transition:filter .25s; flex-shrink:0; }
   .med-partner-logo:hover { filter:grayscale(0) opacity(1); }
@@ -1008,13 +1013,13 @@
   .med-acc-enquire { flex-shrink:0; background:var(--kblue); color:var(--white); border:none; padding:7px 13px; border-radius:7px; font-size:11.5px; font-weight:700; cursor:pointer; font-family:'Montserrat',sans-serif; white-space:nowrap; }
 
   /* Category tab bar */
-  .med-products-nav { background:var(--white); border-bottom:1px solid var(--border); }
-  .med-products-nav-inner { max-width:1180px; margin:0 auto; padding:48px 56px 24px; }
+  .med-products-nav { background:var(--white); border-bottom:1px solid var(--border); padding:0 56px; }
+  .med-products-nav-inner { max-width:1180px; margin:0 auto; padding:48px 0 24px; }
   .med-products-nav-inner .sec-label { margin-bottom:8px; }
   .med-products-nav-inner .sec-title { margin-bottom:0; }
-  .med-cat-tab-bar { display:flex; gap:0; overflow-x:auto; background:var(--white); border-bottom:2px solid var(--border); position:sticky; top:72px; z-index:50; scrollbar-width:none; padding:0; }
+  .med-cat-tab-bar { display:flex; gap:0; overflow-x:auto; background:var(--white); border-bottom:2px solid var(--border); position:sticky; top:72px; z-index:50; scrollbar-width:none; padding:0 56px; }
   .med-cat-tab-bar::-webkit-scrollbar { display:none; }
-  .med-tab-inner { width:100%; max-width:1180px; margin:0 auto; padding:0 56px; display:flex; gap:0; box-sizing:border-box; }
+  .med-tab-inner { width:100%; max-width:1180px; margin:0 auto; display:flex; gap:0; box-sizing:border-box; }
   .med-cat-tab { padding:14px 22px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--gray); cursor:pointer; white-space:nowrap; border-bottom:3px solid transparent; margin-bottom:-2px; transition:color .2s,border-color .2s; }
   .med-cat-tab:hover { color:var(--kblue); }
   .med-cat-tab.act { color:var(--kblue); border-bottom-color:var(--kblue); }
@@ -1038,8 +1043,9 @@
   @media(max-width:900px) {
     .med-highlight-grid { grid-template-columns:1fr; }
     .med-product-section { padding:40px 24px; }
-    .med-products-nav-inner { padding:36px 24px 18px; }
-    .med-tab-inner { padding:0 24px; }
+    .med-products-nav { padding:0 24px; }
+    .med-products-nav-inner { padding:36px 0 18px; }
+    .med-cat-tab-bar { padding:0 24px; }
   }
 
   /* Also Relevant To — S6 */
@@ -1071,7 +1077,8 @@
     .med-also-all-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media(max-width:700px) {
-    .med-partner-strip-inner { padding:0 24px; gap:16px; }
+    .med-partner-strip { padding:22px 24px; }
+    .med-partner-strip-inner { gap:16px; }
     .med-partner-logo { height:28px; }
     .med-pill-strip-inner { padding:0 24px; }
     .med-adv-grid { grid-template-columns:1fr; }
@@ -1086,13 +1093,14 @@
   /* Medical sub-page hero */
   .med-sub-hero {
     position:relative; min-height:420px; display:flex; align-items:center; justify-content:center;
+    padding:0 56px;
   }
   .med-sub-hero-overlay {
     position:absolute; inset:0;
     background:linear-gradient(180deg,rgba(4,27,74,0.70) 0%,rgba(4,27,74,0.88) 100%);
   }
   .med-sub-hero-content {
-    position:relative; z-index:2; padding:80px 56px; max-width:1180px;
+    position:relative; z-index:2; padding:80px 0; max-width:1180px;
     width:100%; text-align:left; margin:0 auto;
   }
   .med-sub-hero-content .breadcrumb { margin-bottom:18px; justify-content:flex-start; }
@@ -1171,14 +1179,15 @@
     .med-features-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width:700px) {
-    .med-hero-content { padding-left:24px; padding-right:24px; }
+    .med-hero { padding:0 24px; }
+    .med-sub-hero { padding:0 24px; }
     .med-sub-intro-grid, .med-features-section { padding-left:24px; padding-right:24px; }
     .med-card-grid { grid-template-columns:1fr; }
     .med-specialty-pill { font-size:13px; padding:10px 20px; }
     .med-pillar-grid { grid-template-columns:1fr; }
     .med-resource-grid { grid-template-columns:1fr; }
     .med-features-grid { grid-template-columns:1fr; }
-    .med-sub-hero-content { padding:56px 24px 48px; }
+    .med-sub-hero-content { padding:56px 0 48px; }
   }
 
 </style>
@@ -1876,7 +1885,7 @@ function resetMedPage(page) {
   </div>
 
   <!-- Intro + Quick Links (2-column) -->
-  <div class="solar-intro-grid">
+  <div class="solar-intro-section"><div class="solar-intro-grid">
     <div>
       <div class="sec-label">Solution Overview</div>
       <h2 class="sec-title">Smarter Solar, Built for Industry</h2>
@@ -1909,7 +1918,7 @@ function resetMedPage(page) {
         </div>
       </div>
     </div>
-  </div>
+  </div></div>
 
   <!-- Video section -->
   <div class="solar-video-section" id="solar-video">
