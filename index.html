@@ -660,6 +660,11 @@
     .bu-page-grid { grid-template-columns:1fr; gap:20px; }
     .bu-sidebar { display:none; }
 
+    /* Hero label / overline hierarchy — non-homepage heroes */
+    .med-hero-h1 { font-size:11px; font-weight:400; color:var(--kyellow); letter-spacing:0.12em; }
+    .med-hero-intro { font-weight:300; opacity:0.8; }
+    .med-sub-category { font-weight:400; }
+
     /* Contact */
     .contact-grid { grid-template-columns:1fr; gap:24px; }
     .cf { padding:24px 18px; }
@@ -670,15 +675,38 @@
     .footer-bottom { flex-direction:column; gap:10px; text-align:center; }
     .footer-bottom-links { justify-content:center; }
 
-    /* Floating proto nav — horizontal scroll */
+    /* Floating proto nav — scroll hint */
+    .proto-nav-wrap {
+      position:fixed; bottom:14px; left:10px; right:10px;
+      border-radius:14px; overflow:hidden; z-index:9999;
+    }
+    .proto-nav-wrap::after {
+      content:'›';
+      position:absolute; top:0; right:0; bottom:0; width:52px;
+      background:linear-gradient(to right, transparent, rgba(10,22,52,0.97) 80%);
+      display:flex; align-items:center; justify-content:flex-end;
+      padding-right:12px; color:rgba(255,255,255,0.35); font-size:20px;
+      pointer-events:none; z-index:1;
+    }
     .proto-nav {
-      left:10px; right:10px; transform:none; bottom:14px;
+      position:static; left:auto; right:auto; bottom:auto; transform:none;
       overflow-x:auto; -webkit-overflow-scrolling:touch;
       scrollbar-width:none; padding:5px; gap:2px;
-      justify-content:flex-start; border-radius:14px;
+      justify-content:flex-start; border-radius:0; z-index:auto;
     }
     .proto-nav::-webkit-scrollbar { display:none; }
     .proto-pill { font-size:12px; padding:11px 14px; white-space:nowrap; min-height:44px; display:flex; align-items:center; }
+
+    /* Tab strip — scroll hint */
+    .med-tab-bar-wrap { position:relative; overflow-x:clip; }
+    .med-tab-bar-wrap::after {
+      content:'›';
+      position:absolute; top:0; right:0; bottom:0; width:52px;
+      background:linear-gradient(to right, transparent, rgba(255,255,255,0.97) 80%);
+      display:flex; align-items:center; justify-content:flex-end;
+      padding-right:12px; color:rgba(180,180,180,0.55); font-size:20px;
+      pointer-events:none; z-index:51;
+    }
 
     /* Inline-style grids (News, Resources, Shop, etc.) */
     /* These use inline style="display:grid;grid-template-columns:..." so we
@@ -2529,7 +2557,7 @@ function resetMedPage(page) {
       <div class="sec-label">Product Lines</div>
       <h2 class="sec-title">Pain Management Solutions</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-pain-management')">RF Pain Management</div><div class="med-cat-tab" onclick="medTabClick(this,'spinal-pain-interventions')">Spinal Pain Interventions</div><div class="med-cat-tab" onclick="medTabClick(this,'neuromodulation')">Neuromodulation</div><div class="med-cat-tab" onclick="medTabClick(this,'nir-phototherapy')">Near-Infrared Phototherapy</div></div></div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-pain-management')">RF Pain Management</div><div class="med-cat-tab" onclick="medTabClick(this,'spinal-pain-interventions')">Spinal Pain Interventions</div><div class="med-cat-tab" onclick="medTabClick(this,'neuromodulation')">Neuromodulation</div><div class="med-cat-tab" onclick="medTabClick(this,'nir-phototherapy')">Near-Infrared Phototherapy</div></div></div></div>
   </div>
   <div class="med-product-section act" id="rf-pain-management">
     <div class="section-inner">
@@ -2808,7 +2836,7 @@ function resetMedPage(page) {
       <div class="sec-label">Product Lines</div>
       <h2 class="sec-title">Ablation Systems</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-ablation-cambridge')">RF Ablation &#8212; Cambridge Interventional</div><div class="med-cat-tab" onclick="medTabClick(this,'microwave-ablation-hygea')">Microwave Ablation &#8212; Hygea</div></div></div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'rf-ablation-cambridge')">RF Ablation &#8212; Cambridge Interventional</div><div class="med-cat-tab" onclick="medTabClick(this,'microwave-ablation-hygea')">Microwave Ablation &#8212; Hygea</div></div></div></div>
   </div>
   <div class="med-product-section act" id="rf-ablation-cambridge">
     <div class="section-inner">
@@ -3003,7 +3031,7 @@ function resetMedPage(page) {
       <div class="sec-label">Product Portfolio</div>
       <h2 class="sec-title">Radiation Protection Range</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'radiation-protection-kiran')">Radiation Protection Portfolio</div></div></div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'radiation-protection-kiran')">Radiation Protection Portfolio</div></div></div></div>
   </div>
   <div class="med-product-section act" id="radiation-protection-kiran">
     <div class="section-inner">
@@ -3147,7 +3175,7 @@ function resetMedPage(page) {
       <div class="sec-label">Product Portfolio</div>
       <h2 class="sec-title">Bone Cement Solutions</h2>
     </div>
-    <div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'osteopal-bone-cement')">OSTEOPAL Bone Cement</div></div></div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner"><div class="med-cat-tab act" onclick="medTabClick(this,'osteopal-bone-cement')">OSTEOPAL Bone Cement</div></div></div></div>
   </div>
   <div class="med-product-section act" id="osteopal-bone-cement">
     <div class="section-inner">
@@ -4226,6 +4254,7 @@ function resetMedPage(page) {
 </div>
 
 <!-- FLOATING NAV -->
+<div class="proto-nav-wrap">
 <div class="proto-nav">
   <button class="proto-pill active" id="pill-home" onclick="showPage('home')">Home</button>
   <button class="proto-pill" id="pill-semi" onclick="showPage('semi')">Semiconductor</button>
@@ -4234,6 +4263,7 @@ function resetMedPage(page) {
   <button class="proto-pill" id="pill-shop" onclick="showPage('shop')">Shop</button>
   <button class="proto-pill" id="pill-resources" onclick="showPage('resources')">Resources</button>
   <button class="proto-pill" id="pill-contact" onclick="showPage('contact')">Contact Us</button>
+</div>
 </div>
 
 <script>
