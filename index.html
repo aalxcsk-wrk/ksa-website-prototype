@@ -598,11 +598,14 @@
       color:rgba(255,255,255,0.82); letter-spacing:-0.01em;
     }
     .nav-link:hover, .nav-dropdown-wrapper .nav-link:hover { color:var(--kyellow); background:transparent; }
-    /* About Us dropdown — fix width + dark-theme colours */
-    .dropdown-panel { position:static; padding-top:0; width:100%; }
+    /* About Us dropdown — match base selector specificity to win on position */
+    .nav-dropdown-wrapper .dropdown-panel {
+      display:block !important; position:static !important;
+      padding-top:0; width:100%;
+    }
     .dropdown-panel-inner {
       box-shadow:none; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.06);
-      border-radius:10px; margin:4px 0 10px; padding:4px 0; width:100%;
+      border-radius:10px; margin:4px 0 10px; padding:4px 0; width:100%; min-width:0;
     }
     .dd-item { color:rgba(255,255,255,0.82); background:transparent; }
     .dd-item:hover { background:rgba(255,255,255,0.08); color:var(--white); transform:none; }
