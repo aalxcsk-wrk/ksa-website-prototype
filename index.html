@@ -571,19 +571,25 @@
   @media (max-width: 768px) {
     .nav-links {
       display:none; flex-direction:column; position:fixed;
-      top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.98);
-      z-index:9000; padding:100px 28px 40px; gap:4px; overflow-y:auto;
+      top:0; left:0; right:0; bottom:0;
+      background:var(--dark-navy);
+      z-index:10000; padding:100px 28px 48px; gap:0; overflow-y:auto;
     }
     .nav-links.mob-open { display:flex; }
     .nav-dropdown-wrapper { width:100%; }
     .nav-link, .nav-dropdown-wrapper .nav-link {
-      font-size:16px; padding:14px 10px;
-      border-bottom:1px solid var(--border); width:100%; border-radius:0;
+      font-size:17px; font-weight:600; padding:16px 4px;
+      border-bottom:1px solid rgba(255,255,255,0.07); width:100%; border-radius:0;
+      color:rgba(255,255,255,0.8); letter-spacing:-0.01em;
+    }
+    .nav-link:hover, .nav-dropdown-wrapper .nav-link:hover {
+      color:var(--kyellow); background:transparent;
     }
     .dropdown-panel { position:static; padding-top:0; }
     .dropdown-panel-inner {
-      box-shadow:none; border:none; background:var(--kblue-light);
-      border-radius:8px; margin:4px 0 8px;
+      box-shadow:none; border:none;
+      background:rgba(255,255,255,0.05);
+      border-radius:10px; margin:6px 0 10px; padding:4px 0;
     }
     .nav-cta { display:none; }
     .nav-hamburger {
@@ -592,8 +598,9 @@
     }
     .nav-hamburger span {
       display:block; width:22px; height:2px;
-      background:var(--text); border-radius:2px; transition:all 0.2s;
+      background:var(--kblue); border-radius:2px; transition:all 0.22s ease;
     }
+    .nav-hamburger.open span { background:var(--kblue); }
     .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity:0; }
     .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
@@ -1575,7 +1582,7 @@ function resetMedPage(page) {
           </div>
         </div>
         <div class="ind-sq-card" onclick="showPage('industries')">
-          <img src="https://images.unsplash.com/photo-pfvvLHdS2UY?w=600&q=80" alt="F&B & Palm Oil Processing" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80" alt="F&B & Palm Oil Processing" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80';this.onerror=null;">
           <div class="ind-sq-overlay"></div>
           <div class="ind-sq-body">
             <h3>F&amp;B &amp; Palm Oil Processing</h3>
