@@ -611,7 +611,7 @@
     .dd-item:hover { background:rgba(255,255,255,0.08); color:var(--white); transform:none; }
     .dd-item strong { color:rgba(255,255,255,0.92); font-size:14px; }
     .dd-item span { color:rgba(255,255,255,0.42); }
-    /* Our Solutions mega-panel — same style and behaviour as About Us */
+    /* Our Solutions mega-panel — match About Us dd-item style */
     .nav-dropdown-wrapper .mega-panel {
       position:static !important; padding-top:0; width:100%;
     }
@@ -620,20 +620,16 @@
       border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.06);
       border-radius:10px; margin:4px 0 10px; min-width:0; padding:4px 0; width:100%;
     }
-    .mega-left { display:none; }
-    .mega-right { display:block; padding:4px 0; min-height:auto; }
-    .mega-sub { display:block !important; margin-bottom:0; }
-    .mega-sub-label {
-      display:block; padding:10px 14px 4px;
-      font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
-      color:var(--kyellow); opacity:0.8;
+    .mega-left { display:block; padding:4px 0; border-right:none; }
+    .mega-right { display:none; }
+    .mega-group {
+      display:block; padding:10px 14px; border-radius:8px; cursor:pointer;
+      transition:all 0.15s; margin-bottom:0; background:transparent;
     }
-    .mega-sub-item {
-      display:block; padding:10px 14px; font-size:13px;
-      color:rgba(255,255,255,0.82); border-radius:0; cursor:pointer;
-      transition:background 0.15s, color 0.15s;
-    }
-    .mega-sub-item:hover { background:rgba(255,255,255,0.08); color:var(--white); padding-left:14px; }
+    .mega-group:hover, .mega-group.mg-active { background:rgba(255,255,255,0.08); color:var(--white); transform:none; }
+    .mega-group-name { display:block; font-size:14px; font-weight:600; color:rgba(255,255,255,0.92); font-family:'DM Sans',sans-serif; }
+    .mega-group-arrow { display:none; }
+    .mega-group-desc { display:block; font-size:11.5px; color:rgba(255,255,255,0.42); margin-top:2px; font-weight:400; font-family:'DM Sans',sans-serif; }
     .nav-cta { display:none; }
     .nav-hamburger {
       display:flex; flex-direction:column; gap:5px;
@@ -806,6 +802,7 @@
     display:grid; grid-template-columns:1fr 1fr;
     overflow:hidden;
   }
+  .mega-group-desc { display:none; }
   .mega-left { padding:10px; border-right:1px solid var(--border); }
   .mega-right { padding:14px 16px; min-height:200px; }
   .mega-group {
@@ -1473,14 +1470,17 @@ function resetMedPage(page) {
             <div class="mega-group mg-active" onmouseenter="megaHover('semi',this)" onclick="showPage('semi')">
               <span class="mega-group-name">Semiconductor &amp; Industrial</span>
               <span class="mega-group-arrow">›</span>
+              <span class="mega-group-desc">Semiconductor, solar &amp; industrial IoT</span>
             </div>
             <div class="mega-group" onmouseenter="megaHover('medical',this)" onclick="showPage('medical')">
               <span class="mega-group-name">Healthcare &amp; Medical</span>
               <span class="mega-group-arrow">›</span>
+              <span class="mega-group-desc">Clinical devices &amp; medical solutions</span>
             </div>
             <div class="mega-group" onmouseenter="megaHover('health',this)" onclick="showPage('personalhealth')">
               <span class="mega-group-name">Personal Health</span>
               <span class="mega-group-arrow">›</span>
+              <span class="mega-group-desc">Wellness &amp; rehabilitation products</span>
             </div>
           </div>
           <div class="mega-right">
