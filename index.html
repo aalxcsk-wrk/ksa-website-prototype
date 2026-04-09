@@ -612,8 +612,9 @@
     .dd-item strong, .mega-group-name { color:rgba(255,255,255,0.92); font-size:14px; }
     .dd-item span, .mega-group-desc { color:rgba(255,255,255,0.42); }
     .nav-dropdown-wrapper .mega-panel {
-      position:static !important; padding-top:0; width:100%;
+      display:none; position:static !important; padding-top:0; width:100%;
     }
+    .nav-dropdown-wrapper:hover .mega-panel { display:block; }
     .mega-inner {
       display:block; box-shadow:none;
       border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.06);
