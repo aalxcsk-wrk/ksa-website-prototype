@@ -789,53 +789,50 @@
     [style*="grid-template-columns:2fr 1fr 1fr 1fr"] { grid-template-columns:repeat(2,1fr) !important; }
   }
 
-  /* ── MEGA MENU ── */
-  .mega-panel {
-    display:none; position:absolute; top:100%; left:0;
-    padding-top:8px; z-index:200;
-  }
-  .nav-dropdown-wrapper:hover .mega-panel { display:block; }
-  .mega-inner {
-    background:var(--white); border-radius:16px;
-    box-shadow:var(--shadow-dropdown); min-width:500px;
-    border:1px solid rgba(221,226,238,0.6);
-    display:grid; grid-template-columns:1fr 1fr;
-    overflow:hidden;
-  }
-  .mega-group-desc { display:none; }
-  .mega-left { padding:10px; border-right:1px solid var(--border); }
-  .mega-right { padding:14px 16px; min-height:200px; }
-  .mega-group {
-    display:flex; align-items:center; justify-content:space-between;
-    padding:11px 14px; border-radius:9px; cursor:pointer;
-    transition:all 0.15s; margin-bottom:2px;
-  }
-  .mega-group:hover, .mega-group.mg-active { background:var(--kblue-50); }
-  .mega-group-name {
-    font-size:13px; font-weight:600; font-family:'DM Sans',sans-serif;
-    color:var(--text); transition:color 0.15s;
-  }
-  .mega-group:hover .mega-group-name,
-  .mega-group.mg-active .mega-group-name { color:var(--kblue); }
-  .mega-group-arrow { font-size:14px; color:var(--gray); transition:all 0.15s; line-height:1; }
-  .mega-group.mg-active .mega-group-arrow { color:var(--kblue); transform:translateX(2px); }
-  .mega-sub { display:none; }
-  .mega-sub.ms-active { display:block; }
-  .mega-sub-label {
-    font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
-    letter-spacing:0.14em; text-transform:uppercase; color:var(--kblue);
-    margin-bottom:12px; padding:0 4px; opacity:0.7;
-  }
-  .mega-sub-item {
-    display:block; padding:9px 12px; font-size:13px; color:var(--text);
-    border-radius:8px; cursor:pointer; transition:all 0.15s;
-    font-family:'DM Sans',sans-serif; font-weight:500; margin-bottom:1px;
-  }
-  .mega-sub-item:hover { background:var(--kblue-50); color:var(--kblue); padding-left:17px; }
-  /* Mobile: stack mega-menu */
-  @media (max-width:600px) {
-    .mega-panel { position:static; padding-top:0; }
-    .mega-group-arrow { display:none; }
+  /* ── MEGA MENU (desktop only) ── */
+  @media (min-width: 769px) {
+    .mega-panel {
+      display:none; position:absolute; top:100%; left:0;
+      padding-top:8px; z-index:200;
+    }
+    .nav-dropdown-wrapper:hover .mega-panel { display:block; }
+    .mega-inner {
+      background:var(--white); border-radius:16px;
+      box-shadow:var(--shadow-dropdown); min-width:500px;
+      border:1px solid rgba(221,226,238,0.6);
+      display:grid; grid-template-columns:1fr 1fr;
+      overflow:hidden;
+    }
+    .mega-group-desc { display:none; }
+    .mega-left { padding:10px; border-right:1px solid var(--border); }
+    .mega-right { padding:14px 16px; min-height:200px; }
+    .mega-group {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:11px 14px; border-radius:9px; cursor:pointer;
+      transition:all 0.15s; margin-bottom:2px;
+    }
+    .mega-group:hover, .mega-group.mg-active { background:var(--kblue-50); }
+    .mega-group-name {
+      font-size:13px; font-weight:600; font-family:'DM Sans',sans-serif;
+      color:var(--text); transition:color 0.15s;
+    }
+    .mega-group:hover .mega-group-name,
+    .mega-group.mg-active .mega-group-name { color:var(--kblue); }
+    .mega-group-arrow { font-size:14px; color:var(--gray); transition:all 0.15s; line-height:1; }
+    .mega-group.mg-active .mega-group-arrow { color:var(--kblue); transform:translateX(2px); }
+    .mega-sub { display:none; }
+    .mega-sub.ms-active { display:block; }
+    .mega-sub-label {
+      font-family:'Syne',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:0.14em; text-transform:uppercase; color:var(--kblue);
+      margin-bottom:12px; padding:0 4px; opacity:0.7;
+    }
+    .mega-sub-item {
+      display:block; padding:9px 12px; font-size:13px; color:var(--text);
+      border-radius:8px; cursor:pointer; transition:all 0.15s;
+      font-family:'DM Sans',sans-serif; font-weight:500; margin-bottom:1px;
+    }
+    .mega-sub-item:hover { background:var(--kblue-50); color:var(--kblue); padding-left:17px; }
   }
 
   /* ── INTELLIGENT SOLAR PAGE ── */
