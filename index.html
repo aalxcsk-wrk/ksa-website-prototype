@@ -598,9 +598,9 @@
       color:rgba(255,255,255,0.82); letter-spacing:-0.01em;
     }
     .nav-link:hover, .nav-dropdown-wrapper .nav-link:hover { color:var(--kyellow); background:transparent; }
-    /* About Us dropdown — match base selector specificity to win on position */
+    /* About Us dropdown — override position only (display stays hover-controlled) */
     .nav-dropdown-wrapper .dropdown-panel {
-      display:block !important; position:static !important;
+      position:static !important;
       padding-top:0; width:100%;
     }
     .dropdown-panel-inner {
