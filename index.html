@@ -608,10 +608,9 @@
       border-radius:10px; margin:4px 0 10px; padding:4px 0; width:100%; min-width:0;
     }
     .dd-item { color:rgba(255,255,255,0.82); background:transparent; }
-    .dd-item:hover { background:rgba(255,255,255,0.08); color:var(--white); transform:none; }
-    .dd-item strong { color:rgba(255,255,255,0.92); font-size:14px; }
-    .dd-item span { color:rgba(255,255,255,0.42); }
-    /* Our Solutions mega-panel — match About Us dd-item style */
+    .dd-item:hover, .mega-group:hover { background:rgba(255,255,255,0.08); color:var(--white); transform:none; }
+    .dd-item strong, .mega-group-name { color:rgba(255,255,255,0.92); font-size:14px; }
+    .dd-item span, .mega-group-desc { color:rgba(255,255,255,0.42); }
     .nav-dropdown-wrapper .mega-panel {
       position:static !important; padding-top:0; width:100%;
     }
@@ -620,16 +619,15 @@
       border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.06);
       border-radius:10px; margin:4px 0 10px; min-width:0; padding:4px 0; width:100%;
     }
-    .mega-left { display:block; padding:4px 0; border-right:none; }
+    .mega-left { display:block; padding:4px 0; }
     .mega-right { display:none; }
     .mega-group {
       display:block; padding:10px 14px; border-radius:8px; cursor:pointer;
       transition:all 0.15s; margin-bottom:0; background:transparent;
     }
-    .mega-group:hover, .mega-group.mg-active { background:rgba(255,255,255,0.08); color:var(--white); transform:none; }
-    .mega-group-name { display:block; font-size:14px; font-weight:600; color:rgba(255,255,255,0.92); font-family:'DM Sans',sans-serif; }
+    .mega-group-name { display:block; font-weight:600; }
     .mega-group-arrow { display:none; }
-    .mega-group-desc { display:block; font-size:11.5px; color:rgba(255,255,255,0.42); margin-top:2px; font-weight:400; font-family:'DM Sans',sans-serif; }
+    .mega-group-desc { display:block; font-size:11.5px; margin-top:2px; font-weight:400; }
     .nav-cta { display:none; }
     .nav-hamburger {
       display:flex; flex-direction:column; gap:5px;
