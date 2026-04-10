@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kromax South Asia — Website Prototype v18</title>
+<title>Kromax South Asia — Website Prototype v19</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -256,6 +256,46 @@
   }
   .cta-strip h2 { font-family:'Montserrat',sans-serif; color:var(--white); font-size:36px; font-weight:800; margin-bottom:14px; letter-spacing:-0.03em; position:relative; }
   .cta-strip p { color:rgba(255,255,255,0.72); font-size:16px; margin-bottom:36px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.78; position:relative; }
+
+  /* GROUP RECOGNITION STRIP */
+  .group-strip { background:#F8F9FA; border-top:1px solid #E5E7EB; border-bottom:1px solid #E5E7EB; padding:12px 56px; }
+  .group-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
+  .group-strip-label { font-family:'DM Sans',sans-serif; font-size:12px; color:#6B7280; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; flex-shrink:0; }
+  .group-strip-logos { display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+  .group-strip-logo { height:32px; width:auto; object-fit:contain; filter:grayscale(100%); opacity:0.6; transition:filter 0.3s,opacity 0.3s; cursor:pointer; }
+  .group-strip-logo:hover { filter:grayscale(0%); opacity:1; }
+
+  /* CREDENTIALS */
+  .cred-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:40px; }
+  .cred-card { background:white; border:1px solid var(--border); border-radius:12px; padding:28px 20px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; }
+  .cred-logo-box { height:100px; width:140px; display:flex; align-items:center; justify-content:center; }
+  .cred-logo-box img { max-height:100%; max-width:100%; object-fit:contain; }
+  .cred-name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:var(--dark-navy); line-height:1.35; }
+  .cred-desc { font-size:12px; color:var(--gray); line-height:1.5; }
+
+  /* ESG / COMMITMENT SECTION */
+  .esg-section { position:relative; padding:88px 56px; overflow:hidden; }
+  .esg-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80') center/cover no-repeat; }
+  .esg-bg::after { content:""; position:absolute; inset:0; background:rgba(8,18,48,0.82); }
+  .esg-section .sec-label { color:var(--kyellow); }
+  .esg-section .sec-label::before { background:var(--kyellow); }
+  .esg-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:32px; }
+  .esg-tag { background:rgba(245,208,0,0.12); border:1px solid rgba(245,208,0,0.4); color:var(--kyellow); padding:9px 20px; border-radius:100px; font-size:13px; font-weight:600; font-family:'Montserrat',sans-serif; letter-spacing:0.02em; }
+
+  /* GROUP GRID */
+  .group-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .group-card { background:white; border:1px solid var(--border); border-radius:12px; padding:24px 20px; display:flex; flex-direction:column; align-items:center; gap:10px; transition:box-shadow 0.2s; cursor:pointer; }
+  .group-card:hover { box-shadow:0 8px 24px rgba(26,75,156,0.12); }
+  .group-card img { height:160px; max-width:100%; object-fit:contain; filter:grayscale(100%); opacity:0.75; transition:filter 0.3s,opacity 0.3s; }
+  .group-card:hover img { filter:grayscale(0%); opacity:1; }
+  .group-card-name { font-family:'Montserrat',sans-serif; font-weight:600; font-size:13.5px; color:var(--dark-navy); text-align:center; }
+
+  /* CLOSING CTA */
+  .closing-cta { position:relative; padding:100px 56px; text-align:center; overflow:hidden; }
+  .closing-cta-bg { position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1600&q=80') center/cover no-repeat; }
+  .closing-cta-bg::after { content:""; position:absolute; inset:0; background:rgba(8,18,48,0.78); }
+  .closing-cta-content { position:relative; z-index:2; }
+  .closing-cta h2 { font-family:'Montserrat',sans-serif; font-size:clamp(28px,3.5vw,48px); font-weight:800; color:white; margin-bottom:36px; letter-spacing:-0.02em; }
 
   /* PAGE BANNER */
   .page-banner {
@@ -689,6 +729,18 @@
     .cta-strip { padding:40px 20px; }
     .cta-strip h2 { font-size:22px; }
     .cta-strip p { font-size:14px; }
+
+    /* Group recognition strip */
+    .group-strip { padding:12px 20px; }
+    .group-strip-inner { flex-direction:column; align-items:flex-start; gap:12px; }
+    .group-strip-logos { overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:4px; }
+
+    /* New section grids → 1 or 2 column */
+    .cred-grid { grid-template-columns:repeat(2,1fr); }
+    .group-grid { grid-template-columns:repeat(2,1fr); }
+    .esg-section { padding:60px 20px; }
+    .closing-cta { padding:64px 20px; }
+    .closing-cta h2 { font-size:24px; }
 
     /* All grids → 1 column */
     .ind-grid  { grid-template-columns:1fr; }
@@ -1541,7 +1593,7 @@ function resetMedPage(page) {
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"></div>
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&q=80')"></div>
       <!-- Dot 4: Flexible — Indonesia / PT U-Sun -->
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=1600&q=80')"></div>
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=1600&q=80');background-size:cover;background-position:center center"></div>
     </div>
 
     <div class="slide-dots" id="slideDots">
@@ -1564,6 +1616,19 @@ function resetMedPage(page) {
     </div>
   </section>
 
+  <!-- GROUP RECOGNITION STRIP -->
+  <div class="group-strip">
+    <div class="group-strip-inner">
+      <span class="group-strip-label">Part of the Kromax Group</span>
+      <div class="group-strip-logos">
+        <img src="images/KSA_Intl Corp.jpg" alt="奇裕 Kromax" class="group-strip-logo">
+        <img src="images/KSA Logo_Blue.png" alt="Kromax South Asia" class="group-strip-logo">
+        <img src="images/PT USUN Logo_Colour_1.png" alt="PT U-Sun International" class="group-strip-logo">
+        <img src="images/USUN AP_Logo_BW.png" alt="U-Sun Asia 优善亚洲" class="group-strip-logo">
+      </div>
+    </div>
+  </div>
+
   <!-- TRUST BAR (animated counters) -->
   <div class="trust-bar" id="trustBar">
     <div class="trust-item">
@@ -1572,18 +1637,18 @@ function resetMedPage(page) {
     </div>
     <div class="trust-div"></div>
     <div class="trust-item">
-      <div class="trust-num" id="cnt-markets" data-target="4" data-suffix="">0</div>
-      <div class="trust-label-below">Markets Served: SG · MY · ID · TW</div>
+      <div class="trust-num" id="cnt-markets" data-target="3" data-suffix="">0</div>
+      <div class="trust-label-below">Markets: Singapore · Malaysia · Indonesia</div>
     </div>
     <div class="trust-div"></div>
     <div class="trust-item">
-      <div class="trust-num" id="cnt-biz" data-target="3" data-suffix="">0</div>
-      <div class="trust-label-below">Business Verticals</div>
+      <div class="trust-num" id="cnt-biz" data-target="15" data-suffix="+">0+</div>
+      <div class="trust-label-below">Global Technology Partners</div>
     </div>
     <div class="trust-div"></div>
     <div class="trust-item">
-      <div class="trust-num" id="cnt-ent" data-target="100" data-suffix="%">0%</div>
-      <div class="trust-label-below">Enterprise Focused</div>
+      <div class="trust-num" id="cnt-ent" data-target="30" data-suffix="+">0+</div>
+      <div class="trust-label-below">Trusted by Enterprises Across the Region</div>
     </div>
   </div>
 
@@ -1605,7 +1670,7 @@ function resetMedPage(page) {
         </div>
         <div class="bu-sol-card" onclick="showPage('personalhealth')">
           <h3>Personal Health &amp; Wellness</h3>
-          <p>TimeWaver frequency technology for integrative wellness practitioners, corporate wellness programmes and individuals seeking a better quality of life.</p>
+          <p>Frequency wellness technology, certified training and practitioner programmes — brought to integrative doctors, homeopaths and wellness professionals across Southeast Asia through U-SUN Asia.</p>
           <div class="bu-sol-link">Explore Solutions →</div>
         </div>
       </div>
@@ -1617,7 +1682,7 @@ function resetMedPage(page) {
     <div class="section-inner">
       <div class="sec-label">WHO WE SERVE</div>
       <h2 class="sec-title" style="margin-bottom:12px">Industries We Serve</h2>
-      <p class="sec-sub" style="margin-bottom:0">From semiconductor fabs to operating theatres — our solutions span eight critical sectors.</p>
+      <p class="sec-sub">From semiconductor fabs to operating theatres to your personal and corporate wellness — our solutions span eight critical sectors. Across every one, we show up not just as a supplier — but as a partner who understands your needs.</p>
       <div class="ind-sq-grid">
         <div class="ind-sq-card" onclick="showPage('industries')">
           <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Semiconductor Fabrication" loading="lazy">
@@ -1691,88 +1756,103 @@ function resetMedPage(page) {
   </section>
 
   
-  <!-- CERTIFICATIONS & GROUP -->
-  <div style="background:#f8f9fa;padding:64px 56px">
-    <div style="max-width:1180px;margin:0 auto">
-      <div style="text-align:center;margin-bottom:48px">
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:28px;font-weight:800;color:var(--dark-navy);margin-bottom:10px">Recognised Standards &amp; Credentials</h2>
-        <p style="color:var(--gray);font-size:16px">Trusted by enterprise clients across Singapore, Malaysia and Indonesia.</p>
-      </div>
-      <div style="display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;margin-bottom:64px">
-        <div style="text-align:center">
-          <div style="background:white;padding:16px 20px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px;display:flex;align-items:center;justify-content:center;height:120px;width:160px">
-          <img src="images/ISO45001-1-2048x1302.png" alt="ISO 45001 Certified" style="height:80px;width:auto;object-fit:contain">
+  <!-- OUR CREDENTIALS -->
+  <section class="section" style="background:#F8F9FA">
+    <div class="section-inner">
+      <div class="sec-label">OUR CREDENTIALS</div>
+      <h2 class="sec-title">Recognised Standards &amp; Credentials</h2>
+      <p class="sec-sub">Our certifications reflect the quality, safety and environmental standards we hold ourselves to — so our clients do not have to take our word for it.</p>
+      <div class="cred-grid">
+        <div class="cred-card">
+          <div class="cred-logo-box">
+            <img src="images/ISO9001_2048x1302.png" alt="ISO 9001 Certified">
           </div>
-          <span style="font-size:13px;color:var(--gray);display:block">ISO 45001 Certified</span>
+          <div class="cred-name">ISO 9001 Certified</div>
+          <div class="cred-desc">Quality Management Systems</div>
         </div>
-        <div style="text-align:center">
-          <div style="background:white;padding:16px 20px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px;display:flex;align-items:center;justify-content:center;height:120px;width:160px">
-          <img src="images/ISO9001_2048x1302.png" alt="ISO 9001 Certified" style="height:80px;width:auto;object-fit:contain">
+        <div class="cred-card">
+          <div class="cred-logo-box">
+            <img src="images/ISO45001-1-2048x1302.png" alt="ISO 45001 Certified">
           </div>
-          <span style="font-size:13px;color:var(--gray);display:block">ISO 9001 Certified</span>
+          <div class="cred-name">ISO 45001 Certified</div>
+          <div class="cred-desc">Occupational Health &amp; Safety</div>
         </div>
-        <div style="text-align:center">
-          <div style="background:white;padding:16px 20px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px;display:flex;align-items:center;justify-content:center;height:120px;width:160px">
-          <img src="images/ESBN-Green-Deal-Green-Badge-1024x1024.png" alt="ESCAP Green Deal" style="height:80px;width:auto;object-fit:contain">
+        <div class="cred-card">
+          <div class="cred-logo-box">
+            <img src="images/ESBN-Green-Deal-Green-Badge-1024x1024.png" alt="ESBN Green Badge">
           </div>
-          <span style="font-size:13px;color:var(--gray);display:block">ESCAP Green Deal</span>
+          <div class="cred-name">ESBN Asia-Pacific Green Deal</div>
+          <div class="cred-desc">Environmental &amp; Sustainability Commitment</div>
         </div>
-        <div style="text-align:center">
-          <div style="background:white;padding:16px 20px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px;display:flex;align-items:center;justify-content:center;height:120px;width:160px">
-          <img src="images/20Annw-1-2048x1302.png" alt="20 Years of Excellence" style="height:80px;width:auto;object-fit:contain">
+        <div class="cred-card">
+          <div class="cred-logo-box">
+            <img src="images/bizsafe-star-seeklogo-01.png" alt="BizSafe Certified">
           </div>
-          <span style="font-size:13px;color:var(--gray);display:block">20 Years of Excellence</span>
-        </div>
-        <div style="text-align:center">
-          <div style="background:white;padding:16px 20px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px;display:flex;align-items:center;justify-content:center;height:120px;width:160px">
-          <img src="images/bizsafe-star-seeklogo-01.png" alt="BizSafe Star" style="height:80px;width:auto;object-fit:contain">
-          </div>
-          <span style="font-size:13px;color:var(--gray);display:block">BizSafe Star</span>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-bottom:36px;padding-top:56px;border-top:2px solid var(--border);margin-top:8px">
-        <h2 style="font-family:'Montserrat',sans-serif;font-size:28px;font-weight:800;color:var(--dark-navy);margin-bottom:10px">Our Group of Companies</h2>
-        <p style="color:var(--gray);font-size:16px">Kromax South Asia is part of a trusted network of regional technology partners.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;max-width:760px;margin:0 auto">
-        <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
-          <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/KSA_Intl Corp.jpg" alt="奇裕 Kromax" style="height:180px;max-width:100%;width:auto;object-fit:contain">
-          </div>
-          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">奇裕 Kromax</div>
-          <div style="font-size:12px;color:#6b7280;text-align:center">Parent Group · Taiwan</div>
-        </div>
-        <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
-          <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/KSA Logo_Blue.png" alt="Kromax South Asia" style="height:180px;max-width:100%;width:auto;object-fit:contain">
-          </div>
-          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">Kromax South Asia</div>
-          <div style="font-size:12px;color:#6b7280;text-align:center">Singapore &amp; Malaysia HQ</div>
-        </div>
-        <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
-          <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/PT USUN Logo_Colour_1.png" alt="PT U-Sun International" style="height:180px;max-width:100%;width:auto;object-fit:contain">
-          </div>
-          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">PT U-Sun International</div>
-          <div style="font-size:12px;color:#6b7280;text-align:center">Indonesia Operations</div>
-        </div>
-        <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
-          <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/USUN AP_Logo_BW.png" alt="U-Sun Asia" style="height:180px;max-width:100%;width:auto;object-fit:contain">
-          </div>
-          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">U-Sun Asia 优善亚洲</div>
-          <div style="font-size:12px;color:#6b7280;text-align:center">Regional Distribution Network</div>
+          <div class="cred-name">BizSafe Certified</div>
+          <div class="cred-desc">Workplace Safety &amp; Health — Singapore</div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="cta-strip">
-    <h2>Ready to Find Your Solution?</h2>
-    <p>Tell us your industry and challenge — our regional team will connect you with the right solution within 24 hours.</p>
-    <button class="btn-primary" onclick="showPage('contact')">Start a Conversation →</button>
-  </div>
+  <!-- OUR COMMITMENT (ESG) -->
+  <section class="esg-section">
+    <div class="esg-bg"></div>
+    <div class="section-inner" style="position:relative;z-index:2">
+      <div class="sec-label">OUR COMMITMENT</div>
+      <h2 class="sec-title" style="color:var(--white)">Committed to a Better World — In Every Industry We Serve.</h2>
+      <p class="sec-sub" style="color:rgba(255,255,255,0.75);max-width:640px">At Kromax South Asia, sustainability is not a badge — it is built into what we sell. Our portfolio is anchored in solutions that reduce energy consumption, cut emissions, minimise waste and support responsible manufacturing across every industry we serve. We hold ourselves to the same standards we bring to our clients — and our ESBN Asia-Pacific Green Deal recognition reflects that commitment.</p>
+      <div class="esg-tags">
+        <span class="esg-tag">Energy Consumption Tracking</span>
+        <span class="esg-tag">CO₂ Emissions Reduction</span>
+        <span class="esg-tag">Waste Reduction</span>
+        <span class="esg-tag">Chemical Safety Compliance</span>
+        <span class="esg-tag">Environmental Standards</span>
+        <span class="esg-tag">Supplier Auditing</span>
+        <span class="esg-tag">Responsible Medical Supply</span>
+        <span class="esg-tag">Single-Use Device Management</span>
+      </div>
+      <div style="margin-top:40px">
+        <button class="btn-outline" onclick="showPage('about')">Learn More About Our Values →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR GROUP -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="sec-label">OUR GROUP</div>
+      <h2 class="sec-title">Our Group of Companies</h2>
+      <p class="sec-sub">Kromax South Asia is part of a family of companies operating across Taiwan, Singapore, Malaysia and Indonesia.</p>
+      <div class="group-grid">
+        <div class="group-card">
+          <img src="images/KSA_Intl Corp.jpg" alt="奇裕 Kromax">
+          <div class="group-card-name">奇裕 Kromax</div>
+        </div>
+        <div class="group-card">
+          <img src="images/KSA Logo_Blue.png" alt="Kromax South Asia">
+          <div class="group-card-name">Kromax South Asia</div>
+        </div>
+        <div class="group-card">
+          <img src="images/PT USUN Logo_Colour_1.png" alt="PT U-Sun International">
+          <div class="group-card-name">PT U-Sun International</div>
+        </div>
+        <div class="group-card">
+          <img src="images/USUN AP_Logo_BW.png" alt="U-Sun Asia 优善亚洲">
+          <div class="group-card-name">U-Sun Asia 优善亚洲</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing-cta">
+    <div class="closing-cta-bg"></div>
+    <div class="closing-cta-content">
+      <h2>Ready to Find Your Solution?</h2>
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-grid">
@@ -4402,7 +4482,15 @@ function goSlide(n) {
 function nextSlide() {
   goSlide((currentSlide + 1) % totalSlides);
 }
-setInterval(nextSlide, 5000);
+var heroTimer = setInterval(nextSlide, 5000);
+
+// Reset timer on manual dot click so each slide gets full 5s
+var _goSlideOrig = goSlide;
+goSlide = function(n) {
+  clearInterval(heroTimer);
+  _goSlideOrig(n);
+  heroTimer = setInterval(nextSlide, 5000);
+};
 
 // ── FORM SUCCESS ──
 function formSuccess(btn) {
@@ -4463,17 +4551,17 @@ function _runCounters() {
   if (_cntDone) return;
   _cntDone = true;
   _animateOne('cnt-years',   20,  '+', 0);
-  _animateOne('cnt-markets',  4,  '',  220);
-  _animateOne('cnt-biz',      3,  '',  440);
-  _animateOne('cnt-ent',    100,  '%', 660);
+  _animateOne('cnt-markets',  3,  '',  220);
+  _animateOne('cnt-biz',     15,  '+', 440);
+  _animateOne('cnt-ent',     30,  '+', 660);
 }
 
 function _resetCounters() {
   _cntDone = false;
   document.getElementById('cnt-years').textContent   = '0+';
   document.getElementById('cnt-markets').textContent = '0';
-  document.getElementById('cnt-biz').textContent     = '0';
-  document.getElementById('cnt-ent').textContent     = '0%';
+  document.getElementById('cnt-biz').textContent     = '0+';
+  document.getElementById('cnt-ent').textContent     = '0+';
 }
 
 // IntersectionObserver — fires when trust bar scrolls into view
