@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kromax South Asia — Website Prototype v17</title>
+<title>Kromax South Asia — Website Prototype v18</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -1531,29 +1531,35 @@ function resetMedPage(page) {
   <!-- HERO WITH SLIDING BANNER -->
   <section class="hero">
     <div class="hero-slides" id="heroSlides">
+      <!-- Dot 1: Semiconductor & Industrial (2 images) -->
       <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"></div>
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80')"></div>
+      <!-- Dot 2: Healthcare & Medical (2 images) -->
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600&q=80')"></div>
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=1600&q=80')"></div>
+      <!-- Dot 3: Personal Health & Wellness (2 images) -->
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"></div>
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&q=80')"></div>
+      <!-- Dot 4: Flexible — Indonesia / PT U-Sun -->
+      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=1600&q=80')"></div>
     </div>
 
     <div class="slide-dots" id="slideDots">
       <div class="slide-dot active" onclick="goSlide(0)"></div>
       <div class="slide-dot" onclick="goSlide(2)"></div>
       <div class="slide-dot" onclick="goSlide(4)"></div>
+      <div class="slide-dot" onclick="goSlide(6)"></div>
     </div>
 
     <div class="hero-content">
-      <div class="hero-eyebrow">🌏 Singapore · Malaysia · Indonesia · Taiwan</div>
+      <div class="hero-eyebrow">SOUTHEAST ASIA</div>
       <div id="heroText">
         <h1>Engineering Solutions From <em>Fab Floor</em> to Final Outcome.</h1>
-        <p class="hero-sub">Kromax South Asia delivers precision-engineered solutions and clinical technologies across South and Southeast Asia — from semiconductor fabrication to frontline healthcare.</p>
+        <p class="hero-sub">Kromax South Asia delivers precision-engineered solutions and clinical technologies across Singapore, Malaysia and Indonesia — from semiconductor fabrication to frontline healthcare.</p>
       </div>
       <div class="hero-btns">
-        <button class="btn-primary" onclick="showPage('contact')">Request a Consultation →</button>
-        <button class="btn-outline" onclick="showPage('industries')">Explore Our Solutions</button>
+        <button class="btn-primary" id="heroBtnPrimary" onclick="showPage('contact')">Request a Consultation →</button>
+        <button class="btn-outline" id="heroBtnSecondary" onclick="showPage('industries')">Explore Our Solutions</button>
       </div>
     </div>
   </section>
@@ -1732,28 +1738,28 @@ function resetMedPage(page) {
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;max-width:760px;margin:0 auto">
         <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
           <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/KSA_Intl Corp.jpg" alt="奇裕 Kromax" style="height:88px;max-width:100%;width:auto;object-fit:contain">
+          <img src="images/KSA_Intl Corp.jpg" alt="奇裕 Kromax" style="height:180px;max-width:100%;width:auto;object-fit:contain">
           </div>
           <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">奇裕 Kromax</div>
           <div style="font-size:12px;color:#6b7280;text-align:center">Parent Group · Taiwan</div>
         </div>
         <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
           <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/KSA Logo_Blue.png" alt="Kromax South Asia" style="height:88px;max-width:100%;width:auto;object-fit:contain">
+          <img src="images/KSA Logo_Blue.png" alt="Kromax South Asia" style="height:180px;max-width:100%;width:auto;object-fit:contain">
           </div>
           <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">Kromax South Asia</div>
           <div style="font-size:12px;color:#6b7280;text-align:center">Singapore &amp; Malaysia HQ</div>
         </div>
         <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
           <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/PT USUN Logo_Colour_1.png" alt="PT U-Sun International" style="height:88px;max-width:100%;width:auto;object-fit:contain">
+          <img src="images/PT USUN Logo_Colour_1.png" alt="PT U-Sun International" style="height:180px;max-width:100%;width:auto;object-fit:contain">
           </div>
           <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">PT U-Sun International</div>
           <div style="font-size:12px;color:#6b7280;text-align:center">Indonesia Operations</div>
         </div>
         <div style="background:white;border:1px solid #e5e7eb;border-radius:12px;padding:24px 32px;display:flex;flex-direction:column;align-items:center;gap:12px;cursor:pointer;transition:box-shadow 0.2s;min-width:0" onmouseenter="this.style.boxShadow='0 8px 24px rgba(26,75,156,0.12)'" onmouseleave="this.style.boxShadow='none'">
           <div style="background:white;padding:4px;border-radius:8px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden">
-          <img src="images/USUN AP_Logo_BW.png" alt="U-Sun Asia" style="height:88px;max-width:100%;width:auto;object-fit:contain">
+          <img src="images/USUN AP_Logo_BW.png" alt="U-Sun Asia" style="height:180px;max-width:100%;width:auto;object-fit:contain">
           </div>
           <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:var(--dark-navy);text-align:center">U-Sun Asia 优善亚洲</div>
           <div style="font-size:12px;color:#6b7280;text-align:center">Regional Distribution Network</div>
@@ -4330,29 +4336,49 @@ function showPage(id) {
 
 // ── HERO SLIDESHOW ──
 var currentSlide = 0;
-var totalSlides = 6;
+var totalSlides = 7;
 
+// Slides 0-5 are permanent (3 dot groups × 2 images).
+// Slide 6 is flexible (Indonesia / PT U-Sun), has its own dot.
 var slideContent = [
   {
     h1: 'Engineering Solutions From <em>Fab Floor</em> to Final Outcome.',
-    sub: 'Kromax South Asia delivers precision-engineered solutions and clinical technologies across South and Southeast Asia — from semiconductor fabrication to frontline healthcare.'
+    sub: 'Kromax South Asia delivers precision-engineered solutions and clinical technologies across Singapore, Malaysia and Indonesia — from semiconductor fabrication to frontline healthcare.',
+    ctaPrimary: { text: 'Request a Consultation \u2192', page: 'contact' },
+    ctaSecondary: { text: 'Explore Our Solutions', page: 'industries' }
   },
   {
     h1: 'Clinical Solutions From the <em>Procedure Room</em> to Patient Recovery.',
-    sub: 'Kromax South Asia partners with hospitals, specialists, and procurement teams across Singapore, Malaysia and Indonesia — bringing verified medical devices, hands-on clinical support, and the expertise to match.'
+    sub: 'Kromax South Asia partners with hospitals, specialists, and procurement teams across Singapore, Malaysia and Indonesia — bringing verified medical devices, hands-on clinical support, and the expertise to match.',
+    ctaPrimary: { text: 'Request a Consultation \u2192', page: 'contact' },
+    ctaSecondary: { text: 'Explore Our Solutions', page: 'industries' }
   },
   {
     h1: 'Elevating Life With <em>Frequency.</em> For Practitioners, Corporates and Individuals.',
-    sub: 'Kromax South Asia brings TimeWaver frequency technology to integrative wellness practitioners, corporate wellness programmes, and individuals seeking a better quality of life — across Singapore, Malaysia and Indonesia.'
+    sub: 'Kromax South Asia brings TimeWaver frequency technology to integrative wellness practitioners, corporate wellness programmes, and individuals seeking a better quality of life — across Singapore, Malaysia and Indonesia.',
+    ctaPrimary: { text: 'Request a Consultation \u2192', page: 'contact' },
+    ctaSecondary: { text: 'Explore Our Solutions', page: 'industries' }
+  },
+  {
+    h1: 'Looking for Our Solutions <em>in Indonesia</em>?',
+    sub: 'Kromax South Asia operates in Indonesia through PT U-Sun International — bringing the same trusted solutions, local presence and on-the-ground support to your doorstep.',
+    ctaPrimary: { text: 'Get in Touch \u2192', page: 'contact' },
+    ctaSecondary: { text: 'Learn More About Us', page: 'about' }
   }
 ];
+
+function getTheme(slideIndex) {
+  return slideIndex < 6 ? Math.floor(slideIndex / 2) : 3;
+}
 
 function goSlide(n) {
   var slides = document.querySelectorAll('.hero-slide');
   var dots = document.querySelectorAll('.slide-dot');
   var heroText = document.getElementById('heroText');
-  var prevTheme = Math.floor(currentSlide / 2);
-  var newTheme = Math.floor(n / 2);
+  var btnPrimary = document.getElementById('heroBtnPrimary');
+  var btnSecondary = document.getElementById('heroBtnSecondary');
+  var prevTheme = getTheme(currentSlide);
+  var newTheme = getTheme(n);
   slides[currentSlide].classList.remove('active');
   dots[prevTheme].classList.remove('active');
   currentSlide = n;
@@ -4361,8 +4387,13 @@ function goSlide(n) {
   if (newTheme !== prevTheme) {
     heroText.classList.add('fading');
     setTimeout(function() {
-      heroText.querySelector('h1').innerHTML = slideContent[newTheme].h1;
-      heroText.querySelector('.hero-sub').textContent = slideContent[newTheme].sub;
+      var content = slideContent[newTheme];
+      heroText.querySelector('h1').innerHTML = content.h1;
+      heroText.querySelector('.hero-sub').textContent = content.sub;
+      btnPrimary.textContent = content.ctaPrimary.text;
+      btnPrimary.onclick = function() { showPage(content.ctaPrimary.page); };
+      btnSecondary.textContent = content.ctaSecondary.text;
+      btnSecondary.onclick = function() { showPage(content.ctaSecondary.page); };
       heroText.classList.remove('fading');
     }, 300);
   }
