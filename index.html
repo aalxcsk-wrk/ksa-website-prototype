@@ -258,11 +258,11 @@
   .cta-strip p { color:rgba(255,255,255,0.72); font-size:16px; margin-bottom:36px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.78; position:relative; }
 
   /* GROUP RECOGNITION STRIP */
-  .group-strip { background:#F8F9FA; border-top:1px solid #E5E7EB; border-bottom:1px solid #E5E7EB; padding:12px 56px; }
-  .group-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
+  .group-strip { background:#F8F9FA; border-top:1px solid #E5E7EB; border-bottom:1px solid #E5E7EB; padding:14px 56px; }
+  .group-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
   .group-strip-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:#6B7280; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; flex-shrink:0; }
   .group-strip-logos { display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
-  .group-strip-logo { height:40px; width:120px; object-fit:contain; filter:grayscale(100%); opacity:0.6; transition:filter 0.3s,opacity 0.3s; cursor:pointer; }
+  .group-strip-logo { height:36px; width:auto; max-width:120px; object-fit:contain; filter:grayscale(100%); opacity:0.6; transition:filter 0.3s,opacity 0.3s; cursor:pointer; }
   .group-strip-logo:hover { filter:grayscale(0%); opacity:1; }
 
   /* CREDENTIALS */
@@ -731,9 +731,10 @@
     .cta-strip p { font-size:14px; }
 
     /* Group recognition strip */
-    .group-strip { padding:12px 20px; }
-    .group-strip-inner { flex-direction:column; align-items:flex-start; gap:12px; }
-    .group-strip-logos { overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:4px; }
+    .group-strip { padding:14px 20px; }
+    .group-strip-inner { flex-direction:column; align-items:flex-start; gap:10px; }
+    .group-strip-logos { overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:4px; gap:20px; }
+    .group-strip-logo { height:32px; }
 
     /* New section grids → 1 or 2 column */
     .cred-grid { grid-template-columns:repeat(2,1fr); }
@@ -1183,11 +1184,11 @@
   }
 
   /* Partner logo strip — subpages */
-  .med-partner-strip { background:var(--white); padding:22px 56px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .med-partner-strip { background:#F8F9FA; padding:14px 56px; border-top:1px solid #E5E7EB; border-bottom:1px solid #E5E7EB; }
   .med-partner-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
   .med-partner-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:#6B7280; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; flex-shrink:0; }
   .med-partner-logos { display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
-  .med-partner-logo { height:36px; max-width:120px; object-fit:contain; filter:grayscale(1) opacity(0.55); transition:filter .25s; flex-shrink:0; }
+  .med-partner-logo { height:36px; width:auto; max-width:120px; object-fit:contain; filter:grayscale(1) opacity(0.55); transition:filter .25s; flex-shrink:0; }
   .med-partner-logo:hover { filter:grayscale(0) opacity(1); }
 
   /* Pill strip — S3 */
@@ -1318,10 +1319,10 @@
     .med-also-all-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media(max-width:700px) {
-    .med-partner-strip { padding:16px 20px; }
-    .med-partner-strip-inner { flex-direction:column; align-items:flex-start; gap:12px; }
+    .med-partner-strip { padding:14px 20px; }
+    .med-partner-strip-inner { flex-direction:column; align-items:flex-start; gap:10px; }
     .med-partner-logos { overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:4px; gap:20px; }
-    .med-partner-logo { height:28px; flex-shrink:0; }
+    .med-partner-logo { height:32px; flex-shrink:0; }
     .med-pill-strip-inner { padding:0 24px; }
     .med-adv-grid { grid-template-columns:1fr; }
     .med-prod-grid { grid-template-columns:1fr; }
