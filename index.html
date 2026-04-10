@@ -260,7 +260,7 @@
   /* GROUP RECOGNITION STRIP */
   .group-strip { background:#F8F9FA; border-top:1px solid #E5E7EB; border-bottom:1px solid #E5E7EB; padding:12px 56px; }
   .group-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
-  .group-strip-label { font-family:'DM Sans',sans-serif; font-size:12px; color:#6B7280; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; flex-shrink:0; }
+  .group-strip-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:#6B7280; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; flex-shrink:0; }
   .group-strip-logos { display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
   .group-strip-logo { height:40px; width:120px; object-fit:contain; filter:grayscale(100%); opacity:0.6; transition:filter 0.3s,opacity 0.3s; cursor:pointer; }
   .group-strip-logo:hover { filter:grayscale(0%); opacity:1; }
@@ -1185,7 +1185,8 @@
   /* Partner logo strip — subpages */
   .med-partner-strip { background:var(--white); padding:22px 56px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
   .med-partner-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
-  .med-partner-label { font-size:11px; font-weight:700; color:var(--gray); text-transform:uppercase; letter-spacing:0.1em; font-family:'Montserrat',sans-serif; white-space:nowrap; margin-right:8px; flex-shrink:0; }
+  .med-partner-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:#6B7280; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; flex-shrink:0; }
+  .med-partner-logos { display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
   .med-partner-logo { height:36px; max-width:120px; object-fit:contain; filter:grayscale(1) opacity(0.55); transition:filter .25s; flex-shrink:0; }
   .med-partner-logo:hover { filter:grayscale(0) opacity(1); }
 
@@ -1317,9 +1318,10 @@
     .med-also-all-grid { grid-template-columns:repeat(2,1fr); }
   }
   @media(max-width:700px) {
-    .med-partner-strip { padding:22px 24px; }
-    .med-partner-strip-inner { gap:16px; }
-    .med-partner-logo { height:28px; }
+    .med-partner-strip { padding:16px 20px; }
+    .med-partner-strip-inner { flex-direction:column; align-items:flex-start; gap:12px; }
+    .med-partner-logos { overflow-x:auto; flex-wrap:nowrap; width:100%; padding-bottom:4px; gap:20px; }
+    .med-partner-logo { height:28px; flex-shrink:0; }
     .med-pill-strip-inner { padding:0 24px; }
     .med-adv-grid { grid-template-columns:1fr; }
     .med-prod-grid { grid-template-columns:1fr; }
@@ -2683,7 +2685,12 @@ function resetMedPage(page) {
   <div class="med-partner-strip">
     <div class="med-partner-strip-inner">
       <span class="med-partner-label">Our Partners</span>
-      <img src="images/Boston Scientific.png" class="med-partner-logo" alt="Boston Scientific" title="Boston Scientific"><img src="images/seawon-logo.png" class="med-partner-logo" alt="Seawon Meditech" title="Seawon Meditech"><img src="images/GammaCore.png" class="med-partner-logo" alt="GammaCore" title="GammaCore"><img src="images/Tokyo-iken-qdeln9o4jxdesfp31ag2v246rxvs06bpzeblmgyt4w.png" class="med-partner-logo" alt="Tokyo Iken" title="Tokyo Iken">
+      <div class="med-partner-logos">
+        <img src="images/Boston Scientific.png" class="med-partner-logo" alt="Boston Scientific" title="Boston Scientific">
+        <img src="images/seawon-logo.png" class="med-partner-logo" alt="Seawon Meditech" title="Seawon Meditech">
+        <img src="images/GammaCore.png" class="med-partner-logo" alt="GammaCore" title="GammaCore">
+        <img src="images/Tokyo-iken-qdeln9o4jxdesfp31ag2v246rxvs06bpzeblmgyt4w.png" class="med-partner-logo" alt="Tokyo Iken" title="Tokyo Iken">
+      </div>
     </div>
   </div>
   <div class="med-adv-section section">
@@ -2973,7 +2980,10 @@ function resetMedPage(page) {
   <div class="med-partner-strip">
     <div class="med-partner-strip-inner">
       <span class="med-partner-label">Our Partners</span>
-      <img src="images/Cambridge Interventional.png" class="med-partner-logo" alt="Cambridge Interventional" title="Cambridge Interventional"><img src="images/Hygea.png" class="med-partner-logo" alt="Hygea" title="Hygea">
+      <div class="med-partner-logos">
+        <img src="images/Cambridge Interventional.png" class="med-partner-logo" alt="Cambridge Interventional" title="Cambridge Interventional">
+        <img src="images/Hygea.png" class="med-partner-logo" alt="Hygea" title="Hygea">
+      </div>
     </div>
   </div>
   <div class="med-adv-section section">
@@ -3179,7 +3189,9 @@ function resetMedPage(page) {
   <div class="med-partner-strip">
     <div class="med-partner-strip-inner">
       <span class="med-partner-label">Our Partners</span>
-      <img src="images/Koran.png" class="med-partner-logo" alt="Kiran" title="Kiran">
+      <div class="med-partner-logos">
+        <img src="images/Koran.png" class="med-partner-logo" alt="Kiran" title="Kiran">
+      </div>
     </div>
   </div>
   <div class="med-adv-section section">
@@ -3334,7 +3346,9 @@ function resetMedPage(page) {
   <div class="med-partner-strip">
     <div class="med-partner-strip-inner">
       <span class="med-partner-label">Our Partners</span>
-      <img src="images/Heraeus Med_Logo.png" class="med-partner-logo" alt="Heraeus Medical" title="Heraeus Medical">
+      <div class="med-partner-logos">
+        <img src="images/Heraeus Med_Logo.png" class="med-partner-logo" alt="Heraeus Medical" title="Heraeus Medical">
+      </div>
     </div>
   </div>
   <div class="med-adv-section section">
@@ -3490,7 +3504,15 @@ function resetMedPage(page) {
   <div class="med-partner-strip">
     <div class="med-partner-strip-inner">
       <span class="med-partner-label">Our Partners</span>
-      <img src="images/Boston Scientific.png" class="med-partner-logo" alt="Boston Scientific" title="Boston Scientific"><img src="images/Cambridge Interventional.png" class="med-partner-logo" alt="Cambridge Interventional" title="Cambridge Interventional"><img src="images/Hygea.png" class="med-partner-logo" alt="Hygea" title="Hygea"><img src="images/seawon-logo.png" class="med-partner-logo" alt="Seawon Meditech" title="Seawon Meditech"><img src="images/Koran.png" class="med-partner-logo" alt="Kiran" title="Kiran"><img src="images/GammaCore.png" class="med-partner-logo" alt="GammaCore" title="GammaCore"><img src="images/Tokyo-iken-qdeln9o4jxdesfp31ag2v246rxvs06bpzeblmgyt4w.png" class="med-partner-logo" alt="Tokyo Iken" title="Tokyo Iken">
+      <div class="med-partner-logos">
+        <img src="images/Boston Scientific.png" class="med-partner-logo" alt="Boston Scientific" title="Boston Scientific">
+        <img src="images/Cambridge Interventional.png" class="med-partner-logo" alt="Cambridge Interventional" title="Cambridge Interventional">
+        <img src="images/Hygea.png" class="med-partner-logo" alt="Hygea" title="Hygea">
+        <img src="images/seawon-logo.png" class="med-partner-logo" alt="Seawon Meditech" title="Seawon Meditech">
+        <img src="images/Koran.png" class="med-partner-logo" alt="Kiran" title="Kiran">
+        <img src="images/GammaCore.png" class="med-partner-logo" alt="GammaCore" title="GammaCore">
+        <img src="images/Tokyo-iken-qdeln9o4jxdesfp31ag2v246rxvs06bpzeblmgyt4w.png" class="med-partner-logo" alt="Tokyo Iken" title="Tokyo Iken">
+      </div>
     </div>
   </div>
   <div class="med-adv-section section">
