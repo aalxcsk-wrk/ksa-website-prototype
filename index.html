@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kromax South Asia — Website Prototype v19</title>
+<title>Kromax South Asia — Website Prototype v20</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -1435,6 +1435,258 @@
     .med-sub-hero-content { padding:56px 0 48px; }
   }
 
+
+  /* ══════════════════════════════════════════════
+     PERSONAL HEALTH & WELLNESS BU — v20
+  ══════════════════════════════════════════════ */
+
+  /* PH Landing hero */
+  .ph-hero { position:relative; min-height:520px; display:flex; flex-direction:column; background-size:cover; background-position:center; }
+  .ph-hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(4,27,74,0.78) 0%,rgba(4,27,74,0.92) 100%); }
+  .ph-hero-content { position:relative; z-index:2; padding:100px 56px 60px; max-width:1180px; width:100%; margin:0 auto; text-align:left; }
+  .ph-hero-content .breadcrumb { margin-bottom:18px; }
+  .ph-hero-content h1 { font-family:'Montserrat',sans-serif; font-size:clamp(28px,3.5vw,48px); font-weight:800; color:var(--white); letter-spacing:-0.025em; line-height:1.1; margin-bottom:10px; }
+  .ph-hero-tagline { font-family:'Montserrat',sans-serif; font-size:clamp(17px,2vw,24px); font-weight:600; color:var(--kyellow); margin-bottom:20px; line-height:1.3; }
+  .ph-hero-content > p { font-size:15.5px; color:rgba(255,255,255,0.78); line-height:1.82; max-width:680px; margin:0; }
+  .ph-disclaimer { font-size:11.5px; color:rgba(255,255,255,0.38); font-style:italic; margin-top:16px; max-width:680px; border-top:1px solid rgba(255,255,255,0.12); padding-top:12px; line-height:1.6; }
+  .ph-hero-cta { margin-top:28px; display:flex; gap:14px; flex-wrap:wrap; }
+  .ph-hero-bottombar { position:relative; z-index:2; background:rgba(255,255,255,0.08); border-top:1px solid rgba(255,255,255,0.13); padding:14px 56px; }
+  .ph-hero-bottombar-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:16px; }
+  .ph-hero-bottombar-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; }
+  .ph-tw-logo { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:700; color:#0066CC; filter:grayscale(100%) brightness(2); opacity:0.75; transition:filter .3s,opacity .3s; }
+  .ph-tw-logo:hover { filter:grayscale(0%); opacity:1; }
+
+  /* PH Solutions Grid S3A */
+  .ph-solutions-section { background:var(--white); padding:72px 56px; }
+  .ph-solutions-inner { max-width:1180px; margin:0 auto; }
+  .ph-sol-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:32px; }
+  .ph-sol-card { background:#f4f7fb; border:1.5px solid var(--border); border-radius:16px; padding:32px 28px; cursor:pointer; transition:all .25s var(--ease-spring); }
+  .ph-sol-card:hover { border-color:var(--kblue); background:var(--white); box-shadow:var(--shadow-card-hover); transform:translateY(-4px); }
+  .ph-sol-title { font-family:'Montserrat',sans-serif; font-size:16px; font-weight:800; color:var(--dark-navy); margin-bottom:4px; }
+  .ph-sol-subtitle { font-size:11.5px; font-weight:600; color:var(--gray); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px; font-family:'Montserrat',sans-serif; }
+  .ph-sol-desc { font-size:14px; color:var(--gray); line-height:1.72; margin-bottom:18px; }
+  .ph-sol-cta { font-size:13px; font-weight:700; color:var(--kblue); font-family:'Montserrat',sans-serif; }
+  .ph-sol-cta::after { content:" →"; }
+
+  /* PH Wellness Needs S3B */
+  .ph-needs-section { background:var(--offwhite); padding:56px 56px; }
+  .ph-needs-inner { max-width:1180px; margin:0 auto; }
+  .ph-needs-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:28px; }
+  .ph-needs-pill { background:var(--white); border:1.5px solid var(--border); border-radius:12px; padding:14px 16px; cursor:pointer; transition:all .18s; }
+  .ph-needs-pill:hover { border-color:var(--kblue); background:var(--kblue-50); }
+  .ph-needs-pill-label { font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--dark-navy); margin-bottom:4px; }
+  .ph-needs-pill-desc { font-size:11.5px; color:var(--gray); line-height:1.55; }
+
+  /* PH Who Is This For S4 */
+  .ph-audience-section { background:var(--white); padding:72px 56px; }
+  .ph-audience-inner { max-width:1180px; margin:0 auto; }
+  .ph-audience-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+  .ph-audience-pill { display:inline-flex; align-items:center; gap:8px; background:var(--kblue-50); border:1.5px solid #c5d3ed; border-radius:100px; padding:10px 18px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--kblue); }
+
+  /* PH QI & AI S5 */
+  .ph-qi-section { background:#f4f7fb; padding:72px 56px; }
+  .ph-qi-inner { max-width:1180px; margin:0 auto; }
+  .ph-diagram-placeholder { width:100%; background:var(--white); border:2px dashed #c8d4e8; border-radius:16px; padding:48px 24px; text-align:center; color:var(--gray); font-size:14px; margin:28px 0; }
+  .ph-diagram-placeholder strong { display:block; font-weight:700; color:var(--dark-navy); margin-bottom:6px; }
+  .ph-diagram-caption { font-size:12px; color:var(--gray); font-style:italic; margin-top:8px; }
+  .ph-qi-flow { display:flex; align-items:stretch; margin:32px 0; background:var(--white); border:1.5px solid var(--border); border-radius:14px; overflow:hidden; }
+  .ph-qi-step { flex:1; padding:20px 14px; text-align:center; border-right:1px solid var(--border); }
+  .ph-qi-step:last-child { border-right:none; }
+  .ph-qi-step-num { font-family:'Montserrat',sans-serif; font-size:10px; font-weight:800; color:var(--kblue); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:6px; }
+  .ph-qi-step-icon { font-size:20px; margin-bottom:8px; }
+  .ph-qi-step-label { font-family:'Montserrat',sans-serif; font-size:11.5px; font-weight:700; color:var(--dark-navy); line-height:1.3; }
+  .ph-qi-callout { background:var(--kblue-50); border:1.5px solid #c5d3ed; border-radius:12px; padding:18px 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:24px; flex-wrap:wrap; }
+  .ph-qi-callout-text { font-size:14px; color:var(--dark-navy); line-height:1.65; flex:1; }
+
+  /* PH Our Direction S6 */
+  .ph-direction-section { background:var(--white); padding:72px 56px; }
+  .ph-direction-inner { max-width:1180px; margin:0 auto; }
+  .ph-sdg-row { display:flex; gap:20px; margin-top:32px; flex-wrap:wrap; }
+  .ph-sdg-item { flex:1; min-width:130px; text-align:center; }
+  .ph-sdg-badge { width:72px; height:72px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; line-height:1.25; text-align:center; padding:6px; }
+  .ph-sdg-badge.sdg3 { background:#4DA147; color:white; }
+  .ph-sdg-badge.sdg8 { background:#A21942; color:white; }
+  .ph-sdg-badge.sdg13 { background:#3F7E44; color:white; }
+  .ph-sdg-badge.idg { background:#2B4EA8; color:white; }
+  .ph-sdg-label { font-size:12px; color:var(--gray); line-height:1.5; }
+
+  /* PH Our Partner S7 */
+  .ph-partner-section { background:var(--offwhite); padding:56px 56px; }
+  .ph-partner-inner { max-width:1180px; margin:0 auto; }
+
+  /* PH Resources S8 */
+  .ph-resources-section { background:var(--white); padding:72px 56px; }
+  .ph-resources-inner { max-width:1180px; margin:0 auto; }
+  .ph-filter-bar { display:flex; gap:8px; flex-wrap:wrap; margin:24px 0; }
+  .ph-filter-btn { padding:8px 18px; border-radius:100px; border:1.5px solid var(--border); background:var(--white); font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:var(--gray); cursor:pointer; transition:all .18s; }
+  .ph-filter-btn.active,.ph-filter-btn:hover { background:var(--kblue); border-color:var(--kblue); color:var(--white); }
+  .ph-resource-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .ph-resource-card { background:var(--offwhite); border:1.5px solid var(--border); border-radius:14px; padding:24px 20px; transition:all .2s; }
+  .ph-resource-card:hover { border-color:var(--kblue); transform:translateY(-2px); }
+  .ph-resource-tag { display:inline-block; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; background:var(--kblue-light); color:var(--kblue); padding:3px 9px; border-radius:100px; margin-bottom:10px; }
+  .ph-resource-title { font-family:'Montserrat',sans-serif; font-size:13.5px; font-weight:700; color:var(--dark-navy); margin-bottom:8px; line-height:1.35; }
+  .ph-resource-meta { font-size:12px; color:var(--gray); }
+  .ph-resource-dl { display:inline-flex; align-items:center; gap:5px; margin-top:12px; font-size:12.5px; font-weight:700; color:var(--kblue); font-family:'Montserrat',sans-serif; cursor:pointer; }
+
+  /* L3 sub-page hero (PH version) — extends med-sub-hero */
+  .ph-sub-hero-btn { display:inline-block; margin-top:24px; background:var(--kyellow); color:var(--dark-navy); padding:12px 28px; border-radius:100px; font-weight:700; font-size:13.5px; cursor:pointer; border:none; font-family:'DM Sans',sans-serif; transition:all .28s var(--ease-spring); }
+  .ph-sub-hero-btn:hover { background:var(--kyellow-hover); transform:translateY(-2px); }
+
+  /* PH Partner strip (single logo) */
+  .ph-partner-strip { background:#F8F9FA; border-top:1px solid #E5E7EB; border-bottom:1px solid #E5E7EB; padding:16px 56px; }
+  .ph-partner-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:20px; }
+  .ph-partner-strip-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:#6B7280; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; }
+
+  /* Two Approaches / Two Audiences block */
+  .ph-two-col-section { background:var(--offwhite); padding:64px 56px; }
+  .ph-two-col-inner { max-width:1180px; margin:0 auto; }
+  .ph-two-col-grid { display:grid; grid-template-columns:1fr 1px 1fr; gap:40px; align-items:start; margin-top:32px; }
+  .ph-col-divider { background:var(--border); align-self:stretch; }
+  .ph-col-head { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:800; color:var(--dark-navy); margin-bottom:12px; }
+  .ph-col-body { font-size:14.5px; color:var(--gray); line-height:1.82; }
+  .ph-two-col-bridge { margin-top:32px; padding-top:24px; border-top:1px solid var(--border); font-size:14px; color:var(--gray); line-height:1.75; font-style:italic; }
+
+  /* PH Who Needs It grid */
+  .ph-who-section { background:var(--white); padding:72px 56px; }
+  .ph-who-inner { max-width:1180px; margin:0 auto; }
+  .ph-who-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:32px; }
+  .ph-who-card { background:#f4f7fb; border:1.5px solid var(--border); border-radius:14px; padding:22px 18px; }
+  .ph-who-card-title { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--dark-navy); margin-bottom:7px; line-height:1.35; }
+  .ph-who-card-desc { font-size:12.5px; color:var(--gray); line-height:1.6; }
+  .ph-who-group-label { font-family:'Montserrat',sans-serif; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--kblue); margin:12px 0 8px; padding-bottom:8px; border-bottom:2px solid var(--kblue-light); grid-column:1/-1; }
+
+  /* Product image placeholder */
+  .ph-prod-img { width:100%; min-height:200px; background:#F5F5F5; border-radius:8px; margin-bottom:14px; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:12.5px; font-family:'Montserrat',sans-serif; font-weight:600; text-align:center; padding:16px; border:1px dashed #D1D5DB; }
+
+  /* Add-on module grid */
+  .ph-module-filter { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0 20px; }
+  .ph-module-filter-btn { padding:6px 15px; border-radius:100px; border:1.5px solid var(--border); background:var(--white); font-family:'Montserrat',sans-serif; font-size:11.5px; font-weight:700; color:var(--gray); cursor:pointer; transition:all .18s; }
+  .ph-module-filter-btn.active,.ph-module-filter-btn:hover { background:var(--kblue); border-color:var(--kblue); color:var(--white); }
+  .ph-module-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .ph-module-card { border:1.5px solid var(--border); border-radius:12px; padding:18px; background:#f8f9fb; transition:border-color .18s; }
+  .ph-module-card:hover { border-color:var(--kblue); }
+  .ph-module-img { width:100%; height:90px; background:#edf1f7; border-radius:8px; margin-bottom:10px; border:1px dashed #c8d4e8; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:11px; font-family:'Montserrat',sans-serif; }
+  .ph-module-name { font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:800; color:var(--dark-navy); margin-bottom:5px; }
+  .ph-module-desc { font-size:11.5px; color:var(--gray); line-height:1.62; margin-bottom:10px; }
+  .ph-module-enquire { width:100%; background:var(--kblue); color:var(--white); border:none; padding:7px 12px; border-radius:7px; font-size:11.5px; font-weight:700; cursor:pointer; font-family:'Montserrat',sans-serif; }
+
+  /* Cardio HRV table */
+  .ph-hrv-table { width:100%; border-collapse:collapse; margin-top:20px; font-size:13px; }
+  .ph-hrv-table th { background:#f4f7fb; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--dark-navy); padding:12px 16px; text-align:left; border-bottom:2px solid var(--border); }
+  .ph-hrv-table td { padding:11px 16px; border-bottom:1px solid var(--border); color:var(--gray); line-height:1.55; }
+  .ph-hrv-table td:first-child { font-weight:600; color:var(--dark-navy); }
+  .ph-hrv-table tr:last-child td { border-bottom:none; }
+  .ph-hrv-note { font-size:11.5px; color:var(--gray); font-style:italic; margin-top:10px; line-height:1.55; }
+
+  /* Coaching 4-step strip */
+  .ph-coaching-steps { display:flex; margin:24px 0; background:var(--white); border:1.5px solid var(--border); border-radius:14px; overflow:hidden; }
+  .ph-coaching-step { flex:1; padding:20px 14px; border-right:1px solid var(--border); text-align:center; transition:background .18s; }
+  .ph-coaching-step:last-child { border-right:none; }
+  .ph-coaching-step:hover { background:var(--kblue-50); }
+  .ph-coaching-step-num { width:28px; height:28px; border-radius:50%; background:var(--kblue); color:var(--white); font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; }
+  .ph-coaching-step-title { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; color:var(--dark-navy); margin-bottom:5px; line-height:1.3; }
+  .ph-coaching-step-desc { font-size:11px; color:var(--gray); line-height:1.5; }
+
+  /* Programme groups pills (Home) */
+  .ph-prog-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .ph-prog-pill { display:inline-flex; align-items:center; padding:6px 14px; border-radius:100px; background:var(--kblue-50); border:1.5px solid #c5d3ed; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:var(--kblue); }
+  .ph-prog-pill.sub { background:#e8f5e9; border-color:#a5d6a7; color:#2e7d32; font-size:11px; }
+
+  /* Upgrade Callout (Home) */
+  .ph-upgrade-callout { background:#FFF8E1; border:1.5px solid #F5D000; border-radius:16px; padding:36px; text-align:center; margin:48px 0; }
+  .ph-upgrade-callout h3 { font-family:'Montserrat',sans-serif; font-size:22px; font-weight:800; color:var(--dark-navy); margin-bottom:12px; }
+  .ph-upgrade-callout p { font-size:15px; color:var(--gray); max-width:560px; margin:0 auto 20px; line-height:1.8; }
+
+  /* Agrar pillars */
+  .ph-agrar-pillars { margin-top:24px; }
+  .ph-agrar-pillar-head { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; color:var(--dark-navy); margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid var(--kblue); }
+  .ph-agrar-pillar-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:28px; }
+  .ph-agrar-pillar-item { background:#f4f7fb; border-radius:10px; padding:13px 15px; font-size:13px; color:var(--dark-navy); font-weight:600; line-height:1.35; }
+  .ph-agrar-pillar-item span { display:block; font-weight:400; font-size:12px; color:var(--gray); margin-top:3px; }
+
+  /* Academy content grid */
+  .ph-content-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:24px; }
+  .ph-content-card { background:var(--offwhite); border:1.5px solid var(--border); border-radius:14px; overflow:hidden; cursor:pointer; transition:all .2s; }
+  .ph-content-card:hover { border-color:var(--kblue); transform:translateY(-3px); box-shadow:var(--shadow-card-hover); }
+  .ph-content-thumb { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,#1a4b9c22,#1a4b9c55); position:relative; display:flex; align-items:center; justify-content:center; }
+  .ph-content-play { width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,0.9); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+  .ph-content-play::after { content:''; width:0; height:0; border-style:solid; border-width:8px 0 8px 16px; border-color:transparent transparent transparent var(--kblue); margin-left:3px; }
+  .ph-content-label { position:absolute; top:10px; left:10px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; padding:4px 10px; border-radius:100px; display:flex; align-items:center; gap:4px; }
+  .ph-content-label.free { background:#22c55e; color:white; }
+  .ph-content-label.members { background:var(--dark-navy); color:white; }
+  .ph-content-body { padding:16px 18px; }
+  .ph-content-topic { display:inline-block; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--kblue); background:var(--kblue-light); padding:3px 8px; border-radius:100px; margin-bottom:8px; }
+  .ph-content-speaker { font-size:12px; color:var(--gray); margin-bottom:6px; }
+  .ph-content-title { font-family:'Montserrat',sans-serif; font-size:13.5px; font-weight:700; color:var(--dark-navy); line-height:1.4; margin-bottom:6px; }
+  .ph-content-duration { font-size:11.5px; color:var(--gray); }
+  .ph-content-cta { display:block; width:100%; margin-top:12px; background:var(--kblue); color:var(--white); border:none; padding:9px 14px; border-radius:8px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; cursor:pointer; }
+  .ph-content-cta.dark { background:var(--dark-navy); }
+
+  /* Certification pathway */
+  .ph-cert-section { background:var(--offwhite); padding:72px 56px; }
+  .ph-cert-inner { max-width:1180px; margin:0 auto; }
+  .ph-cert-path { display:flex; margin-top:40px; }
+  .ph-cert-step { flex:1; padding:28px 20px; background:var(--white); border:1.5px solid var(--border); border-right:none; cursor:pointer; transition:all .2s; }
+  .ph-cert-step:first-child { border-radius:14px 0 0 14px; }
+  .ph-cert-step:last-child { border-right:1.5px solid var(--border); border-radius:0 14px 14px 0; }
+  .ph-cert-step:hover { background:#f4f7fb; }
+  .ph-cert-step.kol { background:linear-gradient(135deg,#FFF8E1,#FFFDE7); border-color:#F5D000; }
+  .ph-cert-step.kol:hover { background:linear-gradient(135deg,#FFF3CD,#FFF8E1); }
+  .ph-cert-num { width:32px; height:32px; border-radius:50%; background:var(--kblue); color:var(--white); font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .ph-cert-step.kol .ph-cert-num { background:#F5D000; color:var(--dark-navy); }
+  .ph-cert-title { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--dark-navy); margin-bottom:7px; line-height:1.3; }
+  .ph-cert-step.kol .ph-cert-title { color:#7a5a00; }
+  .ph-cert-desc { font-size:12px; color:var(--gray); line-height:1.6; }
+
+  /* Modals */
+  .ph-modal-overlay { display:none; position:fixed; inset:0; background:rgba(4,27,74,0.78); z-index:9000; align-items:center; justify-content:center; padding:20px; }
+  .ph-modal-overlay.open { display:flex; }
+  .ph-modal { background:var(--white); border-radius:20px; padding:36px 32px; max-width:440px; width:100%; box-shadow:0 24px 64px rgba(4,27,74,0.25); position:relative; max-height:90vh; overflow-y:auto; }
+  .ph-modal-close { position:absolute; top:14px; right:16px; font-size:22px; cursor:pointer; color:var(--gray); border:none; background:none; font-weight:700; line-height:1; }
+  .ph-modal-thumb { width:100%; height:120px; background:linear-gradient(135deg,#1a4b9c22,#1a4b9c55); border-radius:10px; margin-bottom:14px; display:flex; align-items:center; justify-content:center; }
+  .ph-modal-lock { font-size:32px; text-align:center; margin-bottom:10px; }
+  .ph-modal h3 { font-family:'Montserrat',sans-serif; font-size:17px; font-weight:800; color:var(--dark-navy); margin-bottom:6px; line-height:1.3; }
+  .ph-modal p { font-size:13.5px; color:var(--gray); line-height:1.7; margin-bottom:16px; }
+  .ph-modal input,.ph-modal textarea { width:100%; padding:10px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:13.5px; color:var(--text); margin-bottom:10px; outline:none; resize:vertical; box-sizing:border-box; }
+  .ph-modal input:focus,.ph-modal textarea:focus { border-color:var(--kblue); }
+  .ph-modal-submit { width:100%; background:var(--kyellow); color:var(--dark-navy); border:none; padding:13px; border-radius:100px; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; cursor:pointer; margin-top:6px; }
+  .ph-modal-submit:hover { background:var(--kyellow-hover); }
+  .ph-modal-fine { font-size:11px; color:var(--gray); text-align:center; margin-top:10px; line-height:1.55; }
+
+  /* Responsive — PH */
+  @media(max-width:1100px) {
+    .ph-sol-grid { grid-template-columns:1fr; }
+    .ph-needs-grid { grid-template-columns:repeat(3,1fr); }
+    .ph-who-grid { grid-template-columns:repeat(2,1fr); }
+    .ph-module-grid { grid-template-columns:repeat(2,1fr); }
+    .ph-content-grid { grid-template-columns:repeat(2,1fr); }
+    .ph-cert-path { flex-direction:column; }
+    .ph-cert-step { border-right:1.5px solid var(--border) !important; border-radius:14px !important; }
+    .ph-agrar-pillar-grid { grid-template-columns:1fr; }
+  }
+  @media(max-width:768px) {
+    .ph-hero-content { padding:80px 24px 48px; }
+    .ph-hero-bottombar { padding:14px 24px; }
+    .ph-solutions-section,.ph-needs-section,.ph-audience-section,.ph-qi-section,
+    .ph-direction-section,.ph-partner-section,.ph-resources-section,
+    .ph-two-col-section,.ph-who-section,.ph-cert-section { padding-left:24px; padding-right:24px; }
+    .ph-partner-strip { padding:14px 24px; }
+    .ph-needs-grid { grid-template-columns:repeat(2,1fr); }
+    .ph-two-col-grid { grid-template-columns:1fr; }
+    .ph-col-divider { display:none; }
+    .ph-who-grid { grid-template-columns:repeat(2,1fr); }
+    .ph-qi-flow { flex-direction:column; }
+    .ph-qi-step { border-right:none; border-bottom:1px solid var(--border); }
+    .ph-qi-step:last-child { border-bottom:none; }
+    .ph-coaching-steps { flex-direction:column; }
+    .ph-coaching-step { border-right:none; border-bottom:1px solid var(--border); }
+    .ph-coaching-step:last-child { border-bottom:none; }
+    .ph-cert-path { flex-direction:column; }
+    .ph-cert-step { border-right:1.5px solid var(--border) !important; border-radius:14px !important; }
+    .ph-content-grid { grid-template-columns:1fr; }
+    .ph-module-grid { grid-template-columns:repeat(2,1fr); }
+    .ph-resource-grid { grid-template-columns:1fr; }
+  }
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -1555,9 +1807,12 @@ function resetMedPage(page) {
             </div>
             <div class="mega-sub" id="mega-health">
               <div class="mega-sub-label">Personal Health</div>
-              <div class="mega-sub-item" onclick="showPage('personalhealth')">Quantum Wellness Devices</div>
-              <div class="mega-sub-item" onclick="showPage('personalhealth')">Recovery &amp; Rehabilitation</div>
-              <div class="mega-sub-item" onclick="showPage('personalhealth')">Health Supplements</div>
+              <div class="mega-sub-item" onclick="showPage('personalhealth')">Overview</div>
+              <div class="mega-sub-item" onclick="showPage('ph-holistic')">Holistic Wellness &amp; Frequency Therapy</div>
+              <div class="mega-sub-item" onclick="showPage('ph-corporate')">Corporate Wellness &amp; Business Coaching</div>
+              <div class="mega-sub-item" onclick="showPage('ph-home')">Personal &amp; Home Wellness</div>
+              <div class="mega-sub-item" onclick="showPage('ph-agrar')">Sustainable Agriculture</div>
+              <div class="mega-sub-item" onclick="showPage('academy')">U-SUN Academy</div>
             </div>
           </div>
         </div>
@@ -3651,69 +3906,237 @@ function resetMedPage(page) {
 </div>
 
 
-<!-- ════════════════ PERSONAL HEALTH SOLUTIONS -->
+<!-- ════════════════ PERSONAL HEALTH & WELLNESS — LANDING -->
 <div id="page-personalhealth" class="page">
-  <div class="bu-page-hero" style="background:linear-gradient(130deg,#0f4c5c 0%,#0a3040 100%)">
-    <div class="bu-page-grid">
-      <div>
-        <div class="breadcrumb" onclick="showPage('industries')">← Our Solutions</div>
-        <h1 style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:800;color:var(--white);letter-spacing:-0.02em;margin-bottom:16px">Personal Health Solutions</h1>
-        <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.75;margin-bottom:28px">Quantum frequency technologies for clinical practitioners, corporate wellness programmes and personal well-being.</p>
-        <button class="btn-primary" onclick="showPage('contact')">Request a Consultation →</button>
+  <!-- S2 HERO -->
+  <div class="ph-hero" style="background-image:url('https://images.unsplash.com/photo-1591035897819-f4bdf739f446?w=1600&q=85')">
+    <div class="ph-hero-overlay"></div>
+    <div class="ph-hero-content">
+      <div class="breadcrumb" onclick="showPage('industries')">← Our Solutions</div>
+      <h1>Personal Health &amp; Wellness</h1>
+      <div class="ph-hero-tagline">The partner behind your practice.</div>
+      <p>Since 2013, U-SUN Asia has been the partner that wellness practitioners, corporate teams and individuals across Singapore and Malaysia turn to — not just for technology, but for transformation. We believe that true wellbeing is a harmony of mind, body and soul, and that the right tools alone are never enough. That is why every TimeWaver system we bring to this region comes with certified training, customised education resources, and an ongoing community of practitioners, webinars and member support — so the people we work with do not just own a device. They build a practice.</p>
+      <p class="ph-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <div class="ph-hero-cta">
+        <button class="btn-primary" onclick="document.getElementById('ph-solutions').scrollIntoView({behavior:'smooth'})">Explore Our Solutions</button>
       </div>
-      <div class="bu-sidebar" style="background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.13)">
-        <h4>Programme Areas</h4>
-        <div class="sidebar-item"><span class="dot"></span><span>Clinical Integrative Medicine</span></div>
-        <div class="sidebar-item"><span class="dot"></span><span>Corporate Wellness</span></div>
-        <div class="sidebar-item"><span class="dot"></span><span>Personal Home Care</span></div>
-        <div class="sidebar-item"><span class="dot"></span><span>Pain Management Protocols</span></div>
-        <div class="sidebar-item"><span class="dot"></span><span>Practitioner Education</span></div>
+    </div>
+    <div class="ph-hero-bottombar">
+      <div class="ph-hero-bottombar-inner">
+        <span class="ph-hero-bottombar-label">Brought to Southeast Asia by</span>
+        <span class="ph-tw-logo">U-SUN Asia</span>
       </div>
     </div>
   </div>
-  <div class="section">
-    <div class="section-inner">
-      <div class="sol-grid">
-        <div class="sol-card">
-          <img class="sol-img" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" alt="TimeWaver Pro">
-          <div class="sol-body"><div class="sol-num">01 · CLINICAL SYSTEMS</div><h3>TimeWaver Pro &amp; Frequency</h3><p>Professional bioresonance and frequency therapy systems for integrative medicine practitioners and wellness clinics.</p><div class="sol-link" onclick="showPage('contact')">Request details →</div></div>
+
+  <!-- S3A SOLUTIONS GRID -->
+  <div class="ph-solutions-section" id="ph-solutions">
+    <div class="ph-solutions-inner">
+      <div class="sec-label">Our Solutions</div>
+      <h2 class="sec-title">What We Offer</h2>
+      <p class="sec-sub">We organise our Personal Health and Wellness portfolio into four solution areas — each supported by certified training, customised education and ongoing practitioner support. Explore by category below.</p>
+      <div class="ph-sol-grid">
+        <div class="ph-sol-card" onclick="showPage('ph-holistic')">
+          <div class="ph-sol-title">Holistic Wellness</div>
+          <div class="ph-sol-subtitle">Holistic Wellness and Frequency Therapy</div>
+          <div class="ph-sol-desc">Information field analysis, frequency-based programmes and bioenergetic harmonisation for wellness practitioners, integrative clinics, TCM, medical beauty, physiotherapists and sports and rehabilitation coaches.</div>
+          <div class="ph-sol-cta">Learn More</div>
         </div>
-        <div class="sol-card">
-          <img class="sol-img" src="https://images.unsplash.com/photo-1552581234-26160f608093?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" alt="Corporate">
-          <div class="sol-body"><div class="sol-num">02 · CORPORATE WELLNESS</div><h3>TimeWaver Biz &amp; Coach</h3><p>Business analytics and personal coaching platforms using frequency-based insights for corporate well-being programmes.</p><div class="sol-link" onclick="showPage('contact')">Request details →</div></div>
+        <div class="ph-sol-card" onclick="showPage('ph-corporate')">
+          <div class="ph-sol-title">Corporate and Coaching</div>
+          <div class="ph-sol-subtitle">Corporate Wellness and Business Coaching</div>
+          <div class="ph-sol-desc">Quantifiable workforce wellbeing data, organisational decision intelligence and coaching tools for HR teams, ESG officers, C-suite, consultants and coaches.</div>
+          <div class="ph-sol-cta">Learn More</div>
         </div>
-        <div class="sol-card">
-          <img class="sol-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" alt="FSM">
-          <div class="sol-body"><div class="sol-num">03 · SPECIALISED PROTOCOLS</div><h3>TimeWaver Frequency McMakin</h3><p>Frequency-specific microcurrent (FSM) protocols developed by Carolyn McMakin for clinical pain management.</p><div class="sol-link" onclick="showPage('contact')">Request details →</div></div>
+        <div class="ph-sol-card" onclick="showPage('ph-home')">
+          <div class="ph-sol-title">Home Wellness</div>
+          <div class="ph-sol-subtitle">Personal and Home Wellness</div>
+          <div class="ph-sol-desc">Entry-level frequency wellness for individuals and families — simple, effective, practitioner-referred.</div>
+          <div class="ph-sol-cta">Learn More</div>
         </div>
-        <div class="sol-card">
-          <img class="sol-img" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" alt="Home">
-          <div class="sol-body"><div class="sol-num">04 · HOME CARE</div><h3>TimeWaver Home</h3><p>Personal wellness device for home users — guided frequency sessions for stress, sleep and general well-being.</p><div class="sol-link" onclick="showPage('contact')">Request details →</div></div>
-        </div>
-        <div class="sol-card">
-          <img class="sol-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80';this.onerror=null;" alt="Education">
-          <div class="sol-body"><div class="sol-num">05 · EDUCATION</div><h3>Coaching &amp; Educational Materials</h3><p>Practitioner training programmes, certification courses and educational resources for TimeWaver technology users.</p><div class="sol-link" onclick="showPage('contact')">Request details →</div></div>
+        <div class="ph-sol-card" onclick="showPage('ph-agrar')">
+          <div class="ph-sol-title">Agriculture</div>
+          <div class="ph-sol-subtitle">Sustainable Agriculture and Land Intelligence</div>
+          <div class="ph-sol-desc">Holistic farm analysis and harmonisation for agricultural businesses, hobby growers and land managers.</div>
+          <div class="ph-sol-cta">Learn More</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="cta-strip"><h2>Transform Wellness Outcomes</h2><p>Whether you're a clinician, corporate wellness lead or individual — we have a programme for you.</p><button class="btn-primary" onclick="showPage('contact')">Talk to a Wellness Specialist →</button></div>
+
+  <!-- S3B EXPLORE BY WELLNESS NEED -->
+  <div class="ph-needs-section">
+    <div class="ph-needs-inner">
+      <div class="sec-label">Explore by Wellness Need</div>
+      <p style="font-size:15px;color:var(--gray);margin-top:6px">Looking for a specific application or area of interest? Browse directly by wellness need.</p>
+      <div class="ph-needs-grid">
+        <div class="ph-needs-pill" onclick="showPage('ph-holistic')"><div class="ph-needs-pill-label">Holistic Health Analysis</div><div class="ph-needs-pill-desc">Information field analysis for whole-person wellness support.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-holistic')"><div class="ph-needs-pill-label">Bioenergetic Harmonisation</div><div class="ph-needs-pill-desc">Frequency-based programmes to support energy balance and vitality.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-holistic')"><div class="ph-needs-pill-label">Frequency Therapy</div><div class="ph-needs-pill-desc">IMF and FSM applications for bioenergetic and recovery support.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-holistic')"><div class="ph-needs-pill-label">Stress and Burnout Support</div><div class="ph-needs-pill-desc">Frequency programmes designed to support stress and recovery.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">HRV Stress Monitoring</div><div class="ph-needs-pill-desc">Quantifiable heart rate variability data for personal and workforce wellbeing.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">Employee Wellness Programmes</div><div class="ph-needs-pill-desc">Technology-driven wellbeing support for corporate teams and HR.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">ESG Workforce Intelligence</div><div class="ph-needs-pill-desc">Measurable people data supporting GRI 403 ESG reporting.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">Life Coaching Tools</div><div class="ph-needs-pill-desc">Information field tools that deepen coaching sessions and insights.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">Business Consulting Intelligence</div><div class="ph-needs-pill-desc">Organisational intelligence for consultants, coaches and strategists.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-holistic')"><div class="ph-needs-pill-label">Quantum AI Analysis</div><div class="ph-needs-pill-desc">AI-assisted information field analysis for faster, deeper insights.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-agrar')"><div class="ph-needs-pill-label">Farm Sustainability Intelligence</div><div class="ph-needs-pill-desc">Holistic analysis for soil, plants, animals and farm systems.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-home')"><div class="ph-needs-pill-label">Home Frequency Wellness</div><div class="ph-needs-pill-desc">Simple IMF programmes for personal and family wellbeing at home.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">Systemic Constellation Work</div><div class="ph-needs-pill-desc">Tools for family and organisational constellation practitioners.</div></div>
+        <div class="ph-needs-pill" onclick="showPage('ph-corporate')"><div class="ph-needs-pill-label">Space and Environment Balancing</div><div class="ph-needs-pill-desc">Environmental energy analysis for interior and space consultants.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S4 WHO IS THIS FOR -->
+  <div class="ph-audience-section">
+    <div class="ph-audience-inner">
+      <div class="sec-label">Who Is This For</div>
+      <h2 class="sec-title">Built for the Practitioners, Organisations and Individuals Who Are Ready to Go Further.</h2>
+      <p class="sec-sub">Whether you are a seasoned practitioner looking to go deeper, a corporate team ready to quantify wellbeing, or an individual taking the first step — our solutions are designed for a wide range of professionals, each with different goals, all held within the same support ecosystem.</p>
+      <div class="ph-audience-pills">
+        <span class="ph-audience-pill">🌿 Wellness Practitioners</span>
+        <span class="ph-audience-pill">🏥 Integrative Clinics</span>
+        <span class="ph-audience-pill">🎯 Coaches and Consultants</span>
+        <span class="ph-audience-pill">🏢 Corporate and HR Teams</span>
+        <span class="ph-audience-pill">🌾 Agricultural Businesses</span>
+        <span class="ph-audience-pill">🏠 Individuals and Families</span>
+        <span class="ph-audience-pill">🏛️ Space and Interior Consultants</span>
+        <span class="ph-audience-pill">⚕️ TCM and Naturopaths</span>
+        <span class="ph-audience-pill">🏃 Sports and Rehab Coaches</span>
+        <span class="ph-audience-pill">🐾 Veterinary Professionals</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- S5 QUANTUM INTELLIGENCE AND AI -->
+  <div class="ph-qi-section">
+    <div class="ph-qi-inner">
+      <div class="sec-label">A New Dimension of Analysis</div>
+      <h2 class="sec-title">What if your analysis could think alongside you?</h2>
+      <p style="font-size:15.5px;color:var(--gray);line-height:1.82;max-width:820px;margin-top:18px">The Information Field operates across every dimension of a person — physical, emotional, mental, energetic, and beyond. TimeWaver's technology maps this through a comprehensive ecosystem of specialist modules, each designed to surface what conventional tools cannot reach.</p>
+      <div class="ph-diagram-placeholder">
+        <strong>TimeWaver Module Ecosystem</strong>
+        [TimeWaver_Diagram_2026.png — insert here]
+        <div class="ph-diagram-caption">The TimeWaver module ecosystem — analysis across every level of the human experience.</div>
+      </div>
+      <p style="font-size:15.5px;color:var(--gray);line-height:1.82;max-width:820px;margin-bottom:28px">Now imagine having artificial intelligence working through all of it alongside you — automatically identifying context, generating relevant analysis entries, and transforming complex results into clear, actionable insights. That is what the TimeWaver QI Module brings to every practitioner, consultant and organisation in our network. Less time on analysis. More time with your client.</p>
+      <div class="ph-qi-flow">
+        <div class="ph-qi-step"><div class="ph-qi-step-num">Step 1</div><div class="ph-qi-step-icon">📋</div><div class="ph-qi-step-label">Topic</div></div>
+        <div class="ph-qi-step"><div class="ph-qi-step-num">Step 2</div><div class="ph-qi-step-icon">🤖</div><div class="ph-qi-step-label">AI Context</div></div>
+        <div class="ph-qi-step"><div class="ph-qi-step-num">Step 3</div><div class="ph-qi-step-icon">🗄️</div><div class="ph-qi-step-label">Database</div></div>
+        <div class="ph-qi-step"><div class="ph-qi-step-num">Step 4</div><div class="ph-qi-step-icon">⚡</div><div class="ph-qi-step-label">Information Field Analysis</div></div>
+        <div class="ph-qi-step"><div class="ph-qi-step-num">Step 5</div><div class="ph-qi-step-icon">✨</div><div class="ph-qi-step-label">Affirmations</div></div>
+        <div class="ph-qi-step"><div class="ph-qi-step-num">Step 6</div><div class="ph-qi-step-icon">📄</div><div class="ph-qi-step-label">Report</div></div>
+      </div>
+      <div class="ph-qi-callout">
+        <div class="ph-qi-callout-text"><strong>Already using TimeWaver?</strong> The QI Module takes your practice further — ask us about upgrading.</div>
+        <button class="btn-primary" onclick="showPage('contact')" style="white-space:nowrap;flex-shrink:0">Learn More About the QI Module</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- S6 OUR DIRECTION -->
+  <div class="ph-direction-section">
+    <div class="ph-direction-inner">
+      <div class="sec-label">Our Direction</div>
+      <h2 class="sec-title">Technology With Purpose. Wellness With Impact.</h2>
+      <p style="font-size:15.5px;color:var(--gray);line-height:1.82;max-width:820px;margin-top:18px">At U-SUN Asia, we believe that the work our practitioners and partners do — supporting wellbeing, building resilience, and helping people and organisations find balance — connects to something far larger than any individual session or programme. The UN Sustainable Development Goals call for good health and wellbeing, decent work, and climate-conscious action. The Inner Development Goals remind us that lasting change begins from within — in the consciousness, values and capacity of the people leading it. The solutions we bring to this region are chosen because they serve both dimensions: measurable impact on the outside, and meaningful growth on the inside.</p>
+      <div class="ph-sdg-row">
+        <div class="ph-sdg-item"><div class="ph-sdg-badge sdg3">SDG 3</div><div class="ph-sdg-label">Good Health and Wellbeing</div></div>
+        <div class="ph-sdg-item"><div class="ph-sdg-badge sdg8">SDG 8</div><div class="ph-sdg-label">Decent Work and Economic Growth</div></div>
+        <div class="ph-sdg-item"><div class="ph-sdg-badge sdg13">SDG 13</div><div class="ph-sdg-label">Climate Action</div></div>
+        <div class="ph-sdg-item"><div class="ph-sdg-badge idg">IDGs</div><div class="ph-sdg-label">Inner Development Goals</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S7 OUR PARTNER -->
+  <div class="ph-partner-section">
+    <div class="ph-partner-inner">
+      <div class="sec-label">Our Partner</div>
+      <h2 class="sec-title">Powered by TimeWaver</h2>
+      <div style="margin:24px 0"><span class="ph-tw-logo" style="font-size:24px">TimeWaver</span></div>
+      <p style="font-size:15.5px;color:var(--gray);line-height:1.82;max-width:820px">Founded in Germany in 2007 by Marcus Schmieke, TimeWaver is the creator of Information Field technology — a pioneering approach to analysis and harmonisation that operates across the physical, energetic, emotional, mental and soul dimensions of a person, an organisation, and a space. With over 840,000 database entries and a growing ecosystem of specialist modules, TimeWaver is trusted by practitioners, clinics, coaches and businesses across more than 50 countries. U-SUN Asia is the authorised distributor and certified training partner for Southeast Asia.</p>
+    </div>
+  </div>
+
+  <!-- S8 RESOURCES AND DOWNLOADS -->
+  <div class="ph-resources-section">
+    <div class="ph-resources-inner">
+      <div class="sec-label">Resources and Downloads</div>
+      <h2 class="sec-title">Explore Our Programme Guides and Product Brochures</h2>
+      <p class="sec-sub">Access our latest TimeWaver product brochures, programme guides and training overviews — or get in touch to request materials specific to your area of practice.</p>
+      <div class="ph-filter-bar">
+        <button class="ph-filter-btn active" onclick="phFilterRes(this,'all')">All</button>
+        <button class="ph-filter-btn" onclick="phFilterRes(this,'brochure')">Brochures</button>
+        <button class="ph-filter-btn" onclick="phFilterRes(this,'guide')">Programme Guides</button>
+        <button class="ph-filter-btn" onclick="phFilterRes(this,'video')">Videos</button>
+      </div>
+      <div class="ph-resource-grid">
+        <div class="ph-resource-card" data-res-type="brochure" onclick="phGateDownload(this)">
+          <span class="ph-resource-tag">Brochure</span>
+          <div class="ph-resource-title">TimeWaver Pro — Product Brochure</div>
+          <div class="ph-resource-meta">PDF · Information Field Analysis System</div>
+          <div class="ph-resource-dl">Download →</div>
+        </div>
+        <div class="ph-resource-card" data-res-type="brochure" onclick="phGateDownload(this)">
+          <span class="ph-resource-tag">Brochure</span>
+          <div class="ph-resource-title">TimeWaver Frequency — Product Brochure</div>
+          <div class="ph-resource-meta">PDF · IMF and FSM Frequency System</div>
+          <div class="ph-resource-dl">Download →</div>
+        </div>
+        <div class="ph-resource-card" data-res-type="guide" onclick="phGateDownload(this)">
+          <span class="ph-resource-tag">Programme Guide</span>
+          <div class="ph-resource-title">Corporate Wellness Programme Overview</div>
+          <div class="ph-resource-meta">PDF · HRV and Workforce Intelligence</div>
+          <div class="ph-resource-dl">Download →</div>
+        </div>
+        <div class="ph-resource-card" data-res-type="brochure" onclick="phGateDownload(this)">
+          <span class="ph-resource-tag">Brochure</span>
+          <div class="ph-resource-title">TimeWaver Agrar Module — Brochure</div>
+          <div class="ph-resource-meta">PDF · Agricultural Intelligence System</div>
+          <div class="ph-resource-dl">Download →</div>
+        </div>
+        <div class="ph-resource-card" data-res-type="guide" onclick="phGateDownload(this)">
+          <span class="ph-resource-tag">Programme Guide</span>
+          <div class="ph-resource-title">Holistic Wellness Practitioner Training Overview</div>
+          <div class="ph-resource-meta">PDF · Practitioner Certification Pathway</div>
+          <div class="ph-resource-dl">Download →</div>
+        </div>
+        <div class="ph-resource-card" data-res-type="video" onclick="phGateDownload(this)">
+          <span class="ph-resource-tag">Video</span>
+          <div class="ph-resource-title">Introduction to the QI Module</div>
+          <div class="ph-resource-meta">Video · 12 min · AI and Information Field</div>
+          <div class="ph-resource-dl">Watch →</div>
+        </div>
+      </div>
+      <p style="font-size:14px;color:var(--gray);margin-top:28px">Can't find what you are looking for? <span style="color:var(--kblue);font-weight:700;cursor:pointer" onclick="showPage('contact')">Contact our team directly →</span></p>
+    </div>
+  </div>
+
+  <div class="med-cta-strip">
+    <h2>Ready to explore Personal Health &amp; Wellness?</h2>
+    <p>Whether you are a practitioner, organisation or individual — our team at U-SUN Asia is ready to help you find the right starting point.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch →</button>
+      <button class="btn-outline-white" onclick="showPage('academy')">Visit U-SUN Academy</button>
+    </div>
+  </div>
   <footer>
     <div class="footer-grid">
-      <div>
-        <p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes — powering possibilities across South and Southeast Asia.</p>
-      </div>
-      <div class="footer-col"><h4>Solutions</h4>
-        <span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span>
-        <span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span>
-        <span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span>
-        <span class="footer-link" onclick="showPage('shop')">E-Shop</span>
+      <div><p class="footer-desc">Wellness technology for practitioners, organisations and individuals — distributed across Southeast Asia by U-SUN Asia, part of the Kromax Group.</p></div>
+      <div class="footer-col"><h4>Personal Health</h4>
+        <span class="footer-link" onclick="showPage('ph-holistic')">Holistic Wellness</span>
+        <span class="footer-link" onclick="showPage('ph-corporate')">Corporate and Coaching</span>
+        <span class="footer-link" onclick="showPage('ph-home')">Home Wellness</span>
+        <span class="footer-link" onclick="showPage('ph-agrar')">Agriculture</span>
+        <span class="footer-link" onclick="showPage('academy')">U-SUN Academy</span>
       </div>
       <div class="footer-col"><h4>Company</h4>
         <span class="footer-link" onclick="showPage('about')">About Us</span>
-        <span class="footer-link" onclick="showPage('news')">News &amp; Events</span>
-        <span class="footer-link" onclick="showPage('careers')">Careers</span>
-        <span class="footer-link" onclick="showPage('partnerships')">Partner With Us</span>
+        <span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span>
+        <span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span>
       </div>
       <div class="footer-col"><h4>Connect</h4>
         <span class="footer-link" onclick="showPage('contact')">Get in Touch</span>
@@ -3724,12 +4147,801 @@ function resetMedPage(page) {
     </div>
     <div class="footer-bottom">
       <p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <span class="footer-link" style="margin:0">Privacy Policy</span>
-        <span class="footer-link" style="margin:0">Cookie Policy</span>
-      </div>
+      <div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div>
     </div>
   </footer>
+</div>
+
+<!-- GATE MODAL for resources -->
+<div class="ph-modal-overlay" id="phResModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="ph-modal">
+    <button class="ph-modal-close" onclick="document.getElementById('phResModal').classList.remove('open')">×</button>
+    <h3>Download This Resource</h3>
+    <p>Enter your details and we will send the download link to your email.</p>
+    <input type="text" placeholder="Full Name *">
+    <input type="email" placeholder="Email Address *">
+    <button class="ph-modal-submit" onclick="phModalSuccess('phResModal')">Download Now →</button>
+    <div class="ph-modal-fine">Your information is kept confidential and never shared with third parties.</div>
+  </div>
+</div>
+
+<!-- ════════════════ PH — HOLISTIC WELLNESS -->
+<div id="page-ph-holistic" class="page">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=85') center/cover no-repeat">
+    <div class="med-sub-hero-overlay"></div>
+    <div class="med-sub-hero-content">
+      <div class="breadcrumb" onclick="showPage('personalhealth')">← Personal Health and Wellness</div>
+      <div class="med-sub-category">Holistic Wellness and Frequency Therapy</div>
+      <h1>Holistic Wellness and Frequency Therapy</h1>
+      <p>Two powerful approaches. One integrated practice.</p>
+      <p style="margin-top:14px">Whether you are building an integrative wellness practice, supporting clients through Information Field analysis, or exploring frequency application for vitality, stress management, sports recovery and rehabilitation — TimeWaver offers two distinct yet complementary approaches. Information Field analysis works across the physical, emotional, mental, energetic and soul dimensions of a person. Frequency application delivers targeted Individualized Microcurrent Frequencies (IMF) and Frequency Specific Microcurrent (FSM) programmes to harmonise the Bioenergetic Field. Together, they form the foundation of a practice that addresses the whole person.</p>
+      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-holistic .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore Our Solutions</button>
+    </div>
+  </div>
+  <!-- Partner strip -->
+  <div class="ph-partner-strip">
+    <div class="ph-partner-strip-inner">
+      <span class="ph-partner-strip-label">Our Principal Partner</span>
+      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+    </div>
+  </div>
+  <!-- S4 TWO APPROACHES -->
+  <div class="ph-two-col-section">
+    <div class="ph-two-col-inner">
+      <div class="sec-label">Two Approaches, One Ecosystem</div>
+      <div class="ph-two-col-grid">
+        <div>
+          <div class="ph-col-head">Information Field Analysis</div>
+          <div class="ph-col-body">TimeWaver Pro and MobileQuantum work by analysing backgrounds and imbalances across multiple dimensions of a person — physical, emotional, mental, energetic and soul. Specialist modules extend the analysis into meridians, organ coherence, biofield, family dynamics, epigenetics and more. For practitioners who want to understand the full picture of what is happening for their client, this is the system that goes deepest.</div>
+        </div>
+        <div class="ph-col-divider"></div>
+        <div>
+          <div class="ph-col-head">Frequency Application</div>
+          <div class="ph-col-body">TimeWaver Frequency and Frequency McMakin deliver Individualized Microcurrent Frequencies (IMF) and Frequency Specific Microcurrent (FSM) to harmonise the Bioenergetic Field. Applications span vitality, stress management, sports recovery, rehabilitation and joint and bone support. For practitioners who want a hands-on frequency tool that works independently and supports multiple clients simultaneously.</div>
+        </div>
+      </div>
+      <div class="ph-two-col-bridge">Both approaches can be used independently or combined within the same practice — and both are available through U-SUN Asia with full onboarding, certified training and ongoing member support.</div>
+    </div>
+  </div>
+  <!-- S5 KEY ADVANTAGES -->
+  <div class="med-adv-section section">
+    <div class="section-inner">
+      <div class="sec-label">Key Advantages</div>
+      <h2 class="sec-title">Why Holistic Wellness and Frequency Therapy?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card"><h3>Address the Whole Person</h3><p>Most tools address one dimension. TimeWaver works across the physical, emotional, mental, energetic and soul levels simultaneously — giving practitioners a more complete picture of what is happening for their client.</p></div>
+        <div class="med-adv-card"><h3>Two Modalities, One System</h3><p>Information Field analysis and frequency application can be used independently or combined within the same session — giving practitioners the flexibility to build a practice that fits their approach and client needs.</p></div>
+        <div class="med-adv-card"><h3>Expand Your Range of Services</h3><p>From stress management and vitality support to sports recovery, rehabilitation, meridian analysis and bioenergetic harmonisation — TimeWaver opens new application possibilities without replacing what you already do.</p></div>
+        <div class="med-adv-card"><h3>Built for the Way You Work</h3><p>The TimeWaver Frequency system automates frequency sequences independently, freeing you to attend to other clients during sessions. TimeWaver Pro adapts to your workflow through customisable protocols and specialist modules.</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- S6 WHO NEEDS IT -->
+  <div class="ph-who-section">
+    <div class="ph-who-inner">
+      <div class="sec-label">Who Needs It</div>
+      <h2 class="sec-title">Built for Practitioners Who Work With the Whole Person</h2>
+      <p class="sec-sub">TimeWaver's holistic wellness and frequency therapy applications are used by a wide range of practitioners across integrative health, wellness and rehabilitation disciplines.</p>
+      <div class="ph-who-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="ph-who-card"><div class="ph-who-card-title">Naturopaths</div><div class="ph-who-card-desc">Complement existing natural health practices with Information Field analysis and frequency application.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Traditional Chinese Medicine Practitioners</div><div class="ph-who-card-desc">Extend meridian-based practice with digital TCM meridian analysis and bioenergetic harmonisation.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Integrative and Holistic Clinics</div><div class="ph-who-card-desc">Add a new dimension of whole-person analysis to your clinic's existing service offering.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Energy Healers and Wellness Coaches</div><div class="ph-who-card-desc">Support clients across emotional, mental and energetic levels with structured Information Field tools.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Medical Beauty Practitioners</div><div class="ph-who-card-desc">Incorporate frequency-based wellness programmes as a complementary dimension to aesthetic services.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Physiotherapists</div><div class="ph-who-card-desc">Support recovery and rehabilitation programmes with non-invasive frequency application alongside existing treatment.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Sports and Rehab Coaches</div><div class="ph-who-card-desc">Apply IMF frequency programmes to support physical vitality, muscle recovery and performance preparation.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Aromatherapists and Naturopathic Therapists</div><div class="ph-who-card-desc">Integrate Information Field analysis as a deeper layer of insight into holistic client care.</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- TAB BAR -->
+  <div class="med-products-nav">
+    <div class="med-products-nav-inner">
+      <div class="sec-label">Product Lines</div>
+      <h2 class="sec-title">Holistic Wellness Solutions</h2>
+    </div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner">
+      <div class="med-cat-tab act" onclick="medTabClick(this,'phh-pro')">TimeWaver Pro &amp; MobileQuantum</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phh-freq')">TimeWaver Frequency</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phh-modules')">Add-On Modules</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phh-qi')">QI Module</div>
+    </div></div></div>
+  </div>
+  <!-- TAB 1: Pro + MobileQuantum -->
+  <div class="med-product-section act" id="phh-pro"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">TimeWaver Pro and MobileQuantum</h2>
+    <p class="med-sec-intro">TimeWaver Pro is the flagship Information Field system for professional practitioners — analysing backgrounds and imbalances across multiple dimensions of a person through over 840,000 database entries. TimeWaver MobileQuantum brings the same capability in a compact, ultra-portable form for practitioners who need mobility.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>840,000+ Database Entries</h4><p>From physical and emotional to mental, energetic and soul levels — TimeWaver Pro draws on one of the most comprehensive Information Field databases available to any practitioner.</p></div>
+      <div class="med-highlight-item"><h4>Triple the Analysis Speed on MobileQuantum</h4><p>The 2025 MobileQuantum hardware delivers triple the analysis speed and more than double the precision of previous hardware — without compromising the depth of the TimeWaver Pro software.</p></div>
+    </div>
+    <div class="med-prod-grid two-col">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver Pro</div>
+        <div class="med-prod-name">TimeWaver Pro</div>
+        <div class="med-prod-desc">Flagship Information Field analysis system. 840,000+ database entries. Extensible with specialist add-on modules. For professional wellness practitioners, naturopaths, coaches and integrative clinics.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver MobileQuantum</div>
+        <div class="med-prod-badge extended">2025 Release</div>
+        <div class="med-prod-name">TimeWaver MobileQuantum</div>
+        <div class="med-prod-desc">Ultra-portable hardware for TimeWaver Pro and QI Module. Light Quantum Resonator (LQR). Triple analysis speed vs previous hardware. More than double precision. Ideal for mobile practitioners. Requires TimeWaver Pro base software. Note: not a standalone device.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 2: Frequency -->
+  <div class="med-product-section" id="phh-freq"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">TimeWaver Frequency</h2>
+    <p class="med-sec-intro">TimeWaver Frequency combines Information Field technology with Individualized Microcurrent Frequency (IMF) application — delivering frequency-based programmes for bioenergetic harmonisation, vitality, stress management and physical recovery. Based on Nuno Nina's 50,000+ Gold Frequencies, it is a versatile system that adapts to each client in real time.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Individually Analysed in Real Time</h4><p>The system determines and continuously adapts the frequencies applied to each client during the session — automatically switching to the next frequency at the appropriate time, without manual intervention.</p></div>
+      <div class="med-highlight-item"><h4>Time Flexibility for Practitioners</h4><p>Because TimeWaver Frequency automates frequency sequences independently, practitioners are free to attend to other clients during sessions — confirmed by the practical experience of thousands of users worldwide.</p></div>
+    </div>
+    <p style="font-size:14px;color:var(--gray);line-height:1.75;margin-bottom:20px">Frequency programmes are also designed to support muscle relaxation, physical recovery and resilience — with applications across sports coaching, rehabilitation and general wellness practice.</p>
+    <div class="med-prod-grid two-col" style="margin-bottom:32px">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver Frequency</div>
+        <div class="med-prod-name">TimeWaver Frequency</div>
+        <div class="med-prod-desc">IMF frequency application system. 50,000+ Gold Frequencies. Real-time frequency adaptation. Automated session workflow. Information Field Module included. For wellness practitioners, naturopaths, physiotherapists and sports coaches.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver Frequency McMakin</div>
+        <div class="med-prod-name">TimeWaver Frequency McMakin</div>
+        <div class="med-prod-desc">Same hardware as TimeWaver Frequency — extended with McMakin FSM method. 120+ automated FSM protocols. Dual-channel application. Focus on joints, bones and sports performance. IMF and FSM combinable on same device.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+    <div style="background:#f4f7fb;border-radius:14px;padding:24px 28px;margin-top:4px">
+      <div style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--dark-navy);margin-bottom:8px">TimeWaver Frequency McMakin</div>
+      <p style="font-size:14px;color:var(--gray);line-height:1.75;margin-bottom:18px">The McMakin method extends TimeWaver Frequency with Frequency Specific Microcurrent (FSM) — based on over 25 years of experience by chiropractor Carolyn McMakin, with a focus on joints, bones and sports performance.</p>
+      <div class="med-highlight-grid">
+        <div class="med-highlight-item"><h4>120+ Automated FSM Protocols</h4><p>More than 120 automated FSM application protocols cover a wide range of applications — easily expanded with additional client-specific protocols for individual practitioner needs.</p></div>
+        <div class="med-highlight-item"><h4>Dual-Channel Application</h4><p>FSM uses two coordinated channels — one for the application purpose, one for its target — and can be combined with IMF programmes on the same device for maximum flexibility.</p></div>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 3: Add-On Modules -->
+  <div class="med-product-section" id="phh-modules"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">Add-On Modules</h2>
+    <p class="med-sec-intro">TimeWaver Pro and MobileQuantum can be extended with a growing library of specialist modules — each designed to deepen analysis in a specific dimension of the Information Field. Modules are software unlocks that integrate directly into your existing TimeWaver Pro system.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Deepen Without Starting Over</h4><p>Each module adds a new layer of analysis to your existing TimeWaver Pro setup — no new hardware required. Your practice grows as your expertise does.</p></div>
+      <div class="med-highlight-item"><h4>Mix and Match to Your Practice</h4><p>Modules are selected individually based on discipline and client needs — a TCM practitioner may choose Meridians, a coach may choose Coaching and BiLoPS, a corporate consultant may choose GenoWave and TimeLine.</p></div>
+    </div>
+    <div class="ph-module-filter">
+      <button class="ph-module-filter-btn active" onclick="phModFilter(this,'all')">All</button>
+      <button class="ph-module-filter-btn" onclick="phModFilter(this,'wellness')">Wellness</button>
+      <button class="ph-module-filter-btn" onclick="phModFilter(this,'tcm')">TCM</button>
+      <button class="ph-module-filter-btn" onclick="phModFilter(this,'coaching')">Coaching</button>
+      <button class="ph-module-filter-btn" onclick="phModFilter(this,'corporate')">Corporate</button>
+      <button class="ph-module-filter-btn" onclick="phModFilter(this,'space')">Space</button>
+    </div>
+    <div class="ph-module-grid">
+      <div class="ph-module-card" data-mod-cat="wellness"><div class="ph-module-img">Coherence Module</div><div class="ph-module-name">Coherence Module</div><div class="ph-module-desc">Analyses organ coordination and body system harmony. Monitors health risk trends and cross-references with HRV data. Supports practitioners working with whole-body balance and resilience.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="tcm"><div class="ph-module-img">Meridians Module</div><div class="ph-module-name">Meridians Module</div><div class="ph-module-desc">Traditional Chinese Medicine meridian analysis within the Information Field. Designed for TCM practitioners integrating digital analysis into their existing practice.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="wellness"><div class="ph-module-img">Aura Module</div><div class="ph-module-name">Aura Module</div><div class="ph-module-desc">Biofield and chakra visualisation. Colour-coded display of energy distribution around the individual — a practical tool for energy healers and holistic wellness practitioners.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="wellness"><div class="ph-module-img">Homeology Module</div><div class="ph-module-name">Homeology Module</div><div class="ph-module-desc">Homeopathy-based resonance analysis within the Information Field. Designed for homeopaths and naturopaths seeking a deeper layer of client insight.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="coaching"><div class="ph-module-img">BiLoPS Module</div><div class="ph-module-name">BiLoPS Module</div><div class="ph-module-desc">Biological-Psycho-Social pattern analysis based on the Biological Laws of Nature. Analyses hidden conflict patterns underlying imbalances. Used in deep wellness and coaching contexts.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="wellness"><div class="ph-module-img">Sound Module</div><div class="ph-module-name">Sound Module</div><div class="ph-module-desc">Frequency application via sound and audio. Extends the sensory dimension of Information Field harmonisation for practitioners incorporating sound-based modalities.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="wellness"><div class="ph-module-img">Matrix Module</div><div class="ph-module-name">Matrix Module</div><div class="ph-module-desc">Genetic and epigenetic field analysis within the Information Field. For practitioners exploring deeper biological and ancestral dimensions of client wellbeing.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="space"><div class="ph-module-img">Energy Point Module</div><div class="ph-module-name">Energy Point Module</div><div class="ph-module-desc">Environmental energy point analysis. Used by space and interior consultants and practitioners working with spatial wellness and environmental harmonisation.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="corporate"><div class="ph-module-img">GenoWave Module</div><div class="ph-module-name">GenoWave Module</div><div class="ph-module-desc">Family and organisational dynamics mapping. Visualises hidden relationship dynamics — conflicts, positive flows and neutral connections. Used in corporate consulting and systemic constellation work.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="corporate"><div class="ph-module-img">TimeLine Module</div><div class="ph-module-name">TimeLine Module</div><div class="ph-module-desc">Time-axis risk and event trajectory analysis. Identifies key stress turning points over time. Used for governance, major event management and deep personal coaching.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+      <div class="ph-module-card" data-mod-cat="wellness"><div class="ph-module-img">MyTimeWaver Module</div><div class="ph-module-name">MyTimeWaver Module</div><div class="ph-module-desc">Client-facing personal wellness tracking. Allows practitioners to extend the TimeWaver experience to their clients between sessions.</div><button class="ph-module-enquire" onclick="showPage('contact')">Enquire</button></div>
+    </div>
+  </div></div>
+  <!-- TAB 4: QI Module (shared template) -->
+  <div class="med-product-section qi-tab-content" id="phh-qi"></div>
+  <!-- Also Relevant To -->
+  <section class="section med-also-section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.55)">Also Relevant To</div>
+      <p class="med-also-intro">Holistic wellness and frequency therapy often connect naturally with other areas of practice. These related solutions may be relevant to you or your clients.</p>
+      <div class="med-also-grid">
+        <div class="med-also-card" onclick="showPage('ph-corporate')"><div><div class="med-also-title">Corporate and Coaching</div><div class="med-also-desc">Information Field tools for organisational intelligence, HR wellbeing and professional coaching.</div></div><span class="med-also-arrow">→</span></div>
+        <div class="med-also-card" onclick="showPage('ph-home')"><div><div class="med-also-title">Personal and Home Wellness</div><div class="med-also-desc">Entry-level frequency wellness for individuals and families referred by practitioners.</div></div><span class="med-also-arrow">→</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="med-cta-strip">
+    <h2>Ready to Build a Practice That Goes Further?</h2>
+    <p>Our team at U-SUN Asia works with practitioners at every stage — from first exploration to full certification and beyond. Whether you are evaluating TimeWaver for the first time or looking to deepen an existing practice, we are here to help you find the right starting point.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch</button>
+      <button class="btn-outline-white" onclick="showPage('personalhealth')">Download Product Brochures</button>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div><p class="footer-desc">Wellness technology for practitioners, organisations and individuals — distributed across Southeast Asia by U-SUN Asia.</p></div><div class="footer-col"><h4>Personal Health</h4><span class="footer-link" onclick="showPage('personalhealth')">Overview</span><span class="footer-link" onclick="showPage('ph-holistic')">Holistic Wellness</span><span class="footer-link" onclick="showPage('ph-corporate')">Corporate &amp; Coaching</span><span class="footer-link" onclick="showPage('ph-home')">Home Wellness</span><span class="footer-link" onclick="showPage('ph-agrar')">Agriculture</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('academy')">U-SUN Academy</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
+</div>
+
+<!-- ════════════════ PH — CORPORATE AND COACHING -->
+<div id="page-ph-corporate" class="page">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=85') center/cover no-repeat">
+    <div class="med-sub-hero-overlay"></div>
+    <div class="med-sub-hero-content">
+      <div class="breadcrumb" onclick="showPage('personalhealth')">← Personal Health and Wellness</div>
+      <div class="med-sub-category">Corporate Wellness and Business Coaching</div>
+      <h1>Corporate Wellness and Business Coaching</h1>
+      <p>The intelligence behind better organisations and sharper practitioners.</p>
+      <p style="margin-top:14px">Whether you are an HR leader building a measurable employee wellbeing programme, an ESG officer looking for quantifiable workforce data, or a coach and consultant wanting to bring a deeper dimension to your client work — TimeWaver offers a suite of tools that make the invisible visible. From HRV-based stress monitoring and organisational decision intelligence to structured coaching and systemic analysis, this is technology built for the people who build others.</p>
+      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-corporate .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore Our Solutions</button>
+    </div>
+  </div>
+  <div class="ph-partner-strip">
+    <div class="ph-partner-strip-inner">
+      <span class="ph-partner-strip-label">Our Principal Partner</span>
+      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+    </div>
+  </div>
+  <!-- S4 TWO AUDIENCES -->
+  <div class="ph-two-col-section">
+    <div class="ph-two-col-inner">
+      <div class="sec-label">Two Audiences, One Platform</div>
+      <div class="ph-two-col-grid">
+        <div>
+          <div class="ph-col-head">For Organisations</div>
+          <div class="ph-col-body">HR managers, ESG officers and corporate wellness teams use TimeWaver BIZ 2.0, RealTimeWaver and Cardio HRV to measure employee wellbeing, quantify stress as trackable data, and build people intelligence that supports GRI 403 ESG reporting. The organisation is the buyer. The workforce is the beneficiary.</div>
+        </div>
+        <div class="ph-col-divider"></div>
+        <div>
+          <div class="ph-col-head">For Practitioners</div>
+          <div class="ph-col-body">Life coaches, business consultants, Family Constellation consultants, interior designers and network organisations use TimeWaver's coaching and organisational tools to bring a deeper dimension to their client work — surfacing hidden dynamics, blockages and potential that conventional methods cannot reach.</div>
+        </div>
+      </div>
+      <div class="ph-two-col-bridge">Both paths draw on the same Information Field technology — and both are available through U-SUN Asia with full onboarding, certified training and ongoing member support.</div>
+    </div>
+  </div>
+  <!-- S5 KEY ADVANTAGES -->
+  <div class="med-adv-section section">
+    <div class="section-inner">
+      <div class="sec-label">Key Advantages</div>
+      <h2 class="sec-title">Why Corporate Wellness and Business Coaching With TimeWaver?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card"><h3>Make the Invisible Measurable</h3><p>Employee stress, organisational friction and hidden dynamics are real — but most tools cannot quantify them. TimeWaver surfaces these patterns as structured, trackable data that supports both management decisions and ESG reporting.</p></div>
+        <div class="med-adv-card"><h3>Start With the Person Behind the Business</h3><p>In our experience, the challenges of a business often reflect the state of the people leading it. That is why TimeWaver analysis frequently begins with an HRV measurement of the leader or manager — before moving into organisational analysis.</p></div>
+        <div class="med-adv-card"><h3>Intuition Becomes Tangible</h3><p>Good decisions often rely on instinct, experience and gut feel. TimeWaver BIZ makes these invisible factors visible and structured — so what was once a hunch becomes a conscious, informed direction.</p></div>
+        <div class="med-adv-card"><h3>A Deeper Dimension for Client Work</h3><p>For coaches and consultants, TimeWaver adds structured Information Field analysis to every session — bringing unconscious patterns and hidden dynamics into consciousness through a four-step process designed for professional practice.</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- S6 WHO NEEDS IT -->
+  <div class="ph-who-section">
+    <div class="ph-who-inner">
+      <div class="sec-label">Who Needs It</div>
+      <h2 class="sec-title">Built for Organisations and Practitioners Who Lead With Intelligence</h2>
+      <p class="sec-sub">From large enterprises to SMEs and independent consultants — TimeWaver's corporate wellness and business coaching tools serve organisations investing in their people and practitioners building deeper client practices.</p>
+      <div class="ph-who-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="ph-who-group-label">For Organisations</div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Large Companies and Enterprises</div><div class="ph-who-card-desc">Strategic processes and decisions become more tangible — HR increases efficiency, risk management gains a human touch, and leadership clarity improves at top management and department head level.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Small and Medium-Sized Enterprises (SMEs)</div><div class="ph-who-card-desc">Supporting day-to-day management for businesses from 1 to 500 employees — financial decisions, customer strategy, employee dynamics. Intuition becomes tangible. Presumptions become consciousness.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">HR Managers and People Teams</div><div class="ph-who-card-desc">Build measurable, data-supported employee wellbeing programmes that go beyond satisfaction surveys and deliver quantifiable workforce insights.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">ESG Officers and Sustainability Teams</div><div class="ph-who-card-desc">Quantify workforce health and stress as trackable data supporting GRI 403 occupational health and safety reporting requirements.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">C-Suite and Senior Leadership</div><div class="ph-who-card-desc">Gain deeper insight into organisational dynamics, strategic decision factors and leadership vitality through Information Field analysis and HRV monitoring.</div></div>
+        <div class="ph-who-group-label" style="margin-top:16px">For Practitioners</div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Life Coaches and Mentors</div><div class="ph-who-card-desc">Add structured Information Field analysis to coaching sessions — bringing unconscious patterns and hidden dynamics into consciousness through a proven four-step process.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Business Consultants</div><div class="ph-who-card-desc">Offer clients new, disruptive and differentiated services — thinking outside the box and making yourself indispensable through Information Field-backed organisational intelligence.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Family Constellation Consultants</div><div class="ph-who-card-desc">Apply Information Field analysis to systemic relationship dynamics within families, teams and organisations for deeper constellation work.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Interior and Space Designers</div><div class="ph-who-card-desc">Use TimeWaver's environmental energy analysis tools to incorporate spatial intelligence and organisational flow into design and consultation practice.</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- TAB BAR -->
+  <div class="med-products-nav">
+    <div class="med-products-nav-inner">
+      <div class="sec-label">Product Lines</div>
+      <h2 class="sec-title">Corporate Wellness and Coaching Solutions</h2>
+    </div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner">
+      <div class="med-cat-tab act" onclick="medTabClick(this,'phc-biz')">TimeWaver BIZ 2.0</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phc-rtw')">RealTimeWaver</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phc-cardio')">Cardio HRV</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phc-coaching')">Coaching</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'phc-qi')">QI Module</div>
+    </div></div></div>
+  </div>
+  <!-- TAB 1: BIZ 2.0 -->
+  <div class="med-product-section act" id="phc-biz"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">TimeWaver BIZ 2.0</h2>
+    <p class="med-sec-intro">TimeWaver BIZ 2.0 is the Information Field system for business intelligence — providing analysis across strategy, finance, HR, marketing, risk management and organisational dynamics. With approximately 50,000 business database entries, it surfaces hidden potentials and makes complex decisions more tangible and manageable.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Seven Energy Clusters of a Business</h4><p>TimeWaver BIZ maps a company across seven functional energy areas — covering strategy, people, finance, marketing, operations and more — giving leaders a holistic view of organisational dynamics that numbers alone cannot provide.</p></div>
+      <div class="med-highlight-item"><h4>Start With the Leader, Then the Business</h4><p>In our experience, the challenges of a business often reflect the state of the people leading it. TimeWaver BIZ analysis frequently begins with an HRV measurement of the owner or manager before moving into organisational analysis.</p></div>
+    </div>
+    <div class="med-prod-grid" style="grid-template-columns:1fr 2fr;gap:20px">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver BIZ 2.0</div>
+        <div class="med-prod-badge extended">Updated Version</div>
+        <div class="med-prod-name">TimeWaver BIZ 2.0</div>
+        <div class="med-prod-desc">Business Information and Zoning system. Approximately 50,000 database entries across Management, Finance, Marketing, Sales, HR, IT, R&amp;D, Quality, Building Optimisation and Holistic Coaching. 5 analysis sets. 7 energy point sets. 3 dimensions. For large enterprises, SMEs and business consultants.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 2: RealTimeWaver -->
+  <div class="med-product-section" id="phc-rtw"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">RealTimeWaver</h2>
+    <p class="med-sec-intro">RealTimeWaver is a real-time Information Field monitoring system — simultaneously tracking up to 1,500 elements across a person, team or meeting environment. Designed for practitioners and consultants who need live insight during sessions, coaching conversations and business meetings.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Up to 1,500 Elements Monitored Simultaneously</h4><p>RealTimeWaver auto-highlights the most important Information Field elements in real time — giving practitioners and consultants a live, dynamic picture of what is most relevant at any given moment in a session.</p></div>
+      <div class="med-highlight-item"><h4>Built for Sessions and Meetings</h4><p>With an integrated audio recording function, RealTimeWaver supports coaching sessions, team meetings and business consultations — capturing both the Information Field dynamics and the conversation as it unfolds.</p></div>
+    </div>
+    <div class="med-prod-grid" style="grid-template-columns:1fr 2fr;gap:20px">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">RealTimeWaver</div>
+        <div class="med-prod-name">RealTimeWaver</div>
+        <div class="med-prod-desc">Real-time Information Field monitoring system. Monitors up to 1,500 elements simultaneously. Auto-highlights most relevant elements. Audio recording function. Combines with TimeWaver Pro databases. For coaches, business consultants and practitioners.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 3: Cardio HRV -->
+  <div class="med-product-section" id="phc-cardio"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">Cardio — HRV Analysis</h2>
+    <p class="med-sec-intro">TimeWaver Cardio measures Heart Rate Variability (HRV) — quantifying employee and individual stress as trackable, reportable data. With 12-parameter analysis covering acute stress, chronic stress and neural regulation, it transforms subjective wellbeing into objective, management-ready intelligence.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Stress as a Trackable Data Point</h4><p>TimeWaver Cardio measures both acute stress (Stress Index) and chronic stress (Distress Index) — giving HR teams and wellness managers a quantifiable baseline that can be tracked, compared and reported over time.</p></div>
+      <div class="med-highlight-item"><h4>Supports GRI 403 ESG Reporting</h4><p>By providing measurable occupational health and safety data, TimeWaver Cardio directly supports GRI 403 compliance — filling the gap that most organisations face when trying to quantify the social pillar of their ESG reporting.</p></div>
+    </div>
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--dark-navy);margin-bottom:4px">12-Parameter HRV Reference</h3>
+    <p style="font-size:13px;color:var(--gray);margin-bottom:0">For management reference — not medical diagnosis.</p>
+    <table class="ph-hrv-table">
+      <tr><th>Parameter</th><th>What It Measures</th></tr>
+      <tr><td>Stress Index</td><td>Acute stress level</td></tr>
+      <tr><td>Distress Index</td><td>Chronic stress accumulation</td></tr>
+      <tr><td>VLF/HF Ratio</td><td>Sympathetic/parasympathetic balance</td></tr>
+      <tr><td>VLF+HF</td><td>Total neural regulation</td></tr>
+      <tr><td>HR</td><td>Heart rate</td></tr>
+      <tr><td>CV</td><td>Heart rate variability coefficient</td></tr>
+      <tr><td>ES</td><td>Irregular rhythm trend</td></tr>
+      <tr><td>IC</td><td>Impact on motivation</td></tr>
+      <tr><td>ULF</td><td>Ultra-low frequency power</td></tr>
+      <tr><td>LF</td><td>Low frequency power (sympathetic activity)</td></tr>
+      <tr><td>HF</td><td>High frequency power (parasympathetic activity)</td></tr>
+      <tr><td>TP</td><td>Total power — overall neural regulation capacity</td></tr>
+    </table>
+    <p class="ph-hrv-note">Parameters are provided for management reference and programme tracking. TimeWaver Cardio is not a medical device and does not provide medical diagnosis.</p>
+    <div class="med-prod-grid" style="grid-template-columns:1fr 2fr;gap:20px;margin-top:28px">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver Cardio (Cardio Pulse)</div>
+        <div class="med-prod-name">TimeWaver Cardio (Cardio Pulse)</div>
+        <div class="med-prod-desc">HRV measurement device. 12-parameter stress and neural regulation analysis. Quantifies employee stress as trackable data. Supports GRI 403 ESG reporting. For HR managers, ESG officers, corporate wellness teams and business consultants. Not a medical device.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 4: Coaching -->
+  <div class="med-product-section" id="phc-coaching"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">Coaching and Professional Coaching</h2>
+    <p class="med-sec-intro">The TimeWaver Coaching Module and Professional Coaching package bring Information Field analysis into structured coaching practice — supporting life coaches, business consultants, Family Constellation consultants, mentors and career counsellors with a proven four-step session process and approximately 400,000 coaching database entries.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Bring the Unconscious Into Consciousness</h4><p>TimeWaver analyses eight dimensions of the Information Field during a coaching session — comparing conscious and unconscious aspects to surface hidden patterns, blockages and potential that conventional coaching frameworks cannot reach on their own.</p></div>
+      <div class="med-highlight-item"><h4>A Structured Four-Step Session Process</h4><p>Every coaching session follows a clear structure — Self-Assessment, Vision and Goals, Information Field Analysis, and Action Plan — giving practitioners a repeatable, professional framework that delivers tangible client outcomes.</p></div>
+    </div>
+    <div class="ph-coaching-steps">
+      <div class="ph-coaching-step"><div class="ph-coaching-step-num">1</div><div class="ph-coaching-step-title">Self-Assessment</div><div class="ph-coaching-step-desc">14 life aspects reviewed</div></div>
+      <div class="ph-coaching-step"><div class="ph-coaching-step-num">2</div><div class="ph-coaching-step-title">Vision and Goals</div><div class="ph-coaching-step-desc">Desired outcomes defined</div></div>
+      <div class="ph-coaching-step"><div class="ph-coaching-step-num">3</div><div class="ph-coaching-step-title">Information Field Analysis</div><div class="ph-coaching-step-desc">Conscious vs unconscious across 8 dimensions</div></div>
+      <div class="ph-coaching-step"><div class="ph-coaching-step-num">4</div><div class="ph-coaching-step-title">Action Plan</div><div class="ph-coaching-step-desc">Short and long-term goals, client print-out</div></div>
+    </div>
+    <div class="med-prod-grid two-col">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">Coaching Module</div>
+        <div class="med-prod-name">Coaching Module</div>
+        <div class="med-prod-desc">Software tool for professional coaching sessions. Approximately 400,000 database entries covering personality development, empathy, systemic relationships, life goals and more. Four-step structured session process. For life coaches, Family Constellation consultants, mentors, business consultants and career counsellors.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">Professional Coaching</div>
+        <div class="med-prod-name">Professional Coaching</div>
+        <div class="med-prod-desc">Extended coaching package for advanced practitioners. Adds depth and additional database access to the standard Coaching Module — for coaches and consultants requiring a more comprehensive toolset for complex client work.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 5: QI Module (shared) -->
+  <div class="med-product-section qi-tab-content" id="phc-qi"></div>
+  <!-- Also Relevant To -->
+  <section class="section med-also-section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.55)">Also Relevant To</div>
+      <p class="med-also-intro">Corporate wellness and business coaching often connect with other areas of the TimeWaver ecosystem. These related solutions may be relevant to your practice or organisation.</p>
+      <div class="med-also-grid">
+        <div class="med-also-card" onclick="showPage('ph-holistic')"><div><div class="med-also-title">Holistic Wellness and Frequency Therapy</div><div class="med-also-desc">Information Field analysis and frequency-based programmes for integrative health and practitioner practices.</div></div><span class="med-also-arrow">→</span></div>
+        <div class="med-also-card" onclick="showPage('ph-agrar')"><div><div class="med-also-title">Sustainable Agriculture and Land Intelligence</div><div class="med-also-desc">Organisational and decision intelligence tools with applications in agricultural business management.</div></div><span class="med-also-arrow">→</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="med-cta-strip">
+    <h2>Ready to Bring a New Dimension to Your Organisation or Practice?</h2>
+    <p>Our team at U-SUN Asia works with HR leaders, ESG officers, business consultants and coaches across Singapore and Malaysia — helping each find the right TimeWaver starting point for their goals. Whether you are exploring for the first time or ready to go deeper, we are here.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch</button>
+      <button class="btn-outline-white" onclick="showPage('contact')">Download Programme Guide</button>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div><p class="footer-desc">Wellness technology for practitioners, organisations and individuals — distributed across Southeast Asia by U-SUN Asia.</p></div><div class="footer-col"><h4>Personal Health</h4><span class="footer-link" onclick="showPage('personalhealth')">Overview</span><span class="footer-link" onclick="showPage('ph-holistic')">Holistic Wellness</span><span class="footer-link" onclick="showPage('ph-corporate')">Corporate &amp; Coaching</span><span class="footer-link" onclick="showPage('ph-home')">Home Wellness</span><span class="footer-link" onclick="showPage('ph-agrar')">Agriculture</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('academy')">U-SUN Academy</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
+</div>
+
+<!-- ════════════════ PH — HOME WELLNESS -->
+<div id="page-ph-home" class="page">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=85') center/cover no-repeat">
+    <div class="med-sub-hero-overlay"></div>
+    <div class="med-sub-hero-content">
+      <div class="breadcrumb" onclick="showPage('personalhealth')">← Personal Health and Wellness</div>
+      <div class="med-sub-category">Personal and Home Wellness</div>
+      <h1>Personal and Home Wellness</h1>
+      <p>Frequency wellness, made for everyday life.</p>
+      <p style="margin-top:14px">TimeWaver Home brings the core benefits of IMF frequency wellness into a simple, compact device designed for personal and family use. With programme groups covering vitality, relaxation, balance, fitness, beauty and more — operated with just three buttons — it is the entry point into the TimeWaver ecosystem for individuals and families who want to support their wellbeing at home, at their own pace and on their own terms.</p>
+      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-home .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore TimeWaver Home</button>
+    </div>
+  </div>
+  <div class="ph-partner-strip">
+    <div class="ph-partner-strip-inner">
+      <span class="ph-partner-strip-label">Our Principal Partner</span>
+      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+    </div>
+  </div>
+  <!-- S4 KEY ADVANTAGES -->
+  <div class="med-adv-section section">
+    <div class="section-inner">
+      <div class="sec-label">Key Advantages</div>
+      <h2 class="sec-title">Why TimeWaver Home?</h2>
+      <div class="med-adv-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="med-adv-card"><h3>Simple Enough for Anyone</h3><p>Three buttons. No technical knowledge required. TimeWaver Home is designed so that individuals and families can use it confidently from day one — without training or professional supervision.</p></div>
+        <div class="med-adv-card"><h3>A Full Range of Wellness Programmes</h3><p>From the Gold Cycle to Digital Homeopathy, Schuessler Salts, Bach Flowers, Beauty, Fitness, Sports and Animal programmes — TimeWaver Home covers a wide range of personal wellness applications in one compact device.</p></div>
+        <div class="med-adv-card"><h3>The Entry Point Into a Larger Ecosystem</h3><p>TimeWaver Home is the beginning, not the limit. As your interest grows, the TimeWaver ecosystem expands — with professional systems, specialist modules and certified training available through U-SUN Asia whenever you are ready to go further.</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- S5 WHO NEEDS IT -->
+  <div class="ph-who-section" style="background:var(--offwhite)">
+    <div class="ph-who-inner">
+      <div class="sec-label">Who Needs It</div>
+      <h2 class="sec-title">For Individuals and Families Ready to Take Wellbeing Into Their Own Hands</h2>
+      <p class="sec-sub">TimeWaver Home is designed for personal use — no professional background required. It is the ideal starting point for anyone curious about frequency wellness and ready to explore it at home.</p>
+      <div class="ph-who-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="ph-who-card"><div class="ph-who-card-title">Individuals Seeking Better Wellbeing</div><div class="ph-who-card-desc">Support your personal energy, vitality and balance with IMF frequency programmes designed for everyday home use.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Families</div><div class="ph-who-card-desc">A single device with programme groups suitable for the whole family — including dedicated programmes for children and animals.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Practitioner-Referred Users</div><div class="ph-who-card-desc">Recommended by your wellness practitioner as a complement to your existing programme — continue your support between sessions at home.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Wellness Enthusiasts</div><div class="ph-who-card-desc">Already exploring holistic health approaches and looking for a technology-backed addition to your personal wellness routine.</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- TAB BAR -->
+  <div class="med-products-nav">
+    <div class="med-products-nav-inner">
+      <div class="sec-label">Product Lines</div>
+      <h2 class="sec-title">Home Wellness Solutions</h2>
+    </div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner">
+      <div class="med-cat-tab act" onclick="medTabClick(this,'phw-home')">TimeWaver Home</div>
+    </div></div></div>
+  </div>
+  <!-- TAB 1: TimeWaver Home -->
+  <div class="med-product-section act" id="phw-home"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">TimeWaver Home</h2>
+    <p class="med-sec-intro">TimeWaver Home is the entry-level IMF frequency device designed for personal and family use. Compact, simple and operated with just three buttons — it brings the core benefits of frequency wellness into everyday home life without requiring any professional training.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Three Buttons. Full Frequency Wellness.</h4><p>TimeWaver Home is designed for simplicity — select your programme group, choose a programme and begin. No technical knowledge, no configuration and no professional supervision required. Backed by over 150 million applications of TimeWaver technology worldwide.</p></div>
+      <div class="med-highlight-item"><h4>Programmes for Every Dimension of Wellbeing</h4><p>From the Gold Cycle and Digital Homeopathy to Beauty, Fitness, Sports and Animal programmes — TimeWaver Home covers a broad range of personal wellness applications in one compact device.</p></div>
+    </div>
+    <div style="margin-bottom:24px">
+      <div style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;color:var(--dark-navy);margin-bottom:10px">Programme Groups</div>
+      <div class="ph-prog-pills">
+        <span class="ph-prog-pill">Gold Cycle</span>
+        <span class="ph-prog-pill sub">Pure</span><span class="ph-prog-pill sub">Care</span><span class="ph-prog-pill sub">Energy</span><span class="ph-prog-pill sub">Balance</span><span class="ph-prog-pill sub">Being</span><span class="ph-prog-pill sub">Relax</span><span class="ph-prog-pill sub">Release</span>
+        <span class="ph-prog-pill">Digital Homeopathy</span>
+        <span class="ph-prog-pill">Schuessler Salts</span>
+        <span class="ph-prog-pill">Bach Flowers</span>
+        <span class="ph-prog-pill">Beauty</span>
+        <span class="ph-prog-pill">Fitness</span>
+        <span class="ph-prog-pill">Sports</span>
+        <span class="ph-prog-pill">Animals</span>
+        <span class="ph-prog-pill">Analysis</span>
+      </div>
+    </div>
+    <div class="med-prod-grid" style="grid-template-columns:1fr 2fr;gap:20px">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver Home</div>
+        <div class="med-prod-name">TimeWaver Home</div>
+        <div class="med-prod-desc">Compact IMF frequency device for personal and family use. Three-button operation. Backed by over 150 million applications of TimeWaver technology worldwide. Programme groups: Gold Cycle, Digital Homeopathy, Schuessler Salts, Bach Flowers, Beauty, Fitness, Sports and Animal programmes.</div>
+        <p style="font-size:11px;color:var(--gray);font-style:italic;margin-top:10px">TimeWaver Home is available through practitioner recommendation or direct U-SUN Asia consultation — not sold via E-Shop.</p>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- Upgrade callout -->
+  <div class="section"><div class="section-inner">
+    <div class="ph-upgrade-callout">
+      <div class="sec-label" style="color:#7a5a00;margin-bottom:10px">Ready to Go Further?</div>
+      <h3>Your journey does not have to stop here.</h3>
+      <p>TimeWaver Home is the beginning of the TimeWaver ecosystem — not the limit. When you are ready to explore deeper analysis, specialist modules and professional-grade frequency application, U-SUN Asia is here to guide your next step.</p>
+      <button class="btn-primary" onclick="showPage('ph-holistic')">Explore Holistic Wellness and Frequency Therapy →</button>
+    </div>
+  </div></div>
+  <div class="med-cta-strip">
+    <h2>Curious About TimeWaver Home? Let's Talk.</h2>
+    <p>Whether you have been referred by a practitioner or are exploring frequency wellness for the first time, our team at U-SUN Asia is happy to answer your questions and help you find the right starting point.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch</button>
+      <button class="btn-outline-white" onclick="showPage('contact')">Find a Practitioner Near You</button>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div><p class="footer-desc">Wellness technology for practitioners, organisations and individuals — distributed across Southeast Asia by U-SUN Asia.</p></div><div class="footer-col"><h4>Personal Health</h4><span class="footer-link" onclick="showPage('personalhealth')">Overview</span><span class="footer-link" onclick="showPage('ph-holistic')">Holistic Wellness</span><span class="footer-link" onclick="showPage('ph-corporate')">Corporate &amp; Coaching</span><span class="footer-link" onclick="showPage('ph-home')">Home Wellness</span><span class="footer-link" onclick="showPage('ph-agrar')">Agriculture</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('academy')">U-SUN Academy</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
+</div>
+
+<!-- ════════════════ PH — AGRICULTURE -->
+<div id="page-ph-agrar" class="page">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=85') center/cover no-repeat">
+    <div class="med-sub-hero-overlay"></div>
+    <div class="med-sub-hero-content">
+      <div class="breadcrumb" onclick="showPage('personalhealth')">← Personal Health and Wellness</div>
+      <div class="med-sub-category">Sustainable Agriculture and Land Intelligence</div>
+      <h1>Sustainable Agriculture and Land Intelligence</h1>
+      <p>A new dimension of intelligence for the land you steward.</p>
+      <p style="margin-top:14px">The TimeWaver Agrar Module brings Information Field technology to agriculture for the first time — offering farmers, agricultural businesses, farm families and hobby growers a holistic tool for analysis and harmonisation across soil, plants, animals, buildings, people and processes. With nearly 230,000 targeted database entries and 29 Energy Point Templates across two pillars — Analysis and Harmonisation — it is designed for anyone who wants to understand and shape their land with greater consciousness, purpose and resilience.</p>
+      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-agrar .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore the Agrar Module</button>
+    </div>
+  </div>
+  <div class="ph-partner-strip">
+    <div class="ph-partner-strip-inner">
+      <span class="ph-partner-strip-label">Our Principal Partner</span>
+      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+    </div>
+  </div>
+  <!-- S4 KEY ADVANTAGES -->
+  <div class="med-adv-section section">
+    <div class="section-inner">
+      <div class="sec-label">Key Advantages</div>
+      <h2 class="sec-title">Why the TimeWaver Agrar Module?</h2>
+      <div class="med-adv-grid">
+        <div class="med-adv-card"><h3>Holistic Farm Intelligence</h3><p>Most agricultural tools focus on the visible — soil chemistry, crop yield, weather data. The TimeWaver Agrar Module adds the dimension that conventional tools miss: the energetic connections between soil, plants, animals, buildings and the people behind the farm.</p></div>
+        <div class="med-adv-card"><h3>Analysis and Harmonisation in One System</h3><p>Two powerful pillars work together — Analysis surfaces insights across farm structure, family dynamics, animal welfare and spiritual agriculture. Harmonisation supports plants, soil, machines, buildings and work processes. Nearly 230,000 database entries across both.</p></div>
+        <div class="med-adv-card"><h3>From Seed to Harvest</h3><p>The Agrar Module accompanies every stage of the agricultural cycle — seed phase, growth, harvest and rest — connecting the farmer more deeply with the rhythms and Information Field of the land they steward.</p></div>
+        <div class="med-adv-card"><h3>Built by Farmers, for Farmers</h3><p>Designed and developed by engineers and experienced farmers, the TimeWaver Agrar Module is practical, research-based and deeply attuned to the real challenges of agricultural and land management work.</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- S5 WHO NEEDS IT -->
+  <div class="ph-who-section" style="background:var(--offwhite)">
+    <div class="ph-who-inner">
+      <div class="sec-label">Who Needs It</div>
+      <h2 class="sec-title">For Everyone Who Works With the Land</h2>
+      <p class="sec-sub">The TimeWaver Agrar Module is designed for a wide range of agricultural and land-based practitioners — from large farm operations to hobby gardeners and forest owners.</p>
+      <div class="ph-who-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="ph-who-card"><div class="ph-who-card-title">Farmers and Agricultural Businesses</div><div class="ph-who-card-desc">Gain deeper insight into farm structure, soil, plants, animals and work processes — beyond what conventional agricultural tools can measure.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Agricultural Family Businesses</div><div class="ph-who-card-desc">Bring clarity and consciousness to the generational dynamics, hidden resources and long-term direction of your family farm.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Hobby Gardeners and Plant Enthusiasts</div><div class="ph-who-card-desc">Unlock the full potential of your plants and soil in entirely new ways — with holistic analysis tailored to small-scale growing.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Forest Owners and Self-Sufficient Growers</div><div class="ph-who-card-desc">Combine a deep connection with nature and efficient resource management through Information Field analysis of your land and ecosystem.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-title">Farm Consultants and Agronomists</div><div class="ph-who-card-desc">Offer clients a new dimension of farm intelligence — holistic, energetic and future-oriented — alongside conventional agronomic advice.</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- TAB BAR -->
+  <div class="med-products-nav">
+    <div class="med-products-nav-inner">
+      <div class="sec-label">Product Lines</div>
+      <h2 class="sec-title">Agriculture Solutions</h2>
+    </div>
+    <div class="med-tab-bar-wrap"><div class="med-cat-tab-bar"><div class="med-tab-inner">
+      <div class="med-cat-tab act" onclick="medTabClick(this,'pha-agrar')">TimeWaver Agrar Module</div>
+      <div class="med-cat-tab" onclick="medTabClick(this,'pha-qi')">QI Module</div>
+    </div></div></div>
+  </div>
+  <!-- TAB 1: Agrar Module -->
+  <div class="med-product-section act" id="pha-agrar"><div class="section-inner">
+    <h2 class="med-sec-hd" style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">TimeWaver Agrar Module</h2>
+    <p class="med-sec-intro">The TimeWaver Agrar Module is the first Information Field system designed specifically for agricultural use — with nearly 230,000 database entries across two pillars, Analysis and Harmonisation, and 29 Energy Point Templates covering every dimension of farm and land management.</p>
+    <div class="med-highlight-grid">
+      <div class="med-highlight-item"><h4>Two Pillars — Analysis and Harmonisation</h4><p>Analysis surfaces insights across farm structure, farmer personality, family dynamics, spiritual agriculture, animal welfare and land connections. Harmonisation supports plants, soil, buildings, machines, work processes and the farm as a business.</p></div>
+      <div class="med-highlight-item"><h4>29 Energy Point Templates</h4><p>Purpose-built Energy Point Templates cover the full range of agricultural contexts — from soil and crop cycles to farm buildings, machinery and the personal dynamics of the farming family.</p></div>
+    </div>
+    <div class="ph-agrar-pillars">
+      <div class="ph-agrar-pillar-head">Analysis Pillar</div>
+      <div class="ph-agrar-pillar-grid">
+        <div class="ph-agrar-pillar-item">The Farm in its Entirety<span>Structure, energetic order, social dynamics</span></div>
+        <div class="ph-agrar-pillar-item">Farmer and Leadership Personality<span>Responsibility, personal growth, shadow work</span></div>
+        <div class="ph-agrar-pillar-item">The Business Family<span>Generational conflicts, burdens, hidden resources</span></div>
+        <div class="ph-agrar-pillar-item">Spiritual Agriculture<span>Elemental beings, earth energies, spiritual dimensions</span></div>
+        <div class="ph-agrar-pillar-item">Animal Welfare<span>Physical and energetic health of farm animals</span></div>
+        <div class="ph-agrar-pillar-item">Land Connections<span>Soil, water, ecosystem and land energetics</span></div>
+      </div>
+      <div class="ph-agrar-pillar-head">Harmonisation Pillar</div>
+      <div class="ph-agrar-pillar-grid">
+        <div class="ph-agrar-pillar-item">Plants<span>Care, nutrients, mineral support</span></div>
+        <div class="ph-agrar-pillar-item">Ground<span>Microbiology and compost</span></div>
+        <div class="ph-agrar-pillar-item">Machines<span>Functionality and energetic order</span></div>
+        <div class="ph-agrar-pillar-item">Buildings<span>Balancing barns, homes, storage</span></div>
+        <div class="ph-agrar-pillar-item">Work Processes<span>Administration, certification, insurance</span></div>
+        <div class="ph-agrar-pillar-item">Farm as a Business<span>Sustainable activation of full farm potential</span></div>
+      </div>
+    </div>
+    <div class="med-prod-grid" style="grid-template-columns:1fr 2fr;gap:20px">
+      <div class="med-prod-card featured">
+        <div class="ph-prod-img">TimeWaver Agrar Module</div>
+        <div class="med-prod-name">TimeWaver Agrar Module</div>
+        <div class="med-prod-desc">Information Field module for agricultural and land intelligence. Nearly 230,000 database entries. Two pillars: Analysis and Harmonisation. 29 Energy Point Templates. Accompanies every stage of the agricultural cycle — seed phase, growth, harvest and rest. For farmers, agricultural businesses, farm families, hobby growers and land managers.</div>
+        <button class="med-prod-enquire" onclick="showPage('contact')">Enquire →</button>
+      </div>
+    </div>
+  </div></div>
+  <!-- TAB 2: QI Module (shared) -->
+  <div class="med-product-section qi-tab-content" id="pha-qi"></div>
+  <!-- Also Relevant To -->
+  <section class="section med-also-section">
+    <div class="section-inner">
+      <div class="sec-label" style="color:rgba(255,255,255,0.55)">Also Relevant To</div>
+      <p class="med-also-intro">Agricultural intelligence often connects with broader organisational and business dimensions. These related solutions may be relevant to your practice.</p>
+      <div class="med-also-grid">
+        <div class="med-also-card" onclick="showPage('ph-holistic')"><div><div class="med-also-title">Holistic Wellness and Frequency Therapy</div><div class="med-also-desc">Information Field analysis for practitioners working with land, space and environmental energy.</div></div><span class="med-also-arrow">→</span></div>
+        <div class="med-also-card" onclick="showPage('ph-corporate')"><div><div class="med-also-title">Corporate Wellness and Business Coaching</div><div class="med-also-desc">Organisational decision intelligence and business consulting tools for agricultural businesses and farm consultants.</div></div><span class="med-also-arrow">→</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="med-cta-strip">
+    <h2>Ready to Cultivate Your Success From the Roots Up?</h2>
+    <p>Our team at U-SUN Asia is here to help farmers, agricultural businesses and land stewards across Singapore and Malaysia explore what the TimeWaver Agrar Module can bring to their practice. Get in touch to arrange a consultation or download the brochure to learn more.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch</button>
+      <button class="btn-outline-white" onclick="showPage('contact')">Download Agrar Module Brochure</button>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div><p class="footer-desc">Wellness technology for practitioners, organisations and individuals — distributed across Southeast Asia by U-SUN Asia.</p></div><div class="footer-col"><h4>Personal Health</h4><span class="footer-link" onclick="showPage('personalhealth')">Overview</span><span class="footer-link" onclick="showPage('ph-holistic')">Holistic Wellness</span><span class="footer-link" onclick="showPage('ph-corporate')">Corporate &amp; Coaching</span><span class="footer-link" onclick="showPage('ph-home')">Home Wellness</span><span class="footer-link" onclick="showPage('ph-agrar')">Agriculture</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('academy')">U-SUN Academy</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
+</div>
+
+<!-- ════════════════ ACADEMY -->
+<div id="page-academy" class="page">
+  <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1600&q=85') center/cover no-repeat">
+    <div class="med-sub-hero-overlay"></div>
+    <div class="med-sub-hero-content">
+      <div class="breadcrumb" onclick="showPage('home')">← Home</div>
+      <div class="med-sub-category">Wellness Academy and Training</div>
+      <h1>Wellness Academy and Training</h1>
+      <p>Build your practice on a foundation that never stops growing.</p>
+      <p style="margin-top:14px">U-SUN Academy is the training and education platform for TimeWaver practitioners across Southeast Asia. We partner with certified experts, field specialists and experienced trainers to bring you foundational operation training, advanced certification programmes, expert-led webinars and specialised frequency workshops. Everything on the platform is designed to do more than teach you a system — it is designed to build the expertise, confidence and professional credibility that makes practitioners indispensable to their clients. Whether you are just starting out or deepening an established practice, there is a path here for you.</p>
+      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <button class="ph-sub-hero-btn" onclick="document.getElementById('academy-programmes').scrollIntoView({behavior:'smooth'})">Explore Our Programmes</button>
+    </div>
+  </div>
+
+  <!-- S3 CONTENT GRID -->
+  <div class="ph-resources-section" id="academy-programmes">
+    <div class="ph-resources-inner">
+      <div class="sec-label">Our Programmes</div>
+      <h2 class="sec-title">Learn From the Experts. At Your Own Pace.</h2>
+      <p class="sec-sub">Browse our library of webinars, workshops and training programmes — led by certified TimeWaver practitioners and field specialists from across the region.</p>
+      <div class="ph-filter-bar">
+        <button class="ph-filter-btn active" onclick="phFilterAcad(this,'all')">All</button>
+        <button class="ph-filter-btn" onclick="phFilterAcad(this,'free')">Free</button>
+        <button class="ph-filter-btn" onclick="phFilterAcad(this,'members')">Members Only</button>
+      </div>
+      <div class="ph-content-grid">
+        <div class="ph-content-card" data-acad-type="free" onclick="openFreeModal('East Meets West — Quantum Healing Through the Lens of Consciousness','Dr David Leong','Business and Coaching','45 min')">
+          <div class="ph-content-thumb">
+            <div class="ph-content-play"></div>
+            <span class="ph-content-label free">FREE</span>
+          </div>
+          <div class="ph-content-body">
+            <span class="ph-content-topic">Business and Coaching</span>
+            <div class="ph-content-speaker">Dr David Leong</div>
+            <div class="ph-content-title">East Meets West — Quantum Healing Through the Lens of Consciousness</div>
+            <div class="ph-content-duration">45 min</div>
+            <button class="ph-content-cta">Watch Now</button>
+          </div>
+        </div>
+        <div class="ph-content-card" data-acad-type="members" onclick="openMembersModal('TimeWaver Frequency and McMakin — Practitioner Training Series','Tony Chen','TimeWaver Frequency','Series — 4 sessions')">
+          <div class="ph-content-thumb">
+            <div class="ph-content-play"></div>
+            <span class="ph-content-label members">🔒 MEMBERS ONLY</span>
+          </div>
+          <div class="ph-content-body">
+            <span class="ph-content-topic">TimeWaver Frequency</span>
+            <div class="ph-content-speaker">Tony Chen</div>
+            <div class="ph-content-title">TimeWaver Frequency and McMakin — Practitioner Training Series</div>
+            <div class="ph-content-duration">Series — 4 sessions</div>
+            <button class="ph-content-cta dark">Enquire to Access</button>
+          </div>
+        </div>
+        <div class="ph-content-card" data-acad-type="members" onclick="openMembersModal('N-Dimensional Quantum Information Field — Workshop Series','Mina Chung','Holistic Wellness','Half-day workshop')">
+          <div class="ph-content-thumb">
+            <div class="ph-content-play"></div>
+            <span class="ph-content-label members">🔒 MEMBERS ONLY</span>
+          </div>
+          <div class="ph-content-body">
+            <span class="ph-content-topic">Holistic Wellness</span>
+            <div class="ph-content-speaker">Mina Chung</div>
+            <div class="ph-content-title">N-Dimensional Quantum Information Field — Workshop Series</div>
+            <div class="ph-content-duration">Half-day workshop</div>
+            <button class="ph-content-cta dark">Enquire to Access</button>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:14px;color:var(--gray);margin-top:28px">Looking for something specific? <span style="color:var(--kblue);font-weight:700;cursor:pointer" onclick="showPage('contact')">Get in touch with our team and we will point you in the right direction →</span></p>
+    </div>
+  </div>
+
+  <!-- S4 CERTIFICATION PATHWAY -->
+  <div class="ph-cert-section">
+    <div class="ph-cert-inner">
+      <div class="sec-label">Your Certification Journey</div>
+      <h2 class="sec-title">From First Steps to Field Expert.</h2>
+      <p class="sec-sub">U-SUN Academy's multi-level certification pathway is designed to grow with you — from foundational operation training to recognised expert status across Southeast Asia. Each level builds on the last, deepening your knowledge, expanding your applications and strengthening your professional credibility.</p>
+      <div class="ph-cert-path">
+        <div class="ph-cert-step">
+          <div class="ph-cert-num">1</div>
+          <div class="ph-cert-title">Junior Consultant</div>
+          <div class="ph-cert-desc">Foundational TimeWaver operation training. Learn to use the system confidently in your existing practice.</div>
+        </div>
+        <div class="ph-cert-step">
+          <div class="ph-cert-num">2</div>
+          <div class="ph-cert-title">Senior Consultant</div>
+          <div class="ph-cert-desc">Deepen your application across specialist modules and client scenarios. Expand your service offering.</div>
+        </div>
+        <div class="ph-cert-step">
+          <div class="ph-cert-num">3</div>
+          <div class="ph-cert-title">Expert Consultant</div>
+          <div class="ph-cert-desc">Advanced analysis and harmonisation techniques. Begin contributing to the practitioner community.</div>
+        </div>
+        <div class="ph-cert-step">
+          <div class="ph-cert-num">4</div>
+          <div class="ph-cert-title">Master Consultant</div>
+          <div class="ph-cert-desc">Comprehensive mastery across multiple TimeWaver systems and disciplines. Qualified to guide others.</div>
+        </div>
+        <div class="ph-cert-step kol">
+          <div class="ph-cert-num">5</div>
+          <div class="ph-cert-title">KOL</div>
+          <div class="ph-cert-desc">Key Opinion Leader. Recognised across the U-SUN Asia network as a field authority — contributing to education, content and community leadership.</div>
+        </div>
+      </div>
+      <p style="font-size:14px;color:var(--gray);margin-top:28px">Interested in beginning your certification journey? <span style="color:var(--kblue);font-weight:700;cursor:pointer" onclick="showPage('contact')">Get in touch with our team →</span></p>
+    </div>
+  </div>
+
+  <div class="med-cta-strip">
+    <h2>Ready to Begin?</h2>
+    <p>Whether you are a new TimeWaver user looking for your first training or an experienced practitioner ready to formalise your expertise — U-SUN Academy has a programme for you. Get in touch with our team and we will help you find the right starting point.</p>
+    <div class="med-cta-buttons">
+      <button class="btn-primary" onclick="showPage('contact')">Get in Touch</button>
+      <button class="btn-outline-white" onclick="showPage('personalhealth')">Back to Personal Health and Wellness</button>
+    </div>
+  </div>
+  <footer><div class="footer-grid"><div><p class="footer-desc">Wellness technology for practitioners, organisations and individuals — distributed across Southeast Asia by U-SUN Asia.</p></div><div class="footer-col"><h4>Personal Health</h4><span class="footer-link" onclick="showPage('personalhealth')">Overview</span><span class="footer-link" onclick="showPage('ph-holistic')">Holistic Wellness</span><span class="footer-link" onclick="showPage('ph-corporate')">Corporate &amp; Coaching</span><span class="footer-link" onclick="showPage('ph-home')">Home Wellness</span><span class="footer-link" onclick="showPage('ph-agrar')">Agriculture</span></div><div class="footer-col"><h4>Company</h4><span class="footer-link" onclick="showPage('about')">About Us</span><span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span></div><div class="footer-col"><h4>Connect</h4><span class="footer-link" onclick="showPage('contact')">Get in Touch</span><span class="footer-link" onclick="showPage('resources')">Resources</span></div></div><div class="footer-bottom"><p>© 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p><div class="footer-bottom-links"><span class="footer-link" style="margin:0">Privacy Policy</span><span class="footer-link" style="margin:0">Cookie Policy</span></div></div></footer>
+</div>
+
+<!-- FREE watch modal -->
+<div class="ph-modal-overlay" id="phFreeModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="ph-modal">
+    <button class="ph-modal-close" onclick="document.getElementById('phFreeModal').classList.remove('open')">×</button>
+    <div class="ph-modal-thumb"><div class="ph-content-play"></div></div>
+    <div id="phFreeModalTitle" style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:var(--dark-navy);margin-bottom:4px"></div>
+    <div id="phFreeModalMeta" style="font-size:12px;color:var(--gray);margin-bottom:16px"></div>
+    <input type="text" placeholder="Full Name *">
+    <input type="email" placeholder="Email Address *">
+    <button class="ph-modal-submit" onclick="phModalSuccess('phFreeModal')">Watch Now →</button>
+    <div class="ph-modal-fine">Your information is used only to grant access to this content.</div>
+  </div>
+</div>
+<!-- MEMBERS ONLY enquiry modal -->
+<div class="ph-modal-overlay" id="phMembersModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="ph-modal">
+    <button class="ph-modal-close" onclick="document.getElementById('phMembersModal').classList.remove('open')">×</button>
+    <div class="ph-modal-lock">🔒</div>
+    <h3>This content is available to U-SUN Academy members.</h3>
+    <p>Fill in the form below and our team will be in touch to help you access this programme.</p>
+    <div id="phMembersModalTitle" style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;color:var(--dark-navy);margin-bottom:14px"></div>
+    <input type="text" placeholder="Full Name *">
+    <input type="email" placeholder="Email Address *">
+    <textarea placeholder="Optional: tell us about your practice or interest (optional)" style="height:80px"></textarea>
+    <button class="ph-modal-submit" style="background:var(--dark-navy);color:var(--white)" onclick="phModalSuccess('phMembersModal')">Send Enquiry →</button>
+    <div class="ph-modal-fine">Your enquiry is handled by our team. We typically respond within 1 business day.</div>
+  </div>
 </div>
 
 <div id="page-contact" class="page">
@@ -4850,6 +6062,122 @@ showPage = function(id) {
   if (btn) { btn.classList.remove('open'); }
   document.body.style.overflow = '';
 };
+
+// ── QI MODULE TAB INJECTION ──
+document.addEventListener('DOMContentLoaded', function() {
+  var qiHTML = '<div class="section-inner">'
+    + '<h2 class="med-sec-hd" style="font-family:\'Montserrat\',sans-serif;font-size:22px;font-weight:800;color:var(--dark-navy);margin-bottom:16px">TimeWaver QI Module</h2>'
+    + '<p class="med-sec-intro">The TimeWaver QI Module is the AI-powered analysis layer for the TimeWaver ecosystem — automatically contextualising topics, surfacing the most relevant Information Field entries and generating structured client reports in minutes. For any practitioner or consultant using TimeWaver Pro, QI transforms the depth and efficiency of every session.</p>'
+    + '<div class="med-highlight-grid">'
+    +   '<div class="med-highlight-item"><h4>From Topic to Tailored Insight — In Six Steps</h4><p>Enter a topic, let AI identify the context, draw from the Information Field database, run the analysis, generate affirmations, and deliver a client-ready report. A process that once took significant practitioner time now flows automatically — with greater consistency and depth.</p></div>'
+    +   '<div class="med-highlight-item"><h4>Less Time on Analysis. More Time With Your Client.</h4><p>By automating the most time-intensive steps of Information Field analysis, the QI Module allows practitioners to focus entirely on their client during the session — while QI works through the database in the background.</p></div>'
+    + '</div>'
+    + '<div class="ph-qi-flow" style="margin:28px 0">'
+    +   '<div class="ph-qi-step"><div class="ph-qi-step-num">Step 1</div><div class="ph-qi-step-icon">📋</div><div class="ph-qi-step-label">Topic</div></div>'
+    +   '<div class="ph-qi-step"><div class="ph-qi-step-num">Step 2</div><div class="ph-qi-step-icon">🤖</div><div class="ph-qi-step-label">AI Context</div></div>'
+    +   '<div class="ph-qi-step"><div class="ph-qi-step-num">Step 3</div><div class="ph-qi-step-icon">🗄️</div><div class="ph-qi-step-label">Database</div></div>'
+    +   '<div class="ph-qi-step"><div class="ph-qi-step-num">Step 4</div><div class="ph-qi-step-icon">⚡</div><div class="ph-qi-step-label">Information Field Analysis</div></div>'
+    +   '<div class="ph-qi-step"><div class="ph-qi-step-num">Step 5</div><div class="ph-qi-step-icon">✨</div><div class="ph-qi-step-label">Affirmations</div></div>'
+    +   '<div class="ph-qi-step"><div class="ph-qi-step-num">Step 6</div><div class="ph-qi-step-icon">📄</div><div class="ph-qi-step-label">Report</div></div>'
+    + '</div>'
+    + '<div class="med-prod-grid two-col">'
+    +   '<div class="med-prod-card featured">'
+    +     '<div class="ph-prod-img">TimeWaver QI Module</div>'
+    +     '<div class="med-prod-badge extended">AI-Powered</div>'
+    +     '<div class="med-prod-name">TimeWaver QI Module</div>'
+    +     '<div class="med-prod-desc">AI-powered Information Field analysis add-on for TimeWaver Pro and MobileQuantum. Six-step automated workflow: Topic → AI Context → Database → Information Field Analysis → Affirmations → Report. Client-ready PDF output. Requires TimeWaver Pro base software.</div>'
+    +     '<button class="med-prod-enquire" onclick="showPage(\'contact\')">Enquire →</button>'
+    +   '</div>'
+    +   '<div class="med-prod-card featured">'
+    +     '<div class="ph-prod-img">TimeWaver MobileQuantum</div>'
+    +     '<div class="med-prod-badge extended">2025 Release</div>'
+    +     '<div class="med-prod-name">TimeWaver MobileQuantum</div>'
+    +     '<div class="med-prod-desc">Ultra-portable hardware platform for TimeWaver Pro and QI Module. Light Quantum Resonator (LQR). Triple analysis speed vs previous hardware. More than double precision. Ideal for mobile practitioners requiring QI Module capability on the go.</div>'
+    +     '<button class="med-prod-enquire" onclick="showPage(\'contact\')">Enquire →</button>'
+    +   '</div>'
+    + '</div>'
+    + '<div class="ph-qi-callout" style="margin-top:28px">'
+    +   '<div class="ph-qi-callout-text"><strong>Already using TimeWaver?</strong> The QI Module takes your practice further — ask us about upgrading.</div>'
+    +   '<button class="btn-primary" onclick="showPage(\'contact\')" style="white-space:nowrap;flex-shrink:0">Enquire About QI</button>'
+    + '</div>'
+    + '</div>';
+  document.querySelectorAll('.qi-tab-content').forEach(function(el) {
+    el.innerHTML = qiHTML;
+  });
+});
+
+// ── PH RESOURCE FILTER ──
+function phFilterRes(btn, type) {
+  var bar = btn.closest('.ph-filter-bar');
+  bar.querySelectorAll('.ph-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.ph-resource-card').forEach(function(card) {
+    card.style.display = (type === 'all' || card.dataset.resType === type) ? '' : 'none';
+  });
+}
+
+// ── PH RESOURCE GATE ──
+function phGateDownload(el) {
+  document.getElementById('phResModal').classList.add('open');
+}
+
+// ── PH MODAL SUCCESS ──
+function phModalSuccess(modalId) {
+  var modal = document.getElementById(modalId);
+  if (!modal) return;
+  var inner = modal.querySelector('.ph-modal');
+  if (!inner) return;
+  var origHTML = inner.innerHTML;
+  inner.innerHTML = '<div style="text-align:center;padding:32px 20px"><div style="font-size:40px;margin-bottom:16px">✓</div><div style="font-family:\'Montserrat\',sans-serif;font-size:18px;font-weight:800;color:var(--dark-navy);margin-bottom:8px">Thank you!</div><div style="font-size:14px;color:var(--gray)">Our team will be in touch shortly.</div></div>';
+  setTimeout(function() {
+    modal.classList.remove('open');
+    setTimeout(function() { inner.innerHTML = origHTML; }, 300);
+  }, 2600);
+}
+
+// ── PH MODULE FILTER ──
+function phModFilter(btn, cat) {
+  var bar = btn.closest('.ph-module-filter');
+  bar.querySelectorAll('.ph-module-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  var grid = bar.nextElementSibling;
+  if (!grid) return;
+  grid.querySelectorAll('.ph-module-card').forEach(function(card) {
+    card.style.display = (cat === 'all' || card.dataset.modCat === cat) ? '' : 'none';
+  });
+}
+
+// ── ACADEMY CONTENT FILTER ──
+function phFilterAcad(btn, type) {
+  var bar = btn.closest('.ph-filter-bar');
+  bar.querySelectorAll('.ph-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  var grid = bar.nextElementSibling;
+  if (!grid) return;
+  grid.querySelectorAll('.ph-content-card').forEach(function(card) {
+    card.style.display = (type === 'all' || card.dataset.acadType === type) ? '' : 'none';
+  });
+}
+
+// ── ACADEMY FREE MODAL ──
+function openFreeModal(title, speaker, topic, duration) {
+  var modal = document.getElementById('phFreeModal');
+  if (!modal) return;
+  var titleEl = document.getElementById('phFreeModalTitle');
+  var metaEl = document.getElementById('phFreeModalMeta');
+  if (titleEl) titleEl.textContent = title || '';
+  if (metaEl) metaEl.textContent = (speaker ? speaker : '') + (topic ? ' · ' + topic : '') + (duration ? ' · ' + duration : '');
+  modal.classList.add('open');
+}
+
+// ── ACADEMY MEMBERS MODAL ──
+function openMembersModal(title, speaker, topic, duration) {
+  var modal = document.getElementById('phMembersModal');
+  if (!modal) return;
+  var titleEl = document.getElementById('phMembersModalTitle');
+  if (titleEl) titleEl.textContent = title || '';
+  modal.classList.add('open');
+}
 
 </script>
 </body>
