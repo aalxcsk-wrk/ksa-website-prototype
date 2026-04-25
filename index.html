@@ -1696,6 +1696,11 @@
     .ph-module-grid { grid-template-columns:1fr; }
     .ph-needs-grid { grid-template-columns:1fr; }
   }
+  /* Full disclaimer footnote — Apple-style, sits just before CTA strip */
+  .ph-footnote { background:var(--offwhite); border-top:1px solid var(--border); padding:18px 56px; }
+  .ph-footnote p { max-width:1180px; margin:0 auto; font-size:10.5px; color:var(--gray); font-style:italic; line-height:1.65; opacity:0.65; }
+  @media(max-width:768px) { .ph-footnote { padding:16px 20px; } }
+
   @media(prefers-reduced-motion:reduce) {
     .ph-sol-card,.ph-needs-pill,.ph-sub-hero-btn,.ph-resource-card,
     .ph-module-card,.ph-content-card,.ph-cert-step,.ph-coaching-step,
@@ -3933,7 +3938,7 @@ function resetMedPage(page) {
       <h1>Personal Health &amp; Wellness</h1>
       <div class="ph-hero-tagline">The partner behind your practice.</div>
       <p>Since 2013, U-SUN Asia has been the partner that wellness practitioners, corporate teams and individuals across Singapore and Malaysia turn to — not just for technology, but for transformation. We believe that true wellbeing is a harmony of mind, body and soul, and that the right tools alone are never enough. That is why every TimeWaver system we bring to this region comes with certified training, customised education resources, and an ongoing community of practitioners, webinars and member support — so the people we work with do not just own a device. They build a practice.</p>
-      <p class="ph-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <p class="ph-disclaimer">*Frequency-based wellness support. Not intended to cure, treat, mitigate, diagnose or prevent any medical condition.</p>
       <div class="ph-hero-cta">
         <button class="btn-primary" onclick="document.getElementById('ph-solutions').scrollIntoView({behavior:'smooth'})">Explore Our Solutions</button>
       </div>
@@ -4143,6 +4148,9 @@ function resetMedPage(page) {
     </div>
   </div>
 
+  <div class="ph-footnote">
+    <p>*The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+  </div>
   <div class="med-cta-strip">
     <h2>Ready to explore Personal Health &amp; Wellness?</h2>
     <p>Whether you are a practitioner, organisation or individual — our team at U-SUN Asia is ready to help you find the right starting point.</p>
@@ -4203,7 +4211,7 @@ function resetMedPage(page) {
       <h1>Holistic Wellness and Frequency Therapy</h1>
       <p>Two powerful approaches. One integrated practice.</p>
       <p style="margin-top:14px">Whether you are building an integrative wellness practice, supporting clients through Information Field analysis, or exploring frequency application for vitality, stress management, sports recovery and rehabilitation — TimeWaver offers two distinct yet complementary approaches. Information Field analysis works across the physical, emotional, mental, energetic and soul dimensions of a person. Frequency application delivers targeted Individualized Microcurrent Frequencies (IMF) and Frequency Specific Microcurrent (FSM) programmes to harmonise the Bioenergetic Field. Together, they form the foundation of a practice that addresses the whole person.</p>
-      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <p class="med-sub-disclaimer">*Frequency-based wellness support. Not intended to cure, treat, mitigate, diagnose or prevent any medical condition.</p>
       <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-holistic .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore Our Solutions</button>
     </div>
   </div>
@@ -4380,6 +4388,9 @@ function resetMedPage(page) {
       </div>
     </div>
   </section>
+  <div class="ph-footnote">
+    <p>*The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+  </div>
   <div class="med-cta-strip">
     <h2>Ready to Build a Practice That Goes Further?</h2>
     <p>Our team at U-SUN Asia works with practitioners at every stage — from first exploration to full certification and beyond. Whether you are evaluating TimeWaver for the first time or looking to deepen an existing practice, we are here to help you find the right starting point.</p>
@@ -4401,7 +4412,7 @@ function resetMedPage(page) {
       <h1>Corporate Wellness and Business Coaching</h1>
       <p>The intelligence behind better organisations and sharper practitioners.</p>
       <p style="margin-top:14px">Whether you are an HR leader building a measurable employee wellbeing programme, an ESG officer looking for quantifiable workforce data, or a coach and consultant wanting to bring a deeper dimension to your client work — TimeWaver offers a suite of tools that make the invisible visible. From HRV-based stress monitoring and organisational decision intelligence to structured coaching and systemic analysis, this is technology built for the people who build others.</p>
-      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <p class="med-sub-disclaimer">*Frequency-based wellness support. Not intended to cure, treat, mitigate, diagnose or prevent any medical condition.</p>
       <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-corporate .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore Our Solutions</button>
     </div>
   </div>
@@ -4594,6 +4605,9 @@ function resetMedPage(page) {
       </div>
     </div>
   </section>
+  <div class="ph-footnote">
+    <p>*The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+  </div>
   <div class="med-cta-strip">
     <h2>Ready to Bring a New Dimension to Your Organisation or Practice?</h2>
     <p>Our team at U-SUN Asia works with HR leaders, ESG officers, business consultants and coaches across Singapore and Malaysia — helping each find the right TimeWaver starting point for their goals. Whether you are exploring for the first time or ready to go deeper, we are here.</p>
@@ -4615,7 +4629,7 @@ function resetMedPage(page) {
       <h1>Personal and Home Wellness</h1>
       <p>Frequency wellness, made for everyday life.</p>
       <p style="margin-top:14px">TimeWaver Home brings the core benefits of IMF frequency wellness into a simple, compact device designed for personal and family use. With programme groups covering vitality, relaxation, balance, fitness, beauty and more — operated with just three buttons — it is the entry point into the TimeWaver ecosystem for individuals and families who want to support their wellbeing at home, at their own pace and on their own terms.</p>
-      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <p class="med-sub-disclaimer">*Frequency-based wellness support. Not intended to cure, treat, mitigate, diagnose or prevent any medical condition.</p>
       <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-home .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore TimeWaver Home</button>
     </div>
   </div>
@@ -4708,6 +4722,9 @@ function resetMedPage(page) {
       <button class="btn-primary" onclick="showPage('ph-holistic')">Explore Holistic Wellness and Frequency Therapy →</button>
     </div>
   </div></div>
+  <div class="ph-footnote">
+    <p>*The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+  </div>
   <div class="med-cta-strip">
     <h2>Curious About TimeWaver Home? Let's Talk.</h2>
     <p>Whether you have been referred by a practitioner or are exploring frequency wellness for the first time, our team at U-SUN Asia is happy to answer your questions and help you find the right starting point.</p>
@@ -4729,7 +4746,7 @@ function resetMedPage(page) {
       <h1>Sustainable Agriculture and Land Intelligence</h1>
       <p>A new dimension of intelligence for the land you steward.</p>
       <p style="margin-top:14px">The TimeWaver Agrar Module brings Information Field technology to agriculture for the first time — offering farmers, agricultural businesses, farm families and hobby growers a holistic tool for analysis and harmonisation across soil, plants, animals, buildings, people and processes. With nearly 230,000 targeted database entries and 29 Energy Point Templates across two pillars — Analysis and Harmonisation — it is designed for anyone who wants to understand and shape their land with greater consciousness, purpose and resilience.</p>
-      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <p class="med-sub-disclaimer">*Frequency-based wellness support. Not intended to cure, treat, mitigate, diagnose or prevent any medical condition.</p>
       <button class="ph-sub-hero-btn" onclick="document.querySelector('#page-ph-agrar .med-products-nav').scrollIntoView({behavior:'smooth'})">Explore the Agrar Module</button>
     </div>
   </div>
@@ -4833,6 +4850,9 @@ function resetMedPage(page) {
       </div>
     </div>
   </section>
+  <div class="ph-footnote">
+    <p>*The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+  </div>
   <div class="med-cta-strip">
     <h2>Ready to Cultivate Your Success From the Roots Up?</h2>
     <p>Our team at U-SUN Asia is here to help farmers, agricultural businesses and land stewards across Singapore and Malaysia explore what the TimeWaver Agrar Module can bring to their practice. Get in touch to arrange a consultation or download the brochure to learn more.</p>
@@ -4854,7 +4874,7 @@ function resetMedPage(page) {
       <h1>Wellness Academy and Training</h1>
       <p>Build your practice on a foundation that never stops growing.</p>
       <p style="margin-top:14px">U-SUN Academy is the training and education platform for TimeWaver practitioners across Southeast Asia. We partner with certified experts, field specialists and experienced trainers to bring you foundational operation training, advanced certification programmes, expert-led webinars and specialised frequency workshops. Everything on the platform is designed to do more than teach you a system — it is designed to build the expertise, confidence and professional credibility that makes practitioners indispensable to their clients. Whether you are just starting out or deepening an established practice, there is a path here for you.</p>
-      <p class="med-sub-disclaimer">The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+      <p class="med-sub-disclaimer">*Frequency-based wellness support. Not intended to cure, treat, mitigate, diagnose or prevent any medical condition.</p>
       <button class="ph-sub-hero-btn" onclick="document.getElementById('academy-programmes').scrollIntoView({behavior:'smooth'})">Explore Our Programmes</button>
     </div>
   </div>
@@ -4964,6 +4984,9 @@ function resetMedPage(page) {
     </div>
   </div>
 
+  <div class="ph-footnote">
+    <p>*The analysis and harmonisation in the Information Field is not intended to cure, treat, mitigate, diagnose or prevent any disease or medical condition. TimeWaver products are designed to support wellbeing through frequency-based programmes and information field applications. Use is at the user's discretion and subject to their professional judgment.</p>
+  </div>
   <div class="med-cta-strip">
     <h2>Ready to Begin?</h2>
     <p>Whether you are a new TimeWaver user looking for your first training or an experienced practitioner ready to formalise your expertise — U-SUN Academy has a programme for you. Get in touch with our team and we will help you find the right starting point.</p>
