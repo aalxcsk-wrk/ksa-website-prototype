@@ -1481,7 +1481,8 @@
   .ph-audience-section { background:var(--white); padding:72px 56px; }
   .ph-audience-inner { max-width:1180px; margin:0 auto; }
   .ph-audience-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
-  .ph-audience-pill { display:inline-flex; align-items:center; gap:8px; background:var(--kblue-50); border:1.5px solid #c5d3ed; border-radius:100px; padding:10px 18px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--kblue); }
+  .ph-audience-pill { display:inline-flex; align-items:center; gap:8px; background:var(--kblue-50); border:1.5px solid #c5d3ed; border-radius:100px; padding:10px 18px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:700; color:var(--kblue); transition:transform 0.35s cubic-bezier(0.25,1,0.5,1), box-shadow 0.35s cubic-bezier(0.25,1,0.5,1), background 0.2s ease, border-color 0.2s ease; will-change:transform; cursor:default; }
+  .ph-audience-pill:hover { background:var(--kblue-100,#d0dff7); border-color:var(--kblue); box-shadow:0 8px 24px rgba(0,44,153,0.13); }
 
   /* PH QI & AI S5 */
   .ph-qi-section { background:var(--offwhite); padding:72px 56px; }
@@ -1698,9 +1699,10 @@
   @media(prefers-reduced-motion:reduce) {
     .ph-sol-card,.ph-needs-pill,.ph-sub-hero-btn,.ph-resource-card,
     .ph-module-card,.ph-content-card,.ph-cert-step,.ph-coaching-step,
-    .ph-module-enquire,.ph-content-cta,.ph-modal-overlay,.ph-modal { transition:none; }
+    .ph-module-enquire,.ph-content-cta,.ph-modal-overlay,.ph-modal,
+    .ph-audience-pill { transition:none; }
     .ph-sol-card:hover,.ph-resource-card:hover,.ph-module-card:hover,
-    .ph-content-card:hover { transform:none; }
+    .ph-content-card:hover,.ph-audience-pill:hover { transform:none; }
     .ph-modal { transform:none; }
   }
 </style>
@@ -6208,6 +6210,37 @@ function openMembersModal(title, speaker, topic, duration) {
   if (titleEl) titleEl.textContent = title || '';
   modal.classList.add('open');
 }
+
+// ── AUDIENCE PILL MAGNETIC DRIFT ──
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var container = document.querySelector('.ph-audience-pills');
+  if (!container) return;
+  var pills = Array.from(container.querySelectorAll('.ph-audience-pill'));
+  var MAX_DRIFT = 9;
+  var INFLUENCE = 130;
+
+  container.addEventListener('mousemove', function(e) {
+    var cx = e.clientX, cy = e.clientY;
+    pills.forEach(function(pill) {
+      var r = pill.getBoundingClientRect();
+      var pcx = r.left + r.width / 2;
+      var pcy = r.top + r.height / 2;
+      var dx = cx - pcx, dy = cy - pcy;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < INFLUENCE && dist > 0) {
+        var s = (1 - dist / INFLUENCE) * MAX_DRIFT;
+        pill.style.transform = 'translate(' + (dx / dist * s).toFixed(2) + 'px,' + (dy / dist * s).toFixed(2) + 'px)';
+      } else {
+        pill.style.transform = '';
+      }
+    });
+  });
+
+  container.addEventListener('mouseleave', function() {
+    pills.forEach(function(pill) { pill.style.transform = ''; });
+  });
+});
 
 </script>
 </body>
