@@ -1532,10 +1532,14 @@
   .ph-sub-hero-btn { display:inline-block; margin-top:24px; background:var(--kyellow); color:var(--dark-navy); padding:12px 28px; border-radius:100px; font-weight:700; font-size:13.5px; cursor:pointer; border:none; font-family:'DM Sans',sans-serif; transition:all .24s cubic-bezier(0.25,0.46,0.45,0.94); }
   .ph-sub-hero-btn:hover { background:var(--kyellow-hover); transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,208,0,0.32); }
 
-  /* PH Partner strip (single logo) */
+  /* PH Partner strip */
   .ph-partner-strip { background:var(--offwhite); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:16px 56px; }
   .ph-partner-strip-inner { max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:20px; }
   .ph-partner-strip-label { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; color:var(--gray); text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap; }
+  .ph-partner-logos { display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+  .ph-partner-logo { height:32px; width:auto; max-width:130px; object-fit:contain; filter:grayscale(1) opacity(0.55); transition:filter .25s; flex-shrink:0; }
+  .ph-partner-logo:hover { filter:grayscale(0) opacity(1); }
+  .ph-partner-divider { width:1px; height:22px; background:var(--border); flex-shrink:0; }
 
   /* Two Approaches / Two Audiences block */
   .ph-two-col-section { background:var(--offwhite); padding:64px 56px; }
@@ -1824,7 +1828,6 @@ function resetMedPage(page) {
             </div>
             <div class="mega-sub" id="mega-health">
               <div class="mega-sub-label">Personal Health</div>
-              <div class="mega-sub-item" onclick="showPage('personalhealth')">Overview</div>
               <div class="mega-sub-item" onclick="showPage('ph-holistic')">Holistic Wellness &amp; Frequency Therapy</div>
               <div class="mega-sub-item" onclick="showPage('ph-corporate')">Corporate Wellness &amp; Business Coaching</div>
               <div class="mega-sub-item" onclick="showPage('ph-home')">Personal &amp; Home Wellness</div>
@@ -3941,7 +3944,7 @@ function resetMedPage(page) {
     <div class="ph-hero-bottombar">
       <div class="ph-hero-bottombar-inner">
         <span class="ph-hero-bottombar-label">Brought to Southeast Asia by</span>
-        <span class="ph-tw-logo">U-SUN Asia</span>
+        <img src="images/USUN AP_Logo_BW.png" alt="U-SUN Asia" style="height:26px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8;">
       </div>
     </div>
   </div>
@@ -4073,7 +4076,7 @@ function resetMedPage(page) {
     <div class="ph-partner-inner">
       <div class="sec-label">Our Partner</div>
       <h2 class="sec-title">Powered by TimeWaver</h2>
-      <div style="margin:24px 0"><span class="ph-tw-logo" style="font-size:24px">TimeWaver</span></div>
+      <div style="margin:24px 0"><img src="images/TimeWaver Partner Logo.png" alt="TimeWaver Authorised Partner" style="height:44px;width:auto;object-fit:contain;filter:grayscale(1) opacity(0.6);transition:filter .25s;" onmouseover="this.style.filter='grayscale(0) opacity(1)'" onmouseout="this.style.filter='grayscale(1) opacity(0.6)'"></div>
       <p style="font-size:15.5px;color:var(--gray);line-height:1.82;max-width:820px">Founded in Germany in 2007 by Marcus Schmieke, TimeWaver is the creator of Information Field technology — a pioneering approach to analysis and harmonisation that operates across the physical, energetic, emotional, mental and soul dimensions of a person, an organisation, and a space. With over 840,000 database entries and a growing ecosystem of specialist modules, TimeWaver is trusted by practitioners, clinics, coaches and businesses across more than 50 countries. U-SUN Asia is the authorised distributor and certified training partner for Southeast Asia.</p>
     </div>
   </div>
@@ -4199,8 +4202,12 @@ function resetMedPage(page) {
   <!-- Partner strip -->
   <div class="ph-partner-strip">
     <div class="ph-partner-strip-inner">
-      <span class="ph-partner-strip-label">Our Principal Partner</span>
-      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+      <span class="ph-partner-strip-label">Brought to you by</span>
+      <div class="ph-partner-logos">
+        <img src="images/USUN AP_Logo_BW.png" alt="U-SUN Asia" class="ph-partner-logo">
+        <div class="ph-partner-divider"></div>
+        <img src="images/TimeWaver Partner Logo.png" alt="TimeWaver Authorised Partner" class="ph-partner-logo">
+      </div>
     </div>
   </div>
   <!-- S4 TWO APPROACHES -->
@@ -4391,8 +4398,12 @@ function resetMedPage(page) {
   </div>
   <div class="ph-partner-strip">
     <div class="ph-partner-strip-inner">
-      <span class="ph-partner-strip-label">Our Principal Partner</span>
-      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+      <span class="ph-partner-strip-label">Brought to you by</span>
+      <div class="ph-partner-logos">
+        <img src="images/USUN AP_Logo_BW.png" alt="U-SUN Asia" class="ph-partner-logo">
+        <div class="ph-partner-divider"></div>
+        <img src="images/TimeWaver Partner Logo.png" alt="TimeWaver Authorised Partner" class="ph-partner-logo">
+      </div>
     </div>
   </div>
   <!-- S4 TWO AUDIENCES -->
@@ -4600,8 +4611,12 @@ function resetMedPage(page) {
   </div>
   <div class="ph-partner-strip">
     <div class="ph-partner-strip-inner">
-      <span class="ph-partner-strip-label">Our Principal Partner</span>
-      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+      <span class="ph-partner-strip-label">Brought to you by</span>
+      <div class="ph-partner-logos">
+        <img src="images/USUN AP_Logo_BW.png" alt="U-SUN Asia" class="ph-partner-logo">
+        <div class="ph-partner-divider"></div>
+        <img src="images/TimeWaver Partner Logo.png" alt="TimeWaver Authorised Partner" class="ph-partner-logo">
+      </div>
     </div>
   </div>
   <!-- S4 KEY ADVANTAGES -->
@@ -4709,8 +4724,12 @@ function resetMedPage(page) {
   </div>
   <div class="ph-partner-strip">
     <div class="ph-partner-strip-inner">
-      <span class="ph-partner-strip-label">Our Principal Partner</span>
-      <span class="ph-tw-logo" style="font-size:16px">TimeWaver</span>
+      <span class="ph-partner-strip-label">Brought to you by</span>
+      <div class="ph-partner-logos">
+        <img src="images/USUN AP_Logo_BW.png" alt="U-SUN Asia" class="ph-partner-logo">
+        <div class="ph-partner-divider"></div>
+        <img src="images/TimeWaver Partner Logo.png" alt="TimeWaver Authorised Partner" class="ph-partner-logo">
+      </div>
     </div>
   </div>
   <!-- S4 KEY ADVANTAGES -->
