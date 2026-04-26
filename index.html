@@ -1554,6 +1554,8 @@
   .ph-who-card-title { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--dark-navy); margin-bottom:7px; line-height:1.35; }
   .ph-who-card-desc { font-size:12.5px; color:var(--gray); line-height:1.6; }
   .ph-who-group-label { font-family:'Montserrat',sans-serif; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--kblue); margin:12px 0 8px; padding-bottom:8px; border-bottom:2px solid var(--kblue-light); grid-column:1/-1; }
+  .ph-who-card-icon { width:38px; height:38px; border-radius:9px; background:var(--kblue-light); display:flex; align-items:center; justify-content:center; margin-bottom:12px; flex-shrink:0; }
+  .ph-who-card-icon [data-lucide] { width:20px; height:20px; stroke:var(--kblue); stroke-width:1.75; }
 
   /* Product image placeholder */
   .ph-prod-img { width:100%; min-height:200px; background:var(--offwhite); border-radius:8px; margin-bottom:14px; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:12.5px; font-family:'Montserrat',sans-serif; font-weight:600; text-align:center; padding:16px; border:1px dashed var(--border); }
@@ -1713,6 +1715,7 @@
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
 function medTabClick(el, sectionId) {
   var bar = el.closest('.med-cat-tab-bar');
@@ -4257,14 +4260,14 @@ function resetMedPage(page) {
       <h2 class="sec-title">Built for Practitioners Who Work With the Whole Person</h2>
       <p class="sec-sub">TimeWaver's holistic wellness and frequency therapy applications are used by a wide range of practitioners across integrative health, wellness and rehabilitation disciplines.</p>
       <div class="ph-who-grid" style="grid-template-columns:repeat(4,1fr)">
-        <div class="ph-who-card"><div class="ph-who-card-title">Naturopaths</div><div class="ph-who-card-desc">Complement existing natural health practices with Information Field analysis and frequency application.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Traditional Chinese Medicine Practitioners</div><div class="ph-who-card-desc">Extend meridian-based practice with digital TCM meridian analysis and bioenergetic harmonisation.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Integrative and Holistic Clinics</div><div class="ph-who-card-desc">Add a new dimension of whole-person analysis to your clinic's existing service offering.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Energy Healers and Wellness Coaches</div><div class="ph-who-card-desc">Support clients across emotional, mental and energetic levels with structured Information Field tools.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Medical Beauty Practitioners</div><div class="ph-who-card-desc">Incorporate frequency-based wellness programmes as a complementary dimension to aesthetic services.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Physiotherapists</div><div class="ph-who-card-desc">Support recovery and rehabilitation programmes with non-invasive frequency application alongside existing treatment.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Sports and Rehab Coaches</div><div class="ph-who-card-desc">Apply IMF frequency programmes to support physical vitality, muscle recovery and performance preparation.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Aromatherapists and Naturopathic Therapists</div><div class="ph-who-card-desc">Integrate Information Field analysis as a deeper layer of insight into holistic client care.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="leaf"></i></div><div class="ph-who-card-title">Naturopaths</div><div class="ph-who-card-desc">Complement existing natural health practices with Information Field analysis and frequency application.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="circle-dot"></i></div><div class="ph-who-card-title">Traditional Chinese Medicine Practitioners</div><div class="ph-who-card-desc">Extend meridian-based practice with digital TCM meridian analysis and bioenergetic harmonisation.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="building-2"></i></div><div class="ph-who-card-title">Integrative and Holistic Clinics</div><div class="ph-who-card-desc">Add a new dimension of whole-person analysis to your clinic's existing service offering.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="sparkles"></i></div><div class="ph-who-card-title">Energy Healers and Wellness Coaches</div><div class="ph-who-card-desc">Support clients across emotional, mental and energetic levels with structured Information Field tools.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="gem"></i></div><div class="ph-who-card-title">Medical Beauty Practitioners</div><div class="ph-who-card-desc">Incorporate frequency-based wellness programmes as a complementary dimension to aesthetic services.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="activity"></i></div><div class="ph-who-card-title">Physiotherapists</div><div class="ph-who-card-desc">Support recovery and rehabilitation programmes with non-invasive frequency application alongside existing treatment.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="dumbbell"></i></div><div class="ph-who-card-title">Sports and Rehab Coaches</div><div class="ph-who-card-desc">Apply IMF frequency programmes to support physical vitality, muscle recovery and performance preparation.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="droplets"></i></div><div class="ph-who-card-title">Aromatherapists and Naturopathic Therapists</div><div class="ph-who-card-desc">Integrate Information Field analysis as a deeper layer of insight into holistic client care.</div></div>
       </div>
     </div>
   </div>
@@ -4457,16 +4460,16 @@ function resetMedPage(page) {
       <p class="sec-sub">From large enterprises to SMEs and independent consultants — TimeWaver's corporate wellness and business coaching tools serve organisations investing in their people and practitioners building deeper client practices.</p>
       <div class="ph-who-grid" style="grid-template-columns:repeat(3,1fr)">
         <div class="ph-who-group-label">For Organisations</div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Large Companies and Enterprises</div><div class="ph-who-card-desc">Strategic processes and decisions become more tangible — HR increases efficiency, risk management gains a human touch, and leadership clarity improves at top management and department head level.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Small and Medium-Sized Enterprises (SMEs)</div><div class="ph-who-card-desc">Supporting day-to-day management for businesses from 1 to 500 employees — financial decisions, customer strategy, employee dynamics. Intuition becomes tangible. Presumptions become consciousness.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">HR Managers and People Teams</div><div class="ph-who-card-desc">Build measurable, data-supported employee wellbeing programmes that go beyond satisfaction surveys and deliver quantifiable workforce insights.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">ESG Officers and Sustainability Teams</div><div class="ph-who-card-desc">Quantify workforce health and stress as trackable data supporting GRI 403 occupational health and safety reporting requirements.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">C-Suite and Senior Leadership</div><div class="ph-who-card-desc">Gain deeper insight into organisational dynamics, strategic decision factors and leadership vitality through Information Field analysis and HRV monitoring.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="building-2"></i></div><div class="ph-who-card-title">Large Companies and Enterprises</div><div class="ph-who-card-desc">Strategic processes and decisions become more tangible — HR increases efficiency, risk management gains a human touch, and leadership clarity improves at top management and department head level.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="briefcase"></i></div><div class="ph-who-card-title">Small and Medium-Sized Enterprises (SMEs)</div><div class="ph-who-card-desc">Supporting day-to-day management for businesses from 1 to 500 employees — financial decisions, customer strategy, employee dynamics. Intuition becomes tangible. Presumptions become consciousness.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="users"></i></div><div class="ph-who-card-title">HR Managers and People Teams</div><div class="ph-who-card-desc">Build measurable, data-supported employee wellbeing programmes that go beyond satisfaction surveys and deliver quantifiable workforce insights.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="recycle"></i></div><div class="ph-who-card-title">ESG Officers and Sustainability Teams</div><div class="ph-who-card-desc">Quantify workforce health and stress as trackable data supporting GRI 403 occupational health and safety reporting requirements.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="award"></i></div><div class="ph-who-card-title">C-Suite and Senior Leadership</div><div class="ph-who-card-desc">Gain deeper insight into organisational dynamics, strategic decision factors and leadership vitality through Information Field analysis and HRV monitoring.</div></div>
         <div class="ph-who-group-label" style="margin-top:16px">For Practitioners</div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Life Coaches and Mentors</div><div class="ph-who-card-desc">Add structured Information Field analysis to coaching sessions — bringing unconscious patterns and hidden dynamics into consciousness through a proven four-step process.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Business Consultants</div><div class="ph-who-card-desc">Offer clients new, disruptive and differentiated services — thinking outside the box and making yourself indispensable through Information Field-backed organisational intelligence.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Family Constellation Consultants</div><div class="ph-who-card-desc">Apply Information Field analysis to systemic relationship dynamics within families, teams and organisations for deeper constellation work.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Interior and Space Designers</div><div class="ph-who-card-desc">Use TimeWaver's environmental energy analysis tools to incorporate spatial intelligence and organisational flow into design and consultation practice.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="compass"></i></div><div class="ph-who-card-title">Life Coaches and Mentors</div><div class="ph-who-card-desc">Add structured Information Field analysis to coaching sessions — bringing unconscious patterns and hidden dynamics into consciousness through a proven four-step process.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="trending-up"></i></div><div class="ph-who-card-title">Business Consultants</div><div class="ph-who-card-desc">Offer clients new, disruptive and differentiated services — thinking outside the box and making yourself indispensable through Information Field-backed organisational intelligence.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="share-2"></i></div><div class="ph-who-card-title">Family Constellation Consultants</div><div class="ph-who-card-desc">Apply Information Field analysis to systemic relationship dynamics within families, teams and organisations for deeper constellation work.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="layout-grid"></i></div><div class="ph-who-card-title">Interior and Space Designers</div><div class="ph-who-card-desc">Use TimeWaver's environmental energy analysis tools to incorporate spatial intelligence and organisational flow into design and consultation practice.</div></div>
       </div>
     </div>
   </div>
@@ -4653,10 +4656,10 @@ function resetMedPage(page) {
       <h2 class="sec-title">For Individuals and Families Ready to Take Wellbeing Into Their Own Hands</h2>
       <p class="sec-sub">TimeWaver Home is designed for personal use — no professional background required. It is the ideal starting point for anyone curious about frequency wellness and ready to explore it at home.</p>
       <div class="ph-who-grid" style="grid-template-columns:repeat(4,1fr)">
-        <div class="ph-who-card"><div class="ph-who-card-title">Individuals Seeking Better Wellbeing</div><div class="ph-who-card-desc">Support your personal energy, vitality and balance with IMF frequency programmes designed for everyday home use.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Families</div><div class="ph-who-card-desc">A single device with programme groups suitable for the whole family — including dedicated programmes for children and animals.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Practitioner-Referred Users</div><div class="ph-who-card-desc">Recommended by your wellness practitioner as a complement to your existing programme — continue your support between sessions at home.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Wellness Enthusiasts</div><div class="ph-who-card-desc">Already exploring holistic health approaches and looking for a technology-backed addition to your personal wellness routine.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="user"></i></div><div class="ph-who-card-title">Individuals Seeking Better Wellbeing</div><div class="ph-who-card-desc">Support your personal energy, vitality and balance with IMF frequency programmes designed for everyday home use.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="home"></i></div><div class="ph-who-card-title">Families</div><div class="ph-who-card-desc">A single device with programme groups suitable for the whole family — including dedicated programmes for children and animals.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="link"></i></div><div class="ph-who-card-title">Practitioner-Referred Users</div><div class="ph-who-card-desc">Recommended by your wellness practitioner as a complement to your existing programme — continue your support between sessions at home.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="heart"></i></div><div class="ph-who-card-title">Wellness Enthusiasts</div><div class="ph-who-card-desc">Already exploring holistic health approaches and looking for a technology-backed addition to your personal wellness routine.</div></div>
       </div>
     </div>
   </div>
@@ -4770,11 +4773,11 @@ function resetMedPage(page) {
       <h2 class="sec-title">For Everyone Who Works With the Land</h2>
       <p class="sec-sub">The TimeWaver Agrar Module is designed for a wide range of agricultural and land-based practitioners — from large farm operations to hobby gardeners and forest owners.</p>
       <div class="ph-who-grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="ph-who-card"><div class="ph-who-card-title">Farmers and Agricultural Businesses</div><div class="ph-who-card-desc">Gain deeper insight into farm structure, soil, plants, animals and work processes — beyond what conventional agricultural tools can measure.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Agricultural Family Businesses</div><div class="ph-who-card-desc">Bring clarity and consciousness to the generational dynamics, hidden resources and long-term direction of your family farm.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Hobby Gardeners and Plant Enthusiasts</div><div class="ph-who-card-desc">Unlock the full potential of your plants and soil in entirely new ways — with holistic analysis tailored to small-scale growing.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Forest Owners and Self-Sufficient Growers</div><div class="ph-who-card-desc">Combine a deep connection with nature and efficient resource management through Information Field analysis of your land and ecosystem.</div></div>
-        <div class="ph-who-card"><div class="ph-who-card-title">Farm Consultants and Agronomists</div><div class="ph-who-card-desc">Offer clients a new dimension of farm intelligence — holistic, energetic and future-oriented — alongside conventional agronomic advice.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="wheat"></i></div><div class="ph-who-card-title">Farmers and Agricultural Businesses</div><div class="ph-who-card-desc">Gain deeper insight into farm structure, soil, plants, animals and work processes — beyond what conventional agricultural tools can measure.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="trees"></i></div><div class="ph-who-card-title">Agricultural Family Businesses</div><div class="ph-who-card-desc">Bring clarity and consciousness to the generational dynamics, hidden resources and long-term direction of your family farm.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="flower-2"></i></div><div class="ph-who-card-title">Hobby Gardeners and Plant Enthusiasts</div><div class="ph-who-card-desc">Unlock the full potential of your plants and soil in entirely new ways — with holistic analysis tailored to small-scale growing.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="tree-pine"></i></div><div class="ph-who-card-title">Forest Owners and Self-Sufficient Growers</div><div class="ph-who-card-desc">Combine a deep connection with nature and efficient resource management through Information Field analysis of your land and ecosystem.</div></div>
+        <div class="ph-who-card"><div class="ph-who-card-icon"><i data-lucide="clipboard-list"></i></div><div class="ph-who-card-title">Farm Consultants and Agronomists</div><div class="ph-who-card-desc">Offer clients a new dimension of farm intelligence — holistic, energetic and future-oriented — alongside conventional agronomic advice.</div></div>
       </div>
     </div>
   </div>
@@ -6281,6 +6284,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+lucide.createIcons();
 </script>
 </body>
 </html>
