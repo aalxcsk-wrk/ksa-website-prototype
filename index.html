@@ -1577,11 +1577,10 @@
   .ph-who-card:hover .ph-who-card-desc { max-height:160px; opacity:1; transform:translateY(0); padding-bottom:16px; }
   .ph-who-group-label { font-family:'Montserrat',sans-serif; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--kblue); margin:12px 0 8px; padding-bottom:8px; border-bottom:2px solid var(--kblue-light); grid-column:1/-1; }
   @media (prefers-reduced-motion:reduce) { .ph-who-card,.ph-who-card::before,.ph-who-card-title,.ph-who-card-desc { transition:none; } }
-  @media (hover:none) {
-    .ph-who-card::before { background:linear-gradient(to top,rgba(8,18,40,0.97) 0%,rgba(8,18,40,0.72) 60%,rgba(8,18,40,0.42) 100%); }
-    .ph-who-card-title { padding-bottom:6px; transition:none; }
-    .ph-who-card-desc { max-height:none; opacity:1; transform:translateY(0); padding-bottom:16px; transition:none; }
-  }
+  .ph-who-card.is-open { box-shadow:0 14px 36px rgba(8,18,40,0.22); }
+  .ph-who-card.is-open::before { background:linear-gradient(to top,rgba(8,18,40,0.97) 0%,rgba(8,18,40,0.72) 60%,rgba(8,18,40,0.42) 100%); }
+  .ph-who-card.is-open .ph-who-card-title { padding-bottom:6px; }
+  .ph-who-card.is-open .ph-who-card-desc { max-height:300px; opacity:1; transform:translateY(0); padding-bottom:16px; }
 
   /* Product image placeholder */
   .ph-prod-img { width:100%; min-height:200px; background:var(--offwhite); border-radius:8px; margin-bottom:14px; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:12.5px; font-family:'Montserrat',sans-serif; font-weight:600; text-align:center; padding:16px; border:1px dashed var(--border); }
@@ -6331,6 +6330,19 @@ document.addEventListener('DOMContentLoaded', function() {
     pills.forEach(function(pill) { pill.style.transform = ''; });
   });
 });
+
+// Touch tap-to-reveal for who-cards
+(function() {
+  if (!('ontouchstart' in window) && navigator.maxTouchPoints === 0) return;
+  document.querySelectorAll('.ph-who-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      var isOpen = card.classList.contains('is-open');
+      var grid = card.closest('.ph-who-grid');
+      if (grid) grid.querySelectorAll('.ph-who-card.is-open').forEach(function(c) { c.classList.remove('is-open'); });
+      if (!isOpen) card.classList.add('is-open');
+    });
+  });
+})();
 
 lucide.createIcons();
 </script>
