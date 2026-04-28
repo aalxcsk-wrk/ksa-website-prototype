@@ -282,6 +282,10 @@
   .esg-section .sec-label::before { background:var(--kyellow); }
   .esg-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:32px; }
   .esg-tag { background:rgba(245,208,0,0.12); border:1px solid rgba(245,208,0,0.4); color:var(--kyellow); padding:9px 20px; border-radius:100px; font-size:13px; font-weight:600; font-family:'Montserrat',sans-serif; letter-spacing:0.02em; }
+  .esg-grid { display:grid; grid-template-columns:2fr 1fr; gap:72px; align-items:center; }
+  .esg-logo-col { display:flex; align-items:center; justify-content:center; }
+  .esg-logo-col img { width:200px; height:auto; object-fit:contain; transition:opacity .3s; opacity:0.9; }
+  .esg-logo-col img:hover { opacity:1; }
 
   /* GROUP GRID */
   .group-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
@@ -742,6 +746,8 @@
     .cred-grid { grid-template-columns:repeat(2,1fr); }
     .group-grid { grid-template-columns:repeat(2,1fr); }
     .esg-section { padding:60px 20px; }
+    .esg-grid { grid-template-columns:1fr; gap:40px; }
+    .esg-logo-col { justify-content:flex-start; }
     .closing-cta { padding:64px 20px; }
     .closing-cta h2 { font-size:24px; }
 
@@ -1571,6 +1577,11 @@
   .ph-who-card:hover .ph-who-card-desc { max-height:160px; opacity:1; transform:translateY(0); padding-bottom:16px; }
   .ph-who-group-label { font-family:'Montserrat',sans-serif; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--kblue); margin:12px 0 8px; padding-bottom:8px; border-bottom:2px solid var(--kblue-light); grid-column:1/-1; }
   @media (prefers-reduced-motion:reduce) { .ph-who-card,.ph-who-card::before,.ph-who-card-title,.ph-who-card-desc { transition:none; } }
+  @media (hover:none) {
+    .ph-who-card::before { background:linear-gradient(to top,rgba(8,18,40,0.97) 0%,rgba(8,18,40,0.72) 60%,rgba(8,18,40,0.42) 100%); }
+    .ph-who-card-title { padding-bottom:6px; }
+    .ph-who-card-desc { max-height:160px; opacity:1; transform:translateY(0); padding-bottom:16px; }
+  }
 
   /* Product image placeholder */
   .ph-prod-img { width:100%; min-height:200px; background:var(--offwhite); border-radius:8px; margin-bottom:14px; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:12.5px; font-family:'Montserrat',sans-serif; font-weight:600; text-align:center; padding:16px; border:1px dashed var(--border); }
@@ -2102,21 +2113,28 @@ function resetMedPage(page) {
   <section class="esg-section">
     <div class="esg-bg"></div>
     <div class="section-inner" style="position:relative;z-index:2">
-      <div class="sec-label">OUR COMMITMENT</div>
-      <h2 class="sec-title" style="color:var(--white)">Committed to a Better World — In Every Industry We Serve.</h2>
-      <p class="sec-sub" style="color:rgba(255,255,255,0.75);max-width:640px">At Kromax South Asia, sustainability is not a badge — it is built into what we sell. Our portfolio is anchored in solutions that reduce energy consumption, cut emissions, minimise waste and support responsible manufacturing across every industry we serve. We hold ourselves to the same standards we bring to our clients — and our ESBN Asia-Pacific Green Deal recognition reflects that commitment.</p>
-      <div class="esg-tags">
-        <span class="esg-tag">Energy Consumption Tracking</span>
-        <span class="esg-tag">CO₂ Emissions Reduction</span>
-        <span class="esg-tag">Waste Reduction</span>
-        <span class="esg-tag">Chemical Safety Compliance</span>
-        <span class="esg-tag">Environmental Standards</span>
-        <span class="esg-tag">Supplier Auditing</span>
-        <span class="esg-tag">Responsible Medical Supply</span>
-        <span class="esg-tag">Single-Use Device Management</span>
-      </div>
-      <div style="margin-top:40px">
-        <button class="btn-outline" onclick="showPage('about')">Learn More About Our Values →</button>
+      <div class="esg-grid">
+        <div class="esg-text-col">
+          <div class="sec-label">OUR COMMITMENT</div>
+          <h2 class="sec-title" style="color:var(--white)">Committed to a Better World — In Every Industry We Serve.</h2>
+          <p class="sec-sub" style="color:rgba(255,255,255,0.75)">At Kromax South Asia, sustainability is not a badge — it is built into what we sell. Our portfolio is anchored in solutions that reduce energy consumption, cut emissions, minimise waste and support responsible manufacturing across every industry we serve. We hold ourselves to the same standards we bring to our clients — and our ESBN Asia-Pacific Green Deal recognition reflects that commitment.</p>
+          <div class="esg-tags">
+            <span class="esg-tag">Energy Consumption Tracking</span>
+            <span class="esg-tag">CO₂ Emissions Reduction</span>
+            <span class="esg-tag">Waste Reduction</span>
+            <span class="esg-tag">Chemical Safety Compliance</span>
+            <span class="esg-tag">Environmental Standards</span>
+            <span class="esg-tag">Supplier Auditing</span>
+            <span class="esg-tag">Responsible Medical Supply</span>
+            <span class="esg-tag">Single-Use Device Management</span>
+          </div>
+          <div style="margin-top:40px">
+            <button class="btn-outline" onclick="showPage('about')">Learn More About Our Values →</button>
+          </div>
+        </div>
+        <div class="esg-logo-col">
+          <img src="images/ESBN-Green-Deal-Green-Badge-1024x1024.png" alt="ESBN Asia-Pacific Green Deal">
+        </div>
       </div>
     </div>
   </section>
