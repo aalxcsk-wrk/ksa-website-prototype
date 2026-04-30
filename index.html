@@ -6384,6 +6384,270 @@ lucide.createIcons();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
+
+/* ── AI Chat mockup ── */
+(function() {
+
+  /* ── Data ── */
+  var FLOWS = {
+    start: {
+      bot: "Hi there! I'm the KSA Wellness Assistant. How can I help you today?",
+      chips: [
+        { label: "Which device suits my practice?", next: "device" },
+        { label: "What is Information Field analysis?", next: "ifa" },
+        { label: "How do I get started?", next: "start_flow" },
+        { label: "Tell me about the Academy", next: "academy" }
+      ]
+    },
+    device: {
+      bot: "TimeWaver offers solutions for different practice types:\n\n• Holistic & integrative clinics — TimeWaver Pro\n• Corporate wellness programmes — TimeWaver Home\n• Personal & family use — TimeWaver Home\n• Agriculture & land applications — TimeWaver Vet\n\nWhat best describes your situation?",
+      chips: [
+        { label: "Wellness clinic or practice", next: "contact" },
+        { label: "Corporate team", next: "contact" },
+        { label: "Personal use", next: "contact" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    ifa: {
+      bot: "Information Field analysis is a non-invasive approach that works across the physical, emotional, mental, energetic and soul dimensions of a person.\n\nTimeWaver systems analyse and harmonise the Information Field to support overall wellbeing — not to diagnose, treat or prevent any medical condition.",
+      chips: [
+        { label: "How does it work in practice?", next: "contact" },
+        { label: "How do I get started?", next: "start_flow" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    start_flow: {
+      bot: "Getting started is straightforward:\n\n1. Book a free consultation with our specialist team\n2. We recommend the right system for your goals\n3. Certified training & onboarding included\n\nWould you like to connect with someone directly?",
+      chips: [
+        { label: "Yes, contact your team →", next: "contact" },
+        { label: "Explore solutions first", next: "solutions" },
+        { label: "Tell me about pricing", next: "contact" }
+      ]
+    },
+    academy: {
+      bot: "U-SUN Academy offers certified training for wellness practitioners — covering Information Field analysis, frequency application, and practice-building skills.\n\nContent is available as free introductory courses and a full Members Programme.",
+      chips: [
+        { label: "View Academy courses", next: "academy_cta" },
+        { label: "How do I enrol?", next: "contact" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    solutions: {
+      bot: "You can explore our full Personal Health & Wellness solutions — from holistic wellness and frequency therapy to corporate programmes and sustainable agriculture applications.",
+      chips: [
+        { label: "Open solutions page", next: "solutions_cta" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    contact: {
+      bot: "Our team would love to connect! We're based in Singapore and Malaysia and support practitioners across Southeast Asia.\n\nClick below to reach us via the Get in Touch page.",
+      chips: [],
+      cta: { label: "Get in Touch", page: "contact" }
+    },
+    academy_cta: {
+      bot: "Head to the U-SUN Academy page to browse all free and members-only training content.",
+      chips: [],
+      cta: { label: "Open Academy", page: "academy" }
+    },
+    solutions_cta: {
+      bot: "Opening our Personal Health & Wellness solutions page now.",
+      chips: [],
+      cta: { label: "View Solutions", page: "personalhealth" }
+    }
+  };
+
+  /* ── Build DOM ── */
+  var chatBtn = document.createElement('button');
+  chatBtn.id = 'chatBtn';
+  chatBtn.setAttribute('aria-label', 'Chat with us');
+  chatBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span id="chatDot"></span>';
+  document.body.appendChild(chatBtn);
+
+  var panel = document.createElement('div');
+  panel.id = 'chatPanel';
+  panel.setAttribute('aria-hidden', 'true');
+  panel.innerHTML = [
+    '<div id="chatHeader">',
+      '<div class="chat-hd-left">',
+        '<div class="chat-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg></div>',
+        '<div>',
+          '<div class="chat-hd-name">KSA Wellness Assistant</div>',
+          '<div class="chat-hd-status"><span class="chat-online-dot"></span>Typically replies instantly</div>',
+        '</div>',
+      '</div>',
+      '<button id="chatClose" aria-label="Close chat"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>',
+    '</div>',
+    '<div id="chatBody"></div>',
+    '<div id="chatFooter">',
+      '<div id="chatChips"></div>',
+      '<div class="chat-disclaimer">&#9432; Not medical advice. For informational purposes only.</div>',
+    '</div>'
+  ].join('');
+  document.body.appendChild(panel);
+
+  /* ── Styles ── */
+  var s = document.createElement('style');
+  s.textContent = [
+    /* button */
+    '#chatBtn{position:fixed;bottom:92px;right:32px;z-index:9998;',
+      'width:52px;height:52px;border-radius:50%;border:2px solid rgba(26,75,156,0.18);cursor:pointer;',
+      'background:#fff;color:var(--kblue);',
+      'display:flex;align-items:center;justify-content:center;',
+      'box-shadow:0 4px 20px rgba(26,75,156,0.18);',
+      'transition:transform 0.2s ease,box-shadow 0.2s ease;}',
+    '#chatBtn:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(26,75,156,0.28);}',
+    '#chatDot{position:absolute;top:9px;right:9px;width:10px;height:10px;',
+      'background:#22c55e;border-radius:50%;border:2px solid #fff;}',
+    /* panel */
+    '#chatPanel{position:fixed;bottom:156px;right:32px;z-index:9997;',
+      'width:360px;height:500px;border-radius:16px;overflow:hidden;',
+      'display:flex;flex-direction:column;',
+      'background:#fff;box-shadow:0 8px 48px rgba(0,0,0,0.18);',
+      'transform:scale(0.92) translateY(16px);transform-origin:bottom right;',
+      'opacity:0;pointer-events:none;',
+      'transition:opacity 0.25s ease,transform 0.25s ease;}',
+    '#chatPanel.open{opacity:1;transform:scale(1) translateY(0);pointer-events:auto;}',
+    /* header */
+    '#chatHeader{background:var(--kblue);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}',
+    '.chat-hd-left{display:flex;align-items:center;gap:10px;}',
+    '.chat-avatar{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.2);',
+      'display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;}',
+    '.chat-hd-name{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;color:#fff;}',
+    '.chat-hd-status{font-size:11px;color:rgba(255,255,255,0.72);display:flex;align-items:center;gap:5px;margin-top:2px;}',
+    '.chat-online-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;flex-shrink:0;}',
+    '#chatClose{background:rgba(255,255,255,0.15);border:none;cursor:pointer;color:#fff;',
+      'width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;',
+      'transition:background 0.2s;}',
+    '#chatClose:hover{background:rgba(255,255,255,0.28);}',
+    /* body */
+    '#chatBody{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;}',
+    '.chat-msg{max-width:82%;display:flex;flex-direction:column;gap:4px;}',
+    '.chat-msg.bot{align-self:flex-start;}',
+    '.chat-msg.user{align-self:flex-end;}',
+    '.chat-bubble{padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.6;white-space:pre-wrap;}',
+    '.chat-msg.bot .chat-bubble{background:#f1f4fb;color:#1a1a2e;border-bottom-left-radius:4px;}',
+    '.chat-msg.user .chat-bubble{background:var(--kblue);color:#fff;border-bottom-right-radius:4px;}',
+    '.chat-typing{display:flex;gap:5px;align-items:center;padding:12px 14px;background:#f1f4fb;border-radius:14px;border-bottom-left-radius:4px;width:fit-content;}',
+    '.chat-typing span{width:7px;height:7px;border-radius:50%;background:#94a3b8;animation:chatDot 1.2s infinite;}',
+    '.chat-typing span:nth-child(2){animation-delay:0.2s;}',
+    '.chat-typing span:nth-child(3){animation-delay:0.4s;}',
+    '@keyframes chatDot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}',
+    /* cta button inside chat */
+    '.chat-cta-btn{margin-top:4px;padding:9px 16px;background:var(--kblue);color:#fff;border:none;border-radius:8px;',
+      'font-size:12.5px;font-weight:600;cursor:pointer;align-self:flex-start;',
+      'transition:background 0.2s;}',
+    '.chat-cta-btn:hover{background:var(--kblue-dark);}',
+    /* footer */
+    '#chatFooter{flex-shrink:0;border-top:1px solid #eef0f6;padding:10px 14px 12px;}',
+    '#chatChips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px;}',
+    '.chat-chip{padding:6px 12px;border-radius:20px;border:1.5px solid rgba(26,75,156,0.25);',
+      'background:#fff;color:var(--kblue);font-size:12px;cursor:pointer;white-space:nowrap;',
+      'transition:background 0.15s,border-color 0.15s;}',
+    '.chat-chip:hover{background:var(--kblue-light);border-color:var(--kblue);}',
+    '.chat-disclaimer{font-size:10.5px;color:#94a3b8;line-height:1.5;}',
+    /* mobile */
+    '@media(max-width:768px){',
+      '#chatBtn{bottom:76px;right:20px;width:52px;height:52px;}',
+      '#chatPanel{bottom:0;right:0;left:0;width:100%;height:85vh;border-radius:20px 20px 0 0;transform:translateY(24px);transform-origin:bottom center;}',
+      '#chatPanel.open{transform:translateY(0);}',
+    '}'
+  ].join('');
+  document.head.appendChild(s);
+
+  /* ── State ── */
+  var isOpen = false;
+  var body = document.getElementById('chatBody');
+  var chipsEl = document.getElementById('chatChips');
+  var started = false;
+
+  /* ── Helpers ── */
+  function scrollBottom() {
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function addMsg(text, role, ctaData) {
+    var wrap = document.createElement('div');
+    wrap.className = 'chat-msg ' + role;
+    var bubble = document.createElement('div');
+    bubble.className = 'chat-bubble';
+    bubble.textContent = text;
+    wrap.appendChild(bubble);
+    if (ctaData) {
+      var btn = document.createElement('button');
+      btn.className = 'chat-cta-btn';
+      btn.textContent = ctaData.label;
+      btn.onclick = function() { if (typeof showPage === 'function') showPage(ctaData.page); closeChat(); };
+      wrap.appendChild(btn);
+    }
+    body.appendChild(wrap);
+    scrollBottom();
+    return wrap;
+  }
+
+  function showTyping() {
+    var t = document.createElement('div');
+    t.className = 'chat-msg bot';
+    t.innerHTML = '<div class="chat-typing"><span></span><span></span><span></span></div>';
+    body.appendChild(t);
+    scrollBottom();
+    return t;
+  }
+
+  function setChips(chips) {
+    chipsEl.innerHTML = '';
+    chips.forEach(function(c) {
+      var el = document.createElement('button');
+      el.className = 'chat-chip';
+      el.textContent = c.label;
+      el.onclick = function() { handleChip(c.label, c.next); };
+      chipsEl.appendChild(el);
+    });
+  }
+
+  function handleChip(label, next) {
+    chipsEl.innerHTML = '';
+    addMsg(label, 'user');
+    var flow = FLOWS[next] || FLOWS.contact;
+    var typing = showTyping();
+    setTimeout(function() {
+      typing.remove();
+      addMsg(flow.bot, 'bot', flow.cta || null);
+      setChips(flow.chips || []);
+    }, 900);
+  }
+
+  function openChat() {
+    isOpen = true;
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    chatBtn.setAttribute('aria-expanded', 'true');
+    if (!started) {
+      started = true;
+      var flow = FLOWS.start;
+      var typing = showTyping();
+      setTimeout(function() {
+        typing.remove();
+        addMsg(flow.bot, 'bot');
+        setChips(flow.chips);
+      }, 700);
+    }
+  }
+
+  function closeChat() {
+    isOpen = false;
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    chatBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  chatBtn.addEventListener('click', function() { isOpen ? closeChat() : openChat(); });
+  document.getElementById('chatClose').addEventListener('click', closeChat);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && isOpen) closeChat();
+  });
+
+})();
 </script>
 </body>
 </html>
