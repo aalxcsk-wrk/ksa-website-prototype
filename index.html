@@ -6402,7 +6402,10 @@ lucide.createIcons();
       ]
     },
 
-    /* ══ HEALTHCARE & MEDICAL ══ */
+    /* ══════════════════════════════════════
+       HEALTHCARE & MEDICAL
+       Depth: start → med_start → sub-area → follow-up → terminal
+    ══════════════════════════════════════ */
     med_start: {
       bot: "Our Healthcare & Medical division brings minimally invasive clinical solutions to hospitals and specialists across Southeast Asia. What area are you interested in?",
       chips: [
@@ -6414,53 +6417,158 @@ lucide.createIcons();
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+
+    /* Pain Management */
     med_pain: {
       bot: "We offer a comprehensive range of minimally invasive pain management solutions — from precision radiofrequency ablation and steerable epidural catheters to neuromodulation and phototherapy.\n\nAll supported by our clinical specialists, in the room when it counts.",
       chips: [
-        { label: "View Pain Management", next: "med_pain_cta" },
-        { label: "Other medical areas", next: "med_start" },
+        { label: "Radiofrequency Ablation (RFA)", next: "med_pain_rfa" },
+        { label: "Neuromodulation", next: "med_pain_neuro" },
+        { label: "Phototherapy & Laser", next: "med_pain_photo" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    med_pain_rfa: {
+      bot: "Our RFA systems — including the Boston Scientific G4 Generator — deliver precision ablation for facet joint, sacroiliac, trigeminal and knee/hip pain. Versatile, intuitive, with a comprehensive electrode range.",
+      chips: [
+        { label: "View Pain Management page", next: "med_pain_cta" },
+        { label: "Other pain modalities", next: "med_pain" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_pain_neuro: {
+      bot: "Our neuromodulation solutions deliver targeted electrical stimulation to interrupt pain signals — suitable for chronic spinal, peripheral nerve and complex regional pain conditions.",
+      chips: [
+        { label: "View Pain Management page", next: "med_pain_cta" },
+        { label: "Other pain modalities", next: "med_pain" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_pain_photo: {
+      bot: "Our phototherapy and low-level laser systems offer non-invasive pain relief — supporting tissue healing, inflammation reduction and nerve regeneration across a range of chronic pain conditions.",
+      chips: [
+        { label: "View Pain Management page", next: "med_pain_cta" },
+        { label: "Other pain modalities", next: "med_pain" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_pain_cta: { bot: "Opening our Pain Management page now.", chips: [], cta: { label: "View Pain Management", page: "med-pain" } },
+
+    /* Tumour Ablation */
     med_tumour: {
       bot: "Our tumour ablation portfolio covers radiofrequency and microwave ablation for tumour, thyroid and fibroid procedures — without open surgery, without general anaesthesia, and with recovery times measured in hours.",
       chips: [
-        { label: "View Tumour Ablation", next: "med_tumour_cta" },
-        { label: "Other medical areas", next: "med_start" },
+        { label: "Radiofrequency Ablation", next: "med_tumour_rfa" },
+        { label: "Microwave Ablation", next: "med_tumour_mwa" },
+        { label: "Not sure — need guidance", next: "contact" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    med_tumour_rfa: {
+      bot: "RF ablation delivers controlled thermal energy through a needle electrode to destroy targeted tissue — ideal for liver, kidney and lung tumours, as well as thyroid nodules and uterine fibroids.",
+      chips: [
+        { label: "View Tumour Ablation page", next: "med_tumour_cta" },
+        { label: "Compare with microwave", next: "med_tumour_mwa" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_tumour_mwa: {
+      bot: "Microwave ablation creates larger, more spherical ablation zones at higher temperatures — often preferred for vascular or larger tumours where RF energy may be insufficient.",
+      chips: [
+        { label: "View Tumour Ablation page", next: "med_tumour_cta" },
+        { label: "Compare with RF ablation", next: "med_tumour_rfa" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_tumour_cta: { bot: "Opening our Tumour Ablation page now.", chips: [], cta: { label: "View Tumour Ablation", page: "med-tumour" } },
+
+    /* Radiation Safety */
     med_radiation: {
       bot: "We supply radiation safety and protection systems for clinical environments — shielding, dosimetry and monitoring solutions that keep patients, staff and facilities compliant and protected.",
       chips: [
-        { label: "View Radiation Safety", next: "med_radiation_cta" },
-        { label: "Other medical areas", next: "med_start" },
+        { label: "Patient & staff shielding", next: "med_rad_shield" },
+        { label: "Dosimetry & monitoring", next: "med_rad_dose" },
+        { label: "Regulatory compliance", next: "contact" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    med_rad_shield: {
+      bot: "Our shielding range covers lead aprons, thyroid collars, eye protection and structural shielding panels — designed for radiology, cath labs and radiation oncology environments.",
+      chips: [
+        { label: "View Radiation Safety page", next: "med_radiation_cta" },
+        { label: "Other radiation solutions", next: "med_radiation" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_rad_dose: {
+      bot: "Our dosimetry and monitoring systems track cumulative radiation exposure for clinical staff — supporting compliance with dose limits and providing real-time alerts for high-exposure environments.",
+      chips: [
+        { label: "View Radiation Safety page", next: "med_radiation_cta" },
+        { label: "Other radiation solutions", next: "med_radiation" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_radiation_cta: { bot: "Opening our Radiation Safety page now.", chips: [], cta: { label: "View Radiation Safety", page: "med-radiation" } },
+
+    /* Surgical Support */
     med_surgical: {
       bot: "Our surgical support range includes precision instruments and support systems for minimally invasive procedures — helping clinical teams achieve better outcomes with greater confidence.",
       chips: [
-        { label: "View Surgical Support", next: "med_surgical_cta" },
-        { label: "Other medical areas", next: "med_start" },
+        { label: "Minimally invasive instruments", next: "med_surg_mi" },
+        { label: "Intraoperative support tools", next: "med_surg_intra" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    med_surg_mi: {
+      bot: "Our minimally invasive instrument portfolio spans biopsy needles, access systems, steerable catheters and ablation probes — engineered for precision and clinical confidence in demanding procedures.",
+      chips: [
+        { label: "View Surgical Support page", next: "med_surgical_cta" },
+        { label: "Other surgical tools", next: "med_surgical" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_surg_intra: {
+      bot: "Our intraoperative support systems assist with positioning, imaging guidance and procedural navigation — reducing procedure time and improving safety for both patient and clinical team.",
+      chips: [
+        { label: "View Surgical Support page", next: "med_surgical_cta" },
+        { label: "Other surgical tools", next: "med_surgical" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_surgical_cta: { bot: "Opening our Surgical Support page now.", chips: [], cta: { label: "View Surgical Support", page: "med-surgical" } },
+
+    /* Parts & Consumables */
     med_parts: {
       bot: "We supply OEM and compatible parts, consumables and after-sales support for the clinical equipment in our portfolio — ensuring continuity of care and minimal downtime.",
       chips: [
-        { label: "View Parts & Support", next: "med_parts_cta" },
-        { label: "Other medical areas", next: "med_start" },
+        { label: "Replacement parts & accessories", next: "med_parts_oem" },
+        { label: "Preventive maintenance contract", next: "med_parts_pm" },
+        { label: "Emergency repair support", next: "contact" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
-    med_pain_cta:     { bot: "Opening our Pain Management page now.", chips: [], cta: { label: "View Pain Management", page: "med-pain" } },
-    med_tumour_cta:   { bot: "Opening our Tumour Ablation page now.", chips: [], cta: { label: "View Tumour Ablation", page: "med-tumour" } },
-    med_radiation_cta:{ bot: "Opening our Radiation Safety page now.", chips: [], cta: { label: "View Radiation Safety", page: "med-radiation" } },
-    med_surgical_cta: { bot: "Opening our Surgical Support page now.", chips: [], cta: { label: "View Surgical Support", page: "med-surgical" } },
-    med_parts_cta:    { bot: "Opening our Parts & Support page now.", chips: [], cta: { label: "View Parts & Support", page: "med-parts" } },
+    med_parts_oem: {
+      bot: "We stock OEM and validated compatible consumables for all major systems in our healthcare portfolio — with fast-turnaround local fulfilment across Singapore and Malaysia.",
+      chips: [
+        { label: "View Parts & Support page", next: "med_parts_cta" },
+        { label: "Other support options", next: "med_parts" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_parts_pm: {
+      bot: "Our preventive maintenance contracts cover scheduled servicing, calibration checks and priority response — keeping your equipment performing to specification and minimising clinical disruption.",
+      chips: [
+        { label: "View Parts & Support page", next: "med_parts_cta" },
+        { label: "Other support options", next: "med_parts" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_parts_cta: { bot: "Opening our Parts & Support page now.", chips: [], cta: { label: "View Parts & Support", page: "med-parts" } },
 
-    /* ══ PERSONAL HEALTH & WELLNESS ══ */
+    /* ══════════════════════════════════════
+       PERSONAL HEALTH & WELLNESS
+       Depth: start → ph_start → sub-area → follow-up → terminal
+    ══════════════════════════════════════ */
     ph_start: {
       bot: "Our Personal Health & Wellness division is powered by U-SUN Asia, the exclusive regional partner for TimeWaver technology. What would you like to know?",
       chips: [
@@ -6470,35 +6578,116 @@ lucide.createIcons();
         { label: "Tell me about the Academy", next: "ph_academy" }
       ]
     },
+
+    /* Device selector */
     ph_device: {
       bot: "TimeWaver offers solutions for different practice types:\n\n• Holistic & integrative clinics — TimeWaver Pro\n• Corporate wellness programmes — TimeWaver Home\n• Personal & family use — TimeWaver Home\n• Agriculture & land — TimeWaver Vet\n\nWhat best describes your situation?",
       chips: [
-        { label: "Wellness clinic or practice", next: "contact" },
-        { label: "Corporate team", next: "contact" },
-        { label: "Personal use", next: "contact" },
-        { label: "Explore all solutions", next: "ph_solutions_cta" }
+        { label: "Wellness clinic or practice", next: "ph_device_clinic" },
+        { label: "Corporate team", next: "ph_device_corp" },
+        { label: "Personal use", next: "ph_device_personal" },
+        { label: "Agriculture & land", next: "ph_device_agrar" }
       ]
     },
-    ph_ifa: {
-      bot: "Information Field analysis is a non-invasive approach that works across the physical, emotional, mental, energetic and soul dimensions of a person.\n\nTimeWaver systems analyse and harmonise the Information Field to support overall wellbeing — not to diagnose, treat or prevent any medical condition.",
+    ph_device_clinic: {
+      bot: "For integrative clinics, TimeWaver Pro is the recommended system — combining Information Field analysis with frequency application in one platform. It supports multiple clients, customisable protocols and specialist modules.\n\nWhat would be most helpful next?",
       chips: [
-        { label: "How does it work in practice?", next: "contact" },
-        { label: "How do I get started?", next: "ph_begin" },
+        { label: "Book a free consultation", next: "contact" },
+        { label: "Learn about certification & training", next: "ph_academy" },
+        { label: "Explore all wellness solutions", next: "ph_solutions_cta" }
+      ]
+    },
+    ph_device_corp: {
+      bot: "For corporate wellness, TimeWaver Home is ideal — delivering stress management, energy and recovery programmes for teams. Many organisations use it alongside coaching and wellbeing initiatives.\n\nReady to take the next step?",
+      chips: [
+        { label: "Book a free consultation", next: "contact" },
+        { label: "Explore corporate wellness", next: "ph_solutions_cta" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    ph_device_personal: {
+      bot: "For personal and family use, TimeWaver Home offers an accessible entry point — supporting stress relief, sleep, vitality and emotional balance through practitioner-guided programmes.\n\nHow can we help you take the next step?",
+      chips: [
+        { label: "Find a certified practitioner", next: "contact" },
+        { label: "Browse personal wellness options", next: "ph_solutions_cta" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    ph_device_agrar: {
+      bot: "TimeWaver Vet and our Sustainable Agriculture solutions apply Information Field technology to soil health, plant vitality and livestock wellbeing — supporting a more regenerative approach to land management.",
+      chips: [
+        { label: "Learn more about agrar solutions", next: "ph_solutions_cta" },
+        { label: "Book a free consultation", next: "contact" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+
+    /* Information Field analysis */
+    ph_ifa: {
+      bot: "Information Field analysis is a non-invasive approach that works across the physical, emotional, mental, energetic and soul dimensions of a person.\n\nTimeWaver systems analyse and harmonise the Information Field to support overall wellbeing — not to diagnose, treat or prevent any medical condition.",
+      chips: [
+        { label: "Stress & emotional wellbeing", next: "ph_ifa_stress" },
+        { label: "Physical recovery & vitality", next: "ph_ifa_physical" },
+        { label: "Energy balance & chronic conditions", next: "ph_ifa_energy" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    ph_ifa_stress: {
+      bot: "TimeWaver's Information Field programmes are widely used for stress reduction, emotional resilience and mental clarity — working across the emotional and soul dimensions to identify and harmonise underlying imbalances.",
+      chips: [
+        { label: "How do I get started?", next: "ph_begin" },
+        { label: "Explore all PH solutions", next: "ph_solutions_cta" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    ph_ifa_physical: {
+      bot: "For physical recovery and vitality, TimeWaver Frequency delivers Individualized Microcurrent Frequencies (IMF) — supporting muscle recovery, sports rehabilitation and overall physical energy.",
+      chips: [
+        { label: "How do I get started?", next: "ph_begin" },
+        { label: "Explore all PH solutions", next: "ph_solutions_cta" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    ph_ifa_energy: {
+      bot: "TimeWaver Pro addresses energy balance by working across multiple dimensions — physical, emotional and energetic — to identify patterns that may contribute to chronic fatigue, pain or persistent imbalances.",
+      chips: [
+        { label: "How do I get started?", next: "ph_begin" },
+        { label: "Explore all PH solutions", next: "ph_solutions_cta" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+
+    /* Getting started */
     ph_begin: {
       bot: "Getting started is straightforward:\n\n1. Book a free consultation with our specialist team\n2. We recommend the right system for your goals\n3. Certified training & onboarding included\n\nWould you like to connect with someone directly?",
       chips: [
-        { label: "Yes, contact your team →", next: "contact" },
-        { label: "Explore solutions first", next: "ph_solutions_cta" },
-        { label: "Tell me about pricing", next: "contact" }
+        { label: "Yes, book a consultation →", next: "contact" },
+        { label: "Browse solutions first", next: "ph_solutions_cta" },
+        { label: "Learn about certification", next: "ph_academy" }
       ]
     },
+
+    /* Academy */
     ph_academy: {
       bot: "U-SUN Academy offers certified training for wellness practitioners — covering Information Field analysis, frequency application, and practice-building skills.\n\nContent is available as free introductory courses and a full Members Programme.",
       chips: [
-        { label: "View Academy courses", next: "ph_academy_cta" },
+        { label: "Free introductory content", next: "ph_academy_free" },
+        { label: "Full Members Programme", next: "ph_academy_members" },
+        { label: "Corporate team training", next: "contact" }
+      ]
+    },
+    ph_academy_free: {
+      bot: "Free Academy content includes introductory webinars, practitioner guides and product overviews — available to anyone interested in TimeWaver technology, no purchase required.",
+      chips: [
+        { label: "Open Academy page", next: "ph_academy_cta" },
+        { label: "Tell me about the Members Programme", next: "ph_academy_members" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    ph_academy_members: {
+      bot: "The Members Programme provides full access to certified training modules, live webinars, practitioner resources and an ongoing community — designed to help you build and grow a professional wellness practice.",
+      chips: [
+        { label: "Open Academy page", next: "ph_academy_cta" },
         { label: "How do I enrol?", next: "contact" },
         { label: "Talk to our team →", next: "contact" }
       ]
@@ -6506,7 +6695,10 @@ lucide.createIcons();
     ph_solutions_cta: { bot: "Opening our Personal Health & Wellness solutions page now.", chips: [], cta: { label: "View Solutions", page: "personalhealth" } },
     ph_academy_cta:   { bot: "Head to the U-SUN Academy page to browse all free and members-only training content.", chips: [], cta: { label: "Open Academy", page: "academy" } },
 
-    /* ══ SEMICONDUCTOR & INDUSTRIAL ══ */
+    /* ══════════════════════════════════════
+       SEMICONDUCTOR & INDUSTRIAL
+       Depth: start → semi_start → sub-area → follow-up → terminal
+    ══════════════════════════════════════ */
     semi_start: {
       bot: "Our Semiconductor & Industrial division delivers smart factory, energy and safety solutions for manufacturers across South and Southeast Asia. What are you looking for?",
       chips: [
@@ -6517,35 +6709,135 @@ lucide.createIcons();
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+
+    /* Smart Factory */
     semi_factory: {
       bot: "Our Smart Factory Monitoring and Predictive Equipment Health solutions help manufacturers reduce unplanned downtime, optimise OEE and stay ahead of equipment failures — before they happen.",
       chips: [
-        { label: "View Industrial Solutions", next: "semi_cta" },
-        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Reduce unplanned downtime", next: "semi_factory_downtime" },
+        { label: "Improve OEE & throughput", next: "semi_factory_oee" },
+        { label: "Predictive maintenance programme", next: "semi_factory_pm" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    semi_factory_downtime: {
+      bot: "Our real-time monitoring platform combines sensor data, anomaly detection and alerting to catch equipment degradation early — giving maintenance teams time to act before a failure occurs.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other factory solutions", next: "semi_factory" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_factory_oee: {
+      bot: "By tracking equipment utilisation, cycle times and quality metrics in real time, our OEE dashboards help plant managers identify bottlenecks and drive continuous improvement across production lines.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other factory solutions", next: "semi_factory" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_factory_pm: {
+      bot: "Our predictive maintenance programme uses AI-driven analytics to forecast equipment health — recommending service windows before failures occur and reducing total maintenance cost.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Request a site assessment", next: "contact" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+
+    /* Energy Optimisation */
     semi_energy: {
       bot: "Our AI Chiller Energy Optimisation platform uses machine learning to reduce chiller plant energy consumption by up to 30% — delivering measurable cost savings and sustainability outcomes for large facilities.",
       chips: [
-        { label: "View Energy Solutions", next: "semi_cta" },
-        { label: "Other industrial areas", next: "semi_start" },
+        { label: "High chiller plant costs", next: "semi_energy_chiller" },
+        { label: "Renewable energy optimisation", next: "semi_energy_solar" },
+        { label: "ESG & sustainability reporting", next: "semi_energy_esg" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    semi_energy_chiller: {
+      bot: "Our AI chiller optimisation system continuously tunes chiller plant setpoints in real time — adapting to load, weather and occupancy to deliver maximum efficiency without capital replacement.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other energy solutions", next: "semi_energy" },
+        { label: "Request a savings estimate", next: "contact" }
+      ]
+    },
+    semi_energy_solar: {
+      bot: "We integrate on-site solar generation with smart monitoring and load optimisation — helping facilities maximise self-consumption, reduce grid dependency and track renewable output in real time.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other energy solutions", next: "semi_energy" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_energy_esg: {
+      bot: "Our energy analytics platform generates ESG-ready reporting across energy intensity, carbon emissions and renewable contribution — supporting sustainability disclosures and internal decarbonisation targets.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other energy solutions", next: "semi_energy" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+
+    /* Gas Safety */
     semi_gas: {
       bot: "Our Gas Safety & Scrubber Systems protect workers and environments in semiconductor fabrication and industrial facilities — covering detection, abatement and compliance monitoring.",
       chips: [
-        { label: "View Industrial Solutions", next: "semi_cta" },
-        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Semiconductor fabrication plant", next: "semi_gas_semi" },
+        { label: "Chemical or industrial facility", next: "semi_gas_chem" },
+        { label: "Research & development lab", next: "contact" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    semi_gas_semi: {
+      bot: "For semiconductor fabs, our gas detection and scrubbing systems handle the full range of toxic, pyrophoric and corrosive process gases — with point-of-use abatement and centralised monitoring integration.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other gas safety scenarios", next: "semi_gas" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_gas_chem: {
+      bot: "For chemical and industrial facilities, our gas safety systems cover area monitoring, personal gas detection and exhaust treatment — ensuring worker safety and regulatory compliance across the site.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other gas safety scenarios", next: "semi_gas" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+
+    /* Solar & Sustainability */
     semi_solar: {
       bot: "Our Intelligent Solar & Sustainability solutions combine solar generation with smart monitoring and energy analytics — helping facilities track, optimise and report on their renewable energy performance.",
       chips: [
+        { label: "On-site solar generation", next: "semi_solar_gen" },
+        { label: "Energy monitoring & analytics", next: "semi_solar_monitor" },
+        { label: "ESG reporting & compliance", next: "semi_solar_esg" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_solar_gen: {
+      bot: "We design and commission on-site solar PV systems for industrial and commercial facilities — integrated with smart inverters, battery storage and real-time performance monitoring.",
+      chips: [
         { label: "View Industrial Solutions", next: "semi_cta" },
-        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Other sustainability solutions", next: "semi_solar" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_solar_monitor: {
+      bot: "Our energy monitoring platform provides live dashboards, anomaly alerts and consumption analytics across solar generation, grid import and site load — giving facility managers full visibility.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other sustainability solutions", next: "semi_solar" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_solar_esg: {
+      bot: "Our sustainability reporting module compiles energy, carbon and renewable metrics into ESG-ready outputs — aligned with common disclosure frameworks and internal sustainability targets.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other sustainability solutions", next: "semi_solar" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
