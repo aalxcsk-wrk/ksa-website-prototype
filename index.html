@@ -6390,69 +6390,172 @@ lucide.createIcons();
 
   /* ── Data ── */
   var FLOWS = {
+
+    /* ── Entry ── */
     start: {
-      bot: "Hi there! I'm the KSA Wellness Assistant. How can I help you today?",
+      bot: "Hi there! I'm the KSA Assistant. We operate across three business areas — which one can I help you with today?",
       chips: [
-        { label: "Which device suits my practice?", next: "device" },
-        { label: "What is Information Field analysis?", next: "ifa" },
-        { label: "How do I get started?", next: "start_flow" },
-        { label: "Tell me about the Academy", next: "academy" }
+        { label: "Healthcare & Medical", next: "med_start" },
+        { label: "Personal Health & Wellness", next: "ph_start" },
+        { label: "Semiconductor & Industrial", next: "semi_start" },
+        { label: "General enquiry", next: "contact" }
       ]
     },
-    device: {
-      bot: "TimeWaver offers solutions for different practice types:\n\n• Holistic & integrative clinics — TimeWaver Pro\n• Corporate wellness programmes — TimeWaver Home\n• Personal & family use — TimeWaver Home\n• Agriculture & land applications — TimeWaver Vet\n\nWhat best describes your situation?",
+
+    /* ══ HEALTHCARE & MEDICAL ══ */
+    med_start: {
+      bot: "Our Healthcare & Medical division brings minimally invasive clinical solutions to hospitals and specialists across Southeast Asia. What area are you interested in?",
+      chips: [
+        { label: "Pain Management", next: "med_pain" },
+        { label: "Tumour Ablation", next: "med_tumour" },
+        { label: "Radiation Safety", next: "med_radiation" },
+        { label: "Surgical Support", next: "med_surgical" },
+        { label: "Parts & Consumables", next: "med_parts" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_pain: {
+      bot: "We offer a comprehensive range of minimally invasive pain management solutions — from precision radiofrequency ablation and steerable epidural catheters to neuromodulation and phototherapy.\n\nAll supported by our clinical specialists, in the room when it counts.",
+      chips: [
+        { label: "View Pain Management", next: "med_pain_cta" },
+        { label: "Other medical areas", next: "med_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_tumour: {
+      bot: "Our tumour ablation portfolio covers radiofrequency and microwave ablation for tumour, thyroid and fibroid procedures — without open surgery, without general anaesthesia, and with recovery times measured in hours.",
+      chips: [
+        { label: "View Tumour Ablation", next: "med_tumour_cta" },
+        { label: "Other medical areas", next: "med_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_radiation: {
+      bot: "We supply radiation safety and protection systems for clinical environments — shielding, dosimetry and monitoring solutions that keep patients, staff and facilities compliant and protected.",
+      chips: [
+        { label: "View Radiation Safety", next: "med_radiation_cta" },
+        { label: "Other medical areas", next: "med_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_surgical: {
+      bot: "Our surgical support range includes precision instruments and support systems for minimally invasive procedures — helping clinical teams achieve better outcomes with greater confidence.",
+      chips: [
+        { label: "View Surgical Support", next: "med_surgical_cta" },
+        { label: "Other medical areas", next: "med_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_parts: {
+      bot: "We supply OEM and compatible parts, consumables and after-sales support for the clinical equipment in our portfolio — ensuring continuity of care and minimal downtime.",
+      chips: [
+        { label: "View Parts & Support", next: "med_parts_cta" },
+        { label: "Other medical areas", next: "med_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    med_pain_cta:     { bot: "Opening our Pain Management page now.", chips: [], cta: { label: "View Pain Management", page: "med-pain" } },
+    med_tumour_cta:   { bot: "Opening our Tumour Ablation page now.", chips: [], cta: { label: "View Tumour Ablation", page: "med-tumour" } },
+    med_radiation_cta:{ bot: "Opening our Radiation Safety page now.", chips: [], cta: { label: "View Radiation Safety", page: "med-radiation" } },
+    med_surgical_cta: { bot: "Opening our Surgical Support page now.", chips: [], cta: { label: "View Surgical Support", page: "med-surgical" } },
+    med_parts_cta:    { bot: "Opening our Parts & Support page now.", chips: [], cta: { label: "View Parts & Support", page: "med-parts" } },
+
+    /* ══ PERSONAL HEALTH & WELLNESS ══ */
+    ph_start: {
+      bot: "Our Personal Health & Wellness division is powered by U-SUN Asia, the exclusive regional partner for TimeWaver technology. What would you like to know?",
+      chips: [
+        { label: "Which device suits my practice?", next: "ph_device" },
+        { label: "What is Information Field analysis?", next: "ph_ifa" },
+        { label: "How do I get started?", next: "ph_begin" },
+        { label: "Tell me about the Academy", next: "ph_academy" }
+      ]
+    },
+    ph_device: {
+      bot: "TimeWaver offers solutions for different practice types:\n\n• Holistic & integrative clinics — TimeWaver Pro\n• Corporate wellness programmes — TimeWaver Home\n• Personal & family use — TimeWaver Home\n• Agriculture & land — TimeWaver Vet\n\nWhat best describes your situation?",
       chips: [
         { label: "Wellness clinic or practice", next: "contact" },
         { label: "Corporate team", next: "contact" },
         { label: "Personal use", next: "contact" },
-        { label: "Talk to our team →", next: "contact" }
+        { label: "Explore all solutions", next: "ph_solutions_cta" }
       ]
     },
-    ifa: {
+    ph_ifa: {
       bot: "Information Field analysis is a non-invasive approach that works across the physical, emotional, mental, energetic and soul dimensions of a person.\n\nTimeWaver systems analyse and harmonise the Information Field to support overall wellbeing — not to diagnose, treat or prevent any medical condition.",
       chips: [
         { label: "How does it work in practice?", next: "contact" },
-        { label: "How do I get started?", next: "start_flow" },
+        { label: "How do I get started?", next: "ph_begin" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
-    start_flow: {
+    ph_begin: {
       bot: "Getting started is straightforward:\n\n1. Book a free consultation with our specialist team\n2. We recommend the right system for your goals\n3. Certified training & onboarding included\n\nWould you like to connect with someone directly?",
       chips: [
         { label: "Yes, contact your team →", next: "contact" },
-        { label: "Explore solutions first", next: "solutions" },
+        { label: "Explore solutions first", next: "ph_solutions_cta" },
         { label: "Tell me about pricing", next: "contact" }
       ]
     },
-    academy: {
+    ph_academy: {
       bot: "U-SUN Academy offers certified training for wellness practitioners — covering Information Field analysis, frequency application, and practice-building skills.\n\nContent is available as free introductory courses and a full Members Programme.",
       chips: [
-        { label: "View Academy courses", next: "academy_cta" },
+        { label: "View Academy courses", next: "ph_academy_cta" },
         { label: "How do I enrol?", next: "contact" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
-    solutions: {
-      bot: "You can explore our full Personal Health & Wellness solutions — from holistic wellness and frequency therapy to corporate programmes and sustainable agriculture applications.",
+    ph_solutions_cta: { bot: "Opening our Personal Health & Wellness solutions page now.", chips: [], cta: { label: "View Solutions", page: "personalhealth" } },
+    ph_academy_cta:   { bot: "Head to the U-SUN Academy page to browse all free and members-only training content.", chips: [], cta: { label: "Open Academy", page: "academy" } },
+
+    /* ══ SEMICONDUCTOR & INDUSTRIAL ══ */
+    semi_start: {
+      bot: "Our Semiconductor & Industrial division delivers smart factory, energy and safety solutions for manufacturers across South and Southeast Asia. What are you looking for?",
       chips: [
-        { label: "Open solutions page", next: "solutions_cta" },
+        { label: "Smart Factory & Monitoring", next: "semi_factory" },
+        { label: "Energy Optimisation", next: "semi_energy" },
+        { label: "Gas Safety Systems", next: "semi_gas" },
+        { label: "Solar & Sustainability", next: "semi_solar" },
         { label: "Talk to our team →", next: "contact" }
       ]
     },
+    semi_factory: {
+      bot: "Our Smart Factory Monitoring and Predictive Equipment Health solutions help manufacturers reduce unplanned downtime, optimise OEE and stay ahead of equipment failures — before they happen.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_energy: {
+      bot: "Our AI Chiller Energy Optimisation platform uses machine learning to reduce chiller plant energy consumption by up to 30% — delivering measurable cost savings and sustainability outcomes for large facilities.",
+      chips: [
+        { label: "View Energy Solutions", next: "semi_cta" },
+        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_gas: {
+      bot: "Our Gas Safety & Scrubber Systems protect workers and environments in semiconductor fabrication and industrial facilities — covering detection, abatement and compliance monitoring.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_solar: {
+      bot: "Our Intelligent Solar & Sustainability solutions combine solar generation with smart monitoring and energy analytics — helping facilities track, optimise and report on their renewable energy performance.",
+      chips: [
+        { label: "View Industrial Solutions", next: "semi_cta" },
+        { label: "Other industrial areas", next: "semi_start" },
+        { label: "Talk to our team →", next: "contact" }
+      ]
+    },
+    semi_cta: { bot: "Opening our Semiconductor & Industrial solutions page now.", chips: [], cta: { label: "View Industrial Solutions", page: "semi" } },
+
+    /* ══ SHARED TERMINAL ══ */
     contact: {
-      bot: "Our team would love to connect! We're based in Singapore and Malaysia and support practitioners across Southeast Asia.\n\nClick below to reach us via the Get in Touch page.",
+      bot: "Our team would love to connect! We're based in Singapore and Malaysia and support clients across Southeast Asia.\n\nClick below to reach us via the Get in Touch page.",
       chips: [],
       cta: { label: "Get in Touch", page: "contact" }
-    },
-    academy_cta: {
-      bot: "Head to the U-SUN Academy page to browse all free and members-only training content.",
-      chips: [],
-      cta: { label: "Open Academy", page: "academy" }
-    },
-    solutions_cta: {
-      bot: "Opening our Personal Health & Wellness solutions page now.",
-      chips: [],
-      cta: { label: "View Solutions", page: "personalhealth" }
     }
   };
 
@@ -6471,7 +6574,7 @@ lucide.createIcons();
       '<div class="chat-hd-left">',
         '<div class="chat-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg></div>',
         '<div>',
-          '<div class="chat-hd-name">KSA Wellness Assistant</div>',
+          '<div class="chat-hd-name">KSA Assistant</div>',
           '<div class="chat-hd-status"><span class="chat-online-dot"></span>Typically replies instantly</div>',
         '</div>',
       '</div>',
