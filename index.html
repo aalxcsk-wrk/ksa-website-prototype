@@ -1745,23 +1745,36 @@
 
   /* ═══ SEMICONDUCTOR & INDUSTRIAL — v22 ═══ */
   .semi-sol-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:32px; }
-  .semi-sol-card { background:var(--white); border:1.5px solid var(--border); border-radius:14px; padding:28px 24px 24px; transition:box-shadow .2s,transform .2s; cursor:pointer; }
-  .semi-sol-card:hover { box-shadow:0 8px 32px rgba(26,75,156,0.14); transform:translateY(-3px); }
-  .semi-sol-icon { font-size:28px; margin-bottom:14px; }
-  .semi-sol-card h3 { font-family:'Montserrat',sans-serif; font-size:15px; font-weight:800; color:var(--dark-navy); margin-bottom:8px; line-height:1.3; }
-  .semi-sol-card p { font-size:13px; color:var(--gray); line-height:1.72; margin-bottom:18px; }
-  .semi-sol-link { font-size:13px; font-weight:700; color:var(--kblue); font-family:'Montserrat',sans-serif; }
+  .semi-sol-card { background-size:cover; background-position:center; border:none; border-radius:14px; padding:0; min-height:230px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; transition:box-shadow .3s ease,transform .3s ease; cursor:pointer; }
+  .semi-sol-card::before { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(10,20,50,0.94) 0%,rgba(10,20,50,0.52) 52%,rgba(10,20,50,0.14) 100%); transition:background 0.38s ease; z-index:1; }
+  .semi-sol-card:hover { box-shadow:0 16px 44px rgba(8,18,40,0.34); transform:translateY(-3px); }
+  .semi-sol-card:hover::before { background:linear-gradient(to top,rgba(10,20,50,0.97) 0%,rgba(10,20,50,0.78) 58%,rgba(10,20,50,0.42) 100%); }
+  .semi-sol-icon { position:absolute; top:14px; left:14px; z-index:2; font-size:18px; width:34px; height:34px; border-radius:8px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; }
+  .semi-sol-card h3 { font-family:'Montserrat',sans-serif; font-size:14px; font-weight:800; color:#fff; margin-bottom:6px; line-height:1.3; position:relative; z-index:2; padding:0 16px; }
+  .semi-sol-card p { font-size:12px; color:rgba(255,255,255,0.8); line-height:1.65; position:relative; z-index:2; padding:0 16px; margin-bottom:10px; max-height:0; overflow:hidden; opacity:0; transform:translateY(4px); transition:max-height 0.38s ease,opacity 0.28s ease 0.06s,transform 0.32s ease; }
+  .semi-sol-card:hover p { max-height:120px; opacity:1; transform:translateY(0); }
+  .semi-sol-link { font-size:12.5px; font-weight:700; color:var(--kyellow); font-family:'Montserrat',sans-serif; position:relative; z-index:2; padding:0 16px 16px; display:block; }
   .semi-kw-section { background:#f4f7fc; padding:60px 56px; }
   .semi-kw-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:24px; }
-  .semi-kw-card { background:var(--white); border:1.5px solid var(--border); border-radius:12px; padding:20px 18px 16px; cursor:pointer; transition:box-shadow .18s,transform .18s; }
+  .semi-kw-card { background:var(--white); border:1.5px solid var(--border); border-radius:12px; padding:0; cursor:pointer; transition:box-shadow .18s ease,transform .18s ease; overflow:hidden; }
   .semi-kw-card:hover { box-shadow:var(--shadow-card-hover); transform:translateY(-2px); }
+  .semi-kw-img { width:100%; height:96px; background-size:cover; background-position:center; display:block; }
+  .semi-kw-body { padding:14px 18px 14px; }
   .semi-kw-card h4 { font-family:'Montserrat',sans-serif; font-size:13px; font-weight:800; color:var(--dark-navy); margin-bottom:6px; line-height:1.3; }
   .semi-kw-card p { font-size:12px; color:var(--gray); line-height:1.65; margin-bottom:10px; }
   .semi-kw-link { font-size:12px; font-weight:700; color:var(--kblue); font-family:'Montserrat',sans-serif; }
   .semi-pill-section { background:var(--white); padding:56px 56px; }
   .semi-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
-  .semi-pill { padding:7px 16px; border-radius:100px; border:1.5px solid var(--border); font-size:12.5px; font-weight:600; color:var(--dark-navy); font-family:'Montserrat',sans-serif; background:var(--white); }
+  @keyframes pillIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+  .semi-pill { padding:7px 16px; border-radius:100px; border:1.5px solid var(--border); font-size:12.5px; font-weight:600; color:var(--dark-navy); font-family:'Montserrat',sans-serif; background:var(--white); opacity:0; cursor:default; transition:background 0.22s ease,color 0.22s ease,border-color 0.22s ease,transform 0.2s ease; }
+  .semi-pill:hover { background:var(--kblue); color:#fff; border-color:var(--kblue); transform:translateY(-2px); }
   .semi-pill.test { font-size:11.5px; background:var(--kblue-50); border-color:var(--kblue-light); color:var(--gray); font-style:italic; }
+  .semi-pill.test:hover { background:var(--kblue-light); color:var(--kblue); border-color:var(--kblue-mid); transform:translateY(-2px); }
+  .semi-pills.anim .semi-pill { animation:pillIn 0.42s ease forwards; }
+  .semi-pills.anim .semi-pill:nth-child(1){animation-delay:0s} .semi-pills.anim .semi-pill:nth-child(2){animation-delay:0.04s} .semi-pills.anim .semi-pill:nth-child(3){animation-delay:0.08s} .semi-pills.anim .semi-pill:nth-child(4){animation-delay:0.12s}
+  .semi-pills.anim .semi-pill:nth-child(5){animation-delay:0.16s} .semi-pills.anim .semi-pill:nth-child(6){animation-delay:0.20s} .semi-pills.anim .semi-pill:nth-child(7){animation-delay:0.24s} .semi-pills.anim .semi-pill:nth-child(8){animation-delay:0.28s}
+  .semi-pills.anim .semi-pill:nth-child(9){animation-delay:0.32s} .semi-pills.anim .semi-pill:nth-child(10){animation-delay:0.36s} .semi-pills.anim .semi-pill:nth-child(11){animation-delay:0.40s} .semi-pills.anim .semi-pill:nth-child(12){animation-delay:0.44s}
+  .semi-pills.anim .semi-pill:nth-child(13){animation-delay:0.48s} .semi-pills.anim .semi-pill:nth-child(14){animation-delay:0.52s} .semi-pills.anim .semi-pill:nth-child(15){animation-delay:0.56s} .semi-pills.anim .semi-pill:nth-child(16){animation-delay:0.60s}
   .semi-pillar-section { background:#f4f7fc; padding:72px 56px; }
   .semi-pillar-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:32px; }
   .semi-pillar-card { background:var(--white); border:1.5px solid var(--border); border-radius:14px; padding:28px 22px; }
@@ -1802,7 +1815,7 @@
   .semi-stub h1 { font-family:'Montserrat',sans-serif; font-size:clamp(22px,2.5vw,36px); font-weight:800; color:var(--dark-navy); margin-bottom:14px; letter-spacing:-0.02em; line-height:1.2; }
   .semi-stub > p { font-size:15px; color:var(--gray); line-height:1.85; max-width:480px; margin-bottom:28px; }
   .mega-cs-badge { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background:var(--kyellow); color:var(--dark-navy); border-radius:3px; padding:2px 6px; vertical-align:middle; margin-left:8px; font-family:'Montserrat',sans-serif; line-height:1.5; }
-  .semi-cs-badge { display:block; font-size:9.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background:var(--kyellow); color:var(--dark-navy); border-radius:4px; padding:3px 8px; margin-bottom:10px; font-family:'Montserrat',sans-serif; width:fit-content; }
+  .semi-cs-badge { display:block; font-size:9.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background:var(--kyellow); color:var(--dark-navy); border-radius:4px; padding:3px 8px; margin-bottom:6px; margin-left:16px; font-family:'Montserrat',sans-serif; width:fit-content; position:relative; z-index:2; }
   .semi-stub-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:580px; width:100%; margin:0 auto 32px; text-align:left; }
   .semi-stub .semi-stub-list-item { background:var(--white); border:1.5px solid var(--border); border-radius:10px; padding:14px 16px; }
   .semi-stub .semi-stub-list-item h4 { font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:var(--dark-navy); margin-bottom:4px; line-height:1.35; }
@@ -1822,6 +1835,10 @@
     .semi-gallery { grid-template-columns:repeat(2,1fr); }
     .semi-stub { padding:60px 24px; min-height:40vh; }
     .semi-stub-list { grid-template-columns:1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .semi-pill { opacity:1 !important; animation:none !important; transform:none !important; }
+    .semi-sol-card p { transition:none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -2539,39 +2556,39 @@ function resetMedPage(page) {
       <h2 class="sec-title">Our Solutions</h2>
       <p style="font-size:15px;color:var(--gray);line-height:1.8;max-width:720px;margin-bottom:8px">We organise our Semiconductor and Industrial portfolio into six solution areas &mdash; each supported by our engineering specialists, system integration expertise and on-site field service. Explore by category or scroll down to find your specific application area.</p>
       <div class="semi-sol-grid">
-        <div class="semi-sol-card" onclick="showPage('semi-energy')">
+        <div class="semi-sol-card" style="background-image:url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=80')" onclick="showPage('semi-energy')">
           <div class="semi-sol-icon">&#9889;</div>
           <h3>Energy Management &amp; Sustainability</h3>
           <p>AI-driven chiller optimisation, equipment-level energy monitoring, solar generation and power efficiency solutions for semiconductor fabs and industrial facilities.</p>
           <div class="semi-sol-link">Learn More &#8594;</div>
         </div>
-        <div class="semi-sol-card" onclick="showPage('semi-predictive')">
+        <div class="semi-sol-card" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80')" onclick="showPage('semi-predictive')">
           <div class="semi-sol-icon">&#128225;</div>
           <h3>Predictive Equipment Health &amp; Monitoring</h3>
           <p>Patented smart sensors and wireless condition monitoring for vacuum pumps, diffusion furnaces and critical fab equipment &mdash; catch failures before they happen.</p>
           <div class="semi-sol-link">Learn More &#8594;</div>
         </div>
-        <div class="semi-sol-card" onclick="showPage('semi-heating')">
+        <div class="semi-sol-card" style="background-image:url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80')" onclick="showPage('semi-heating')">
           <div class="semi-sol-icon">&#128293;</div>
           <h3>Industrial Heating Solutions</h3>
           <p>Custom heating jackets, thermal insulation and multi-zone temperature control systems for OEM equipment, process piping and specialty industrial applications.</p>
           <div class="semi-sol-link">Learn More &#8594;</div>
         </div>
-        <div class="semi-sol-card" onclick="showPage('semi-fab')">
+        <div class="semi-sol-card" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80')" onclick="showPage('semi-fab')">
           <div class="semi-sol-icon">&#128300;</div>
           <span class="semi-cs-badge">Coming Soon</span>
           <h3>Fabrication &amp; Inspection Equipment</h3>
           <p>Wafer inspection, horizontal furnace systems, bonding and de-bonding, and high-precision capillary printing for front-end and advanced packaging processes.</p>
           <div class="semi-sol-link">Learn More &#8594;</div>
         </div>
-        <div class="semi-sol-card" onclick="showPage('semi-gas')">
+        <div class="semi-sol-card" style="background-image:url('https://images.unsplash.com/photo-1569428034239-f9565e32e224?w=600&q=80')" onclick="showPage('semi-gas')">
           <div class="semi-sol-icon">&#128299;</div>
           <span class="semi-cs-badge">Coming Soon</span>
           <h3>Gas, Chemical &amp; Wet Process Solutions</h3>
           <p>Real-time chemical concentration analysis, specialty gas equipment, industrial scrubbers and wet process chemical supply for semiconductor and cleanroom environments.</p>
           <div class="semi-sol-link">Learn More &#8594;</div>
         </div>
-        <div class="semi-sol-card" onclick="showPage('semi-parts')">
+        <div class="semi-sol-card" style="background-image:url('https://images.unsplash.com/photo-1585435557343-3b092031a831?w=600&q=80')" onclick="showPage('semi-parts')">
           <div class="semi-sol-icon">&#128295;</div>
           <span class="semi-cs-badge">Coming Soon</span>
           <h3>Parts, Maintenance &amp; Consumables</h3>
@@ -2590,44 +2607,68 @@ function resetMedPage(page) {
       <p style="font-size:14px;color:var(--gray);margin-bottom:0">Looking for a specific application or process challenge? Browse directly by industrial need.</p>
       <div class="semi-kw-grid">
         <div class="semi-kw-card" onclick="showPage('semi-energy')">
-          <h4>AI Chiller &amp; HVAC Optimisation</h4>
-          <p>Cut energy costs in semiconductor fabs and industrial facilities with AI-driven chiller control.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>AI Chiller & HVAC Optimisation</h4>
+            <p>Cut energy costs in semiconductor fabs and industrial facilities with AI-driven chiller control.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-energy')">
-          <h4>Equipment Energy Monitoring &amp; ESG Compliance</h4>
-          <p>Real-time machine-level energy visibility with built-in ISO&nbsp;50001 and SEMI&nbsp;S23 compliance.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Equipment Energy Monitoring &amp; ESG Compliance</h4>
+            <p>Real-time machine-level energy visibility with built-in ISO&nbsp;50001 and SEMI&nbsp;S23 compliance.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-predictive')">
-          <h4>Predictive Maintenance &amp; Smart Sensors</h4>
-          <p>Prevent unplanned downtime with patented smart sensors for critical fab equipment.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Predictive Maintenance &amp; Smart Sensors</h4>
+            <p>Prevent unplanned downtime with patented smart sensors for critical fab equipment.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-heating')">
-          <h4>Custom Heating &amp; Thermal Insulation</h4>
-          <p>Precision heating jackets and temperature control systems for OEM and process equipment.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Custom Heating &amp; Thermal Insulation</h4>
+            <p>Precision heating jackets and temperature control systems for OEM and process equipment.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-fab')">
-          <h4>Wafer Inspection &amp; Defect Detection</h4>
-          <p>Surface and macro inspection systems for unpatterned and patterned wafers, front-end processes.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Wafer Inspection &amp; Defect Detection</h4>
+            <p>Surface and macro inspection systems for unpatterned and patterned wafers, front-end processes.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-fab')">
-          <h4>Advanced Packaging &amp; Bonding</h4>
-          <p>Wafer bonding, de-bonding and high-precision printing for advanced packaging applications.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Advanced Packaging &amp; Bonding</h4>
+            <p>Wafer bonding, de-bonding and high-precision printing for advanced packaging applications.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-gas')">
-          <h4>Gas Safety &amp; Scrubber Systems</h4>
-          <p>Turnkey specialty gas equipment, industrial scrubbers and abatement for fab and chemical facilities.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1569428034239-f9565e32e224?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Gas Safety &amp; Scrubber Systems</h4>
+            <p>Turnkey specialty gas equipment, industrial scrubbers and abatement for fab and chemical facilities.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
         <div class="semi-kw-card" onclick="showPage('semi-gas')">
-          <h4>Wet Process Chemical Analysis</h4>
-          <p>Real-time concentration monitoring for SC-1, SC-2, HF and other wet process chemistries.</p>
-          <div class="semi-kw-link">Learn More &#8594;</div>
+          <div class="semi-kw-img" style="background-image:url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80')"></div>
+          <div class="semi-kw-body">
+            <h4>Wet Process Chemical Analysis</h4>
+            <p>Real-time concentration monitoring for SC-1, SC-2, HF and other wet process chemistries.</p>
+            <div class="semi-kw-link">Learn More &#8594;</div>
+          </div>
         </div>
       </div>
     </div>
@@ -6998,6 +7039,17 @@ function filterRes(type, btn) {
 }
 
 // ── GATED DOWNLOAD ──
+
+// Semi pills entrance animation
+(function(){
+  var pills = document.querySelector('#page-semi .semi-pills');
+  if(!pills){ return; }
+  if(!window.IntersectionObserver){ pills.classList.add('anim'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('anim'); io.unobserve(e.target); } });
+  }, { threshold:0.2 });
+  io.observe(pills);
+})();
 
 function filterSemiRes(cat, btn) {
   document.querySelectorAll('#semiResFilters .semi-res-filter').forEach(function(b){ b.classList.remove('active'); });
