@@ -1852,7 +1852,7 @@
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/lucide@1.23.0/dist/umd/lucide.min.js"></script>
 <script>
 function medTabClick(el, sectionId) {
   var bar = el.closest('.med-cat-tab-bar');
@@ -6377,20 +6377,20 @@ function resetMedPage(page) {
       </div>
 
       <!-- Gated Download Modal -->
-      <div id="gatedModal" style="display:none;position:fixed;inset:0;background:rgba(11,26,62,0.85);z-index:9000;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
+      <div id="gatedModal" onclick="if(event.target===this)closeGated()" style="display:none;position:fixed;inset:0;background:rgba(11,26,62,0.85);z-index:9000;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
         <div style="background:white;border-radius:18px;padding:44px;max-width:520px;width:90%;position:relative;box-shadow:0 24px 64px rgba(0,0,0,0.3)">
           <button onclick="closeGated()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--gray);line-height:1">✕</button>
           <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--kblue);font-family:'Montserrat',sans-serif;margin-bottom:8px">Gated Download</div>
           <h3 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--dark-navy);margin-bottom:6px" id="gatedTitle">Download Resource</h3>
           <p style="font-size:13.5px;color:var(--gray);margin-bottom:24px">Please complete the form below. Your download link will be sent to your email.</p>
           <div class="frow" style="margin-bottom:14px">
-            <div class="fg" style="margin-bottom:0"><label>First Name *</label><input type="text" placeholder="Alex"></div>
-            <div class="fg" style="margin-bottom:0"><label>Last Name *</label><input type="text" placeholder="Tan"></div>
+            <div class="fg" style="margin-bottom:0"><label>First Name *</label><input type="text" placeholder="Alex" required></div>
+            <div class="fg" style="margin-bottom:0"><label>Last Name *</label><input type="text" placeholder="Tan" required></div>
           </div>
-          <div class="fg"><label>Work Email *</label><input type="email" placeholder="alex@company.com"></div>
+          <div class="fg"><label>Work Email *</label><input type="email" placeholder="alex@company.com" required></div>
           <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+65 9000 0000"></div>
           <div class="frow">
-            <div class="fg"><label>Company *</label><input type="text" placeholder="Acme Semiconductor"></div>
+            <div class="fg"><label>Company *</label><input type="text" placeholder="Acme Semiconductor" required></div>
             <div class="fg"><label>Job Title</label><input type="text" placeholder="Engineering Manager"></div>
           </div>
           <div class="fg"><label>Country</label>
@@ -6696,20 +6696,20 @@ function resetMedPage(page) {
       </div>
 
       <!-- Checkout Modal -->
-      <div id="checkoutModal" style="display:none;position:fixed;inset:0;background:rgba(11,26,62,0.85);z-index:9000;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
+      <div id="checkoutModal" onclick="if(event.target===this)closeCheckout()" style="display:none;position:fixed;inset:0;background:rgba(11,26,62,0.85);z-index:9000;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
         <div style="background:white;border-radius:18px;padding:44px;max-width:520px;width:90%;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.3)">
           <button onclick="closeCheckout()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--gray);line-height:1">✕</button>
           <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--kblue);font-family:'Montserrat',sans-serif;margin-bottom:8px">E-Shop Checkout</div>
           <h3 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--dark-navy);margin-bottom:20px">Complete Your Order</h3>
           <div id="checkoutItems" style="background:var(--offwhite);border-radius:10px;padding:16px;margin-bottom:20px;font-size:13.5px;color:var(--gray)"></div>
           <div class="frow" style="margin-bottom:14px">
-            <div class="fg" style="margin-bottom:0"><label>First Name *</label><input type="text" placeholder="Alex"></div>
-            <div class="fg" style="margin-bottom:0"><label>Last Name *</label><input type="text" placeholder="Tan"></div>
+            <div class="fg" style="margin-bottom:0"><label>First Name *</label><input type="text" placeholder="Alex" required></div>
+            <div class="fg" style="margin-bottom:0"><label>Last Name *</label><input type="text" placeholder="Tan" required></div>
           </div>
-          <div class="fg"><label>Work Email *</label><input type="email" placeholder="alex@company.com"></div>
-          <div class="fg"><label>Phone *</label><input type="tel" placeholder="+65 9000 0000"></div>
-          <div class="fg"><label>Company / Institution *</label><input type="text" placeholder="Acme Semiconductor Pte Ltd"></div>
-          <div class="fg"><label>Billing Address *</label><input type="text" placeholder="1 Science Park Drive, Singapore 118222"></div>
+          <div class="fg"><label>Work Email *</label><input type="email" placeholder="alex@company.com" required></div>
+          <div class="fg"><label>Phone *</label><input type="tel" placeholder="+65 9000 0000" required></div>
+          <div class="fg"><label>Company / Institution *</label><input type="text" placeholder="Acme Semiconductor Pte Ltd" required></div>
+          <div class="fg"><label>Billing Address *</label><input type="text" placeholder="1 Science Park Drive, Singapore 118222" required></div>
           <div class="fg"><label>Purchase Order No. <span style="font-weight:400;color:var(--gray)">(optional)</span></label><input type="text" placeholder="PO-2025-0001"></div>
           <div class="fg"><label>Special Instructions</label><textarea placeholder="Delivery notes, urgency, etc." style="height:72px;resize:vertical;width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13.5px;font-family:'Open Sans',sans-serif;color:var(--text);background:var(--offwhite);outline:none"></textarea></div>
           <div style="background:var(--kblue-light);border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:13px;color:var(--gray)">Payment via bank transfer or corporate credit card. Our team will send an invoice within 1 business day of order confirmation.</div>
@@ -6776,14 +6776,15 @@ function resetMedPage(page) {
 <script>
 // ── PAGE NAVIGATION ──
 function showPage(id) {
+  var target = document.getElementById('page-' + id);
+  if (!target) return;
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
+  target.classList.add('active');
   document.querySelectorAll('.proto-pill').forEach(p => p.classList.remove('active'));
   var pill = document.getElementById('pill-' + id);
   if (pill) pill.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  var activePage = document.getElementById('page-' + id);
-  if(activePage) resetMedPage(activePage);
+  resetMedPage(target);
 }
 
 // ── HERO SLIDESHOW ──
@@ -6852,6 +6853,8 @@ function goSlide(n) {
 }
 
 function nextSlide() {
+  var home = document.getElementById('page-home');
+  if (home && !home.classList.contains('active')) return;
   goSlide((currentSlide + 1) % totalSlides);
 }
 var heroTimer = setInterval(nextSlide, 5000);
@@ -6893,6 +6896,18 @@ document.addEventListener('DOMContentLoaded', function() {
       if (e.target === this) toggleSearch();
     });
   }
+});
+
+// Escape closes any open modal or the search overlay
+document.addEventListener('keydown', function(e) {
+  if (e.key !== 'Escape') return;
+  var gated = document.getElementById('gatedModal');
+  var checkout = document.getElementById('checkoutModal');
+  var search = document.getElementById('searchOverlay');
+  if (gated && gated.style.display === 'flex') closeGated();
+  if (checkout && checkout.style.display === 'flex') closeCheckout();
+  if (search && search.style.display === 'flex') toggleSearch();
+  document.querySelectorAll('.ph-modal-overlay.open').forEach(function(m) { m.classList.remove('open'); });
 });
 
 // ── ANIMATED COUNTERS ──
@@ -7007,6 +7022,17 @@ function toggleMedAcc(el) {
   item.classList.toggle('open');
 }
 
+// Highlight empty/invalid required fields inside the button's modal card; true if all pass
+function _validateRequired(btn) {
+  var ok = true;
+  btn.closest('div').querySelectorAll('input[required]').forEach(function(inp) {
+    var valid = inp.value.trim() !== '' && inp.checkValidity();
+    inp.style.borderColor = valid ? '' : '#c0392b';
+    if (!valid) ok = false;
+  });
+  return ok;
+}
+
 function showGatedForm(title) {
   document.getElementById('gatedTitle').textContent = title;
   var m = document.getElementById('gatedModal');
@@ -7014,6 +7040,7 @@ function showGatedForm(title) {
 }
 function closeGated() { document.getElementById('gatedModal').style.display = 'none'; }
 function submitGated(btn) {
+  if (!_validateRequired(btn)) return;
   btn.textContent = 'Sending download link...'; btn.disabled = true; btn.style.background = '#1a6b32';
   setTimeout(function() {
     btn.textContent = 'Download link sent to your email!';
@@ -7053,6 +7080,7 @@ function checkoutCart() {
 }
 function closeCheckout() { document.getElementById('checkoutModal').style.display = 'none'; }
 function submitOrder(btn) {
+  if (!_validateRequired(btn)) return;
   btn.textContent = 'Processing order...'; btn.disabled = true; btn.style.background = '#1a6b32';
   setTimeout(function() {
     btn.textContent = 'Order placed! Check your email for confirmation.';
@@ -7266,7 +7294,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 
-lucide.createIcons();
+if (window.lucide) lucide.createIcons();
 
 /* ── Scroll-to-top button ── */
 (function() {
