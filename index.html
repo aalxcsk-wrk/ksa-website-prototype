@@ -2836,49 +2836,6 @@ function resetMedPage(page) {
   </footer>
 </div>
 
-<!-- ════════════════ SOLAR — RETIRED, REDIRECTS TO ENERGY MANAGEMENT -->
-<div id="page-solar" class="page">
-  <div class="med-sub-hero" style="background:linear-gradient(135deg,var(--dark-navy) 0%,#0a3580 100%)">
-    <div class="med-sub-hero-overlay" style="background:none"></div>
-    <div class="med-sub-hero-content" style="text-align:center;max-width:620px;margin:0 auto">
-      <div class="sec-label" style="color:rgba(255,255,255,0.5);margin-bottom:16px">Page Updated</div>
-      <h1 style="font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,40px);font-weight:800;color:var(--white);line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px">Intelligent Solar &amp; Sustainability has moved.</h1>
-      <p style="color:rgba(255,255,255,0.7);font-size:15.5px;line-height:1.8;margin-bottom:28px">Our solar solutions are now part of our Energy Management &amp; Sustainability portfolio. You&rsquo;ll find SmartFlower and all solar content under the Intelligent Solar tab on that page.</p>
-      <button class="btn-primary" onclick="showPage('semi-energy')">Go to Energy Management &amp; Sustainability &#8594;</button>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-grid">
-      <div><p class="footer-desc">Engineering solutions from semiconductor fabrication to final outcomes &mdash; powering possibilities across South and Southeast Asia.</p></div>
-      <div class="footer-col"><h4>Solutions</h4>
-        <span class="footer-link" onclick="showPage('semi')">Semiconductor &amp; Industrial</span>
-        <span class="footer-link" onclick="showPage('medical')">Healthcare &amp; Medical</span>
-        <span class="footer-link" onclick="showPage('personalhealth')">Personal Health</span>
-        <span class="footer-link" onclick="showPage('shop')">E-Shop</span>
-      </div>
-      <div class="footer-col"><h4>Company</h4>
-        <span class="footer-link" onclick="showPage('about')">About Us</span>
-        <span class="footer-link" onclick="showPage('news')">News &amp; Events</span>
-        <span class="footer-link" onclick="showPage('careers')">Careers</span>
-        <span class="footer-link" onclick="showPage('partnerships')">Partner With Us</span>
-      </div>
-      <div class="footer-col"><h4>Connect</h4>
-        <span class="footer-link" onclick="showPage('contact')">Get in Touch</span>
-        <span class="footer-link" onclick="showPage('resources')">Resources</span>
-        <span class="footer-link" onclick="showPage('contact')">Singapore Office</span>
-        <span class="footer-link" onclick="showPage('contact')">Malaysia Office</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Kromax South Asia Pte. Ltd. All rights reserved.</p>
-      <div class="footer-bottom-links">
-        <span class="footer-link" style="margin:0">Privacy Policy</span>
-        <span class="footer-link" style="margin:0">Cookie Policy</span>
-      </div>
-    </div>
-  </footer>
-</div>
-
 <!-- ════════════════ ENERGY MANAGEMENT & SUSTAINABILITY -->
 <div id="page-semi-energy" class="page">
   <div class="med-sub-hero" style="background:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=85') center/cover no-repeat">
@@ -6133,7 +6090,6 @@ function resetMedPage(page) {
                .bindPopup('<strong style="font-family:Montserrat,sans-serif;font-size:13px">'+o[2]+'</strong><br><span style="font-size:12px;color:#6b7280">'+o[3]+'</span>');
             });
           }
-          var _origShow = window.showPage;
           document.addEventListener('DOMContentLoaded', function() {
             var orig = window.showPage;
             window.showPage = function(id) {
@@ -7051,14 +7007,6 @@ function toggleMedAcc(el) {
   item.classList.toggle('open');
 }
 
-function filterMedResources(cat, btn) {
-  document.querySelectorAll('#medFilterTabs .med-filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('#medResourceGrid .med-resource-card').forEach(card => {
-    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
-  });
-}
-
 function showGatedForm(title) {
   document.getElementById('gatedTitle').textContent = title;
   var m = document.getElementById('gatedModal');
@@ -7124,45 +7072,6 @@ function megaHover(group, el) {
   var sub = document.getElementById('mega-' + group);
   if (sub) sub.classList.add('ms-active');
 }
-
-// ── SOLAR STATS COUNTER ──
-var _solarDone = false;
-function _runSolarCounters() {
-  if (_solarDone) return;
-  _solarDone = true;
-  document.querySelectorAll('[data-solar-target]').forEach(function(el) {
-    var target = parseInt(el.dataset.solarTarget, 10);
-    var duration = 1600;
-    var steps = 60;
-    var step = 0;
-    var timer = setInterval(function() {
-      step++;
-      var val = Math.round(target * (step / steps));
-      el.textContent = val;
-      if (step >= steps) { el.textContent = target; clearInterval(timer); }
-    }, duration / steps);
-  });
-}
-var _solarIO = new IntersectionObserver(function(entries) {
-  if (entries[0].isIntersecting) _runSolarCounters();
-}, { threshold: 0.2 });
-function _initSolarCounters() {
-  var grid = document.getElementById('solarStatsGrid');
-  if (grid) _solarIO.observe(grid);
-}
-document.addEventListener('DOMContentLoaded', _initSolarCounters);
-// Reset when navigating away and back to solar page
-var _origShowPageSolar = showPage;
-showPage = function(id) {
-  _origShowPageSolar(id);
-  if (id === 'solar') {
-    _solarDone = false;
-    setTimeout(function() {
-      var grid = document.getElementById('solarStatsGrid');
-      if (grid) { _solarIO.disconnect(); _solarIO.observe(grid); }
-    }, 250);
-  }
-};
 
 // ── MOBILE NAV ──
 function toggleMobileNav() {
